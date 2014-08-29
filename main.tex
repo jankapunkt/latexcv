@@ -1,0 +1,75 @@
+%============================================================================%
+%
+%	DOCUMENT DEFINITION
+%
+%============================================================================%
+
+%we use article class for thesis design
+\documentclass[11pt,A4]{article}	
+
+%----------------------------------------------------------------------------------------
+%	ENCODING
+%----------------------------------------------------------------------------------------
+
+%we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+%note: requires latex-font-extra package
+
+\usepackage[defaultsans]{droidsans}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be typewriter style
+\usepackage[T1]{fontenc}
+
+%\usepackage[thin]{roboto} 
+
+
+
+%----------------------------------------------------------------------------------------
+%	LAYOUT  DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%debug
+\usepackage{showframe}
+
+%define page styles using geometry
+\usepackage[a4paper]{geometry}		
+
+% for example, change the margins to 2 inches all round
+\geometry{margin=2cm} 	
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+ \chead{\small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  jank87@tzi.de  $\cdot$ +49 176 313 877 34}}
+
+
+\usepackage{graphicx}
+
+%============================================================================%
+%
+%	OVERRIDES
+%
+%============================================================================%
+
+
+
+%============================================================================%
+%
+%	DOCUMENT CONTENT
+%
+%============================================================================%
+
+\begin{document}
+\pagestyle{fancy}
+\begin{figure}[htbp]
+    \begin{center}
+            \includegraphics[trim=0 150 0 150,clip,width=\textwidth]{4436.png}
+    \end{center}
+\end{figure}
+\vspace{-20pt}
+\Huge{\textbf{Jan Küster}}
+
+\end{document}
