@@ -1,10 +1,39 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2014 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	The above copyright notice and this permission notice shall be included in
+%	all copies or substantial portions of the Software.
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+
 %============================================================================%
 %
 %	DOCUMENT DEFINITION
 %
 %============================================================================%
 
-%we use article class for thesis design
+%we use article class because we want to fully customize the page 
+%and dont use a cv template
 \documentclass[11pt,A4]{article}	
 
 %----------------------------------------------------------------------------------------
@@ -17,34 +46,43 @@
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
-%note: requires latex-font-extra package
+% some tex-live fonts - choose your own
 
-\usepackage[defaultsans]{droidsans}
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+%\usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+\usepackage[light,math]{iwona}
+
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be typewriter style
 \usepackage[T1]{fontenc}
 
 %\usepackage[thin]{roboto} 
 
+\usepackage{moresize}
 
 
 %----------------------------------------------------------------------------------------
-%	LAYOUT  DEFINITIONS
+%	PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
 
-%debug
-\usepackage{showframe}
-
-%define page styles using geometry
-\usepackage[a4paper]{geometry}		
-
-% for example, change the margins to 2 inches all round
-\geometry{margin=2cm} 	
+%\usepackage{showframe}			%debug
 
 
-\usepackage{fancyhdr}
+\usepackage[a4paper]{geometry}		%define page styles using geometry
+\geometry{margin=2cm} 			% for example, change the margins to 2 inches all round
+
+
+
+\usepackage{fancyhdr}				%customize header
 \pagestyle{fancy}
- \chead{\small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  jank87@tzi.de  $\cdot$ +49 176 313 877 34}}
+\setlength{\headheight}{-5pt}		%less space between header and content
 
+\lhead{}
+\chead{\small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  jank87@tzi.de  $\cdot$ +49 176 313 877 34}}
+\rhead{}
 
 \usepackage{graphicx}
 
@@ -54,7 +92,25 @@
 %
 %============================================================================%
 
+% --------------- HEADER -----------------%
+\renewcommand{\headrulewidth}{0pt} % remove top header line
+\renewcommand{\footrulewidth}{0pt}	  %remove botttom header line
+\renewcommand{\thepage}{}	%remove pagenum
 
+
+%----------------- SECTION ----------------%
+
+
+
+\renewcommand{\thesection}{}		%remove section num
+
+\renewcommand{\section}{ 			%overide section
+\hrulefill
+
+\vspace{-2pt}
+\large
+
+}
 
 %============================================================================%
 %
@@ -66,10 +122,17 @@
 \pagestyle{fancy}
 \begin{figure}[htbp]
     \begin{center}
-            \includegraphics[trim=0 150 0 150,clip,width=\textwidth]{4436.png}
+            \includegraphics[trim=0 150 0 150,clip,width=\textwidth]{4436.png}	%trimming relative to image size!
     \end{center}
 \end{figure}
 \vspace{-20pt}
-\Huge{\textbf{Jan Küster}}
+\HUGE{Jan Küster}
 
+\section{Work}
+
+\section{Education}
+
+\section{Skills}
+
+\section{Activities}
 \end{document}
