@@ -36,6 +36,9 @@
 %and dont use a cv template
 \documentclass[11pt,A4]{article}	
 
+\usepackage{multicol}
+
+
 %----------------------------------------------------------------------------------------
 %	ENCODING
 %----------------------------------------------------------------------------------------
@@ -51,10 +54,10 @@
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
 %\usepackage{cmbright}
-%\usepackage[default]{raleway}
+\usepackage[default]{raleway}
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
-\usepackage[light,math]{iwona}
+%\usepackage[light,math]{iwona}
 
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be typewriter style
 \usepackage[T1]{fontenc}
@@ -81,10 +84,24 @@
 \setlength{\headheight}{-5pt}		%less space between header and content
 
 \lhead{}
-\chead{\small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  jank87@tzi.de  $\cdot$ +49 176 313 877 34}}
+\chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ contact@jankuester.com  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
+
+
+%----------------------------------------------------------------------------------------
+%	GRAPHICS DEFINITIONS
+%---------------------------------------------------------------------------------------- 
 \usepackage{graphicx}
+\usepackage{tikz}
+
+
+%----------------------------------------------------------------------------------------
+%	Color DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+\usepackage{color}
+
+\definecolor{sectcol}{RGB}{255,127,0}
 
 %============================================================================%
 %
@@ -99,18 +116,48 @@
 
 
 %----------------- SECTION ----------------%
-
-
-
 \renewcommand{\thesection}{}		%remove section num
 
-\renewcommand{\section}{ 			%overide section
-\hrulefill
 
-\vspace{-2pt}
-\large
+\newcommand{\larrow}
+{\begin{tikzpicture}[scale=0.7] % draw nodes (pgf/TikZ v2.00 manual sections 3.4, 3.7, 3.9)
+ \filldraw[fill=sectcol!100,draw=sectcol!100!black] (0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;
+ \end{tikzpicture}
+}
+
+\newcommand{\rarrow}
+{\begin{tikzpicture}[scale=0.7]  % draw nodes (pgf/TikZ v2.00 manual sections 3.4, 3.7, 3.9)
+ \filldraw[fill=sectcol!100,draw=sectcol!100!black] (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;
+ \end{tikzpicture}
+}
+
+%custom section command
+\newcommand{\cvsection}[1]
+{
+\noindent
+%\textcolor{sectcol}{\hrulefill}
+\mbox{
+\larrow
+\larrow
+\hspace{\stretch{1}}
+\normalsize{\textcolor{sectcol}{#1}}
+\hspace{\stretch{1}}
+\rarrow
+\rarrow
+}
+\newline
+\vspace{-6pt}
 
 }
+
+
+%--------------  STRUT -------------------------%
+
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+%--------------  LOREM IPSUM -------------------------%
+\newcommand{\lorem}
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.}
 
 %============================================================================%
 %
@@ -120,19 +167,40 @@
 
 \begin{document}
 \pagestyle{fancy}
+
+%----------------------------------------------------------------------------------------
+%	HEADER IMAGE
+%----------------------------------------------------------------------------------------
 \begin{figure}[htbp]
     \begin{center}
-            \includegraphics[trim=0 150 0 150,clip,width=\textwidth]{4436.png}	%trimming relative to image size!
+            \includegraphics[trim=0 200 0 200,clip,width=\paperwidth]{4436.png}	%trimming relative to image size!
     \end{center}
 \end{figure}
 \vspace{-20pt}
-\HUGE{Jan Küster}
+\begin{flushright}
+\mbox{\HUGE{\textcolor{sectcol}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{4mm}{0.9cm}} \HUGE{ \textcolor{sectcol}{CV}}}
+\end{flushright}
 
-\section{Work}
 
-\section{Education}
+\normalsize
 
-\section{Skills}
+\begin{multicols}{2} 
+\cvsection{Work and Projects}
+\lorem\\
+\lorem\\
 
-\section{Activities}
+\cvsection{Education}
+\lorem\\
+\lorem\\
+
+\cvsection{Skills}
+\lorem\\
+\lorem\\
+
+\cvsection{Activities}
+\lorem\\
+\lorem\\
+
+\end{multicols}
+
 \end{document}
