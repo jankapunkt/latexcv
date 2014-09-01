@@ -75,7 +75,7 @@
 
 
 \usepackage[a4paper]{geometry}		%define page styles using geometry
-\geometry{margin=2cm} 			% for example, change the margins to 2 inches all round
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2.5cm} 			% for example, change the margins to 2 inches all round
 
 
 
@@ -84,7 +84,7 @@
 \setlength{\headheight}{-5pt}		%less space between header and content
 
 \lhead{}
-\chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ contact@jankuester.com  $\cdot$ +49 176 313 877 34}}
+\chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ \textcolor{sectcol}{contact@jankuester.com}  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
 
@@ -101,7 +101,9 @@
 %---------------------------------------------------------------------------------------- 
 \usepackage{color}
 
-\definecolor{sectcol}{RGB}{255,127,0}
+\definecolor{sectcol}{RGB}{255,150,0}
+
+\definecolor{bgcol}{RGB}{110,110,110}
 
 %============================================================================%
 %
@@ -117,6 +119,13 @@
 
 %----------------- SECTION ----------------%
 \renewcommand{\thesection}{}		%remove section num
+
+%============================================================================%
+%
+%	DEFINITIONS
+%
+%============================================================================%
+
 
 
 \newcommand{\larrow}
@@ -136,7 +145,7 @@
 {
 \noindent
 %\textcolor{sectcol}{\hrulefill}
-\mbox{
+ \makebox[1\linewidth][l]{
 \larrow
 \larrow
 \hspace{\stretch{1}}
@@ -157,7 +166,7 @@
 
 %--------------  LOREM IPSUM -------------------------%
 \newcommand{\lorem}
-{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.}
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.}
 
 %============================================================================%
 %
@@ -176,15 +185,15 @@
             \includegraphics[trim=0 200 0 200,clip,width=\paperwidth]{4436.png}	%trimming relative to image size!
     \end{center}
 \end{figure}
-\vspace{-20pt}
+\vspace{-50pt}
 \begin{flushright}
-\mbox{\HUGE{\textcolor{sectcol}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{4mm}{0.9cm}} \HUGE{ \textcolor{sectcol}{CV}}}
+\colorbox{bgcol}{\makebox[1.758\linewidth][c]{\HUGE{\textcolor{white}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{ \textcolor{white}{CV}}}}
 \end{flushright}
 
 
 \normalsize
 
-\begin{multicols}{2} 
+\begin{multicols}{3} 
 \cvsection{Work and Projects}
 \lorem\\
 \lorem\\
