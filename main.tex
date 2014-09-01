@@ -22,7 +22,6 @@
 %	THE SOFTWARE.
 %	
 %
-%
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 
@@ -31,26 +30,19 @@
 %	DOCUMENT DEFINITION
 %
 %============================================================================%
-
-%we use article class because we want to fully customize the page 
-%and dont use a cv template
-\documentclass[11pt,A4]{article}	
-
-\usepackage{multicol}
+\documentclass[11pt,A4]{article}	%we use article class because we want to fully customize the page and dont use a cv template
+\usepackage{multicol}			%we use multicol because we dont want the whole page to be multicolumn
 
 
 %----------------------------------------------------------------------------------------
 %	ENCODING
 %----------------------------------------------------------------------------------------
-
-%we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}		%we use utf8 since we want to build from any machine
 
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 % some tex-live fonts - choose your own
-
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
 %\usepackage{cmbright}
@@ -58,13 +50,13 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-
-\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be typewriter style
-\usepackage[T1]{fontenc}
-
 %\usepackage[thin]{roboto} 
 
-\usepackage{moresize}
+\renewcommand*\familydefault{\sfdefault} 	% Only if the base font of the document is to be typewriter style
+\usepackage[T1]{fontenc}
+
+
+\usepackage{moresize}		%more font size definitions
 
 
 %----------------------------------------------------------------------------------------
@@ -75,8 +67,8 @@
 
 
 \usepackage[a4paper]{geometry}		%define page styles using geometry
-\geometry{top=2cm,bottom=2cm,left=2cm,right=2.5cm} 			% for example, change the margins to 2 inches all round
-
+\geometry{top=2cm,bottom=2cm,
+			left=2cm,right=2.5cm} 	% for example, change the margins to 2 inches all round
 
 
 \usepackage{fancyhdr}				%customize header
@@ -92,17 +84,15 @@
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
 %---------------------------------------------------------------------------------------- 
-\usepackage{graphicx}
-\usepackage{tikz}
-
+\usepackage{graphicx}			%for header image
+\usepackage{tikz}				%for drawing graphics
+\usetikzlibrary{shapes, backgrounds,calendar,patterns}
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 \usepackage{color}
-
 \definecolor{sectcol}{RGB}{255,150,0}
-
 \definecolor{bgcol}{RGB}{110,110,110}
 
 %============================================================================%
@@ -110,15 +100,13 @@
 %	OVERRIDES
 %
 %============================================================================%
-
-% --------------- HEADER -----------------%
-\renewcommand{\headrulewidth}{0pt} % remove top header line
-\renewcommand{\footrulewidth}{0pt}	  %remove botttom header line
-\renewcommand{\thepage}{}	%remove pagenum
-
-
-%----------------- SECTION ----------------%
-\renewcommand{\thesection}{}		%remove section num
+%----------------------------------------------------------------------------------------
+% 	HEADER
+%----------------------------------------------------------------------------------------
+\renewcommand{\headrulewidth}{0pt} 	% remove top header line
+\renewcommand{\footrulewidth}{0pt}	  	%remove botttom header line
+\renewcommand{\thepage}{}			%remove pagenum
+\renewcommand{\thesection}{}			%remove section num
 
 %============================================================================%
 %
@@ -126,25 +114,39 @@
 %
 %============================================================================%
 
+%----------------------------------------------------------------------------------------
+% ARROW GRAPHICS in Tikz
+%----------------------------------------------------------------------------------------
 
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
 
 \newcommand{\larrow}
-{\begin{tikzpicture}[scale=0.7] % draw nodes (pgf/TikZ v2.00 manual sections 3.4, 3.7, 3.9)
- \filldraw[fill=sectcol!100,draw=sectcol!100!black] (0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;
+{\begin{tikzpicture}[scale=0.7]
+	 \filldraw[fill=sectcol!100,draw=sectcol!100!black]  \tzlarrow
  \end{tikzpicture}
 }
+
+\newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
 
 \newcommand{\rarrow}
-{\begin{tikzpicture}[scale=0.7]  % draw nodes (pgf/TikZ v2.00 manual sections 3.4, 3.7, 3.9)
- \filldraw[fill=sectcol!100,draw=sectcol!100!black] (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;
+{\begin{tikzpicture}[scale=0.7]
+	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
  \end{tikzpicture}
 }
 
+%----------------------------------------------------------------------------------------
+% 	CV Boxes in Tikz
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
 %custom section command
+%----------------------------------------------------------------------------------------
+
 \newcommand{\cvsection}[1]
 {
 \noindent
-%\textcolor{sectcol}{\hrulefill}
  \makebox[1\linewidth][l]{
 \larrow
 \larrow
@@ -159,12 +161,24 @@
 
 }
 
+%----------------------------------------------------------------------------------------
+% META SECTION
+%----------------------------------------------------------------------------------------
+\newcommand{\metasection}[1]
+{
+\noindent
+\mbox{\larrow\normalsize{\textcolor{sectcol}{#1}}}
+}
 
-%--------------  STRUT -------------------------%
 
+%----------------------------------------------------------------------------------------
+% CUSTOM STRUT
+%----------------------------------------------------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
-%--------------  LOREM IPSUM -------------------------%
+%----------------------------------------------------------------------------------------
+% CUSTOM LOREM IPSUM
+%----------------------------------------------------------------------------------------
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.}
 
@@ -173,9 +187,8 @@
 %	DOCUMENT CONTENT
 %
 %============================================================================%
-
 \begin{document}
-\pagestyle{fancy}
+\pagestyle{fancy}	%use our custom fancy header definitions
 
 %----------------------------------------------------------------------------------------
 %	HEADER IMAGE
@@ -185,31 +198,41 @@
             \includegraphics[trim=0 200 0 200,clip,width=\paperwidth]{4436.png}	%trimming relative to image size!
     \end{center}
 \end{figure}
-\vspace{-50pt}
+\vspace{-50.55pt}
 \begin{flushright}
 \colorbox{bgcol}{\makebox[1.758\linewidth][c]{\HUGE{\textcolor{white}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{ \textcolor{white}{CV}}}}
 \end{flushright}
 
-
+%---------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
 \normalsize
 
-\begin{multicols}{3} 
-\cvsection{Work and Projects}
-\lorem\\
-\lorem\\
+\vspace{4pt}
 
-\cvsection{Education}
-\lorem\\
-\lorem\\
+\metasection{Skills:} Flex \& AIR, Java, Design Pattern\\
+\metasection{Activities:} FL Studio, Blender, Muay Thai, Grappling\\
 
-\cvsection{Skills}
-\lorem\\
-\lorem\\
+\begin{flushleft}
+\begin{tikzpicture}
+\draw[help lines] (0,0) grid (9,9);
 
-\cvsection{Activities}
-\lorem\\
-\lorem\\
+\fill[orange] (1,1) circle (1);
 
-\end{multicols}
+
+\end{tikzpicture}
+\end{flushleft}
+
+%
+%\begin{multicols}{2} 
+%\cvsection{Experience}
+%\lorem\\
+%\lorem\\
+%\cvsection{Education}
+%\lorem\\
+%\lorem\\
+%\end{multicols}
+
+
 
 \end{document}
