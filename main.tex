@@ -79,7 +79,7 @@
 \chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ \textcolor{sectcol}{contact@jankuester.com}  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
-
+\setlength{\parindent}{0mm}
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
@@ -87,6 +87,7 @@
 \usepackage{graphicx}			%for header image
 \usepackage{tikz}				%for drawing graphics
 \usetikzlibrary{shapes, backgrounds,calendar,patterns}
+\usepackage{wrapfig}
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
@@ -122,7 +123,7 @@
 
 \newcommand{\larrow}
 {\begin{tikzpicture}[scale=0.7]
-	 \filldraw[fill=sectcol!100,draw=sectcol!100!black]  \tzlarrow
+	 \filldraw[fill=bgcol!100,draw=bgcol!100!black]  \tzlarrow
  \end{tikzpicture}
 }
 
@@ -146,19 +147,9 @@
 
 \newcommand{\cvsection}[1]
 {
-\noindent
- \makebox[1\linewidth][l]{
-\larrow
-\larrow
-\hspace{\stretch{1}}
-\normalsize{\textcolor{sectcol}{#1}}
-\hspace{\stretch{1}}
-\rarrow
-\rarrow
-}
-\newline
-\vspace{-6pt}
-
+\hspace{-57pt}\colorbox{bgcol}{\makebox[1.11\linewidth][r]{
+\textcolor{white}{\textbf{#1}}\hspace{4pt}\rarrow\rarrow\hspace{8.5pt}
+}}\\
 }
 
 %----------------------------------------------------------------------------------------
@@ -170,6 +161,28 @@
 \mbox{\larrow\normalsize{\textcolor{sectcol}{#1}}}
 }
 
+%----------------------------------------------------------------------------------------
+% CV EVENT
+%----------------------------------------------------------------------------------------
+
+\newcommand{\cvevent}[2]
+{
+	\noindent
+	\makebox[1\linewidth][l]{\textbf{{#1}}\hspace{\stretch{1}}{#2}}
+}
+
+\newcommand{\cveventmeta}[2]
+{
+	\noindent
+	\makebox[1\linewidth][l]{{#1}\hspace{\stretch{1}}}
+	\begin{wrapfigure}{r}{0.12\textwidth}
+  \vspace{-20pt}
+  \begin{flushright}
+    \includegraphics[width=0.1\textwidth]{#2}
+  \end{flushright}
+  \vspace{-20pt}
+\end{wrapfigure}
+}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM STRUT
@@ -195,33 +208,61 @@
 %----------------------------------------------------------------------------------------
 \begin{figure}[htbp]
     \begin{center}
-            \includegraphics[trim=0 200 0 200,clip,width=\paperwidth]{4436.png}	%trimming relative to image size!
+            \includegraphics[trim=400 200 0 300,clip,width=\paperwidth]{4436.png}	%trimming relative to image size!
     \end{center}
 \end{figure}
+%---------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
 \vspace{-50.55pt}
 \begin{flushright}
-\colorbox{bgcol}{\makebox[1.758\linewidth][c]{\HUGE{\textcolor{white}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{ \textcolor{white}{CV}}}}
+	\colorbox{bgcol}{\makebox[1.758\linewidth][c]{\HUGE{\textcolor{white}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{ \textcolor{white}{CV}}}}
 \end{flushright}
 
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
 \normalsize
-
 \vspace{4pt}
-
 \metasection{Skills:} Flex \& AIR, Java, Design Pattern\\
 \metasection{Activities:} FL Studio, Blender, Muay Thai, Grappling\\
+
+
+
+\cvsection{Work}
+
+\cvevent{Job Title o Project Title }{11.11.2011}\\
+\cveventmeta{Employer}{qrcode.png}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\\
+
+
+\cvevent{Job Title o Project Title }{11.11.2011}\\
+\cveventmeta{Employer}{qrcode.png}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\\
+
+\cvevent{Job Title o Project Title }{11.11.2011}\\
+\cveventmeta{Employer}{qrcode.png}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\\
+
+
+
+\cvsection{Education}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+
+
+
 
 \begin{flushleft}
 \begin{tikzpicture}
 \draw[help lines] (0,0) grid (9,9);
-
 \fill[orange] (1,1) circle (1);
-
-
 \end{tikzpicture}
-\end{flushleft}
+\end{flushleft} 
 
 %
 %\begin{multicols}{2} 
