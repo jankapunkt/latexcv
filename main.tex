@@ -45,8 +45,8 @@
 % some tex-live fonts - choose your own
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
-\usepackage{cmbright}
-%\usepackage[default]{raleway}
+%\usepackage{cmbright}
+\usepackage[default]{raleway}
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
@@ -139,10 +139,6 @@
  \end{tikzpicture}
 }
 
-%----------------------------------------------------------------------------------------
-% 	CV Boxes in Tikz
-%----------------------------------------------------------------------------------------
-
 
 
 %----------------------------------------------------------------------------------------
@@ -151,8 +147,8 @@
 
 \newcommand{\cvsection}[1]
 {
-\colorbox{bgcol}{\makebox[1\linewidth][l]{
-\larrow{sectcol} \hspace{-8pt} \larrow{sectcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
+\colorbox{sectcol}{\makebox[1\linewidth][l]{
+\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
 }}\\
 }
 
@@ -169,7 +165,7 @@
 % CV EVENT
 %----------------------------------------------------------------------------------------
 
-\newcommand{\cvevent}[2]
+\newcommand{\cvevent}[3]
 {
 	\makebox[0.15\linewidth][l]{\textcolor{bgcol}{2011-2015}}
 	\colorbox{white}{\makebox[0.85\linewidth][l]{\textbf{{#1}}\hspace{\stretch{1}}\textcolor{sectcol}{#2}}}
@@ -223,12 +219,16 @@
 \vspace{-20.55pt}
 
 %\begin{flushright}
-	\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{Jan Küster} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{ \textcolor{white}{Resume}}}}
+	\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{Assessment Software}}}\\
+ \large{ \textcolor{white}{{Developer}}}}
+
+}}
 %\end{flushright}
 
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
+
 \normalsize
 \vspace{12pt}
 \metasection{Languages:}Flex \& AIR, Java, Processing, Latex\\
@@ -236,35 +236,35 @@
 \metasection{Activities:}FL Studio, Blender, Muay Thai, Grappling\\
 
 \cvsection{Summary}\\
-\vspace{-26pt}
-\doublelist{Digital media graduate with three years of work experience as a software developer in the field of technology based assessment. Master classes were in teams from different disciplines and cultural backgrounds on (digital) solutions for complex problems. Specialized in development of test-scenario engines and innovative, rich media item formats. Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.}
+Digital media graduate with three years of project work experience as a software developer in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies were in teams from different disciplines and cultural backgrounds on (digital) solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
+
 
 \cvsection{Education}\\
 \cvevent{Master of Science Digital Media}{University of Bremen}\\
-\cveventmeta{Title of the master thesis, usually a very long title for a very complex topic}{qrcode.png}\\
+\cveventmeta{Title of the master thesis, usually a very long title for a very complex topic}{qrcode.png}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. \\
 
 \cvevent{Bachelor of Science Digital Media}{University of Bremen}\\
 \cveventmeta{Specialisation in usability}{qrcode.png}\\
 
 
-\cvsection{Experience}
+\cvsection{Work}
 
+\cvevent{Technology Based Domain Specific Learning Assessment}{BMBF Project}\\
+\cveventmeta{Scientific employee, software development}{qrcode.png}
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. \\
+
+\cvsection{Experience}
 
 \cvevent{Poster Presentation}{DELFI}\\
 \cveventmeta{Usability Guidelines for Tests with Functional Illiterates}{qrcode.png}\\
 orem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. \\
 
-
-\cvevent{Technology Based Domain Specific Learning Assessment}{BMBF Project}\\
-\cveventmeta{Scientific employee}{qrcode.png}\\
-orem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. \\
-
-
-
-
-
-
+\cvevent{Semester Abroad}{University of Melbourne}\\
+\cveventmeta{Description}{qrcode.png}\\
 
 
 
