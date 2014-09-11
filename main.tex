@@ -30,18 +30,22 @@
 %	DOCUMENT DEFINITION
 %
 %============================================================================%
-\documentclass[10pt,A4]{article}	%we use article class because we want to fully customize the page and dont use a cv template
-\usepackage{multicol}			%we use multicol because we dont want the whole page to be multicolumn
+
+%we use article class because we want to fully customize the page and dont use a cv template
+\documentclass[10pt,A4]{article}	
 
 
 %----------------------------------------------------------------------------------------
 %	ENCODING
 %----------------------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}		%we use utf8 since we want to build from any machine
+
+%we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}		
 
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
+
 % some tex-live fonts - choose your own
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
@@ -52,66 +56,114 @@
 %\usepackage[light,math]{iwona}
 %\usepackage[thin]{roboto} 
 
-\renewcommand*\familydefault{\sfdefault} 	% Only if the base font of the document is to be typewriter style
+% default the font
+\renewcommand*\familydefault{\sfdefault} 	
 \usepackage[T1]{fontenc}
 
-
-\usepackage{moresize}		%more font size definitions
+%more font size definitions
+\usepackage{moresize}		
 
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
 
-%\usepackage{showframe}			%debug
+%debug page outer frames
+%\usepackage{showframe}			
 
 
-\usepackage[a4paper]{geometry}		%define page styles using geometry
-\geometry{top=2cm,bottom=2cm,
-			left=2.5cm,right=2.5cm} 	% for example, change the margins to 2 inches all round
+%define page styles using geometry
+\usepackage[a4paper]{geometry}		
 
+% for example, change the margins to 2 inches all round
+\geometry{top=1.75cm,bottom=-.6cm,
+			left=2.5cm,right=2.5cm} 	
 
-\usepackage{fancyhdr}				%customize header
+%use customized header
+\usepackage{fancyhdr}				
 \pagestyle{fancy}
-\setlength{\headheight}{-5pt}		%less space between header and content
 
+%less space between header and content
+\setlength{\headheight}{-5pt}		
+
+
+%customize entries left, center and righjt
 \lhead{}
-\chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ \textcolor{sectcol}{contact@jankuester.com}  $\cdot$ +49 176 313 877 34}}
+\chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ \textcolor{sectcol}{info@jankuester.com}  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
+
+
+
+%indentation is zero
 \setlength{\parindent}{0mm}
+
+%for layouting tables
+\usepackage{multicol}			
+\usepackage{multirow}
+
+%extended aligning of tabular cells
+\usepackage{array}
+
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
 %---------------------------------------------------------------------------------------- 
-\usepackage{graphicx}			%for header image
-\usepackage{tikz}				%for drawing graphics
-\usetikzlibrary{shapes, backgrounds,calendar,patterns}
+
+%for header image
+\usepackage{graphicx}
+
+%for floating figures
 \usepackage{wrapfig}
+
+%for drawing graphics		
+\usepackage{tikz}				
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
+
 \usepackage{color}
 
+%accent color
 \definecolor{sectcol}{RGB}{255,150,0}
 
+%dark background color
 \definecolor{bgcol}{RGB}{110,110,110}
 
-\definecolor{softcol}{RGB}{245,245,245}
+%light background / accent color
+\definecolor{softcol}{RGB}{230,230,230}
 
 %============================================================================%
 %
 %	OVERRIDES
 %
 %============================================================================%
+
 %----------------------------------------------------------------------------------------
 % 	HEADER
 %----------------------------------------------------------------------------------------
-\renewcommand{\headrulewidth}{0pt} 	% remove top header line
-\renewcommand{\footrulewidth}{0pt}	  	%remove botttom header line
-\renewcommand{\thepage}{}			%remove pagenum
-\renewcommand{\thesection}{}			%remove section num
+
+% remove top header line
+\renewcommand{\headrulewidth}{0pt} 
+
+%remove botttom header line
+\renewcommand{\footrulewidth}{0pt}	  	
+
+%remove pagenum
+\renewcommand{\thepage}{}	
+
+%remove section num		
+\renewcommand{\thesection}{}			
 
 %============================================================================%
 %
@@ -123,16 +175,22 @@
 % ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
+% a six pointed arrow poiting to the left
 \newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
 
+%include the left arrow into a tikz picture
+% param1: fill color
 \newcommand{\larrow}[1]
 {\begin{tikzpicture}[scale=0.7]
 	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
  \end{tikzpicture}
 }
 
+% a six pointed arrow poiting to the right
 \newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
 
+%include the right arrow into a tikz picture
+% param1: fill color
 \newcommand{\rarrow}
 {\begin{tikzpicture}[scale=0.7]
 	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
@@ -142,19 +200,20 @@
 
 
 %----------------------------------------------------------------------------------------
-%custom section command
+%custom sections
 %----------------------------------------------------------------------------------------
 
+%create a coloured box with arrow and title as cv section headline
+% param 1: section title
 \newcommand{\cvsection}[1]
 {
-\colorbox{sectcol}{\makebox[1\linewidth][l]{
+\colorbox{sectcol}{\mystrut \makebox[1\linewidth][l]{
 \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
 }}\\
 }
 
-%----------------------------------------------------------------------------------------
-% META SECTION
-%----------------------------------------------------------------------------------------
+%create a coloured arrow with title as cv meta section section
+% param 1: meta section title
 \newcommand{\metasection}[1]
 {
 \noindent
@@ -165,27 +224,45 @@
 % CV EVENT
 %----------------------------------------------------------------------------------------
 
-\newcommand{\cvevent}[3]
+%creates a stretched box as cv entry headline
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+
+\newcommand{\cvevent}[5]
 {
-	\makebox[0.15\linewidth][l]{\textcolor{bgcol}{2011-2015}}
-	\colorbox{white}{\makebox[0.85\linewidth][l]{\textbf{{#1}}\hspace{\stretch{1}}\textcolor{sectcol}{#2}}}
+
+	\begin{tabular*}{1\textwidth}{p{2.8cm} p{8.4cm} x{3.9cm}}
+		\larrow{sectcol} \textcolor{bgcol}{#1} & \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
+	\end{tabular*}
+	\begin{tabular*}{1\textwidth}{p{2.8cm} p{12.4cm}}
+		&#4\\
+	\end{tabular*}\\
+
 }
 
+%deprecated but maybe still used
+%\newcommand{\cvevent}[5]
+%{
+%	\colorbox{white}{\mystrut \makebox[0.17\linewidth][l]{\larrow{sectcol} \textcolor{bgcol}{\textbf{#1}}}}
+%	\colorbox{white}{\mystrut \makebox[0.83\linewidth][l]{\textbf{{#2}}\hspace{\stretch{1}}\textcolor{sectcol}{#3}}}
+%	\cveventmeta{#4}{#5}
+%}
+
+%creates a stretched box as 
 \newcommand{\cveventmeta}[2]
 {
-	\makebox[0.15\linewidth][l]{\hspace{\stretch{1}}\vspace{\stretch{1}}} \makebox[0.85\linewidth][l]{\textit{#1}\hspace{\stretch{1}}}
+	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
+	#2
 }
 
-\newcommand{\doublelist}[1]
-{
-\begin{multicols}{2} 
-	#1
-\end{multicols}
-}
+
 
 %----------------------------------------------------------------------------------------
-% CUSTOM STRUT
-%----------------------------------------------------------------------------------------
+% CUSTOM STRUT FOR EMPTY BOXES
+%----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
 %----------------------------------------------------------------------------------------
@@ -200,19 +277,21 @@
 %
 %============================================================================%
 \begin{document}
-\pagestyle{fancy}	%use our custom fancy header definitions
+
+%use our custom fancy header definitions
+\pagestyle{fancy}	
 
 %----------------------------------------------------------------------------------------
-%
 %	HEADER IMAGE
-%
 %----------------------------------------------------------------------------------------
+
 \hspace{-74pt}
 %\begin{figure}[htbp]
  %   \begin{center}
-            \includegraphics[trim=400 200 0 300,clip,width=\paperwidth]{4436.png}	%trimming relative to image size!
+\includegraphics[trim= 0 50 0 100,clip,width=1.05\paperwidth]{myfoto.jpg}	%trimming relative to image size!
  %   \end{center}
 %\end{figure}
+
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
@@ -226,68 +305,66 @@
 %\end{flushright}
 
 %---------------------------------------------------------------------------------------
-%	TITLE HEADLINE
+%	META SECTION
 %----------------------------------------------------------------------------------------
 
 \normalsize
 \vspace{12pt}
+
+
 \metasection{Languages:}Flex \& AIR, Java, Processing, Latex\\
-\metasection{Concepts:}Requirements, Software Design, Design Pattern, Usability\\
+\metasection{Concepts:}Software Design, Design Pattern, Usability\\
 \metasection{Activities:}FL Studio, Blender, Muay Thai, Grappling\\
 
-\cvsection{Summary}\\
-Digital media graduate with three years of project work experience as a software developer in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies were in teams from different disciplines and cultural backgrounds on (digital) solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
+%---------------------------------------------------------------------------------------
+%	SUMMARAY
+%----------------------------------------------------------------------------------------
 
+\cvsection{Summary}\\
+Digital media graduate with four years of project work experience as a software developer in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies were in teams from different disciplines and cultural backgrounds on (digital) solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
+
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\cvsection{Experience}\\
+
+\cvevent{2013 / 09}{Poster Presentation}{DELFI Conference}{Usability Guidelines for Tests with Functional Illiterates (Publication)}
+{Presented results from usability field tests with functional illiterates. Held 30 seconds 'poster madness' presentation on quick resuming the content.}
+
+\cvevent{2012 - Present}{Software Developer}{BMBF Project}{Technology Based Domain Specific Learning Assessment}\
+
+\cvevent{2010 - 2011}{Student Assistant}{BMBF Project}{otu.lea}
+
+\cvevent{2009}{Semester Abroad}{University of Melbourne}{Description}
+
+%---------------------------------------------------------------------------------------
+%	EDUCATION 
+%----------------------------------------------------------------------------------------
 
 \cvsection{Education}\\
-\cvevent{Master of Science Digital Media}{University of Bremen}\\
-\cveventmeta{Title of the master thesis, usually a very long title for a very complex topic}{qrcode.png}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. \\
+\cvevent
+{2012 - Present}
+{Master of Science Digital Media}
+{University of Bremen}
+{Thesis: Title of the master thesis, usually a very long title for a very complex topic}{\lorem}
 
-\cvevent{Bachelor of Science Digital Media}{University of Bremen}\\
-\cveventmeta{Specialisation in usability}{qrcode.png}\\
+\cvevent{2011 / 11}{Seminar on Project Management}{Getoq Consulting}{Two day simulation of a generic project lifecycle including basics of ...}
 
+\cvevent{2007 - 2011}{Bachelor of Science Digital Media}{University of Bremen}{Thesis: Bachelor Thesis Name}
 
-\cvsection{Work}
+%-------------------------------------------------------------------------------------------------
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
+%--------------------------------------------------------------------------------------------------
 
-\cvevent{Technology Based Domain Specific Learning Assessment}{BMBF Project}\\
-\cveventmeta{Scientific employee, software development}{qrcode.png}
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\small \textcolor{white}{www.jankuester.com $\cdot$ github.com/jankapunkt}}}
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. \\
-
-\cvsection{Experience}
-
-\cvevent{Poster Presentation}{DELFI}\\
-\cveventmeta{Usability Guidelines for Tests with Functional Illiterates}{qrcode.png}\\
-orem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. \\
-
-\cvevent{Semester Abroad}{University of Melbourne}\\
-\cveventmeta{Description}{qrcode.png}\\
-
-
-
-
-
+%============================================================================%
 %
-%\begin{flushleft}
-%\begin{tikzpicture}
-%\draw[help lines] (0,0) grid (9,9);
-%\fill[orange] (1,1) circle (1);
-%\end{tikzpicture}
-%\end{flushleft} 
-
+%	DOCUMENT END
 %
-%\begin{multicols}{2} 
-%\cvsection{Experience}
-%\lorem\\
-%\lorem\\
-%\cvsection{Education}
-%\lorem\\
-%\lorem\\
-%\end{multicols}
-
-
-
+%============================================================================%
 \end{document}
