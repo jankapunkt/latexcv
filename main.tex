@@ -43,6 +43,12 @@
 \usepackage[utf8]{inputenc}		
 
 %----------------------------------------------------------------------------------------
+%	LOGIC
+%----------------------------------------------------------------------------------------
+
+\usepackage{xifthen}% provides \isempty test
+
+%----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 
@@ -89,7 +95,7 @@
 
 %customize entries left, center and righjt
 \lhead{}
-\chead{ \small{Jan Küster $\cdot$ Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ \textcolor{sectcol}{info@jankuester.com}  $\cdot$ +49 176 313 877 34}}
+\chead{ \small{Adress: Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$ Contact:  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
 
@@ -208,16 +214,17 @@
 \newcommand{\cvsection}[1]
 {
 \colorbox{sectcol}{\mystrut \makebox[1\linewidth][l]{
-\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
+\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
 }}\\
 }
 
 %create a coloured arrow with title as cv meta section section
 % param 1: meta section title
-\newcommand{\metasection}[1]
+\newcommand{\metasection}[2]
 {
-\noindent
-\mbox{\larrow{bgcol}\normalsize{\textcolor{sectcol}{#1}}}
+\begin{tabular*}{1\textwidth}{p{2.4cm} p{8.4cm} x{3.9cm}}
+\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[2pt]
+\end{tabular*}
 }
 
 %----------------------------------------------------------------------------------------
@@ -230,26 +237,18 @@
 % param 3:	institution (where did you work / study)
 % param 4:	what was your position
 % param 5:	some words about your contributions
-
 \newcommand{\cvevent}[5]
 {
-
-	\begin{tabular*}{1\textwidth}{p{2.8cm} p{8.4cm} x{3.9cm}}
-		\larrow{sectcol} \textcolor{bgcol}{#1} & \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
+\vspace{6pt}
+	\begin{tabular*}{1\textwidth}{p{2.4cm} p{8.4cm} x{3.9cm}}
+ \textcolor{bgcol}{#1} & \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
 	\end{tabular*}
-	\begin{tabular*}{1\textwidth}{p{2.8cm} p{12.4cm}}
-		&#4\\
-	\end{tabular*}\\
+	\begin{tabular*}{1\textwidth}{p{2.4cm} p{12.4cm}}
+		&\textit{#4}\\[6pt]
+		&\larrow{bgcol} #5\\[6pt]
+	\end{tabular*}
 
 }
-
-%deprecated but maybe still used
-%\newcommand{\cvevent}[5]
-%{
-%	\colorbox{white}{\mystrut \makebox[0.17\linewidth][l]{\larrow{sectcol} \textcolor{bgcol}{\textbf{#1}}}}
-%	\colorbox{white}{\mystrut \makebox[0.83\linewidth][l]{\textbf{{#2}}\hspace{\stretch{1}}\textcolor{sectcol}{#3}}}
-%	\cveventmeta{#4}{#5}
-%}
 
 %creates a stretched box as 
 \newcommand{\cveventmeta}[2]
@@ -269,7 +268,7 @@
 % CUSTOM LOREM IPSUM
 %----------------------------------------------------------------------------------------
 \newcommand{\lorem}
-{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.}
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
 %============================================================================%
 %
@@ -288,7 +287,7 @@
 \hspace{-74pt}
 %\begin{figure}[htbp]
  %   \begin{center}
-\includegraphics[trim= 0 50 0 100,clip,width=1.05\paperwidth]{myfoto.jpg}	%trimming relative to image size!
+\includegraphics[trim= 0 50 0 100,clip,width=1.005\paperwidth]{myfoto.jpg}	%trimming relative to image size!
  %   \end{center}
 %\end{figure}
 
@@ -297,62 +296,65 @@
 %----------------------------------------------------------------------------------------
 \vspace{-20.55pt}
 
-%\begin{flushright}
-	\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{Assessment Software}}}\\
- \large{ \textcolor{white}{{Developer}}}}
 
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{Assessment Software}}}\\
+ \large{ \textcolor{white}{{Developer}}}}
 }}
-%\end{flushright}
+
 
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-
+\vspace{-144pt}
+\includegraphics[width=64pt]{qrcode}
 \normalsize
-\vspace{12pt}
+\vspace{88pt}
 
+\metasection{Languages:}{Flex \& AIR, Java, Processing, Latex}
+\metasection{Concepts:}{Software Design, Design Pattern, Usability}
+\metasection{Activities:}{FL Studio, Blender, Muay Thai, Grappling}
 
-\metasection{Languages:}Flex \& AIR, Java, Processing, Latex\\
-\metasection{Concepts:}Software Design, Design Pattern, Usability\\
-\metasection{Activities:}FL Studio, Blender, Muay Thai, Grappling\\
 
 %---------------------------------------------------------------------------------------
 %	SUMMARAY
 %----------------------------------------------------------------------------------------
 
-\cvsection{Summary}\\
-Digital media graduate with four years of project work experience as a software developer in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies were in teams from different disciplines and cultural backgrounds on (digital) solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
+%\cvsection{Summary}\\
+%Digital media graduate with four years project experience in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies focused on teams from different disciplines and cultural backgrounds on solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\cvsection{Experience}\\
+\cvsection{Experience}
 
 \cvevent{2013 / 09}{Poster Presentation}{DELFI Conference}{Usability Guidelines for Tests with Functional Illiterates (Publication)}
-{Presented results from usability field tests with functional illiterates. Held 30 seconds 'poster madness' presentation on quick resuming the content.}
+{Presented results from usability field tests with functional illiterates;}
 
-\cvevent{2012 - Present}{Software Developer}{BMBF Project}{Technology Based Domain Specific Learning Assessment}\
 
-\cvevent{2010 - 2011}{Student Assistant}{BMBF Project}{otu.lea}
+\textcolor{softcol}{\hrule}
 
-\cvevent{2009}{Semester Abroad}{University of Melbourne}{Description}
+\cvevent{2012 - Present}{Software Developer}{BMBF Project}{Technology Based Domain Specific Learning Assessment}
+{Gather requirements from partners; Software design; Test engine design; Leading development team of three }
+\textcolor{softcol}{\hrule}
+\cvevent{2010 - 2011}{Student Assistant}{BMBF Project}{otu.lea - online test environment targeting functional illiterates}{Software design by given architecture; Implementation; Testing; Reporting}
+\textcolor{softcol}{\hrule}
+\cvevent{2009}{Semester Abroad}{University of Melbourne}{Studied one semester in Melbourne, Australia}{Programming the machine; Information visualization; Professional essay writing}
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION 
-%----------------------------------------------------------------------------------------
-
-\cvsection{Education}\\
+%--------------------------------------------------------------------------------------
+\cvsection{Education}
 
 \cvevent
 {2012 - Present}
 {Master of Science Digital Media}
 {University of Bremen}
-{Thesis: Title of the master thesis, usually a very long title for a very complex topic}{\lorem}
-
-\cvevent{2011 / 11}{Seminar on Project Management}{Getoq Consulting}{Two day simulation of a generic project lifecycle including basics of ...}
-
-\cvevent{2007 - 2011}{Bachelor of Science Digital Media}{University of Bremen}{Thesis: Bachelor Thesis Name}
+{Thesis: Developing and Evaluating an Algorithm for Automated Scoring of Spreadsheets (in progress)}{Intercultural classes in english; Special topics in programming and design;  }
+\textcolor{softcol}{\hrule}
+\cvevent{2011 / 11}{Seminar on Project Management}{Getoq Consulting}{Two day simulation of a generic project lifecycle from management perspective.}{Customer contracts; change management; Communication; Controlling; Planning; Realization; Evaluation}
+\textcolor{softcol}{\hrule}
+\cvevent{2007 - 2011}{Bachelor of Science Digital Media}{University of Bremen}{Thesis: (Redesigning the Keyboard to Reduce the Cognitive Load and to Support the Learning Process for People with Low Usage Experience}{Programming basics; Technical basics; Design principles; Usability principles}
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
@@ -360,7 +362,7 @@ Digital media graduate with four years of project work experience as a software 
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\small \textcolor{white}{www.jankuester.com $\cdot$ github.com/jankapunkt}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.jankuester.com} $\cdot$ \textcolor{white}{github.com/jankapunkt}}}
 
 %============================================================================%
 %
