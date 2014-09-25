@@ -95,7 +95,7 @@
 
 %customize entries left, center and righjt
 \lhead{}
-\chead{ \small{Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 877 34}}
+\chead{ \small{Jan Küster  $\cdot$  Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
 
@@ -222,7 +222,7 @@
 % param 1: meta section title
 \newcommand{\metasection}[2]
 {
-\begin{tabular*}{1\textwidth}{p{2.4cm} p{8.4cm} x{3.9cm}}
+\begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
 \larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[2pt]
 \end{tabular*}
 }
@@ -239,13 +239,13 @@
 % param 5:	some words about your contributions
 \newcommand{\cvevent}[5]
 {
-\vspace{6pt}
-	\begin{tabular*}{1\textwidth}{p{2.4cm} p{8.4cm} x{3.9cm}}
- \textcolor{bgcol}{#1} & \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
+\vspace{8pt}
+	\begin{tabular*}{1\textwidth}{p{2.3cm}  p{8.4cm} x{3.9cm}}
+ \textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
 	\end{tabular*}
-	\begin{tabular*}{1\textwidth}{p{2.4cm} p{12.4cm}}
-		&\textit{#4}\\[6pt]
-		&\larrow{bgcol} #5\\[6pt]
+	\begin{tabular*}{1\textwidth}{p{2.3cm} p{12.4cm}}
+&		 \larrow{bgcol}  #4\\[3pt]
+&		 \larrow{bgcol}  #5\\[6pt]
 	\end{tabular*}
 
 }
@@ -272,10 +272,15 @@
 
 %============================================================================%
 %
+%
+%
 %	DOCUMENT CONTENT
+%
+%
 %
 %============================================================================%
 \begin{document}
+
 
 %use our custom fancy header definitions
 \pagestyle{fancy}	
@@ -297,10 +302,10 @@
 \vspace{-20.55pt}
 
 
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{Curriculum}}}\\
- \large{ \textcolor{white}{{Vitae}}}}
-}}
-
+%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{Flex Developer}}}\\
+ %\large{ \textcolor{white}{{Resume}}}}
+%}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} } }}
 
 %---------------------------------------------------------------------------------------
 %	META SECTION
@@ -311,9 +316,9 @@
 \normalsize
 \vspace{88pt}
 
-\metasection{Languages:}{Flex \& AIR, Java, Processing}
-\metasection{Concepts:}{Software Design, Design Pattern, Usability}
-\metasection{Activities:}{Digital Music, Blender, Martial Arts}
+\metasection{Tools:}{Flex, AIR, Java, Processing, Git, Eclipse}
+\metasection{Concepts:}{Software Design, OOP-Pattern, Scrum, Usability, Accessibility} 
+\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
 
 
 %---------------------------------------------------------------------------------------
@@ -329,27 +334,34 @@
 \cvsection{Experience}
 
 %
-\cvevent{2013 / 09}{Poster Presentation}{DELFI Conference}{Usability Guidelines for Tests with Functional Illiterates (Publication)}{Presented results from usability field tests with functional illiterates.}
+\cvevent{2013 / 09}{Poster Presentation}{DELFI Conference}{Usability Guidelines for Tests with Functional Illiterates (Publication)}{Task: Presented results to conference audience.}
 
 \textcolor{softcol}{\hrule}
 
 %
-\cvevent{2012 - Present}{Software Developer}{BMBF Project}{Technology Based Domain Specific Learning Assessment}{Gathered requirements from partners, software design, assessment engine design, leading development team of three persons.}
+\cvevent{2012 - Present}{Scientific Employee / Software Developer}{BMBF Project}{Technology Based Domain Specific Learning Assessment (Apache Flex)}{Tasks: Requirements elicitation, software design, assessment engine design, leading development team of three persons.}
 
 \textcolor{softcol}{\hrule}
 
 %
-\cvevent{2010 - 2011}{Student Assistant}{BMBF Project}{otu.lea - online test environment targeting functional illiterates}{Software design by given architecture, implementation, testing, reporting.}
+\cvevent{2010 - 2011}{Student Assistant / Programmer}{BMBF Project}{Online diagnosis platform for workforce literacy development (Apache Flex)}{Tasks: Software design, implementation, testing, reporting.}
 
 \textcolor{softcol}{\hrule}
 
 %
-\cvevent{2009}{Semester Abroad}{University of Melbourne}{Studied one semester in Melbourne, Australia}{Programming the machine, information visualization, professional essay writing.}
+\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Six months of study and intercultural experience in Melbourne, Australia}{Classes included: Programming the machine, information visualization, professional essay writing.}
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
+
+
+
+%
+\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Developing a touch table software for medical support (Java)}{Tasks: Server setup and administration, software design, implementation, testing.}
+
+\textcolor{softcol}{\hrule}
 
 %
 \cvevent{2012 - Present}{Master of Science Digital Media}{University of Bremen}{Thesis: Developing and Evaluating an Algorithm for Automated Scoring of Spreadsheets (in progress)}{Intercultural classes in English, special topics in programming and design.  }
@@ -357,12 +369,7 @@
 \textcolor{softcol}{\hrule}
 
 %
-\cvevent{2011 / 11}{Seminar on Project Management}{Getoq Consulting}{Two day simulation of a generic project lifecycle from management perspective}{Customer contracts, change management, communication, controlling, planning, realization, evaluation.}
-
-\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2007 - 2011}{Bachelor of Science Digital Media}{University of Bremen}{Thesis: (Redesigning the Keyboard to Reduce the Cognitive Load and to Support the Learning Process for People with Low Usage Experience}{Programming basics, technical basics, design principles, usability principles.}
+\cvevent{2011 / 11}{Seminar on Project Management}{Getoq Consulting}{Two day project simulation from management perspective}{Topics: Customer contracts, change management, communication, controlling, planning, realization, evaluation.}
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
@@ -371,6 +378,9 @@
 \null
 \vspace*{\fill}
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.jankuester.com} $\cdot$ \textcolor{white}{github.com/jankapunkt}}}
+
+
+
 
 %============================================================================%
 %
