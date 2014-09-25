@@ -46,13 +46,15 @@
 %	LOGIC
 %----------------------------------------------------------------------------------------
 
-\usepackage{xifthen}% provides \isempty test
+% provides \isempty test
+\usepackage{xifthen}
 
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 
 % some tex-live fonts - choose your own
+
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
 %\usepackage{cmbright}
@@ -62,11 +64,11 @@
 %\usepackage[light,math]{iwona}
 %\usepackage[thin]{roboto} 
 
-% default the font
+% set font default
 \renewcommand*\familydefault{\sfdefault} 	
 \usepackage[T1]{fontenc}
 
-%more font size definitions
+% more font size definitions
 \usepackage{moresize}		
 
 
@@ -82,8 +84,7 @@
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1.75cm,bottom=-.6cm,
-			left=2.5cm,right=2.5cm} 	
+\geometry{top=1.75cm, bottom=-.6cm, left=2.5cm, right=2.5cm} 	
 
 %use customized header
 \usepackage{fancyhdr}				
@@ -93,16 +94,18 @@
 \setlength{\headheight}{-5pt}		
 
 
-%customize entries left, center and righjt
+%customize entries left, center and right
 \lhead{}
 \chead{ \small{Jan Küster  $\cdot$  Kissinger Str. 31  $\cdot$ 28215, Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 877 34}}
 \rhead{}
 
 
-
-
 %indentation is zero
 \setlength{\parindent}{0mm}
+
+%----------------------------------------------------------------------------------------
+%	TABLE /ARRAY DEFINITIONS
+%---------------------------------------------------------------------------------------- 
 
 %for layouting tables
 \usepackage{multicol}			
@@ -113,8 +116,6 @@
 
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
-
-
 
 
 %----------------------------------------------------------------------------------------
@@ -132,8 +133,6 @@
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 
-
-
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -149,9 +148,12 @@
 %light background / accent color
 \definecolor{softcol}{RGB}{230,230,230}
 
+
 %============================================================================%
 %
-%	OVERRIDES
+%
+%	DEFINITIONS
+%
 %
 %============================================================================%
 
@@ -171,21 +173,16 @@
 %remove section num		
 \renewcommand{\thesection}{}			
 
-%============================================================================%
-%
-%	DEFINITIONS
-%
-%============================================================================%
-
 %----------------------------------------------------------------------------------------
-% ARROW GRAPHICS in Tikz
+% 	ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
 \newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
 
-%include the left arrow into a tikz picture
+% include the left arrow into a tikz picture
 % param1: fill color
+%
 \newcommand{\larrow}[1]
 {\begin{tikzpicture}[scale=0.58]
 	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
@@ -195,8 +192,9 @@
 % a six pointed arrow poiting to the right
 \newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
 
-%include the right arrow into a tikz picture
+% include the right arrow into a tikz picture
 % param1: fill color
+%
 \newcommand{\rarrow}
 {\begin{tikzpicture}[scale=0.7]
 	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
@@ -206,11 +204,12 @@
 
 
 %----------------------------------------------------------------------------------------
-%custom sections
+%	custom sections
 %----------------------------------------------------------------------------------------
 
-%create a coloured box with arrow and title as cv section headline
+% create a coloured box with arrow and title as cv section headline
 % param 1: section title
+%
 \newcommand{\cvsection}[1]
 {
 \colorbox{sectcol}{\mystrut \makebox[1\linewidth][l]{
@@ -220,6 +219,7 @@
 
 %create a coloured arrow with title as cv meta section section
 % param 1: meta section title
+%
 \newcommand{\metasection}[2]
 {
 \begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
@@ -228,15 +228,17 @@
 }
 
 %----------------------------------------------------------------------------------------
-% CV EVENT
+%	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-%creates a stretched box as cv entry headline
+% creates a stretched box as cv entry headline followed by two paragraphs about 
+% the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
 % param 3:	institution (where did you work / study)
 % param 4:	what was your position
 % param 5:	some words about your contributions
+%
 \newcommand{\cvevent}[5]
 {
 \vspace{8pt}
@@ -250,14 +252,12 @@
 
 }
 
-%creates a stretched box as 
+% creates a stretched box as 
 \newcommand{\cveventmeta}[2]
 {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
 	#2
 }
-
-
 
 %----------------------------------------------------------------------------------------
 % CUSTOM STRUT FOR EMPTY BOXES
@@ -269,6 +269,8 @@
 %----------------------------------------------------------------------------------------
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+
 
 %============================================================================%
 %
@@ -288,7 +290,6 @@
 %----------------------------------------------------------------------------------------
 %	HEADER IMAGE
 %----------------------------------------------------------------------------------------
-
 \hspace{-74pt}
 %\begin{figure}[htbp]
  %   \begin{center}
@@ -301,14 +302,16 @@
 %----------------------------------------------------------------------------------------
 \vspace{-20.55pt}
 
-
+% for multiple words like working titles etc.
 %\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{Flex Developer}}}\\
  %\large{ \textcolor{white}{{Resume}}}}
 %}}
+
+% for single words, e.g. CV or RESUME etc.
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} } }}
 
 %---------------------------------------------------------------------------------------
-%	META SECTION
+%	QR CODE (optional)
 %----------------------------------------------------------------------------------------
 \vspace{-144pt}
 \hspace{0.85\linewidth}
@@ -316,17 +319,26 @@
 \normalsize
 \vspace{88pt}
 
+%---------------------------------------------------------------------------------------
+%	META SECTION
+%----------------------------------------------------------------------------------------
 \metasection{Tools:}{Flex, AIR, Java, Processing, Git, Eclipse}
 \metasection{Concepts:}{Software Design, OOP-Pattern, Scrum, Usability, Accessibility} 
 \metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
 
 
 %---------------------------------------------------------------------------------------
-%	SUMMARAY
+%	SUMMARAY (optional)
 %----------------------------------------------------------------------------------------
 
 %\cvsection{Summary}\\
 %Digital media graduate with four years project experience in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies focused on teams from different disciplines and cultural backgrounds on solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
+
+%============================================================================%
+%
+%	CV SECTIONS AND EVENTS (MAIN CONTENT)
+%
+%============================================================================%
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -356,8 +368,6 @@
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-
-
 %
 \cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Developing a touch table software for medical support (Java)}{Tasks: Server setup and administration, software design, implementation, testing}
 
@@ -384,7 +394,11 @@
 
 %============================================================================%
 %
+%
+%
 %	DOCUMENT END
+%
+%
 %
 %============================================================================%
 \end{document}
