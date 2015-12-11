@@ -1,16 +1,11 @@
-latexcv
+latexcv/modern
 =======
 
 Introduction
 ------------
 
-A collection of simple and easy to use, yet powerful LaTex templates for CV and resume.
+A modern cv / resume written in latex.
 
-
-Where to download?
-------------------
-
-You can build them from this source. In each folder is a main.tex, which needs to be compiled by your LaTex distribution. The main.pdf shows the example output.
 
 
 License
@@ -34,6 +29,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
 
 
 Build instructions
