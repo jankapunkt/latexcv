@@ -1,3 +1,5 @@
+Note: For any issues, contact me via [info@jankuester.com](mailto:info@jankuester.com)
+
 latexcv
 =======
 
