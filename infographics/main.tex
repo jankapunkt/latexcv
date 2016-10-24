@@ -86,7 +86,7 @@
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
-\geometry{top=0.75cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\geometry{top=0.75cm, bottom=-.6cm, left=1cm, right=1cm} 	
 
 
 %use customized header
@@ -158,7 +158,7 @@
 \definecolor{secondcol}{RGB}{50,50,200}
 
 %dark background color
-\definecolor{bgcol}{RGB}{110,110,110}
+\definecolor{bgcol}{RGB}{100,100,100}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
@@ -325,11 +325,11 @@
 % param 1: section title
 %
 \newcommand{\cvsection}[1] {
-	\larrow{bgcol} \textcolor{black}{\textbf{#1}}  \rarrow{bgcol}
+	\larrow{bgcol} \textcolor{white}{\textbf{#1}}  \rarrow{bgcol}
 }
 
 \newcommand{\cvsect}[2]{
-	\colorbox{sectcol}{ \makebox[0.49\linewidth][c]{\cvsection{#1}}}
+	\colorbox{gray}{ \makebox[0.75\linewidth][c]{\cvsection{#1}}}
 }
 
 %create a coloured arrow with title as cv meta section section
@@ -344,7 +344,9 @@
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
-
+\newcounter{expcounter}
+\newcounter{educounter}
+\newcounter{yearcount}
 % creates a vertical cv timeline
 % param 1: start year
 % param 2: end year
@@ -361,25 +363,60 @@
 	% param 6:	some words about your contributions
 	%
 	\newcommand{\cvexperience}[6] {
-	%##1,##2,##3\\
-		\draw[fill=white, opacity=0.5] (-0.1,0) -- (-3.1,0) -- (-3.1,1) -- (-0.1,1) --cycle;
+		
+		\foreach \monthf/\yearf in {##1} {
+			\foreach \montht/\yeart in {##2} {
+				\definecolor{expcol}{RGB}{50,50,\theexpcounter}
+				\pgfmathparse{#3/\fullrange*((\yearf-#1)+(\monthf/12))}
+  				\let\startexp\pgfmathresult
+				\pgfmathparse{#3/\fullrange*((\yeart-#1)+(\montht/12))}
+  				\let\endexp\pgfmathresult
+				\pgfmathparse{1/(\endexp-\startexp+1.5)}
+  				\let\lenexp\pgfmathresult
+				\pgfmathparse{0.5*\endexp+0.5*\startexp}
+  				\let\midexp\pgfmathresult
+
+				\draw[fill=expcol, opacity=0.75] (\startexp,-0.1) -- (\startexp,-0.6-\lenexp) -- (\endexp,-0.6-\lenexp) -- (\endexp,-0.1) --cycle;
+				\draw[draw=black](\midexp,-0.6-\lenexp) -- ((\midexp,-1.5-\lenexp);
+				\node[label=\textcolor{black}{##3}] at (\midexp,-2-\lenexp) {}; %start year
+				\addtocounter{expcounter}{50}
+			}
+		}
 	}
 	\newcommand{\cveducation}[6] {
-	%##1,##2,##3\\
-		\draw[fill=white, opacity=0.5] (0.1,0) -- (3.1,0) -- (3.1,1) -- (0.1,1) --cycle;
+		\foreach \monthf/\yearf in {##1} {
+			\foreach \montht/\yeart in {##2} {
+				\definecolor{expcol}{RGB}{250,\theeducounter,0}
+				\pgfmathparse{#3/\fullrange*((\yearf-#1)+(\monthf/12))}
+  				\let\startexp\pgfmathresult
+				\pgfmathparse{#3/\fullrange*((\yeart-#1)+(\montht/12))}
+  				\let\endexp\pgfmathresult
+				\pgfmathparse{1/(\endexp-\startexp+1.5)}
+  				\let\lenexp\pgfmathresult
+				\pgfmathparse{0.5*\endexp+0.5*\startexp}
+  				\let\midexp\pgfmathresult
+
+				\draw[fill=expcol, opacity=0.75] (\startexp,0.1) -- (\startexp,0.6+\lenexp) -- (\endexp,0.6+\lenexp) -- (\endexp,0.1) --cycle;
+				\draw[draw=black](\midexp,0.6+\lenexp) -- ((\midexp,1+\lenexp);
+				\node[label=\textcolor{black}{##3}] at (\midexp,1.1+\lenexp) {}; %start year
+				\addtocounter{educounter}{50}
+			}
+		}
 	}
 	\begin{tikzpicture}
  	\pgfmathparse{(#2-#1)}
   	\let\fullrange\pgfmathresult
-	\draw[draw=white,line width=3pt] (0,0) -- (0,#3) ;	%line
-	\newcounter{yearcount}
+	\draw[draw=white,line width=1pt] (0,0) -- (#3,0) ;	%line
+
+	%for each year put a horizontal line in place
 	\setcounter{yearcount}{1}
+	\setcounter{expcounter}{50}
 	\whiledo{\value{yearcount} < \fullrange}{
-		\draw[draw=white] (-0.25, #3/\fullrange*\value{yearcount}) -- (0.25, #3/\fullrange*\value{yearcount});
+		\draw[draw=white] (#3/\fullrange*\value{yearcount},-0.15) -- (#3/\fullrange*\value{yearcount},0.15);
 		\stepcounter{yearcount}
 	}
-	\node[label=\textcolor{white}{#1}] at (0,-0.75) {}; %start year
-	\node[label=\textcolor{white}{#2}] at (0,#3+0.75) {}; %end year
+	\node[label=\textcolor{white}{#1}] at (-0.75,0) {}; %start year
+	\node[label=\textcolor{white}{#2}] at (#3+0.75,0) {}; %end year
 	
 }%end begin part of newenv
 {\end{tikzpicture}}
@@ -465,60 +502,17 @@
 	}
 \end{tabular*}
 	\begin{center}
-		\cvsect{Experience}{0.49}\\[16pt]
-		\begin{cvtimeline}{2007}{2017}{16.5}{\linewidth}
-%---------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-
-\cvexperience{12/2014}{09/2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Implement the frontend for a BPMN compatible engine within We4IT Aveedo}
-
-%\textcolor{softcol}{\hrule}
-
-%\cvevent{2013 / 09}{Poster Presentation}{DELFI Conference}{Co-published poster with paper on usability guidelines for tests with functional illiterates}{Presented results to conference audience at conference event}
-
-%\textcolor{softcol}{\hrule}
-
-%\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
-
-%\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
-
-
-%---------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%--------------------------------------------------------------------------------------
-
-
-\cveducation{2015.07}{2015.07}{M.Sc. Graduation}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
-
-
-%\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
-
-%\textcolor{softcol}{\hrule}
-
-%\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
-
-%\textcolor{softcol}{\hrule}
-
-%\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
-		\end{cvtimeline}
+		\cvsect{Skills}{0.49}\\[16pt]
+		\chart{9/Design, 25/Consulting, 25/Projects,41/Development}{0.65}{360}{nothing}\\[16pt]
+		\cvsect{Technologies}{0.49}\\[16pt]
+		\bubbles{6/js , 3/java , 3/Meteor , 2/React, 2/BPMN}{\cvsection{Technologies}}\\[16pt]
+		\bubbles{5/git, 5/eclipse, 2/excel, 2/LaTex}{\cvsection{Technologies}}\\[16pt]
 	\end{center}
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
 	\begin{center}
-		\cvsect{Skills}{0.49}\\[16pt]
-		\chart{9/Design, 25/Consulting, 25/Projects,41/Development}{0.65}{360}{nothing}\\[16pt]
-		\cvsect{Technologies}{0.49}\\[16pt]
-		\bubbles{6/js , 3/java , 3/Meteor , 2/React}{\cvsection{Technologies}}\\[16pt]
-		\bubbles{5/git, 5/eclipse, 2/excel, 2/LaTex}{\cvsection{Technologies}}\\[16pt]
+		
+
 		\cvsect{Activities}{0.49}\\[16pt]
 		\squares{10/Game Development,40/Martial Arts,30/News,20/Music}{1.5}\\[6pt]
 		\cvsect{Languages}{0.49}\\[12pt]
@@ -528,16 +522,52 @@
 \end{minipage}
 
 
-\newpage
 
-%-------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
-%--------------------------------------------------------------------------------------------------
+\begin{center}
+	\cvsect{Experience and Education}{0.49}\\[16pt]
 
-\null
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.jankuester.com} $\cdot$ \textcolor{white}{github.com/jankapunkt}}}
+\end{center}
 
+\begin{cvtimeline}{2009}{2017}{15.5}{\linewidth}
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+
+\cvexperience{11/2014}{9/2016}{IT Consultant}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Implement the frontend for a BPMN compatible engine within We4IT Aveedo}
+
+\cvexperience{9/2013}{9/2013}{Poster Presentation}{DELFI Conference}{Co-published poster with paper on usability guidelines for tests with functional illiterates}{Presented results to conference audience at conference event}
+
+\cvexperience{1/2012}{11/2014}{Scientific Employee}{Uni of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
+
+
+
+\cvexperience{6/2010}{11/2011}{Student Assistant}{Uni Bremen}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
+
+\cvexperience{05/2016}{05/2016}{Startup Weekend}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
+
+
+%---------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%--------------------------------------------------------------------------------------
+
+\cveducation{1/2009}{11/2011}{Bachelor Studies}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+
+
+\cveducation{7/2015}{7/2015}{M.Sc. Graduation}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+
+\cveducation{11/2011}{11/2011}{PM Seminar}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
+
+%\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
+
+%\textcolor{softcol}{\hrule}
+
+\cveducation{11/2011}{7/2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
+
+%\textcolor{softcol}{\hrule}
+
+\cveducation{5/2009}{1/2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
+		\end{cvtimeline}
 
 
 
