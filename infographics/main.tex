@@ -23,6 +23,7 @@
 %	http://tex.stackexchange.com/questions/183087/draw-colored-world-us-map-in-latex#183138
 %	http://www.texample.net/tikz/examples/simple-flow-chart/
 %	http://vizualize.me/#
+%	http://devnet.kentico.com/getattachment/fd511a92-e164-40f5-ba51-07c228a49fed/Kentico_fortune500_infographics_FINAL.png
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 
@@ -73,6 +74,7 @@
 % more font size definitions
 \usepackage{moresize}		
 
+\usepackage{url}
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
@@ -86,7 +88,7 @@
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
-\geometry{top=0.75cm, bottom=-.6cm, left=1cm, right=1cm} 	
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} 	
 
 
 %use customized header
@@ -100,6 +102,7 @@
 %customize entries left, center and right
 \lhead{}
 \rhead{}
+\chead{}
 
 \setlength{\parindent}{0mm}	%indentation is zero
 
@@ -143,7 +146,7 @@
 \newcommand{\icons}{Font-Awesome-SVG-PNG/white/png/64/}	%path to your icon lib
 \newcommand{\icon}[2]{\includegraphics[height=#2]{\icons#1}}	%icon shortcut
 \newcommand{\icontext}[3]{ 						%icon with text shortcut
-	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{#3}
+	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -152,27 +155,28 @@
 
 \usepackage{color}
 
-%accent color
-\definecolor{sectcol}{RGB}{255,150,0}
+%main color
+\definecolor{maincol}{RGB}{255,150,0}
 
-\definecolor{secondcol}{RGB}{50,50,200}
+%secondary color
+\definecolor{secondcol}{RGB}{0,178,255}
+\definecolor{thirdcol}{RGB}{0,80,130}
+\definecolor{fourthcol}{RGB}{0,100,160}
+\definecolor{fifthcol}{RGB}{0,80,130}
+\definecolor{sixthcol}{RGB}{0,80,130}
 
-%dark background color
-\definecolor{bgcol}{RGB}{100,100,100}
+%background color
+\definecolor{bgcol}{RGB}{190,220,255}
 
-%light background / accent color
-\definecolor{softcol}{RGB}{225,225,225}
+%textcolor
+\definecolor{textcol}{RGB}{0,50,80}
 
-%background col for whole page
+%sectioncolor
+\definecolor{sectcol}{RGB}{225,225,225}
+
+%set a background col for whole page
 \pagecolor{bgcol}
 
-%============================================================================%
-%
-%
-%	DEFINITIONS
-%
-%
-%============================================================================%
 
 %----------------------------------------------------------------------------------------
 % 	HEADER
@@ -190,7 +194,6 @@
 %remove section num		
 \renewcommand{\thesection}{}			
 
-\chead{}
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
@@ -222,98 +225,28 @@
 }
 
 
-% draw a slice for a chart
-% param 1:
-% param 2:
-% param 3:
-% param 4:
-% param 5:
-% param 6:
-\newcommand{\slice}[6] {
- 	\pgfmathparse{0.5*#1+0.5*#2}
-  	\let\midangle\pgfmathresult
-	% slice
-  	\filldraw[fill=#5!100,draw=bgcol!100, line width=2pt,  inner sep=15pt ] (0,0) -- (#1:#6) arc (#1:#2:#6) -- cycle;
-
-%	\draw[draw=white]
-  	% outer label
-  	\node[label=\midangle:\textcolor{white}{#4}] at (\midangle:#6) {};
-}
-
-%counters for chart loop
-\newcounter{a}
-\newcounter{b}
-\newcounter{c}
-
-% draws a pie chart by a list of input values
-% param 1: the value list ->example: 20/type A, 4/type B, 11/type C, 49/type D, 16/other
-% param 2: scaling factor (no font scaling)
-% param 3: circle size, use 90, 180, 270 or 360
-% param 4: caption
-\newcommand{\chart}[4]{
-	%reset counters
-	\setcounter{a}{0}
-	\setcounter{b}{0}
-	\setcounter{c}{50}
-	\begin{tikzpicture}[scale=3]
-	\foreach \p/\t in {#1} {
-		\setcounter{a}{\value{b}}
-	    	\addtocounter{b}{\p}
-		\addtocounter{c}{35}
-		\definecolor{currentcolor}{RGB}{220,\thec, 0}
-	    	\slice{\thea/100*#3}{\theb/100*#3}{\p\%}{\t}{currentcolor}{#2}
-	}
-	\end{tikzpicture}
-}
-
-\newcommand{\bubble}[5]{
-	\definecolor{tmpcol}{RGB}{50,50,#5}
-	% slice
-  	\filldraw[fill=tmpcol!100,draw=none] (#1,0.5) circle (#3);
-
-  	% outer label
-  	\node[label=\textcolor{white}{#4}] at (#1,0.7) {};
-}
-
-\newcommand{\bubbles}[2]{
-	%reset counters
-	\setcounter{a}{0}
-	\setcounter{c}{150}
-	\begin{tikzpicture}[scale=3]
-	\foreach \p/\t in {#1} {
-	    	\addtocounter{a}{1}
-	    	\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
-	}
-	\end{tikzpicture}
-}
-
-\newcommand{\squares}[2]{
-	%reset counters
-	\setcounter{a}{0}
-	\setcounter{b}{0}
-	\setcounter{c}{50}
-	\begin{tikzpicture}[scale=3]
-	\foreach \p/\t in {#1} {
-		\setcounter{a}{\value{b}}
-	    	\addtocounter{b}{\p}
-		\addtocounter{c}{35}
-		\definecolor{currentcolor}{RGB}{50,50, 1\p}
-	    	\square{\thea/100*#2}{\theb/100*#2}{\p\%}{\t}{currentcolor}
-	}
-	\end{tikzpicture}
-}
-
-\newcommand{\square}[5] {
- 	\pgfmathparse{#1+0.5*(#2-#1)-0.14}
-  	\let\midangle\pgfmathresult
-	% slice
-  	\filldraw[fill=#5!100,draw=bgcol!100, line width=3pt] (0,#1) -- (2,#1) -- (2,#2) -- (0,#2) -- cycle;
-  	% outer label
-  	\node[label=\textcolor{white}{#4}] at (1,\midangle) {};
-}
 %----------------------------------------------------------------------------------------
-%	social info
+% 	PIE CHART
 %----------------------------------------------------------------------------------------
+\input{./g/chart.tex}
+
+
+
+%----------------------------------------------------------------------------------------
+% 	BUBBLE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/bubbles.tex}
+
+%----------------------------------------------------------------------------------------
+% 	SQUARE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/squares.tex}
+
+
+%----------------------------------------------------------------------------------------
+% 	TIMELINE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/timeline.tex}
 
 
 
@@ -324,12 +257,12 @@
 % create a coloured box with arrow and title as cv section headline
 % param 1: section title
 %
-\newcommand{\cvsection}[1] {
-	\larrow{bgcol} \textcolor{white}{\textbf{#1}}  \rarrow{bgcol}
+\newcommand{\cvsection}[2] {
+\textcolor{sectcol}{\uppercase{\textbf{#1}}}
 }
 
-\newcommand{\cvsect}[2]{
-	\colorbox{gray}{ \makebox[0.75\linewidth][c]{\cvsection{#1}}}
+\newcommand{\cvsect}[4]{
+	\colorbox{#3}{ {\cvsection{#1}{#4}}}
 }
 
 %create a coloured arrow with title as cv meta section section
@@ -344,82 +277,7 @@
 %----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
-\newcounter{expcounter}
-\newcounter{educounter}
-\newcounter{yearcount}
-% creates a vertical cv timeline
-% param 1: start year
-% param 2: end year
-% param 3: overall width
-%param 4: overall height
-\newenvironment{cvtimeline}[4]{
-	% creates a stretched box as cv entry headline followed by two paragraphs about 
-	% the work you did
-	% param 1:	event start month/year
-	% param 2:	event end month/year
-	% param 3:  event name
-	% param 4:	institution (where did you work / study)
-	% param 5:	what was your position
-	% param 6:	some words about your contributions
-	%
-	\newcommand{\cvexperience}[6] {
-		
-		\foreach \monthf/\yearf in {##1} {
-			\foreach \montht/\yeart in {##2} {
-				\definecolor{expcol}{RGB}{50,50,\theexpcounter}
-				\pgfmathparse{#3/\fullrange*((\yearf-#1)+(\monthf/12))}
-  				\let\startexp\pgfmathresult
-				\pgfmathparse{#3/\fullrange*((\yeart-#1)+(\montht/12))}
-  				\let\endexp\pgfmathresult
-				\pgfmathparse{1/(\endexp-\startexp+1.5)}
-  				\let\lenexp\pgfmathresult
-				\pgfmathparse{0.5*\endexp+0.5*\startexp}
-  				\let\midexp\pgfmathresult
 
-				\draw[fill=expcol, opacity=0.75] (\startexp,-0.1) -- (\startexp,-0.6-\lenexp) -- (\endexp,-0.6-\lenexp) -- (\endexp,-0.1) --cycle;
-				\draw[draw=black](\midexp,-0.6-\lenexp) -- ((\midexp,-1.5-\lenexp);
-				\node[label=\textcolor{black}{##3}] at (\midexp,-2-\lenexp) {}; %start year
-				\addtocounter{expcounter}{50}
-			}
-		}
-	}
-	\newcommand{\cveducation}[6] {
-		\foreach \monthf/\yearf in {##1} {
-			\foreach \montht/\yeart in {##2} {
-				\definecolor{expcol}{RGB}{250,\theeducounter,0}
-				\pgfmathparse{#3/\fullrange*((\yearf-#1)+(\monthf/12))}
-  				\let\startexp\pgfmathresult
-				\pgfmathparse{#3/\fullrange*((\yeart-#1)+(\montht/12))}
-  				\let\endexp\pgfmathresult
-				\pgfmathparse{1/(\endexp-\startexp+1.5)}
-  				\let\lenexp\pgfmathresult
-				\pgfmathparse{0.5*\endexp+0.5*\startexp}
-  				\let\midexp\pgfmathresult
-
-				\draw[fill=expcol, opacity=0.75] (\startexp,0.1) -- (\startexp,0.6+\lenexp) -- (\endexp,0.6+\lenexp) -- (\endexp,0.1) --cycle;
-				\draw[draw=black](\midexp,0.6+\lenexp) -- ((\midexp,1+\lenexp);
-				\node[label=\textcolor{black}{##3}] at (\midexp,1.1+\lenexp) {}; %start year
-				\addtocounter{educounter}{50}
-			}
-		}
-	}
-	\begin{tikzpicture}
- 	\pgfmathparse{(#2-#1)}
-  	\let\fullrange\pgfmathresult
-	\draw[draw=white,line width=1pt] (0,0) -- (#3,0) ;	%line
-
-	%for each year put a horizontal line in place
-	\setcounter{yearcount}{1}
-	\setcounter{expcounter}{50}
-	\whiledo{\value{yearcount} < \fullrange}{
-		\draw[draw=white] (#3/\fullrange*\value{yearcount},-0.15) -- (#3/\fullrange*\value{yearcount},0.15);
-		\stepcounter{yearcount}
-	}
-	\node[label=\textcolor{white}{#1}] at (-0.75,0) {}; %start year
-	\node[label=\textcolor{white}{#2}] at (#3+0.75,0) {}; %end year
-	
-}%end begin part of newenv
-{\end{tikzpicture}}
 
 % creates a stretched box as 
 \newcommand{\cveventmeta}[2] {
@@ -428,9 +286,10 @@
 }
 
 %----------------------------------------------------------------------------------------
-% CUSTOM STRUT FOR EMPTY BOXES
+% STRUTS AND RULES
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
 
 %----------------------------------------------------------------------------------------
 % CUSTOM LOREM IPSUM
@@ -459,14 +318,27 @@
 %----------------------------------------------------------------------------------------
 \mystrut
 \vspace{-12pt}
-\begin{center}
-\HUGE{\textcolor{white}{\textsc{Jan Küster}} }\\[-30pt]
-\textcolor{sectcol}{\hrule}
-\vspace{5pt}
-\Large{\textcolor{white}{\textsc{Software Engineer and Consultant}}}\\
-\end{center}
 
-\normalfont
+\begin{tabular*}{1\textwidth}{ c c c}
+	\parbox[c]{0.4\linewidth}{
+		\colorbox{thirdcol}{\HUGE{\textcolor{white}{\textbf{\uppercase{Jan Küster}}} }}\\
+		\Large{\textcolor{thirdcol}{\textsc{ Consultant Developer}}}\\
+	}&
+	\parbox{0.25\textwidth}{
+	\icontext{map-marker}{22pt}{Bremen, Germany}\\
+	\icontext{mobile-phone}{22pt}{+49 176 313 877 34}\\
+	\icontext{send}{22pt}{info@jankuester.com}\\
+	}&
+	\parbox{0.3\textwidth}{
+	\icontext{mouse-pointer}{22pt}{www.jankuester.com}\\
+	\icontext{github}{22pt}{github.com/jankapunkt}\\
+	\icontext{twitter}{22pt}{@Kuester\_Jan}\\
+	}
+\end{tabular*}
+
+
+
+\small
 
 
 %---------------------------------------------------------------------------------------
@@ -487,35 +359,28 @@
 
 \begin{minipage}{0.49\textwidth}
 	\begin{center}
-		\cvsect{Profile}{0.49}\\[16pt]
+		\cvsect{Profile}{0.49}{thirdcol}{textcol}\\[16pt]
 	\end{center}
 
-\begin{tabular*}{1\textwidth}{ c c }
-	\parbox[c]{0.375\linewidth}{
-	\includegraphics[trim= 320 130 460 210,clip,width=\linewidth]{myfoto.jpg}}&
-	\parbox{0.55\textwidth}{
-	\icontext{map-marker}{22pt}{Bremen, Germany}\\
-	\icontext{mobile-phone}{22pt}{+49 176 313 877 34}\\
-	\icontext{send}{22pt}{info@jankuester.com}\\
-	\icontext{mouse-pointer}{22pt}{www.jankuester.com}\\
-	\icontext{github}{22pt}{github.com/jankapunkt}\\
-	\icontext{twitter}{22pt}{@Kuester\_Jan}\\
-	}
-\end{tabular*}
+
 
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
 	\begin{center}
-		\cvsect{Skills}{0.49}\\[16pt]
-		\chart{9/Design, 25/Consulting, 25/Projects,41/Development}{0.65}{360}{nothing}\\[16pt]
-
+		\cvsect{Skillset}{0.49}{thirdcol}{textcol}\\[16pt]		
+		\begin{piechart}{360}{2}
+			\slice{9}{Design}{thirdcol}{bgcol}{textcol}
+			\slice{25}{Consulting}{fourthcol}{bgcol}{textcol}
+			\slice{25}{Projects}{secondcol}{bgcol}{textcol}
+			\slice{41}{Development}{maincol}{bgcol}{textcol}
+		\end{piechart}
 	\end{center}
 \end{minipage}
 
 \vspace{16pt}
 
 \begin{center}
-	\cvsect{Experience and Education}{0.49}\\[16pt]
+	\cvsect{Experience and Education}{0.49}{thirdcol}{textcol}\\[16pt]
 
 \end{center}
 
@@ -564,17 +429,17 @@
 \begin{minipage}{0.49\textwidth}
 	\begin{center}
 
-		\cvsect{Technologies}{0.49}\\[16pt]
+		\cvsect{Technologies}{0.49}{thirdcol}{textcol}\\[16pt]
 		\bubbles{6/js , 3/java , 3/Meteor , 2/React, 2/Notes}{\cvsection{Technologies}}\\[16pt]
 		\bubbles{5/git, 5/eclipse, 2/excel, 2/LaTex}{\cvsection{Technologies}}\\[16pt]
 
-		\cvsect{Activities}{0.49}\\[16pt]
+		\cvsect{Activities}{0.49}{thirdcol}{textcol}\\[16pt]
 		\squares{10/Game Development,40/Martial Arts,30/News,20/Music}{1.5}\\[6pt]
 	\end{center}
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
 	\begin{center}
-		\cvsect{Languages}{0.49}\\[12pt]
+		\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[12pt]
 		German (native) English (Academic) Russian (Basic)\\[4pt]
 		\includegraphics[width=1\linewidth]{world.png}\\[12pt]	 %trimming relative to image size!		
 

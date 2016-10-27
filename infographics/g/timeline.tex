@@ -1,0 +1,107 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2016 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+% define global counters
+\newcounter{expcounter}
+\newcounter{educounter}
+\newcounter{yearcount}
+
+
+% env cvtimeline
+%
+% creates a vertical cv timeline
+%
+% param 1: start year
+% param 2: end year
+% param 3: overall width
+%param 4: overall height
+\newenvironment{cvtimeline}[4]{
+
+
+
+	% creates a stretched box as cv entry headline followed by two paragraphs about 
+	% the work you did
+	% param 1:	event start month/year
+	% param 2:	event end month/year
+	% param 3:  event name
+	% param 4:	institution (where did you work / study)
+	% param 5:	what was your position
+	% param 6:	some words about your contributions
+	%
+	\newcommand{\cvexperience}[6] {
+		
+		\foreach \monthf/\yearf in {##1} {
+			\foreach \montht/\yeart in {##2} {
+				\definecolor{expcol}{RGB}{50,50,\theexpcounter}
+				\pgfmathparse{#3/\fullrange*((\yearf-#1)+(\monthf/12))}
+  				\let\startexp\pgfmathresult
+				\pgfmathparse{#3/\fullrange*((\yeart-#1)+(\montht/12))}
+  				\let\endexp\pgfmathresult
+				\pgfmathparse{1/(\endexp-\startexp+1.5)}
+  				\let\lenexp\pgfmathresult
+				\pgfmathparse{0.5*\endexp+0.5*\startexp}
+  				\let\midexp\pgfmathresult
+
+				\draw[fill=expcol, opacity=0.75] (\startexp,-0.1) -- (\startexp,-0.6-\lenexp) -- (\endexp,-0.6-\lenexp) -- (\endexp,-0.1) --cycle;
+				\draw[draw=black](\midexp,-0.6-\lenexp) -- ((\midexp,-1.5-\lenexp);
+				\node[label=\textcolor{textcol}{##3}] at (\midexp,-2-\lenexp) {}; %start year
+				\addtocounter{expcounter}{50}
+			}
+		}
+	}
+	\newcommand{\cveducation}[6] {
+		\foreach \monthf/\yearf in {##1} {
+			\foreach \montht/\yeart in {##2} {
+				\definecolor{expcol}{RGB}{250,\theeducounter,0}
+				\pgfmathparse{#3/\fullrange*((\yearf-#1)+(\monthf/12))}
+  				\let\startexp\pgfmathresult
+				\pgfmathparse{#3/\fullrange*((\yeart-#1)+(\montht/12))}
+  				\let\endexp\pgfmathresult
+				\pgfmathparse{1/(\endexp-\startexp+1.5)}
+  				\let\lenexp\pgfmathresult
+				\pgfmathparse{0.5*\endexp+0.5*\startexp}
+  				\let\midexp\pgfmathresult
+
+				\draw[fill=expcol, opacity=0.75] (\startexp,0.1) -- (\startexp,0.6+\lenexp) -- (\endexp,0.6+\lenexp) -- (\endexp,0.1) --cycle;
+				\draw[draw=black](\midexp,0.6+\lenexp) -- ((\midexp,1+\lenexp);
+				\node[label=\textcolor{textcol}{##3}] at (\midexp,1.1+\lenexp) {}; %start year
+				\addtocounter{educounter}{50}
+			}
+		}
+	}
+	\begin{tikzpicture}
+ 	\pgfmathparse{(#2-#1)}
+  	\let\fullrange\pgfmathresult
+	\draw[draw=textcol,line width=1pt] (0,0) -- (#3,0) ;	%line
+
+	%for each year put a horizontal line in place
+	\setcounter{yearcount}{1}
+	\setcounter{expcounter}{50}
+	\whiledo{\value{yearcount} < \fullrange}{
+		\draw[draw=textcol] (#3/\fullrange*\value{yearcount},-0.15) -- (#3/\fullrange*\value{yearcount},0.15);
+		\stepcounter{yearcount}
+	}
+	\node[label=\textcolor{textcol}{#1}] at (-0.75,0) {}; %start year
+	\node[label=\textcolor{textcol}{#2}] at (#3+0.75,0) {}; %end year
+	
+}%end begin part of newenv
+{\end{tikzpicture}}
