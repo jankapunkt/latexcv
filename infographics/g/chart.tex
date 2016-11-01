@@ -28,20 +28,20 @@
 % draw a slice for a chart
 % param 1: Circle form - 90 = quarter, 180 = half, 360 = full
 % param 2: scale default=1 (scales only chart, not label text)
-% param 3:
-% param 4:
-% param 5:
+% param 3: border color
+% param 4: label text color
+% param 5: label bg color
 % param 6:
-\newenvironment{piechart}[2] {
+\newenvironment{piechart}[5] {
 
 	% draw a slice for a chart
 	% param 1: value x of 100
 	% param 2: label text
 	% param 3: fill color
-	% param 4: border color
-	% param 5: label text color
+	% param 4:
+	% param 5:
 	% param 6:
-	\newcommand{\slice}[5] {
+	\newcommand{\slice}[3] {
 
 		\setcounter{a}{\value{b}}
 		\addtocounter{b}{##1}
@@ -59,10 +59,12 @@
 	  	\let\midangle\pgfmathresult
 		
 		% draw the slice
-	  	\filldraw[fill=##3!100,draw=##4!100, line width=2pt ] (0,0) -- (\pointa:#2) arc (\pointa:\pointb:#2) -- cycle;
-	
+	  	\filldraw[fill=##3!100,draw=#3!100, line width=2pt ] (0,0) -- (\pointa:#2) arc (\pointa:\pointb:#2) -- cycle;
+
 	  	% draw label
-	  	\node[label=\midangle:\textcolor{##5}{##2}] at (\midangle:#2) {};
+	  	\node[label=\midangle:\colorbox{#5}{\textcolor{#4}{##2}}] at (\midangle:#2) {};
+
+		\filldraw[fill=#3,draw=none] (0,0) circle (#2/2);
 	}
 
 	% execute commands
