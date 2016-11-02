@@ -44,7 +44,7 @@
 		\pgfmathparse{##3+##4+##5}
 		 \let\perc\pgfmathresult
 
-		\pgfmathparse{#2*\perc/100}
+		\pgfmathparse{#2}
 		 \let\barsize\pgfmathresult
 	
 		\pgfmathparse{\barsize*##3/100}
@@ -68,6 +68,6 @@
 	}
 	\begin{tikzpicture}
 	\setcounter{barcount}{0}
-	%\draw[draw=#3, line width= 2pt] (0,0) -- (#1,0);
+	
 }
 {\end{tikzpicture}}

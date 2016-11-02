@@ -29,18 +29,18 @@
 	\foreach \p/\t in {#1} {
 		\setcounter{a}{\value{b}}
 	    	\addtocounter{b}{\p}
-		\addtocounter{c}{35}
-		\definecolor{currentcolor}{RGB}{50,50, 1\p}
-	    	\square{\thea/100*#2}{\theb/100*#2}{\p\%}{\t}{currentcolor}
+	    	\square{\thea/100*#2}{\theb/100*#2}{\p\%}{\t}{thirdcol}
 	}
 	\end{tikzpicture}
 }
 
 \newcommand{\square}[5] {
- 	\pgfmathparse{#1+0.5*(#2-#1)-0.14}
+ 	\pgfmathparse{#1+0.5*(#2-#1)}
   	\let\midangle\pgfmathresult
+
+	\draw[draw=sectcol] (0.4, \midangle) -- (0.6,\midangle);
 	% slice
-  	\filldraw[fill=#5!100,draw=bgcol!100, line width=3pt] (0,#1) -- (2,#1) -- (2,#2) -- (0,#2) -- cycle;
+  	\filldraw[fill=#5!100,draw=bgcol!100, line width=3pt] (0,#1) -- (0.5,#1) -- (0.5,#2) -- (0,#2) -- cycle;
   	% outer label
-  	\node[label=\textcolor{textcol}{#4}] at (1,\midangle) {};
+  	\node[label=360:\colorbox{sectcol}{\textcolor{textcol}{#4}}] at (0.55,\midangle) {};
 }

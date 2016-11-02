@@ -144,7 +144,7 @@
 
 
 \newcommand{\icons}{Font-Awesome-SVG-PNG/white/png/64/}	%path to your icon lib
-\newcommand{\icon}[2]{\includegraphics[height=#2]{\icons#1}}	%icon shortcut
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\includegraphics[height=#2]{\icons#1}}}	%icon shortcut
 \newcommand{\icontext}[3]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
@@ -252,7 +252,10 @@
 %----------------------------------------------------------------------------------------
 \input{./g/timeline.tex}
 
-
+%----------------------------------------------------------------------------------------
+% 	FACT BUBBLE
+%----------------------------------------------------------------------------------------
+\input{./g/factbubble.tex}
 
 
 %----------------------------------------------------------------------------------------
@@ -296,6 +299,11 @@
 %----------------------------------------- -----------------------------------------------
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
+% colored rule and text for chart legends, wrapped in parbox
+% param 1: text
+% param 2: width in cm or pt, em ...
+% param 3: color
+\newcommand{\legend}[3]{\parbox{#2}{\textcolor{#3}{\rule{#2}{4pt}}\\#1}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM LOREM IPSUM
@@ -352,59 +360,121 @@
 %----------------------------------------------------------------------------------------
 %\vspace{-136pt}
 %\hspace{0.75\linewidth}
-%\includegraphics[width=103pt]{qrcode}
+%
 %\normalsize
 %\vspace{88pt}
 
 
-
-%---------------------------------------------------------------------------------------
-%	META SECTION
-%----------------------------------------------------------------------------------------
 \vspace{16pt}
 
 
 \begin{minipage}{0.59\textwidth}
-\cvsect{Skills and Technologies}{0.49}{thirdcol}{textcol}\\[4pt]
 
-		\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
-			\slice{6}{Design}{thirdcol}
-			\slice{16}{Consulting}{fourthcol}
-			\slice{16}{Research}{fifthcol}
-			\slice{16}{Projects}{secondcol}
-			\slice{46}{Development}{maincol}
-		\end{piechart}\\
+%---------------------------------------------------------------------------------------
+%	FACTS
+%----------------------------------------------------------------------------------------
+	\mbox{
+		\parbox[c][3cm][c]{0.29\textwidth}{
+		\textcolor{textcol}{I am a digital media graduate with working experience in research projects as well as in the private sector.}
+		}
+		\hspace{10pt}
+		\parbox[c][3cm][c]{0.32\textwidth}{
+			\begin{center}
+			\factbubble{\huge{\textcolor{sectcol}{\textbf{M.Sc.}}}\\\small{\textcolor{sectcol}{\textbf{Digital Media}}}}{1}{maincol}{sectcol}{thirdcol}\\
+			\textcolor{textcol}{as latest degree from}\\
+			\textcolor{textcol}{\textbf{University of Bremen}}
+			\end{center}
+		}
+		\hspace{10pt}
+		\parbox[c][3cm][c]{0.29\textwidth}{
+		\textcolor{textcol}{And I am looking for exciting interdisciplinary projects worldwide.}
+		}
+	}
+	\vspace{34pt}
+%---------------------------------------------------------------------------------------
+%	SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
 
-
-\begin{barchart}{10}{6}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
-	\baritem{80}{Javascript}{50}{0}{10}
-	\baritem{50}{Java}{15}{25}{25}
-	\baritem{80}{Metor}{60}{0}{0}
-	\baritem{80}{React}{40}{0}{0}
-	\baritem{50}{XPages}{50}{0}{0}
-	\baritem{50}{LaTex}{0}{10}{50}
-\end{barchart}\\
-\mbox{\colorbox{maincol}{\strut} Experience \colorbox{secondcol}{\strut} Events \colorbox{thirdcol}{\strut} Education}\\
-
-%\bubbles{6/git, 6/Eclipse, 9/Office, 7/Inkscape, 6/Blender}{\cvsection{Technologies}}\\[16pt]
-
-\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[4pt]
-%\input{world.tex}
+	\cvsect{Skills and Technologies}{0.49}{thirdcol}{textcol}\\[4pt]
+	\mbox{
+	\parbox[b][150pt][c]{0.35\textwidth}{
+		\textcolor{textcol}{The biggest part I contribute to my work is in the area of software development.}\\
+	
+		\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[4pt]
+		\icontext{language}{14pt}{\colorbox{maincol}{German (native)}}\\
+		\icontext{language}{14pt}{\colorbox{maincol}{English (c1)}}\\
+	}
+	\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
+		\slice{6}{Design}{thirdcol}
+		\slice{16}{Consulting}{fourthcol}
+		\slice{16}{Research}{fifthcol}
+		\slice{16}{Projects}{secondcol}
+		\slice{46}{Development}{maincol}
+	\end{piechart}\\
+	}
+	\begin{center}
+	\begin{tikzpicture}
+		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+	\end{tikzpicture}
+	\end{center}
+	\mbox{\hspace{-14pt}
+		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
+			\baritem{50}{Java}{0}{0}{65}
+			\baritem{80}{Javascript}{100}{0}{0}
+			\baritem{80}{Metor}{0}{0}{70}
+			\baritem{80}{React}{0}{0}{30}
+			\baritem{50}{XPages}{0}{0}{50}
+			\baritem{50}{LaTex}{0}{0}{60}
+		\end{barchart}
+		\hspace{10pt}
+		\parbox[b][100pt][c]{0.3\textwidth}{\textcolor{textcol}{Currently, I develop realtime apps with Meteor and react.\\Formerly I worked with Java and XPages.}}
+	}
+	\begin{center}
+	\begin{tikzpicture}
+		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+	\end{tikzpicture}
+	\end{center}
+	\begin{center}
+	\mbox{
+		\parbox[b][2cm][c]{3cm}{
+			\textcolor{textcol}{I am using git and eclipse regularly for my dev projects.}
+		}\hspace{12pt}
+		\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}{\cvsection{Technologies}}		
+	}
+	\end{center}
+	\cvsect{Actvities}{0.49}{thirdcol}{textcol}\\[20pt]
+	\mbox{\parbox[b][3cm][c]{3cm}{
+		\factbubble{\HUGE{\textcolor{sectcol}{\textbf{6}}}\\\large{\textcolor{sectcol}{\textbf{years}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
+		\textcolor{textcol}{of participation at}\\
+		\textcolor{textcol}{\textbf{Global Game Jam}}
+	}
+	\parbox[b][3cm][c]{4cm}{
+		\textcolor{textcol}{In my freetime I do practice many creative hobbies. Due to Muay Thai training I can keep my body and mind in balance.}
+	}
+	\squares{20/Game Dev,40/Martial Arts,10/News,20/Music}{1}
+	}
+\end{minipage}
+\begin{minipage}{0.05\textwidth}
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[draw=sectcol,dashed, opacity=0.5] (0,-12) -- (0,12);
+		\end{tikzpicture}
+	\end{center}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
-		%\squares{10/Game Development,40/Martial Arts,30/News,20/Music}{1.5}\\[6pt]
-\cvsect{Experience and Education}{0.49}{thirdcol}{textcol}\\[16pt]
+\cvsect{Experience and Education}{0.4}{thirdcol}{textcol}\\[16pt]
 
-\mbox{\colorbox{maincol}{\strut} Experience \colorbox{secondcol}{\strut} Events \colorbox{thirdcol}{\strut} Education}
+\hspace{60pt}\mbox{\legend{Experience}{1.8cm}{maincol} \legend{Events}{1.1cm}{secondcol} \legend{Education}{1.5cm}{thirdcol}}
+\vspace{-40pt}
 \begin{center}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\begin{cvtimeline}{2009}{2017}{19.5}{\linewidth}
+\begin{cvtimeline}{2009}{2017}{20}{\linewidth}
 \cvevent{1/2009}{11/2011}{Bachelor Studies}{Uni Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
 \cvevent{5/2009}{1/2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{maincol}{1}
-\cvevent{6/2010}{11/2011}{Student Assistant}{Uni Bremen}{Realized an online diagnosis platform for workforce literacy development (Flex)}{thirdcol}{1}
+\cvevent{6/2010}{11/2011}{Student Assistant}{Uni Bremen}{Realized an online diagnosis platform for workforce literacy development (Flex)}{maincol}{1}
 \cvevent{9/2011}{9/2011}{PM Simulation}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{secondcol}{2}
 \cvevent{11/2011}{7/2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{thirdcol}{0}
 \cvevent{1/2012}{11/2014}{Scientific Employee}{Uni of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{maincol}{1}

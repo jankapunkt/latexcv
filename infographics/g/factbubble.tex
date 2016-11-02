@@ -20,24 +20,24 @@
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
-
-\newcommand{\bubble}[5]{
-	\definecolor{tmpcol}{RGB}{50,50,#5}
-	% slice
-  	\filldraw[fill=thirdcol,draw=none] (#1,0.5) circle (#3);
-
-  	% outer label
-  	\node[label=\textcolor{textcol}{#4}] at (#1,0.7) {};
-}
-
-\newcommand{\bubbles}[2]{
-	%reset counters
-	\setcounter{a}{0}
-	\setcounter{c}{150}
-	\begin{tikzpicture}[scale=3]
-	\foreach \p/\t in {#1} {
-	    	\addtocounter{a}{1}
-	    	\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
-	}
+% draw a circle with facts
+% param 1: fact text
+% param 2: scale default=1 (scales only chart, not label text)
+% param 3: big border color
+% param 4: second border color
+% param 5: label bg color
+\newcommand{\factbubble}[5]{
+	\begin{tikzpicture}
+	\pgfmathparse{#2*2}
+	\let\pbxwidth\pgfmathresult
+		\filldraw[fill=#3,draw=none] (0,0) circle (#2 * 1.5);
+		\filldraw[fill=#5,draw=#4, line width=3.5pt] (0,0) circle (#2 * 1.2);
+		\node at (0,0) {
+			\parbox{\pbxwidth cm}{
+				\begin{center}	
+					#1
+				\end{center}
+			}
+		};
 	\end{tikzpicture}
 }
