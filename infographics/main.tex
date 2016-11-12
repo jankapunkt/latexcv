@@ -18,12 +18,14 @@
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
 %
-%	RESOURCES USED:
+%	*************	RESOURCES USED	 ********************
+%
 %	http://tex.stackexchange.com/questions/5718/package-for-pie-charts
 %	http://tex.stackexchange.com/questions/183087/draw-colored-world-us-map-in-latex#183138
 %	http://www.texample.net/tikz/examples/simple-flow-chart/
 %	http://vizualize.me/#
 %	http://devnet.kentico.com/getattachment/fd511a92-e164-40f5-ba51-07c228a49fed/Kentico_fortune500_infographics_FINAL.png
+%
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 
@@ -48,7 +50,6 @@
 %	LOGIC
 %----------------------------------------------------------------------------------------
 
-% provides \isempty test
 \usepackage{xifthen}
 \usepackage{calc}
 
@@ -74,8 +75,6 @@
 % more font size definitions
 \usepackage{moresize}		
 
-\usepackage{url}
-
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -83,38 +82,35 @@
 %debug page outer frames
 %\usepackage{showframe}			
 
-
 %define page styles using geometry
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
 \geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} 	
 
-
-%use customized header
+% use customized header
 \usepackage{fancyhdr}				
 \pagestyle{fancy}
 
 %less space between header and content
 \setlength{\headheight}{-5pt}		
 
-
-%customize entries left, center and right
+% customize header entries
 \lhead{}
 \rhead{}
 \chead{}
 
-\setlength{\parindent}{0mm}	%indentation is zero
+%indentation is zero
+\setlength{\parindent}{0mm}
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
-\usepackage{multicol}			
-\usepackage{multirow}
+%extended aligning of tabular cells
+\usepackage{array}
 
-\usepackage{array}	%extended aligning of tabular cells
-
+% custom column width
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
 
@@ -123,25 +119,31 @@
 %	GRAPHICS DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
-\usepackage{graphicx}	%for header image
-\usepackage{wrapfig}	%for floating figures
-\usepackage{float}
-%\floatstyle{boxed} 
-%\restylefloat{figure}
+\usepackage{graphicx}
+\usepackage{wrapfig}
 
-		
-\usepackage{tikz}	%for drawing graphics
+% for drawing graphics and charts
+\usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds}
 
-%http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
 \newcommand{\vcenteredinclude}[1]{\begingroup
 \setbox0=\hbox{\includegraphics{#1}}%
 \parbox{\wd0}{\box0}\endgroup}
 
-%http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
 \newcommand*{\vcenteredhbox}[1]{\begingroup
 \setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
 
+%----------------------------------------------------------------------------------------
+%	ICON-SET EMBEDDING
+%---------------------------------------------------------------------------------------- 
+
+% at this point we simplify our icon-embedding by simply referring to a set of png images.
+% if you find a good way of including svg without conflicting with other packages you can
+% replace this part
 
 \newcommand{\icons}{Font-Awesome-SVG-PNG/white/png/64/}	%path to your icon lib
 \newcommand{\icon}[2]{\colorbox{thirdcol}{\includegraphics[height=#2]{\icons#1}}}	%icon shortcut
@@ -158,7 +160,7 @@
 %main color
 \definecolor{maincol}{RGB}{255,150,0}
 
-%secondary color
+%secondary colors
 \definecolor{secondcol}{RGB}{0,178,255}
 \definecolor{thirdcol}{RGB}{0,80,130}
 \definecolor{fourthcol}{RGB}{0,100,160}
@@ -196,7 +198,9 @@
 
 
 %----------------------------------------------------------------------------------------
-% 	ARROW GRAPHICS in Tikz
+%
+% 	TIKZ GRAPHICS
+%
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
@@ -224,6 +228,7 @@
  \end{tikzpicture}
 }
 
+% the chart graphics are outsourced into own files
 
 %----------------------------------------------------------------------------------------
 % 	PIE CHART
@@ -274,7 +279,7 @@
 	\colorbox{#3}{ {\cvsection{#1}{#4}}}
 }
 
-%create a coloured arrow with title as cv meta section section
+% create a coloured arrow with title as cv meta section section
 % param 1: meta section title
 %
 \newcommand{\metasection}[2] {
@@ -287,7 +292,6 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-
 % creates a stretched box as 
 \newcommand{\cveventmeta}[2] {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
@@ -297,6 +301,8 @@
 %----------------------------------------------------------------------------------------
 % STRUTS AND RULES
 %----------------------------------------- -----------------------------------------------
+
+% custom strut
 \newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
 
 % colored rule and text for chart legends, wrapped in parbox
@@ -327,7 +333,7 @@
 \pagestyle{fancy}	
 
 
-%---------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
 \mystrut
@@ -350,29 +356,18 @@
 	}
 \end{tabular*}
 
-
-
+% manage space by reducing font size
 \small
-
-
-%---------------------------------------------------------------------------------------
-%	QR CODE (optional)
-%----------------------------------------------------------------------------------------
-%\vspace{-136pt}
-%\hspace{0.75\linewidth}
-%
-%\normalsize
-%\vspace{88pt}
-
 
 \vspace{16pt}
 
 
 \begin{minipage}{0.59\textwidth}
 
-%---------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
 %	FACTS
 %----------------------------------------------------------------------------------------
+
 	\mbox{
 		\parbox[c][3cm][c]{0.29\textwidth}{
 		\textcolor{textcol}{I am a digital media graduate with working experience in research projects as well as in the private sector.}
@@ -391,32 +386,40 @@
 		}
 	}
 	\vspace{34pt}
-%---------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
 %	SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
 	\cvsect{Skills and Technologies}{0.49}{thirdcol}{textcol}\\[4pt]
 	\mbox{
-	\parbox[b][150pt][c]{0.35\textwidth}{
-		\textcolor{textcol}{The biggest part I contribute to my work is in the area of software development.}\\
-	
-		\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[4pt]
-		\icontext{language}{14pt}{\colorbox{maincol}{German (native)}}\\
-		\icontext{language}{14pt}{\colorbox{maincol}{English (c1)}}\\
-	}
-	\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
-		\slice{6}{Design}{thirdcol}
-		\slice{16}{Consulting}{fourthcol}
-		\slice{16}{Research}{fifthcol}
-		\slice{16}{Projects}{secondcol}
-		\slice{46}{Development}{maincol}
-	\end{piechart}\\
+		
+		% TEXT BOX
+		\parbox[b][150pt][c]{0.35\textwidth}{
+			\textcolor{textcol}{The biggest part I contribute to my work is in the area of software development.}\\
+		
+			% LANGUAGES
+			\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[4pt]
+			\icontext{language}{14pt}{\colorbox{maincol}{German (native)}}\\
+			\icontext{language}{14pt}{\colorbox{maincol}{English (c1)}}\\
+		}
+
+		% PIE CHART	
+		\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
+			\slice{6}{Design}{thirdcol}
+			\slice{16}{Consulting}{fourthcol}
+			\slice{16}{Research}{fifthcol}
+			\slice{16}{Projects}{secondcol}
+			\slice{46}{Development}{maincol}
+		\end{piechart}\\
 	}
 	\begin{center}
 	\begin{tikzpicture}
 		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
+
+	% BAR CHART
 	\mbox{\hspace{-14pt}
 		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
 			\baritem{50}{Java}{0}{0}{65}
@@ -427,6 +430,8 @@
 			\baritem{50}{LaTex}{0}{0}{60}
 		\end{barchart}
 		\hspace{10pt}
+
+		% TEXTBOX
 		\parbox[b][100pt][c]{0.3\textwidth}{\textcolor{textcol}{Currently, I develop realtime apps with Meteor and react.\\Formerly I worked with Java and XPages.}}
 	}
 	\begin{center}
@@ -442,16 +447,26 @@
 		\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}{\cvsection{Technologies}}		
 	}
 	\end{center}
+%---------------------------------------------------------------------------------------
+%	ACTIVITIES
+%----------------------------------------------------------------------------------------
 	\cvsect{Actvities}{0.49}{thirdcol}{textcol}\\[20pt]
-	\mbox{\parbox[b][3cm][c]{3cm}{
-		\factbubble{\HUGE{\textcolor{sectcol}{\textbf{6}}}\\\large{\textcolor{sectcol}{\textbf{years}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
-		\textcolor{textcol}{of participation at}\\
-		\textcolor{textcol}{\textbf{Global Game Jam}}
-	}
-	\parbox[b][3cm][c]{4cm}{
-		\textcolor{textcol}{In my freetime I do practice many creative hobbies. Due to Muay Thai training I can keep my body and mind in balance.}
-	}
-	\squares{20/Game Dev,40/Martial Arts,10/News,20/Music}{1}
+	\mbox{
+		
+		% FACT BUBBLE
+		\parbox[b][3cm][c]{3cm}{
+			\factbubble{\HUGE{\textcolor{sectcol}{\textbf{6}}}\\\large{\textcolor{sectcol}{\textbf{years}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
+			\textcolor{textcol}{of participation at}\\
+			\textcolor{textcol}{\textbf{Global Game Jam}}
+		}
+
+		% TEXT BOX
+		\parbox[b][3cm][c]{4cm}{
+			\textcolor{textcol}{In my freetime I do practice many creative hobbies. Due to Muay Thai training I can keep my body and mind in balance.}
+		}
+
+		% SQUARE BARS
+		\squares{20/Game Dev,40/Martial Arts,10/News,20/Music}{1}
 	}
 \end{minipage}
 \begin{minipage}{0.05\textwidth}
@@ -462,15 +477,16 @@
 	\end{center}
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE / EDUCATION
+%----------------------------------------------------------------------------------------
 \cvsect{Experience and Education}{0.4}{thirdcol}{textcol}\\[16pt]
 
 \hspace{60pt}\mbox{\legend{Experience}{1.8cm}{maincol} \legend{Events}{1.1cm}{secondcol} \legend{Education}{1.5cm}{thirdcol}}
 \vspace{-40pt}
 \begin{center}
 
-%---------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
+% TIMELINE
 \begin{cvtimeline}{2009}{2017}{20}{\linewidth}
 \cvevent{1/2009}{11/2011}{Bachelor Studies}{Uni Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
 \cvevent{5/2009}{1/2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{maincol}{1}
