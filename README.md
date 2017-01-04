@@ -14,6 +14,11 @@ How to build?
 
 You can build them from this source. In each folder is a main.tex, which needs to be compiled by your LaTex distribution. The main.pdf shows the example output.
 
+There just a few requirements:
+
+- requires tex-live distribution
+- requires tex-live fonts
+- run the main.tex and build with a (pdf-) LaTeX environment of your choice
 
 License
 -------
@@ -36,13 +41,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-Build instructions
-------------------
-
-- You need the tex-live distribution and tex-live fonts to build.
-- Run the main.tex and build with a (pdf-) LaTeX environment of your choice.
 
 
 Credits
