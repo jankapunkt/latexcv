@@ -9,7 +9,7 @@ Introduction
 A collection of simple and easy to use, yet powerful LaTex templates for CV and resume.
 
 
-Where to download?
+How to build?
 ------------------
 
 You can build them from this source. In each folder is a main.tex, which needs to be compiled by your LaTex distribution. The main.pdf shows the example output.
@@ -20,7 +20,7 @@ License
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Jan Küster
+Copyright (c) 2014-2017 Jan Küster
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@ Build instructions
 ------------------
 
 - You need the tex-live distribution and tex-live fonts to build.
-- Run the main.tex and build with a LaTeX environment of your choice.
+- Run the main.tex and build with a (pdf-) LaTeX environment of your choice.
 
 
 Credits
