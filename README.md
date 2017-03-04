@@ -1,27 +1,27 @@
-Note: For any issues, contact me via [info@jankuester.com](mailto:info@jankuester.com)
 
-latexcv
-=======
+# latexcv - LaTex CV and Resume Collection
 
-Introduction
-------------
+## Summary
 
-A collection of simple and easy to use, yet powerful LaTex templates for CV and resume.
+A collection of simple and easy to use, yet powerful LaTex templates for CV and resume. All of them are self designed and self implemented and not copied from template collections.
+
+If there are any problems, please create an issue. I will fix it asap. Contributors are very welcome.
+
+[See the preview / example outputs](https://github.com/jankapunkt/latexcv#gallery)
 
 
-How to build?
-------------------
+## How to build?
 
 You can build them from this source. In each folder is a main.tex, which needs to be compiled by your LaTex distribution. The main.pdf shows the example output.
 
-There just a few requirements:
+There are just few requirements:
 
-- requires tex-live distribution
-- requires tex-live fonts
+- package tex-live distribution
+- package tex-live fonts
+- (in miktex all requirements should be included at compile-time)
 - run the main.tex and build with a (pdf-) LaTeX environment of your choice
 
-License
--------
+## License
 
 The MIT License (MIT)
 
@@ -43,8 +43,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-Credits
--------
+## Gallery
 
-Jan Küster
-www.jankuester.com
+### Classic
+
+![Modern cv preview image](http://jankuester.com/wp-content/uploads/main_preview.png "Modern CV example preview")
+
+### Modern
+
+![Modern cv preview image](http://jankuester.com/wp-content/uploads/main_preview-1.png "Modern CV example preview")
+
+### Infographics
+
+![Infographics preview image](http://jankuester.com/wp-content/uploads/infographics-cv.png "Infographics CV example preview")
