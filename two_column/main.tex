@@ -239,25 +239,16 @@
 % param 4:	what was your position
 % param 5:	some words about your contributions
 %
-\newcommand{\cvevent}[5]
-{
-\vspace{8pt}
+\newcommand{\cvevent}[5] {
 \begin{flushleft}
 \textcolor{bgcol}{#1 - #3}\\
-\textbf{#2}
+\textbf{#2}\\
+\larrow{bgcol}  #4 #5
 \end{flushleft}
-\textcolor{softcol}{\hrule}
-\vspace{6pt}
-\begin{itemize}
-	\item \larrow{bgcol}  #4
-	\item \larrow{bgcol}  #5
-\end{itemize}
-
 }
 
 % creates a stretched box as 
-\newcommand{\cveventmeta}[2]
-{
+\newcommand{\cveventmeta}[2] {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
 	#2
 }
@@ -302,7 +293,7 @@
 %}}
 
 % use this for single words, e.g. CV or RESUME etc.
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} } }}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -352,6 +343,10 @@
 
 \begin{minipage}{0.49\textwidth}
 
+
+
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.25\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Küster}} } }}
+
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -386,7 +381,7 @@
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}{0.29\textwidth}
 
 \cvsection{Education}
 
