@@ -101,7 +101,7 @@
 \setlength{\parindent}{0mm}
 
 %----------------------------------------------------------------------------------------
-%	TABLE /ARRAY DEFINITIONS
+%	TABLE /ARRAY/LIST DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
 %for layouting tables
@@ -113,6 +113,8 @@
 
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
+
+\usepackage{enumitem}
 
 
 %----------------------------------------------------------------------------------------
@@ -140,10 +142,10 @@
 \usepackage{color}
 
 %accent color
-\definecolor{sectcol}{RGB}{255,150,0}
+\definecolor{sectcol}{RGB}{13,92,127}
 
 %dark background color
-\definecolor{bgcol}{RGB}{110,110,110}
+\definecolor{bgcol}{RGB}{204,110,0}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
@@ -220,11 +222,10 @@
 %create a coloured arrow with title as cv meta section section
 % param 1: meta section title
 %
-\newcommand{\metasection}[2]
-{
-\begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
-\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[12pt]
-\end{tabular*}
+\newcommand{\metasection}[2]{
+	\begin{tabular*}{1\linewidth}{p{0.22\linewidth} p{0.7\linewidth}}
+		\larrow{bgcol} \normalsize{\textcolor{sectcol}{#1}}&#2\\
+	\end{tabular*}
 }
 
 %----------------------------------------------------------------------------------------
@@ -242,9 +243,13 @@
 \newcommand{\cvevent}[5] {
 \begin{flushleft}
 \textcolor{bgcol}{#1 - #3}\\
-\textbf{#2}\\
-\larrow{bgcol}  #4 #5
+\textbf{#2}\\[8pt]
+\begin{itemize}[leftmargin=18pt]
+\item [\larrow{bgcol}] #4
+\item [\larrow{bgcol}] #5
+\end{itemize}
 \end{flushleft}
+%\textcolor{softcol}{\hrule}
 }
 
 % creates a stretched box as 
@@ -282,58 +287,10 @@
 \pagestyle{fancy}	
 
 
-%---------------------------------------------------------------------------------------
-%	TITLE HEADLINE
-%----------------------------------------------------------------------------------------
-\vspace{-20.55pt}
-
-% use this for multiple words like working titles etc.
-%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
-% \large{ \textcolor{white}{{Resume}}}}
-%}}
-
-% use this for single words, e.g. CV or RESUME etc.
 
 
 
-%----------------------------------------------------------------------------------------
-%	HEADER IMAGE
-%----------------------------------------------------------------------------------------
 
-%\begin{figure}[H]
-%\begin{flushright}
-%	\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{myfoto.jpg}	%trimming relative to image size!
-%\end{flushright}
-%\end{figure}
-
-%---------------------------------------------------------------------------------------
-%	QR CODE (optional)
-%----------------------------------------------------------------------------------------
-%\vspace{-136pt}
-%\hspace{0.75\linewidth}
-%\includegraphics[width=103pt]{qrcode}
-%\normalsize
-%\vspace{88pt}
-
-%---------------------------------------------------------------------------------------
-%	META SECTION
-%----------------------------------------------------------------------------------------
-
-%\vspace{-114pt}
-
-%\metasection{Status:}{M.Sc. Digital Media, Fullstack JS Engineer}
-%\metasection{Fields:}{Project Management, Software Development, Consulting} 
-%\metasection{Prefers:}{Javascript (Meteor NodeJS), Java / JSF, XPages, Git, Eclipse}
-%\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
-
-%\vspace{6pt}
-
-%---------------------------------------------------------------------------------------
-%	SUMMARAY (optional)
-%----------------------------------------------------------------------------------------
-
-%\cvsection{Summary}\\
-%Digital media graduate with four years project experience in the field of technology based assessment. Specialized in development of test-scenario engines and innovative, rich media item formats. Master studies focused on teams from different disciplines and cultural backgrounds on solutions for complex problems.  Prior knowledge has been collected in he field of usability / accessibility during bachelor studies.\\
 
 %============================================================================%
 %
@@ -341,47 +298,47 @@
 %
 %============================================================================%
 
-\begin{minipage}{0.49\textwidth}
+\begin{minipage}[t]{0.485\textwidth}
 
-
+%---------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
 
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.25\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Küster}} } }}
 
-%---------------------------------------------------------------------------------------
-%	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{Experience}
+%	HEADER IMAGE
+%----------------------------------------------------------------------------------------
+\hspace{-0.25\linewidth}\includegraphics[width=1.2725\linewidth]{myfoto.jpg} %use full size
 
-%
-\cvevent{2016 / 09}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
+%---------------------------------------------------------------------------------------
+%	QR CODE (optional)
+%----------------------------------------------------------------------------------------
+\vspace{-100pt}
+\hspace{0.59\linewidth}
+\includegraphics[width=88pt]{qrcode}
+\normalsize
 
-%\textcolor{softcol}{\hrule}
+\vspace{16pt}
 
-%
-\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
+%---------------------------------------------------------------------------------------
+%	META SECTION
+%----------------------------------------------------------------------------------------
+\metasection{Status:}{Fullstack JS Engineer, M.Sc. Digital Media}
+\metasection{Fields:}{Project Management, Software Development, Consulting} 
+\metasection{Prefers:}{Javascript (Meteor NodeJS), Java / JSF, XPages, Git, Eclipse}
+\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
 
+%---------------------------------------------------------------------------------------
+%	SUMMARY (optional)
+%----------------------------------------------------------------------------------------
 
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
-
-%
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
-\end{minipage}
+\cvsection{Summary}\\
+I am a digital media graduate with project experience in diverse areas. This ranges from developing e-assessment software, classroom management systems or b2b software for IBM Notes Domino. These projects involved to master different technologies, ranging from Java and JSF to xPages and currently NodeJS via Meteor and React.\\
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-\begin{minipage}{0.29\textwidth}
 
 \cvsection{Education}
 
@@ -399,8 +356,35 @@
 
 %\textcolor{softcol}{\hrule}
 
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+
+
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\cvsection{Experience}
+
+%
+\cvevent{2016 / 09}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
+
+%
+\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
+
+%
+\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
+
+%
+\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
+
+%
+\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
+
 %
 \cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
+
 
 \end{minipage}
 
