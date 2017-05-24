@@ -75,6 +75,10 @@
 % more font size definitions
 \usepackage{moresize}		
 
+% awesome font
+\usepackage{fontawesome}
+
+
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -144,9 +148,7 @@
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
 % replace this part
-
-\newcommand{\icons}{Font-Awesome-SVG-PNG/white/png/64/}	%path to your icon lib
-\newcommand{\icon}[2]{\colorbox{thirdcol}{\includegraphics[height=#2]{\icons#1}}}	%icon shortcut
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{white}{\csname fa#1\endcsname}}}}	%icon shortcut
 \newcommand{\icontext}[3]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
@@ -345,14 +347,14 @@
 		\Large{\textcolor{thirdcol}{\textsc{ Consultant Developer}}}\\
 	}&
 	\parbox{0.25\textwidth}{
-	\icontext{map-marker}{22pt}{Bremen, Germany}\\
-	\icontext{mobile-phone}{22pt}{+49 176 313 877 34}\\
-	\icontext{send}{22pt}{info@jankuester.com}\\
+	\icontext{MapMarker}{12}{Bremen, Germany}\\
+	\icontext{MobilePhone}{12}{+49 176 313 877 34}\\
+	\icontext{Send}{12}{info@jankuester.com}\\
 	}&
 	\parbox{0.3\textwidth}{
-	\icontext{mouse-pointer}{22pt}{www.jankuester.com}\\
-	\icontext{github}{22pt}{github.com/jankapunkt}\\
-	\icontext{twitter}{22pt}{@Kuester\_Jan}\\
+	\icontext{MousePointer}{12}{www.jankuester.com}\\
+	\icontext{Github}{12}{github.com/jankapunkt}\\
+	\icontext{Twitter}{12}{@Kuester\_Jan}\\
 	}
 \end{tabular*}
 
@@ -400,8 +402,8 @@
 		
 			% LANGUAGES
 			\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[4pt]
-			\icontext{language}{14pt}{\colorbox{maincol}{German (native)}}\\
-			\icontext{language}{14pt}{\colorbox{maincol}{English (c1)}}\\
+			\icontext{Language}{12}{\colorbox{maincol}{German (native)}}\\
+			\icontext{Language}{12}{\colorbox{maincol}{English (c1)}}\\
 		}
 
 		% PIE CHART	
