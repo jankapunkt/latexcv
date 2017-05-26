@@ -1,5 +1,5 @@
 sudo: require
-dist: trusty
+dist: xenial
 language: bash
 
 before_install:
