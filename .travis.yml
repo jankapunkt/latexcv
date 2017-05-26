@@ -1,4 +1,5 @@
-sudo: required
+sudo: require
+dist: trusty
 language: bash
 
 before_install:
