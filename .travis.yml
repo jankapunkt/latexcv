@@ -10,5 +10,5 @@ before_install:
 script:
   - bash tests/test.sh classic
   - bash tests/test.sh modern
-  - bash tests/test.sh two_columns
+  - bash tests/test.sh two_column
   - bash tests/test.sh infographics
