@@ -1,0 +1,12 @@
+language: bash
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y texlive-base texlive-fonts-extra
+
+
+script:
+  - bash /tests/test.sh classic
+  - bash /tests/test.sh modern
+  - bash /tests/test.sh two_columns
+  - bash /tests/test.sh infographics

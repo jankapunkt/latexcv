@@ -36,3 +36,9 @@ glossary.ist
 #project specific
 infographics/Font-Awesome-SVG-PNG
 infographics/Font-Awesome-SVG-PNG/*
+.idea/jsLibraryMappings.xml
+.idea/latexcv.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml
