@@ -3,7 +3,7 @@ language: bash
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y texlive-base texlive-fonts-extra
+  - sudo apt-get install -y texlive-base texlive-latex-base texlive-fonts-extra
 
 
 script:
