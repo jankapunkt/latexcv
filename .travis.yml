@@ -2,6 +2,11 @@ sudo: require
 dist: xenial
 language: bash
 
+general:
+  branches:
+    only:
+      - ci_setup
+
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
