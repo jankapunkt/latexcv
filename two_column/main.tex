@@ -54,8 +54,8 @@
 
 %\usepackage[defaultsans]{droidsans}
 %\usepackage[default]{comfortaa}
-%\usepackage{cmbright}
-\usepackage[default]{raleway}
+\usepackage{cmbright}
+%\usepackage[default]{raleway}
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
@@ -142,10 +142,10 @@
 \usepackage{color}
 
 %accent color
-\definecolor{sectcol}{RGB}{13,92,127}
+\definecolor{bgcol}{RGB}{13,92,127}
 
 %dark background color
-\definecolor{bgcol}{RGB}{204,110,0}
+\definecolor{sectcol}{RGB}{204,110,0}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
@@ -214,8 +214,8 @@
 %
 \newcommand{\cvsection}[1]
 {
-\colorbox{sectcol}{\makebox[1\linewidth][l]{
-	\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
+\colorbox{bgcol}{\makebox[1\linewidth][l]{
+	\larrow{sectcol} \hspace{-8pt} \larrow{sectcol} \hspace{-8pt} \larrow{sectcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
 }}\\
 }
 
@@ -223,8 +223,8 @@
 % param 1: meta section title
 %
 \newcommand{\metasection}[2]{
-	\begin{tabular*}{1\linewidth}{p{0.22\linewidth} p{0.7\linewidth}}
-		\larrow{bgcol} \normalsize{\textcolor{sectcol}{#1}}&#2\\
+	\begin{tabular*}{1\linewidth}{p{0.18\linewidth} p{0.76\linewidth}}
+		\larrow{bgcol}\normalsize{\textbf{\textcolor{sectcol}{#1}}}&#2\\
 	\end{tabular*}
 }
 
@@ -242,12 +242,14 @@
 %
 \newcommand{\cvevent}[5] {
 \begin{flushleft}
-\textcolor{bgcol}{#1 - #3}\\
-\textbf{#2}\\[8pt]
-\begin{itemize}[leftmargin=18pt]
-\item [\larrow{bgcol}] #4
-\item [\larrow{bgcol}] #5
-\end{itemize}
+\textcolor{sectcol}{#1 - #3}\\
+\textbf{#2}\\[-7pt]
+\textcolor{softcol}{\hrule}
+\vspace{\spread}
+\begin{tabular*}{1\linewidth}{p{0.001\linewidth} p{0.9\linewidth}}
+	\larrow{bgcol} & #4 \\[2pt]
+	\larrow{bgcol} & #5 \\[\spread]
+\end{tabular*}
 \end{flushleft}
 %\textcolor{softcol}{\hrule}
 }
@@ -269,7 +271,10 @@
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
-
+%----------------------------------------------------------------------------------------
+% SPREAD
+%----------------------------------------------------------------------------------------
+\newcommand{\spread}{7pt}
 
 %============================================================================%
 %
@@ -284,21 +289,13 @@
 
 
 %use our custom fancy header definitions
-\pagestyle{fancy}	
+\pagestyle{fancy}
 
 
-
-
-
-
-
-%============================================================================%
-%
-%	CV SECTIONS AND EVENTS (MAIN CONTENT)
-%
-%============================================================================%
 
 \begin{minipage}[t]{0.485\textwidth}
+
+\vspace{\spread}
 
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
@@ -319,22 +316,50 @@
 \includegraphics[width=88pt]{qrcode}
 \normalsize
 
-\vspace{16pt}
+
+\vspace{20pt}
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+%---------------------------------------------------------------------------------------
+%	SUMMARY (optional)
+%----------------------------------------------------------------------------------------
+\vspace{\spread}
+
+\cvsection{Summary}\\
+I am a digital media graduate (M.Sc.) with project experience in diverse areas. This ranges from developing e-assessment software, classroom management systems or b2b software for IBM Notes Domino.
+
+This has involved to master different technologies, ranging from \textbf{Java} and JSF to xPages and currently NodeJS via \textbf{Meteor} and \textbf{React}.
+
+I also love fitness, martial arts, videogames and producing digital music.\\[-2pt]
+\textcolor{softcol}{\hrule}
+
+\end{minipage}
+
+\begin{minipage}[t]{0.485\textwidth}
+
+\vspace{\spread}
 
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-\metasection{Status:}{Fullstack JS Engineer, M.Sc. Digital Media}
+\metasection{Status:}{Fullstack JS Engineer, M.Sc. Digital Media, Consultant}
 \metasection{Fields:}{Project Management, Software Development, Consulting} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+
+\vspace{5pt}
+
 \metasection{Prefers:}{Javascript (Meteor NodeJS), Java / JSF, XPages, Git, Eclipse}
-\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
+\metasection{Loves:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
+\end{minipage}
 
-%---------------------------------------------------------------------------------------
-%	SUMMARY (optional)
-%----------------------------------------------------------------------------------------
 
-\cvsection{Summary}\\
-I am a digital media graduate with project experience in diverse areas. This ranges from developing e-assessment software, classroom management systems or b2b software for IBM Notes Domino. These projects involved to master different technologies, ranging from Java and JSF to xPages and currently NodeJS via Meteor and React.\\
+\begin{minipage}[t]{0.485\textwidth}
+
+\vspace{\spread}
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -354,6 +379,12 @@ I am a digital media graduate with project experience in diverse areas. This ran
 %
 \cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
 
+%
+\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
+
+%
+\cvevent{2007 - 2012}{Bachelor Studies Digital Media}{University of Bremen}{Fundamentals in Computer Science}{Bachelor thesis focused on experimental redesign of the keyboard to support functional illiterates.}
+
 %\textcolor{softcol}{\hrule}
 
 
@@ -361,6 +392,7 @@ I am a digital media graduate with project experience in diverse areas. This ran
 \hfill
 \begin{minipage}[t]{0.485\textwidth}
 
+\vspace{\spread}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -381,9 +413,6 @@ I am a digital media graduate with project experience in diverse areas. This ran
 
 %
 \cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
 
 
 \end{minipage}
