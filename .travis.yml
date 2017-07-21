@@ -1,5 +1,5 @@
 sudo: require
-dist: xenial
+dist: trusty
 language: bash
 
 general:
