@@ -57,3 +57,7 @@ THE SOFTWARE.
 ### Infographics
 
 ![Infographics preview image](http://jankuester.com/wp-content/uploads/infographics-cv.png "Infographics CV example preview")
+
+### Two Column
+
+![Two Column preview image](http://jankuester.com/wp-content/uploads/twocolumn-cv.png "Infographics CV example preview")
