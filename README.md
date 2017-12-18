@@ -64,6 +64,11 @@ The following packages need to be installed:
 
 Create an issue, if this manual does not work for your.
 
+##### Contribution
+
+Want to contribute? Awesome! Please check the [contribution guidelines](https://github.com/jankapunkt/latexcv/blob/master/CONTRIBUTING.md) first to make it a success.
+
+
 ## License
 
 The MIT License (MIT)
