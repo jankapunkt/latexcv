@@ -1,5 +1,5 @@
-sudo: require
-dist: zesty
+sudo: true
+dist: trusty
 language: bash
 
 general:
