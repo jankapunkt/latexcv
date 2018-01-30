@@ -1,26 +1,74 @@
 [![Build Status](https://travis-ci.org/jankapunkt/latexcv.svg?branch=master)](https://travis-ci.org/jankapunkt/latexcv) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![GitLicense](https://gitlicense.com/badge/jankapunkt/latexcv)](https://gitlicense.com/license/jankapunkt/latexcv)
+ 
 # latexcv - LaTex CV and Resume Collection
-
-## Summary
 
 A collection of simple and easy to use, yet powerful LaTex templates for CV and resume. All of them are self designed and self implemented and not copied from template collections.
 
-If there are any problems, please create an issue. I will fix it asap. Contributors are very welcome.
+If there are any problems, please create an issue. I will fix it asap. **Contributors are very welcome**.
 
-[See the preview / example outputs](https://github.com/jankapunkt/latexcv#gallery)
 
+## Gallery
+
+This is a preview of the currently featured templates. There is also an example output pdf in each template's directory.
+
+<table style="width:100%;">
+	<tr>
+		<th>Classic</th>
+		<th>Modern</th>
+		<th>Infographics</th>
+		<th>Two Columns</th>
+	</tr>
+	<tr>
+		<td>
+			<img src="http://jankuester.com/wp-content/uploads/main_preview.png" 
+				alt="Classic CV example preview"
+				height="280" />
+		</td>
+		<td>
+			<img src="http://jankuester.com/wp-content/uploads/main_preview-1.png" 
+				alt="Modern CV example preview"
+				height="280"/>
+		</td>
+		<td>
+			<img src="http://jankuester.com/wp-content/uploads/infographics-cv.png" 
+				alt="Infographics CV example preview" 
+				height="280"/>
+		</td>
+		<td>
+			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
+				alt="Two Column CV example preview" 
+				height="280"/>
+		</td>
+	</tr>
+</table>
 
 ## How to build?
 
-You can build them from this source. In each folder is a main.tex, which needs to be compiled by your LaTex distribution. The main.pdf shows the example output.
+##### Build Requirements
 
-There are just few requirements:
+The following packages need to be installed:
 
 - package tex-live distribution
 - package tex-live fonts
-- (in miktex all requirements should be included at compile-time)
-- run the main.tex and build with a (pdf-) LaTeX environment of your choice
+- a LaTeX environment of your choice with pdfLatex capability
+
+##### Build Procedure
+
+ - Clone or download this project. 
+ - Each template is in a folder, which contains a main.tex file
+ - Edit the main.tex according to your credentials, optionally change settings and colors etc.
+ - Run pdflatex (build/compile) 
+ - The main.pdf should show the output.
+
+Create an issue, if this manual does not work for your.
+
+##### Contribution
+
+Want to contribute? Awesome! Please check the [contribution guidelines](https://github.com/jankapunkt/latexcv/blob/master/CONTRIBUTING.md) first to make it a success.
+
 
 ## License
 
@@ -43,21 +91,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-
-## Gallery
-
-### Classic
-
-![Modern cv preview image](http://jankuester.com/wp-content/uploads/main_preview.png "Modern CV example preview")
-
-### Modern
-
-![Modern cv preview image](http://jankuester.com/wp-content/uploads/main_preview-1.png "Modern CV example preview")
-
-### Infographics
-
-![Infographics preview image](http://jankuester.com/wp-content/uploads/infographics-cv.png "Infographics CV example preview")
-
-### Two Column
-
-![Two Column preview image](http://jankuester.com/wp-content/uploads/twocolumn-cv.png "Infographics CV example preview")
