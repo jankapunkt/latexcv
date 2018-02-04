@@ -148,7 +148,7 @@
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
 % replace this part
-\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{white}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{sectcol}{\csname fa#1\endcsname}}}}	%icon shortcut
 \newcommand{\icontext}[3]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
@@ -157,26 +157,39 @@
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
-\usepackage{color}
+\usepackage{xcolor}
+
+%defineColors
+\definecolor{orange}{RGB}{255,150,0}
+\definecolor{lblue}{RGB}{0,178,255}
+\definecolor{darkblue}{RGB}{0,80,130}
+\definecolor{darkerblue}{RGB}{0,100,160}
+\definecolor{lgray}{RGB}{0,120,200}
+\definecolor{powderblue}{RGB}{190,220,255}
+\definecolor{darkestblue}{RGB}{0,50,80}
+
 
 %main color
-\definecolor{maincol}{RGB}{255,150,0}
+\colorlet{maincol}{orange}
 
 %secondary colors
-\definecolor{secondcol}{RGB}{0,178,255}
-\definecolor{thirdcol}{RGB}{0,80,130}
-\definecolor{fourthcol}{RGB}{0,100,160}
-\definecolor{fifthcol}{RGB}{0,120,200}
-\definecolor{sixthcol}{RGB}{0,80,130}
+\colorlet{secondcol}{lblue}
+\colorlet{thirdcol}{darkblue}
+\colorlet{fourthcol}{darkerblue}
+\colorlet{fifthcol}{lgray}
+\colorlet{sixthcol}{darkblue}
 
 %background color
-\definecolor{bgcol}{RGB}{190,220,255}
+\colorlet{bgcol}{powderblue}
 
 %textcolor
-\definecolor{textcol}{RGB}{0,50,80}
+\colorlet{textcol}{darkestblue}
+
+%titletextcolor
+\colorlet{titletext}{white}
 
 %sectioncolor
-\definecolor{sectcol}{RGB}{255,255,255}
+\colorlet{sectcol}{white}
 
 %set a background col for whole page
 \pagecolor{bgcol}
@@ -343,7 +356,7 @@
 
 \begin{tabular*}{1\textwidth}{ c c c}
 	\parbox[c]{0.4\linewidth}{
-		\colorbox{thirdcol}{\HUGE{\textcolor{white}{\textbf{\uppercase{Jan Küster}}} }}\\
+		\colorbox{thirdcol}{\HUGE{\textcolor{titletext}{\textbf{\uppercase{Jan Küster}}} }}\\
 		\Large{\textcolor{thirdcol}{\textsc{ Consultant Developer}}}\\
 	}&
 	\parbox{0.25\textwidth}{
