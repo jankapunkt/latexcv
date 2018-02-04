@@ -218,30 +218,6 @@
 %
 %----------------------------------------------------------------------------------------
 
-% a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
-
-% a six pointed arrow poiting to the right
-\newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
-
-
-% include the left arrow into a tikz picture
-% param1: fill color
-%
-\newcommand{\larrow}[1]
-{\begin{tikzpicture}[scale=0.58]
-	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
- \end{tikzpicture}
-}
-
-% include the right arrow into a tikz picture
-% param1: fill color
-%
-\newcommand{\rarrow}[1]
-{\begin{tikzpicture}[scale=0.58]
-	\filldraw[fill=#1!100,draw=#1!100!black] \tzrarrow
- \end{tikzpicture}
-}
 
 % the chart graphics are outsourced into own files
 
