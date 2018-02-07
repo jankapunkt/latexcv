@@ -11,7 +11,7 @@ general:
 before_install:
   - PROJECTDIR=$(pwd)
   - cd /tmp && wget http://ftp.fau.de/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz
-  - untar -xvzf install-tl-unx.tar.gz
+  - tar -xvzf install-tl-unx.tar.gz
   - cd install-tl-*
   - chmod +x install-tl
   - sudo ./install-tl --profile=$PROJECTDIR/texlive.profile
