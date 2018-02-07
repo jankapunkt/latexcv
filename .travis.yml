@@ -9,11 +9,7 @@ general:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-
+  - sudo apt-get install -y texlive-base texlive-extra-utils texlive-font-utils texlive-fonts-extra texlive-fonts-recommended texlive-generic-recommended texlive-lang-english texlive-lang-german texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-pstricks
 
 script:
-  - bash tests/test.sh classic
-  - bash tests/test.sh modern
-  - bash tests/test.sh two_column
-  - bash tests/test.sh infographics
+  - bash tests/testall.sh
