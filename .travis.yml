@@ -7,6 +7,13 @@ general:
     only:
       - ci_setup
 
+addons:
+  apt:
+    sources:
+    - xenialmain: 'deb http://de.archive.ubuntu.com/ubuntu/xenial main'
+    - xenialuniv: 'deb http://de.archive.ubuntu.com/ubuntu/xenial universe'
+
+
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-extra-utils texlive-font-utils texlive-fonts-extra texlive-fonts-recommended texlive-generic-recommended texlive-lang-english texlive-lang-german texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-pstricks
