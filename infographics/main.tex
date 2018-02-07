@@ -148,7 +148,7 @@
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
 % replace this part
-\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{white}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{sectcol}{\csname fa#1\endcsname}}}}	%icon shortcut
 \newcommand{\icontext}[3]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
@@ -157,26 +157,39 @@
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
-\usepackage{color}
+\usepackage{xcolor}
+
+%defineColors
+\definecolor{orange}{RGB}{255,150,0}
+\definecolor{lblue}{RGB}{0,178,255}
+\definecolor{darkblue}{RGB}{0,80,130}
+\definecolor{darkerblue}{RGB}{0,100,160}
+\definecolor{lgray}{RGB}{0,120,200}
+\definecolor{powderblue}{RGB}{190,220,255}
+\definecolor{darkestblue}{RGB}{0,50,80}
+
 
 %main color
-\definecolor{maincol}{RGB}{255,150,0}
+\colorlet{maincol}{orange}
 
 %secondary colors
-\definecolor{secondcol}{RGB}{0,178,255}
-\definecolor{thirdcol}{RGB}{0,80,130}
-\definecolor{fourthcol}{RGB}{0,100,160}
-\definecolor{fifthcol}{RGB}{0,120,200}
-\definecolor{sixthcol}{RGB}{0,80,130}
+\colorlet{secondcol}{lblue}
+\colorlet{thirdcol}{darkblue}
+\colorlet{fourthcol}{darkerblue}
+\colorlet{fifthcol}{lgray}
+\colorlet{sixthcol}{darkblue}
 
 %background color
-\definecolor{bgcol}{RGB}{190,220,255}
+\colorlet{bgcol}{powderblue}
 
 %textcolor
-\definecolor{textcol}{RGB}{0,50,80}
+\colorlet{textcol}{darkestblue}
+
+%titletextcolor
+\colorlet{titletext}{white}
 
 %sectioncolor
-\definecolor{sectcol}{RGB}{255,255,255}
+\colorlet{sectcol}{white}
 
 %set a background col for whole page
 \pagecolor{bgcol}
@@ -205,37 +218,13 @@
 %
 %----------------------------------------------------------------------------------------
 
-% a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
-
-% a six pointed arrow poiting to the right
-\newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
-
-
-% include the left arrow into a tikz picture
-% param1: fill color
-%
-\newcommand{\larrow}[1]
-{\begin{tikzpicture}[scale=0.58]
-	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
- \end{tikzpicture}
-}
-
-% include the right arrow into a tikz picture
-% param1: fill color
-%
-\newcommand{\rarrow}[1]
-{\begin{tikzpicture}[scale=0.58]
-	\filldraw[fill=#1!100,draw=#1!100!black] \tzrarrow
- \end{tikzpicture}
-}
 
 % the chart graphics are outsourced into own files
 
 %----------------------------------------------------------------------------------------
 % 	PIE CHART
 %----------------------------------------------------------------------------------------
-\input{./g/chart.tex}
+\input{./g/piechart.tex}
 
 %----------------------------------------------------------------------------------------
 % 	BAR CHART
@@ -343,7 +332,7 @@
 
 \begin{tabular*}{1\textwidth}{ c c c}
 	\parbox[c]{0.4\linewidth}{
-		\colorbox{thirdcol}{\HUGE{\textcolor{white}{\textbf{\uppercase{Jan Küster}}} }}\\
+		\colorbox{thirdcol}{\HUGE{\textcolor{titletext}{\textbf{\uppercase{Jan Küster}}} }}\\
 		\Large{\textcolor{thirdcol}{\textsc{ Consultant Developer}}}\\
 	}&
 	\parbox{0.25\textwidth}{
@@ -490,18 +479,47 @@
 
 % TIMELINE
 \begin{cvtimeline}{2009}{2017}{20}{\linewidth}
-\cvevent{1/2009}{11/2011}{Bachelor Studies}{Uni Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
-\cvevent{5/2009}{1/2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{maincol}{1}
-\cvevent{6/2010}{11/2011}{Student Assistant}{Uni Bremen}{Realized an online diagnosis platform for workforce literacy development (Flex)}{maincol}{1}
-\cvevent{9/2011}{9/2011}{PM Simulation}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{secondcol}{2}
-\cvevent{11/2011}{7/2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{thirdcol}{0}
-\cvevent{1/2012}{11/2014}{Scientific Employee}{Uni of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{maincol}{1}
-\cvevent{11/2012}{11/2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{thirdcol}{2}
-\cvevent{9/2013}{9/2013}{Poster Presentation}{DELFI Conference}{Co-published poster with paper on usability guidelines for tests with functional illiterates}{secondcol}{2}
-\cvevent{11/2014}{9/2016}{IT Consultant}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{maincol}{1}
-\cvevent{7/2015}{7/2015}{M.Sc. Graduation}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
-\cvevent{5/2016}{5/2016}{Startup Weekend}{Uni Bremen}{Performed a two-day project simulation from management perspective}{secondcol}{0}
-\cvevent{9/2016}{12/2016}{Software Engineer}{University of Bremen}{text a}{maincol}{1}
+
+\cvevent{1/2009}{11/2011}{Bachelor Studies}{Uni Bremen}
+    {Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
+
+\cvevent{5/2009}{1/2010}{Semester Abroad}{University of Melbourne}
+    {Mastered six months of study and trans-cultural experience in Melbourne, Australia}{maincol}{1}
+
+\cvevent{6/2010}{11/2011}{Student Assistant}{Uni Bremen}
+    {Realized an online diagnosis platform for workforce literacy development (Flex)}{maincol}{1}
+
+\cvevent{9/2011}{9/2011}{PM Simulation}{Getoq Consulting}
+    {Performed a two-day project simulation from management perspective}{secondcol}{2}
+
+\cvevent{11/2011}{7/2015}{Master Studies Digital Media}{University of Bremen}
+    {Inter-cultural classes in English, covering special topics in computer science and design}
+    {thirdcol}{0}
+
+\cvevent{1/2012}{11/2014}{Scientific Employee}{Uni of Bremen}
+    {Invented a flexible assessment framework, targeting industrial trainees}{maincol}{1}
+
+\cvevent{11/2012}{11/2013}{Master Project - PrIMA}{University of Bremen}
+    {Co-Invented a touch table application for medical support, co-developed software (Java) }
+    {thirdcol}{2}
+
+\cvevent{9/2013}{9/2013}{Poster Presentation}{DELFI Conference}
+    {Co-published poster with paper on usability guidelines for tests with functional illiterates}
+    {secondcol}{2}
+
+\cvevent{11/2014}{9/2016}{IT Consultant}{We4IT GmbH Bremen}
+    {Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}
+    {maincol}{1}
+
+\cvevent{7/2015}{7/2015}{M.Sc. Graduation}{University of Bremen}
+    {Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
+
+\cvevent{5/2016}{5/2016}{Startup Weekend}{Uni Bremen}
+    {Performed a two-day project simulation from management perspective}{secondcol}{0}
+
+\cvevent{9/2016}{12/2016}{Software Engineer}{University of Bremen}
+    {text a}{maincol}{1}
+        
 \end{cvtimeline}
 \end{center}
 \end{minipage}
