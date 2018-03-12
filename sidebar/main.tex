@@ -82,20 +82,17 @@
 \usepackage[a4paper]{geometry}		
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1.75cm, bottom=-.6cm, left=0.5cm, right=1cm} 	
+\geometry{top=1cm, bottom=-.6cm, left=0.4cm, right=1cm} 	
 
-%use customized header
-\usepackage{fancyhdr}				
-\pagestyle{fancy}
 
 %less space between header and content
 \setlength{\headheight}{-5pt}		
 
 
 %customize entries left, center and right
-\lhead{}
-\chead{ \small{Jan Küster  $\cdot$ Consultant and Software Engineer $\cdot$  Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 *** **}}
-\rhead{}
+%\lhead{}
+%\chead{ \small{Jan Küster  $\cdot$ Consultant and Software Engineer $\cdot$  Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 *** **}}
+%\rhead{}
 
 
 %indentation is zero
@@ -163,22 +160,7 @@
 % returns minipage width minus two times \fboxsep
 % to keep padding included in width calculations
 \newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
-
-%----------------------------------------------------------------------------------------
-% 	HEADER
-%----------------------------------------------------------------------------------------
-
-% remove top header line
-\renewcommand{\headrulewidth}{0pt} 
-
-%remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
-
-%remove pagenum
-\renewcommand{\thepage}{}	
-
-%remove section num		
-\renewcommand{\thesection}{}			
+	
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
@@ -207,8 +189,6 @@
 	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
  \end{tikzpicture}
 }
-
-
 
 %----------------------------------------------------------------------------------------
 %	custom sections
@@ -282,6 +262,18 @@
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
 %----------------------------------------------------------------------------------------
 %	ICON-SET EMBEDDING
 %---------------------------------------------------------------------------------------- 
@@ -289,9 +281,9 @@
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
 % replace this part
-\newcommand{\icon}[3]{\colorbox{#3}{\makebox(#2, #2){\textcolor{#3}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\icon}[3]{\makebox(#2, #2){\textcolor{#3}{\csname fa#1\endcsname}}}	%icon shortcut
 \newcommand{\icontext}[4]{ 						%icon with text shortcut
-	\vcenteredhbox{\icon{#1}{#2}{#3}} \vcenteredhbox{\textcolor{#4}{#3}}
+	\vcenteredhbox{\icon{#1}{#2}{#4}} \vcenteredhbox{\textcolor{#4}{#3}}
 }
 
 
@@ -306,13 +298,13 @@
 %
 %============================================================================%
 \begin{document}
-\fcolorbox{black}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
+\fcolorbox{white}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
 
 
 %---------------------------------------------------------------------------------------
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
-%\vspace{-1pt}
+\vspace{-3pt}
 % use this for multiple words like working titles etc.
 %\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
 % \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
@@ -324,6 +316,7 @@
 %----------------------------------------------------------------------------------------
 %	HEADER IMAGE
 %----------------------------------------------------------------------------------------
+
 
 %\hspace{-1.6cm}
 %\includegraphics[trim= 0 250 0 270,clip,width=1\linewidth+3.1cm]{myfoto.jpg}	%trimming relative to image size!
@@ -350,6 +343,15 @@
 %	CV SECTIONS AND EVENTS (MAIN CONTENT)
 %
 %============================================================================%
+
+%---------------------------------------------------------------------------------------
+%	STATUS
+%----------------------------------------------------------------------------------------
+\cvsection{Status}
+
+JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and healthcare
+
+\vspace{12pt}
 
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
@@ -381,6 +383,7 @@
 %
 \cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
 
+\vspace{12pt}
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
@@ -405,7 +408,19 @@
 
 
 \end{minipage}}%
-\fcolorbox{black}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
+\fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
+
+
+\begin{metasection}{Contact}
+
+	\icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
+	\icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
+	\icontext{Send}{12}{info@jankuester.com}{white}\\[6pt]
+	\icontext{MousePointer}{12}{www.jankuester.com}{white}\\[6pt]
+	\icontext{Github}{12}{github.com/jankapunkt}{white}\\[6pt]
+	\icontext{Twitter}{12}{@Kuester\_Jan}{white}\\[6pt]
+
+\end{metasection}
 	
 %----------------------------------------------------------------------------------------
 %	META SECTION
@@ -413,56 +428,59 @@
 
 \begin{metasection}{Fields}
 
-\icontext{}\textcolor{white}{Project Management}\\
-\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{white}\larrow{white}\larrow{white}\\[6pt]
+\icontext{Code}{12}{Software Development}{white}\\
+\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
 
-\textcolor{white}{Software Development}\\
-\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\\[6pt]
+\icontext{CommentsO}{12}{Consulting}{white}\\
+\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
 
-%\textcolor{white}{Consulting}\\
-\icontext{12}{code-fork}{Consulting}{white}
-\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{complcol}\larrow{white}\larrow{white}\\[6pt]
+\icontext{CodeFork}{12}{Project Management}{white}\\
+\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+
 
 \end{metasection}
 
 
 \begin{metasection}{Technologies}
-Javascript 
 
-Meteor \& MongoDB
-
-Git
-
-
+\textcolor{white}{
+\icontext{Code}{12}{JavaScript}{white} \\[6pt]
+\icontext{Code}{12}{Meteor}{white} \\[6pt]
+\icontext{Fire}{12}{Blaze}{white} \\[6pt]
+\icontext{Database}{12}{MongoDB}{white} \\[6pt]
+\icontext{CodeFork}{12}{Git}{white} \\[6pt]
+}
 \end{metasection}
 
 \begin{metasection}{Tools}
-Webstorm
+
+\textcolor{white}{
+\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
+\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
+}
 \end{metasection}
 
 \begin{metasection}{Activities}
-Global Game Jam
-Sound Engineering
-Blender
-Martial Arts
+
+\textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Bicycle}{24}{white}}}
 \end{metasection}
 
-\end{minipage}}
+\begin{metasection}{Operating Systems}
 
-%use our custom fancy header definitions
-%\pagestyle{fancy}	
+\textcolor{white}{\LARGE{\icon{Linux}{24}{white} \icon{Apple}{24}{white}  \icon{Windows}{24}{white}}}
 
-
+\end{metasection}
 
 %---------------------------------------------------------------------------------------
 %	QR CODE (optional)
 %----------------------------------------------------------------------------------------
-%\includegraphics[width=0.1\linewidth]{qrcode}
-%\end{minipage}%
-%\noindent\fcolorbox{sectcol}{sectcol}{%
-%\begin{minipage}[b]{0.5\textwidth}
 
+\vspace{12pt}
+\begin{center}
+\includegraphics[width=0.35\mpwidth]{qrcode}
+\end{center}
 
+\end{minipage}}
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
@@ -470,7 +488,7 @@ Martial Arts
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.jankuester.com} $\cdot$ \textcolor{white}{github.com/jankapunkt}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{Coypright 2018 jkuester@uni-bremen.de} $\cdot$ \textcolor{white}{licensed unter MIT license}}}
 
 %============================================================================%
 %
