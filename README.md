@@ -24,22 +24,27 @@ This is a preview of the currently featured templates. There is also an example 
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/main_preview.png" 
 				alt="Classic CV example preview"
-				height="280" />
+				height="200" />
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/main_preview-1.png" 
 				alt="Modern CV example preview"
-				height="280"/>
+				height="200"/>
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/infographics-cv.png" 
 				alt="Infographics CV example preview" 
-				height="280"/>
+				height="200"/>
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
 				alt="Two Column CV example preview" 
-				height="280"/>
+				height="200"/>
+		</td>
+		<td>
+			<img src="http://jankuester.com/wp-content/uploads/sidebar_cv_template.png" 
+				alt="Sidebar CV example preview" 
+				height="200"/>
 		</td>
 	</tr>
 </table>
