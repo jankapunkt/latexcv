@@ -19,6 +19,7 @@ This is a preview of the currently featured templates. There is also an example 
 		<th>Modern</th>
 		<th>Infographics</th>
 		<th>Two Columns</th>
+		<th>Sidebar</th>
 	</tr>
 	<tr>
 		<td>
