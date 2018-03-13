@@ -15,7 +15,7 @@ before_install:
   - cd install-tl-*
   - chmod +x install-tl
   - sudo ./install-tl --profile=$PROJECTDIR/texlive.profile
-  - sudo apt-cache poliy texlive
+  - sudo apt-cache policy texlive
   - tlmgr install fontawesome
 
 
