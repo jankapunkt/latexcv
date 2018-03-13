@@ -1,9 +1,8 @@
-[![Build Status](https://travis-ci.org/jankapunkt/latexcv.svg?branch=master)](https://travis-ci.org/jankapunkt/latexcv) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+# latexcv - LaTex CV and Resume Collection</h1>
 
+[![Build Status](https://travis-ci.org/jankapunkt/latexcv.svg?branch=master)](https://travis-ci.org/jankapunkt/latexcv)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![GitLicense](https://gitlicense.com/badge/jankapunkt/latexcv)](https://gitlicense.com/license/jankapunkt/latexcv)
- 
-# latexcv - LaTex CV and Resume Collection
 
 A collection of simple and easy to use, yet powerful LaTex templates for CV and resume. All of them are self designed and self implemented and not copied from template collections.
 
@@ -20,27 +19,33 @@ This is a preview of the currently featured templates. There is also an example 
 		<th>Modern</th>
 		<th>Infographics</th>
 		<th>Two Columns</th>
+		<th>Sidebar</th>
 	</tr>
 	<tr>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/main_preview.png" 
 				alt="Classic CV example preview"
-				height="280" />
+				height="200" />
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/main_preview-1.png" 
 				alt="Modern CV example preview"
-				height="280"/>
+				height="200"/>
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/infographics-cv.png" 
 				alt="Infographics CV example preview" 
-				height="280"/>
+				height="200"/>
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
 				alt="Two Column CV example preview" 
-				height="280"/>
+				height="200"/>
+		</td>
+		<td>
+			<img src="http://jankuester.com/wp-content/uploads/sidebar_cv_template.png" 
+				alt="Sidebar CV example preview" 
+				height="200"/>
 		</td>
 	</tr>
 </table>
