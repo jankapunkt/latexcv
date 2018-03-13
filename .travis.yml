@@ -15,7 +15,7 @@ before_install:
   - cd install-tl-*
   - chmod +x install-tl
   - sudo ./install-tl --profile=$PROJECTDIR/texlive.profile
-  - tex --version
+  - PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
   - pdflatex -v
 
 script:
