@@ -138,7 +138,7 @@
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
-
+\usepackage{transparent}
 \usepackage{color}
 
 %accent color
@@ -199,9 +199,9 @@
 % include the right arrow into a tikz picture
 % param1: fill color
 %
-\newcommand{\rarrow}
+\newcommand{\rarrow}[1]
 {\begin{tikzpicture}[scale=0.7]
-	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
+	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzrarrow
  \end{tikzpicture}
 }
 
@@ -226,8 +226,8 @@
 %
 \newcommand{\metasection}[2]
 {
-\begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
-\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[12pt]
+\begin{tabular*}{1\textwidth}{p{2cm} p{11cm}}
+\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[8pt]
 \end{tabular*}
 }
 
@@ -246,16 +246,15 @@
 \newcommand{\cvevent}[5]
 {
 \vspace{8pt}
-	\begin{tabular*}{1\textwidth}{p{2.3cm}  p{10.8cm} x{3.9cm}}
- \textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
-
+	\begin{tabular*}{0.6\linewidth}{ p{12cm} x{3cm}}
+\textbf{#2} \textcolor{bgcol}{(#3)}&\textcolor{bgcol}{#1}\\[4pt]
 	\end{tabular*}
 \vspace{-12pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-	\begin{tabular*}{1\textwidth}{p{2.3cm} p{14.4cm}}
-&		 \larrow{bgcol}  #4\\[3pt]
-&		 \larrow{bgcol}  #5\\[6pt]
+	\begin{tabular*}{1\textwidth}{l}
+		 \larrow{sectcol}  #4\\[4.5pt]
+		 \larrow{sectcol}  #5\\[6pt]
 	\end{tabular*}
 
 }
@@ -295,42 +294,95 @@
 \pagestyle{fancy}	
 
 %----------------------------------------------------------------------------------------
-% BASIC INFORMATION
+% HEADLINE / BASIC INFORMATION
 %----------------------------------------------------------------------------------------
-\fcolorbox{white}{bgcol}{
+\fcolorbox{bgcol}{bgcol}{
 \begin{minipage}[c][0.1\textheight][t]{\linewidth}
 \begin{center}
 	\vspace{14pt}
-	\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} }\\[-8pt]
-	\textcolor{light}{\small{Consultant and Software Engineer $\cdot$  Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 XXX XX}}
+	\textcolor{light}{\small{Consultant and Software Engineer $\cdot$  Bremen, Germany  $\cdot$  info@jankuester.com  $\cdot$ +49 176 313 XXX XX}}\\[4pt]
+	\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} }
 \end{center}
-\end{minipage}}
-
-
-
+\end{minipage}}\\[-4pt]
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\fcolorbox{sectcol}{sectcol}{
+\begin{minipage}[c][0.04\textheight][t]{\linewidth}
+\begin{center}
+\parbox[b]{0.75\linewidth}{
+	\begin{center}
+	\large
+	\larrow{bgcol}\larrow{bgcol} \textcolor{white}{I create awesome resume templates in LaTeX for everyone.} \rarrow{bgcol}\rarrow{bgcol}
+	\end{center}
+}
+\end{center}
+\end{minipage}}\\[-4pt]
+%----------------------------------------------------------------------------------------
+% META
+%----------------------------------------------------------------------------------------
+\fcolorbox{white}{white}{
+\begin{minipage}[c][0.16\textheight][t]{\linewidth}
+\vspace{8pt}
+\begin{center}
+\parbox[c]{\innerwidth}{
+	\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{myfoto.jpg}
+	\hspace{8pt}
+	\parbox[b]{5cm}{
+	\metasection{Status:}{PhD student, M.Sc. Digital Media, Fullstack JS Engineer}
+	\metasection{Fields:}{Software Development, Consulting, Education} 
+	\metasection{Stack:}{Meteor, Mongo, React, Bootstrap, Fontawesome ,Mocha}
+	\metasection{Tools:}{Git, Sourcetree, Travis, Webstorm, Terminal}
+	\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
+	}
+}
+\end{center}
+\end{minipage}}\\[-4pt]
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+\fcolorbox{light}{light}{
+\begin{minipage}[c][0.4\textheight][t]{\linewidth}
+\vspace{8pt}
+\hspace{20pt}
+\parbox[c]{0.75\linewidth}{
 %---------------------------------------------------------------------------------------
-%	TITLE HEADLINE
+%	EXPERIENCE
 %----------------------------------------------------------------------------------------
-%\vspace{-20.55pt}
+%\cvsection{Experience}
 
-% use this for multiple words like working titles etc.
-%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
-% \large{ \textcolor{white}{{Resume}}}}
-%}}
+%
+\cvevent{2016 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
 
-% use this for single words, e.g. CV or RESUME etc.
-%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} } }}
+%\textcolor{softcol}{\hrule}
+
+%
+\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
 
 
-%----------------------------------------------------------------------------------------
-%	HEADER IMAGE
-%----------------------------------------------------------------------------------------
+%\textcolor{softcol}{\hrule}
 
-%\begin{figure}[H]
-%\begin{flushright}
-%	\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{myfoto.jpg}	%trimming relative to image size!
-%\end{flushright}
-%\end{figure}
+%
+\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
+
+%\textcolor{softcol}{\hrule}
+
+%
+\cvevent{Nov. 2011}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
+
+%\textcolor{softcol}{\hrule}
+
+
+%
+\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
+
+}
+\hspace{18pt}
+\textcolor{sectcol}{\rule[-3.2cm]{2pt}{7cm}}
+\hspace{12pt}
+\rotatebox[origin=c]{270}{\HUGE \textsc{Experience}}
+\end{minipage}}\\[-4pt]
+
 
 %---------------------------------------------------------------------------------------
 %	QR CODE (optional)
@@ -340,20 +392,6 @@
 %\includegraphics[width=103pt]{qrcode}
 %\normalsize
 %\vspace{88pt}
-
-%---------------------------------------------------------------------------------------
-%	META SECTION
-%----------------------------------------------------------------------------------------
-
-%\vspace{-114pt}
-
-%\metasection{Status:}{M.Sc. Digital Media, Fullstack JS Engineer}
-%\metasection{Fields:}{Project Management, Software Development, Consulting} 
-%\metasection{Prefers:}{Javascript (Meteor NodeJS), Java / JSF, XPages, Git, Eclipse}
-%\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
-
-%\vspace{6pt}
-
 %---------------------------------------------------------------------------------------
 %	SUMMARAY (optional)
 %----------------------------------------------------------------------------------------
@@ -367,35 +405,6 @@
 %
 %============================================================================%
 
-%---------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-%\cvsection{Experience}
-
-%
-%\cvevent{2016 / 09}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
-
-%\textcolor{softcol}{\hrule}
-
-%
-%\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
-
-
-%\textcolor{softcol}{\hrule}
-
-%
-%\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%
-%\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
-
-%
-%\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
 
 
 %---------------------------------------------------------------------------------------
