@@ -18,36 +18,49 @@ This is a preview of the currently featured templates. There is also an example 
 		<th>Classic</th>
 		<th>Modern</th>
 		<th>Infographics</th>
-		<th>Two Columns</th>
-		<th>Sidebar</th>
 	</tr>
 	<tr>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/main_preview.png" 
 				alt="Classic CV example preview"
-				height="200" />
+				height="300" />
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/main_preview-1.png" 
 				alt="Modern CV example preview"
-				height="200"/>
+				height="300"/>
 		</td>
 		<td>
 			<img src="http://jankuester.com/wp-content/uploads/infographics-cv.png" 
 				alt="Infographics CV example preview" 
-				height="200"/>
-		</td>
-		<td>
-			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
-				alt="Two Column CV example preview" 
-				height="200"/>
-		</td>
-		<td>
-			<img src="http://jankuester.com/wp-content/uploads/sidebar_cv_template.png" 
-				alt="Sidebar CV example preview" 
-				height="200"/>
+				height="300"/>
 		</td>
 	</tr>
+</table>
+
+<table>
+    <tr>
+       <th>Two Columns</th>
+       	<th>Sidebar</th>
+       	<th>Row Layout</th>
+    </tr>
+    	<tr>	
+    		<td>
+    			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
+    				alt="Two Column CV example preview" 
+    				height="300"/>
+    		</td>
+    		<td>
+    			<img src="http://jankuester.com/wp-content/uploads/sidebar_cv_template.png" 
+    				alt="Sidebar CV example preview" 
+    				height="300"/>
+    		</td>
+    		<td>
+    		    <img src="http://jankuester.com/wp-content/uploads/latexcv-row-layout.png"
+    		    alt="Row-Layout CV example preview" 
+                	height="300"/>
+            </td>    	
+    	</tr>
 </table>
 
 ## How to build?
