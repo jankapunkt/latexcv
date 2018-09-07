@@ -4,9 +4,9 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![GitLicense](https://gitlicense.com/badge/jankapunkt/latexcv)](https://gitlicense.com/license/jankapunkt/latexcv)
 
-A collection of simple and easy to use, yet powerful LaTex templates for CV and resume. All of them are self designed and self implemented and not copied from template collections.
+A collection of simple and easy to use, yet powerful LaTex templates for CVs and resumes. All of them are self designed and self implemented and not copied from template collections.
 
-If there are any problems, please create an issue. I will fix it asap. **Contributors are very welcome**.
+If there are any problems, please create an issue or - even better - a pull request. **Contributors are very welcome**.
 
 
 ## Gallery
@@ -71,17 +71,19 @@ The following packages need to be installed:
 
 - package tex-live distribution
 - package tex-live fonts
-- a LaTeX environment of your choice with pdfLatex capability
+- package pdflatex
+
+There is also a `texlive.profile` file in the project root, that can be used to install the minimum required texlive packages.
 
 ##### Build Procedure
 
  - Clone or download this project. 
- - Each template is in a folder, which contains a main.tex file
+ - For each template is in a folder, which contains a `main.tex` file do
  - Edit the main.tex according to your credentials, optionally change settings and colors etc.
- - Run pdflatex (build/compile) 
- - The main.pdf should show the output.
+ - Run `pdflatex` (build/compile) 
+ - The `main.pdf` should show the output.
 
-Create an issue, if this manual does not work for your.
+Create an issue, if this manual does not work for you.
 
 ##### Contribution
 
@@ -92,7 +94,7 @@ Want to contribute? Awesome! Please check the [contribution guidelines](https://
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2017 Jan Küster
+Copyright (c) 2014-2018 Jan Küster
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
