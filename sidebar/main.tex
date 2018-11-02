@@ -149,6 +149,9 @@
 \definecolor{sectcol}{RGB}{0,120,150}
 
 
+%Package for links, must be the last package used
+\usepackage{hyperref}
+
 %============================================================================%
 %
 %
@@ -285,6 +288,13 @@
 \newcommand{\icontext}[4]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}{#4}} \vcenteredhbox{\textcolor{#4}{#3}}
 }
+\newcommand{\iconhref}[5]{ 						%icon with website url
+    \vcenteredhbox{\icon{#1}{#2}{#5}} \href{#4}{\textcolor{#5}{#3}}
+}
+
+\newcommand{\iconemail}[5]{ 						%icon with email link
+    \vcenteredhbox{\icon{#1}{#2}{#5}} \href{mailto:#4}{\textcolor{#5}{#3}}
+}
 
 
 
@@ -415,10 +425,10 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 
 	\icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
 	\icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
-	\icontext{Send}{12}{info@jankuester.com}{white}\\[6pt]
-	\icontext{MousePointer}{12}{www.jankuester.com}{white}\\[6pt]
-	\icontext{Github}{12}{github.com/jankapunkt}{white}\\[6pt]
-	\icontext{Twitter}{12}{@Kuester\_Jan}{white}\\[6pt]
+	\iconemail{Send}{12}{info@jankuester.com}{info@jankuester.com}{white}\\[6pt]
+	\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
+	\iconhref{Github}{12}{https://github.com/jankapunkt}{https://github.com/jankapunkt}{white}\\[6pt]
+	\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
 
 \end{metasection}
 	
