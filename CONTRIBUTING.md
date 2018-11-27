@@ -29,7 +29,7 @@ I know this creates lots of duplicate code or make it harde to solve a feature r
 
 ### Learn LaTeX
 
-The following constructs/libraries are crucial to know in order to conribute successfully:
+The following constructs/libraries are crucial to know in order to contribute successfully:
 
 * newenvironment
 * newcommand
