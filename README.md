@@ -13,7 +13,7 @@ Point out with a progressive layout. Give decision makers and HR only the most i
 
 **Beginner friendly**
 
-Pick a template, replace the content, compile, done. If tht's not enough you can easily customize colors, fonts and layout. The templates are documented directly in the code. 
+Pick a template, replace the content, compile, done. If that's not enough you can easily customize colors, fonts and layout. The templates are documented directly in the code. 
 
 **Minimal environment**
 
