@@ -76,7 +76,7 @@ This is a preview of the currently featured templates. There is also an example 
 
 ## How to build?
 
-The following guide just briefly describes the requirements and build procedure as there are many ways to install a LaTeX distrubution on various OS. Please create an issue, if this part is not helpful.
+The following guide just briefly describes the requirements and build procedure as there are many ways to install a LaTeX distribution on various OS. Please create an issue, if this part is not helpful.
 
 **Build Requirements**
 
