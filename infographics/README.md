@@ -1,4 +1,4 @@
-#Infographics CV
+# Infographics CV
 
 This infographics cv contains the following components:
 
