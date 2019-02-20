@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="latexcv icon" src="./logo.svg" width="300px" />
+  <img alt="latexcv icon" src="./logo.svg" height="300px" />
   <br />
   LaTex CV and Resume Collection
 </h1>
@@ -17,9 +17,11 @@
 </div>
 
 <br />
+<br />
 <p align="center">
 :necktie: A collection of simple and easy to use, yet powerful LaTeX templates for CVs and resumes. All of them are self designed and self implemented and not copied from template collections.
 </p>
+<br />
 
 <div align="center">
 <table width="100%" margin-left="auto" margin-right="auto">
