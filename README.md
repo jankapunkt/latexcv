@@ -1,30 +1,28 @@
-# latexcv - LaTex CV and Resume Collection
+<h1 align="center">
+  <img alt="latexcv icon" src="./logo.svg" width="300px" />
+  <br />
+  LaTex CV and Resume Collection
+</h1>
 
-[![Build Status](https://travis-ci.org/jankapunkt/latexcv.svg?branch=master)](https://travis-ci.org/jankapunkt/latexcv)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![GitLicense](https://gitlicense.com/badge/jankapunkt/latexcv)](https://gitlicense.com/license/jankapunkt/latexcv)
+<div align="center">
+  <a href="https://travis-ci.org/jankapunkt/latexcv" title="Build Status">
+    <img src="https://travis-ci.org/jankapunkt/latexcv.svg?branch=master" alt="Build Status" />
+  </a>
+  <a href="http://www.repostatus.org/#active" title="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
+    <img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active" />
+  </a>
+  <a href="https://gitlicense.com/license/jankapunkt/latexcv">
+    <img src="https://gitlicense.com/badge/jankapunkt/latexcv" alt="GitLicense" />
+  </a>	
+</div>
 
-A collection of simple and easy to use, yet powerful LaTeX templates for CVs and resumes. All of them are self designed and self implemented and not copied from template collections.
+<br />
+<p align="center">
+:necktie: A collection of simple and easy to use, yet powerful LaTeX templates for CVs and resumes. All of them are self designed and self implemented and not copied from template collections.
+</p>
 
-
-**Great first impression**
-
-Point out with a progressive layout. Give decision makers and HR only the most important information about you on one single page.
-
-**Beginner friendly**
-
-Pick a template, replace the content, compile, done. If that's not enough you can easily customize colors, fonts and layout. The templates are documented directly in the code. 
-
-**Minimal environment**
-
-You need a minimal tex-live distribution to compile the templates. No XeTeX or LuaTeX required. No other SDKs or environments required.
-
-
-## Gallery
-
-This is a preview of the currently featured templates. There is also an example output pdf in each template's directory.
-
-<table width="100%">
+<div align="center">
+<table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
 		<th>Classic</th>
 		<th>Modern</th>
@@ -73,6 +71,19 @@ This is a preview of the currently featured templates. There is also an example 
             </td>    	
     	</tr>
 </table>
+</div>
+
+**Great first impression**
+
+Point out with a progressive layout. Give decision makers and HR only the most important information about you on one single page.
+
+**Beginner friendly**
+
+Pick a template, replace the content, compile, done. If that's not enough you can easily customize colors, fonts and layout. The templates are documented directly in the code. 
+
+**Minimal environment**
+
+You need a minimal tex-live distribution to compile the templates. No XeTeX or LuaTeX required. No other SDKs or environments required.
 
 ## How to build?
 
@@ -108,7 +119,7 @@ This repo also contains a `texlive.profile` file in the project root, that can b
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2018 Jan Küster
+Copyright (c) 2014-2019 Jan Küster
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
