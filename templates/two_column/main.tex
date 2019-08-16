@@ -66,8 +66,17 @@
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
+
+%----------------------------------------------------------------------------------------
+%	CONFIG INCLUDE
+%----------------------------------------------------------------------------------------
+\input{../../config/config_meta.tex}
+\input{../../config/config_cvevents.tex}
+
+\eventsLoad{eventsexperience}{../../config/events_experience.csv}
+\eventsLoad{eventseducation}{../../config/events_education.csv}
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT  DEFINITIONS
@@ -93,7 +102,7 @@
 
 %customize entries left, center and right
 \lhead{}
-\chead{ \small{Jan Küster  $\cdot$ Consultant and Software Engineer $\cdot$  Bremen, Germany  $\cdot$  \textcolor{sectcol}{\textbf{info@jankuester.com}}  $\cdot$ +49 176 313 877 34}}
+\chead{ \small{Jan Küster  $\cdot$ \metaJobPosition $\cdot$  \metaLocation  $\cdot$  \textcolor{sectcol}{\textbf{\metaEmail}}  $\cdot$ \metaPhone}}
 \rhead{}
 
 
@@ -301,19 +310,19 @@
 %	TITLE HEADLINE
 %----------------------------------------------------------------------------------------
 
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.25\linewidth][c]{\HUGE{\textcolor{white}{\textsc{Jan}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Küster}} } }}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.25\linewidth][c]{\HUGE{\textcolor{white}{\textsc{\metaFirstName}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{\metaLastName}} } }}
 
 %----------------------------------------------------------------------------------------
 %	HEADER IMAGE
 %----------------------------------------------------------------------------------------
-\hspace{-0.25\linewidth}\includegraphics[width=1.2725\linewidth]{myfoto.jpg} %use full size
+\hspace{-0.25\linewidth}\includegraphics[trim= 0 100 0 0, clip,width=1.2725\linewidth]{../../config/myfoto.jpg} %use full size
 
 %---------------------------------------------------------------------------------------
 %	QR CODE (optional)
 %----------------------------------------------------------------------------------------
 \vspace{-100pt}
 \hspace{0.59\linewidth}
-\includegraphics[width=88pt]{qrcode}
+\includegraphics[width=88pt]{../../config/qrcode}
 \normalsize
 
 
@@ -328,10 +337,17 @@
 \vspace{\spread}
 
 \cvsection{Summary}\\
-I am a digital media graduate (M.Sc.) with project experience in educational research as well as in the private sector. During my studies I focused on e-assessment software and moved over to b2b software for IBM Notes Domino.
+\metaSummary\\
 
-Currently I develop and evaluate the next generation learning management system with Meteor based on an extensive nursing curriculum for healthcare education.  I also love fitness, martial arts, videogames, news and Sci-Fi series.\\[-2pt]
-\textcolor{softcol}{\hrule}
+\metasection{Status:}{\metaJobDescription, \metaJobPosition}
+
+\metasection{Fields:}{\metaFields}
+
+\metasection{Tools:}{\metaTools}
+
+\metasection{Tech:}{\metaTechs}
+
+\metasection{Loves:}{\metaActivities}
 
 \end{minipage}
 
@@ -342,18 +358,8 @@ Currently I develop and evaluate the next generation learning management system 
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-\metasection{Status:}{Fullstack JS Engineer, M.Sc. Digital Media, Consultant}
-\metasection{Fields:}{Project Management, Software Development, Consulting} 
+
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.485\textwidth}
-
-\vspace{5pt}
-
-\metasection{Tech:}{Meteor, Javascript, Bootstrap, Mongodb, Git, Webstorm, Sourcetree, Terminal}
-\metasection{Loves:}{Global Game Jam, Sci-Fi series, Stackoverflow, Fitness and Martial Arts}
-\end{minipage}
-
 
 \begin{minipage}[t]{0.485\textwidth}
 
