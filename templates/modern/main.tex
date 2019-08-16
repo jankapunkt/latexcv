@@ -148,7 +148,7 @@
 \definecolor{sectcol}{RGB}{255,150,0}
 
 %dark background color
-\definecolor{bgcol}{RGB}{110,110,110}
+\definecolor{bgcol}{RGB}{90,90,90}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
@@ -228,7 +228,7 @@
 \newcommand{\metasection}[2]
 {
 \begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
-\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[6pt]
+\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[4pt]
 \end{tabular*}
 }
 
@@ -254,9 +254,9 @@
 \vspace{-12pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-	\begin{tabular*}{1\textwidth}{p{2.3cm} p{14.4cm}}
-&		 \larrow{bgcol}  #4\\[3pt]
-&		 \larrow{bgcol}  #5\\[6pt]
+	\begin{tabular*}{1\textwidth}{p{1.8cm} p{0.05cm} p{14.6cm}}
+&		 \larrow{bgcol} & \textcolor{bgcol}{#4}\\[3pt]
+&		 \larrow{bgcol} & \textcolor{bgcol}{#5}\\[6pt]
 	\end{tabular*}
 
 }
@@ -315,17 +315,6 @@
 % use this for single words, e.g. CV or RESUME etc.
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{\metaName}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} } }}
 
-
-%----------------------------------------------------------------------------------------
-%	HEADER IMAGE
-%----------------------------------------------------------------------------------------
-
-\begin{figure}[H]
-\begin{flushright}
-	\includegraphics[trim= 320 130 460 210,clip,width=0.18\linewidth]{../../config/myfoto.jpg}	%trimming relative to image size!
-\end{flushright}
-\end{figure}
-\hspace{-10pt}
 %---------------------------------------------------------------------------------------
 %	QR CODE (optional)
 %----------------------------------------------------------------------------------------
@@ -338,16 +327,21 @@
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-
-\vspace{-126pt}
-
+\vspace{8pt}
 \metasection{Status:}{\metaJobDescription, \metaJobPosition}
 \metasection{Fields:}{\metaFields}
 \metasection{Stack:}{\metaTechs}
 \metasection{Tools:}{\metaTools}
 \metasection{Activities:}{\metaActivities}
 
-\vspace{6pt}
+%----------------------------------------------------------------------------------------
+%	HEADER IMAGE
+%----------------------------------------------------------------------------------------
+\vspace{-100pt}
+\hspace{424.1pt}
+\includegraphics[trim= 320 130 460 210,clip,width=0.18\linewidth]{../../config/myfoto.jpg}	%trimming relative to image size!
+
+
 
 %---------------------------------------------------------------------------------------
 %	SUMMARAY (optional)
@@ -370,9 +364,14 @@
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
-\cvsection{Education}
+\begin{minipage}[c][0.3\textheight][t]{1\linewidth}
+
+	\cvsection{Education}
 
 \eventsRender{eventseducation}
+
+\end{minipage}
+
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
