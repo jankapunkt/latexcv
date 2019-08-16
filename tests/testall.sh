@@ -4,10 +4,12 @@ set -e
 
 ROOT=$(pwd)
 
-$ROOT/tests/test.sh $ROOT/classic
-$ROOT/tests/test.sh $ROOT/modern
-$ROOT/tests/test.sh $ROOT/two_column
-$ROOT/tests/test.sh $ROOT/infographics
+$ROOT/tests/test.sh $ROOT/templates/classic
+$ROOT/tests/test.sh $ROOT/templates/infographics
+$ROOT/tests/test.sh $ROOT/templates/modern
+$ROOT/tests/test.sh $ROOT/templates/rows
+$ROOT/tests/test.sh $ROOT/templates/sidebar
+$ROOT/tests/test.sh $ROOT/templates/two_column
 
 echo 'all tests passed'
 exit 0
