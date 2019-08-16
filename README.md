@@ -40,7 +40,7 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 				height="300" />
 		</td>
 		<td>
-			<img src="templates/main.png" 
+			<img src="templates/modern/main.png" 
 				alt="Modern CV example preview"
 				height="300"/>
 		</td>
@@ -60,7 +60,7 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
     </tr>
     	<tr>	
     		<td>
-    			<img src="templates/twocolumn/main.png" 
+    			<img src="templates/two_column/main.png" 
     				alt="Two Column CV example preview" 
     				height="300"/>
     		</td>
@@ -70,7 +70,7 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
     				height="300"/>
     		</td>
     		<td>
-    		    <img src="templates/row/main.png"
+    		    <img src="templates/rows/main.png"
     		    alt="Row-Layout CV example preview" 
                 	height="300"/>
             </td>    	
