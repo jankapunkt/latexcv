@@ -35,17 +35,17 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 	</tr>
 	<tr>
 		<td>
-			<img src="http://jankuester.com/wp-content/uploads/main_preview.png" 
+			<img src="templates/classic/main.png" 
 				alt="Classic CV example preview"
 				height="300" />
 		</td>
 		<td>
-			<img src="http://jankuester.com/wp-content/uploads/main_preview-1.png" 
+			<img src="templates/main.png" 
 				alt="Modern CV example preview"
 				height="300"/>
 		</td>
 		<td>
-			<img src="http://jankuester.com/wp-content/uploads/infographics-cv.png" 
+			<img src="templates/infographics/main.png" 
 				alt="Infographics CV example preview" 
 				height="300"/>
 		</td>
@@ -60,17 +60,17 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
     </tr>
     	<tr>	
     		<td>
-    			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
+    			<img src="templates/twocolumn/main.png" 
     				alt="Two Column CV example preview" 
     				height="300"/>
     		</td>
     		<td>
-    			<img src="http://jankuester.com/wp-content/uploads/sidebar_cv_template.png" 
+    			<img src="templates/sidebar/main.png" 
     				alt="Sidebar CV example preview" 
     				height="300"/>
     		</td>
     		<td>
-    		    <img src="http://jankuester.com/wp-content/uploads/latexcv-row-layout.png"
+    		    <img src="templates/row/main.png"
     		    alt="Row-Layout CV example preview" 
                 	height="300"/>
             </td>    	
@@ -114,6 +114,18 @@ This repo also contains a `texlive.profile` file in the project root, that can b
  * Run `pdflatex` (build/compile) 
  - The `main.pdf` should show the output.
 
+## New: Configuration files
+
+To ease bilding multiple templates at once, the project introduces the `config` folder, where personal and event data can be configured.
+
+Please take a look at the files
+
+[`/config/config_meta.tex`](config/config_meta.tex)
+
+[`/config/config_cvevents.tex`](config/config_cvevents.tex)
+
+
+The new procedure is backwards compatible. If you need customization beyond these files you can easily replace their definitions with your custom content.
 
 ## Contribution
 
