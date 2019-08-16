@@ -41,7 +41,7 @@ Considering the structure of this repository you can include the `cjk.tex` using
 \documentclass[10pt,A4]{article} % just added to demonstrate where to put the \def and input	
 \usepackage[utf8]{inputenc}      % just added to demonstrate where to put the \def and input
 \def \cjklang {gbsn}             % defines to use gbsn simplified Chinese for this document
-\input{../cjk/cjk.tex}           % includes the CJK setup script.
+\input{../../env/cjk/cjk.tex}    % includes the CJK setup script, path is relative to the current template folder
 % ...
 ```
 
