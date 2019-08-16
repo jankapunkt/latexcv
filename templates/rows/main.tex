@@ -142,16 +142,16 @@
 \usepackage{color}
 
 %accent color
-\definecolor{sectcol}{RGB}{255,150,0}
+\definecolor{sectcol}{RGB}{100,70,250}
 
 %dark background color
-\definecolor{bgcol}{RGB}{110,110,110}
+\definecolor{bgcol}{RGB}{50,50, 50}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
 
 % light bg
-\definecolor{light}{RGB}{210, 210, 210}
+\definecolor{light}{RGB}{245, 245, 245}
 
 %============================================================================%
 %
@@ -227,7 +227,7 @@
 \newcommand{\metasection}[2]
 {
 \begin{tabular*}{1\textwidth}{p{2cm} p{11cm}}
-\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[8pt]
+\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[3pt]
 \end{tabular*}
 }
 
@@ -277,7 +277,11 @@
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
+\input{../../config/config_meta.tex}
+\input{../../config/config_cvevents.tex}
 
+\eventsLoad{eventsexperience}{../../config/events_experience.csv}
+\eventsLoad{eventseducation}{../../config/events_education.csv}
 
 %============================================================================%
 %
@@ -300,44 +304,45 @@
 \begin{minipage}[c][0.085\textheight][t]{\linewidth}
 \begin{center}
 	\vspace{14pt}
-	\textcolor{light}{\small{Consultant and Software Engineer $\cdot$  Bremen, Germany  $\cdot$  info@jankuester.com  $\cdot$ +49 176 313 XXX XX}}\\
-	\HUGE{\textcolor{white}{\textsc{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} }
-\end{center}
-\end{minipage}}\\[-4pt]
-%----------------------------------------------------------------------------------------
-% SUMMARY
-%----------------------------------------------------------------------------------------
-\fcolorbox{sectcol}{sectcol}{
-\begin{minipage}[c][0.03\textheight][t]{\linewidth}
-\vspace{-3pt}
-\begin{center}
-\parbox[b]{0.75\linewidth}{
-	\begin{center}
-	\large
-	\larrow{bgcol}\larrow{bgcol} \textcolor{white}{I create awesome resume templates in LaTeX for everyone.} \rarrow{bgcol}\rarrow{bgcol}
-	\end{center}
-}
+	\textcolor{light}{\small{\metaJobDescription $\cdot$  \metaLocation $\cdot$  \metaEmail $\cdot$ \metaPhone}}\\
+	\HUGE{\textcolor{white}{\textsc{\metaName}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{Resume}} }
 \end{center}
 \end{minipage}}\\[-4pt]
 %----------------------------------------------------------------------------------------
 % META
 %----------------------------------------------------------------------------------------
 \fcolorbox{white}{white}{
-\begin{minipage}[c][0.16\textheight][t]{\linewidth}
-\vspace{8pt}
+\begin{minipage}[c][0.12\textheight][t]{\linewidth}
 \begin{center}
+\vspace{10pt}
 \parbox[c]{\innerwidth}{
-	\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{myfoto.jpg}
-	\hspace{8pt}
 	\parbox[b]{5cm}{
-	\metasection{Status:}{PhD student, M.Sc. Digital Media, Fullstack JS Engineer}
-	\metasection{Fields:}{Software Development, Consulting, Education} 
-	\metasection{Stack:}{Meteor, Mongo, React, Bootstrap, Fontawesome ,Mocha}
-	\metasection{Tools:}{Git, Sourcetree, Travis, Webstorm, Terminal}
-	\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
+	\metasection{Status:}{\metaJobDescription, \metaJobPosition}
+	\metasection{Fields:}{\metaFields}
+	\metasection{Stack:}{\metaTechs}
+	\metasection{Tools:}{\metaTools}
+	\metasection{Activities:}{\metaActivities}
 	}
 }
 \end{center}
+\vspace{-100pt}
+\hspace{400pt}
+\includegraphics[trim= 320 130 50 210,clip,width=0.30\linewidth]{../../config/myfoto.jpg}
+\end{minipage}}\\[-4pt]
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\fcolorbox{sectcol}{sectcol}{
+\begin{minipage}[c][0.03\textheight][t]{\linewidth}
+    \vspace{-3pt}
+    \begin{center}
+        \parbox[b]{0.75\linewidth}{
+        \begin{center}
+            \large
+            \larrow{bgcol}\larrow{bgcol} \textcolor{white}{\metaSlogan} \rarrow{bgcol}\rarrow{bgcol}
+        \end{center}
+        }
+    \end{center}
 \end{minipage}}\\[-4pt]
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
@@ -346,31 +351,9 @@
 \begin{minipage}[c][0.36\textheight][t]{\linewidth}
 \vspace{4pt}
 \hspace{26pt}
-\parbox[c]{0.75\linewidth}{
-%
-\cvevent{2016 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
+\parbox[c]{0.80\linewidth}{
 
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
-
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{Nov. 2011}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
-
-
-%
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
+\eventsRender{eventsexperience}
 
 }
 \hspace{18pt}
@@ -385,7 +368,7 @@
 \begin{minipage}[c][0.03\textheight][t]{\linewidth}
 \vspace{-3pt}
 \begin{center}
-\parbox[b]{0.75\linewidth}{
+\parbox[b]{0.80\linewidth}{
 	\begin{center}
 	\large
 	\textcolor{white}{Check out my open source projects at - } \textcolor{sectcol}{\textbf{github.com/jankapunkt}}
@@ -397,28 +380,12 @@
 % EDUCATION
 %----------------------------------------------------------------------------------------
 \fcolorbox{white}{white}{
-\begin{minipage}[c][0.2875\textheight][t]{\linewidth}
+\begin{minipage}[c][0.32875\textheight][t]{\linewidth}
 \vspace{1pt}
 \hspace{26pt}
-\parbox[c]{0.75\linewidth}{
-%\cvsection{Education}
-
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
+\parbox[c]{0.80\linewidth}{
+% render all eevents from DB
+\eventsRender{eventseducation}
 }
 \hspace{18pt}
 \textcolor{sectcol}{\rule[-3.2cm]{2pt}{7cm}}
@@ -441,11 +408,11 @@
 %--------------------------------------------------------------------------------------------------
 \fcolorbox{bgcol}{bgcol}{
 \begin{minipage}[c][0.01\textheight][t]{\linewidth}
-\vspace{-8pt}
+\vspace{-9pt}
 \begin{center}
 \parbox[b]{0.75\linewidth}{
 	\begin{center}
-	 \textcolor{white}{www.jankuester.com} \textcolor{white}{$\cdot$} \textcolor{white}{twitter.com/kuester\_jan}
+	 \textcolor{white}{\metaHomepage} \textcolor{white}{$\cdot$} \textcolor{white}{\metaTwitter}
 	\end{center}
 }
 \end{center}
