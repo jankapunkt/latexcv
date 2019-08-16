@@ -13,5 +13,8 @@
 \DTLforeach*                                                                             % start iteration
 {#1}                                                                       % database label
 {\evFrom=from,\evTo=to,\evPos=position,\evIns=institution,\evSum=summary,\evDet=details} % variables assignment
-{\cvevent{\evFrom - \evTo}{\evPos}{\evIns}{\evSum}{\evDet}}                                % render event on iteration
+{
+
+\cvevent{\evFrom - \evTo}{\evPos}{\evIns}{\evSum}{\evDet}}                             % render event on iteration
+
 }
