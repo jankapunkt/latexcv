@@ -9,7 +9,7 @@
 
 % Fields are internally mapped to
 % from; to; position;   institution;    summary;    details
-\newcommand{\eventsRender}[1]{
+\newcommand{\eventsRender}[2]{
 \DTLforeach*                                                                             % start iteration
 {#1}                                                                       % database label
 {\evFrom=from,\evTo=to,\evPos=position,\evIns=institution,\evSum=summary,\evDet=details} % variables assignment
