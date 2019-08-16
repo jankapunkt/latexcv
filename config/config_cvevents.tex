@@ -1,0 +1,17 @@
+\usepackage{datatool}
+\DTLsetseparator{;}
+
+
+\newcommand{\eventsLoad}[2]{\DTLloaddb{#1}{#2}}
+% \DTLloaddb{eventseducation}{events_education.csv}
+
+
+
+% Fields are internally mapped to
+% from; to; position;   institution;    summary;    details
+\newcommand{\eventsRender}[1]{
+\DTLforeach*                                                                             % start iteration
+{#1}                                                                       % database label
+{\evFrom=from,\evTo=to,\evPos=position,\evIns=institution,\evSum=summary,\evDet=details} % variables assignment
+{\cvevent{\evFrom - \evTo}{\evPos}{\evIns}{\evSum}{\evDet}}                                % render event on iteration
+}
