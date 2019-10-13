@@ -22,7 +22,7 @@
 :necktie: A collection of simple and easy to use, yet powerful LaTeX templates for CVs and resumes. All of them are self designed and self implemented and not copied from template collections.
 </p>
 <p>
-Now with support for Chinese, Japanese and Korean character encoding. Setup is only two lines of code! Read more <a href="cjk/README.md">here</a>.
+Now with support for Chinese, Japanese and Korean character encoding. Setup is only two lines of code! Read more <a href="docs/cjk/README.md">here</a>.
 </p>	
 <br />
 
@@ -31,48 +31,65 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 	<tr>
 		<th>Classic</th>
 		<th>Modern</th>
-		<th>Infographics</th>
 	</tr>
 	<tr>
-		<td>
-			<img src="http://jankuester.com/wp-content/uploads/main_preview.png" 
-				alt="Classic CV example preview"
-				height="300" />
+		<td width="50%">
+			<img src="docs/media/classic.png" 
+				alt="Classic CV example preview" />
 		</td>
-		<td>
-			<img src="http://jankuester.com/wp-content/uploads/main_preview-1.png" 
-				alt="Modern CV example preview"
-				height="300"/>
+		<td width="50%">
+			<img src="docs/media/modern.png" 
+				alt="Modern CV example preview" />
 		</td>
-		<td>
-			<img src="http://jankuester.com/wp-content/uploads/infographics-cv.png" 
-				alt="Infographics CV example preview" 
-				height="300"/>
+	</tr>
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+	<tr>
+		<th>Infographics</th>
+		<th>Two Columns</th>
+	</tr>
+	<tr>
+		<td width="50%">
+			<img src="docs/media/infographics.png" 
+				alt="Infographics CV example preview" />
 		</td>
-	</tr>			
+		<td width="50%">
+			<img src="docs/media/two_column.png" 
+				alt="Two Column CV example preview" />
+		</td>
+	</tr>
 </table>
 
 <table>
     <tr>
-       <th>Two Columns</th>
        	<th>Sidebar</th>
        	<th>Row Layout</th>
     </tr>
     	<tr>	
-    		<td>
-    			<img src="http://jankuester.com/wp-content/uploads/twocolumn-cv.png" 
-    				alt="Two Column CV example preview" 
-    				height="300"/>
+    		<td width="50%">
+    			<img src="docs/media/sidebar.png" 
+    				alt="Sidebar CV example preview" />
     		</td>
-    		<td>
-    			<img src="http://jankuester.com/wp-content/uploads/sidebar_cv_template.png" 
-    				alt="Sidebar CV example preview" 
-    				height="300"/>
+    		<td width="50%">
+    		    <img src="docs/media/rows.png"
+    		    alt="Row-Layout CV example preview" />
+            </td>    	
+    	</tr>
+</table>
+
+<table>
+    <tr>
+       	<th>Sidebar Left</th>
+       	<th>More coming soon...</th>
+    </tr>
+    	<tr>	
+    		<td width="50%">
+    			<img src="docs/media/sidebarleft.png"
+    				alt="Left sidebar CV example preview" />
     		</td>
-    		<td>
-    		    <img src="http://jankuester.com/wp-content/uploads/latexcv-row-layout.png"
-    		    alt="Row-Layout CV example preview" 
-                	height="300"/>
+    		<td width="50%">
+    			<h4>Your idea for a new template.</h4>
             </td>    	
     	</tr>
 </table>
