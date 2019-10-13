@@ -33,15 +33,15 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 		<th>Modern</th>
 	</tr>
 	<tr>
-		<td>
+		<td width="50%">
 			<img src="docs/media/classic.png" 
 				alt="Classic CV example preview" />
 		</td>
-		<td>
+		<td width="50%">
 			<img src="docs/media/modern.png" 
 				alt="Modern CV example preview" />
 		</td>
-	</tr>			
+	</tr>
 </table>
 
 <table width="100%" margin-left="auto" margin-right="auto">
@@ -50,15 +50,15 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 		<th>Two Columns</th>
 	</tr>
 	<tr>
-		<td>
+		<td width="50%">
 			<img src="docs/media/infographics.png" 
 				alt="Infographics CV example preview" />
 		</td>
-		<td>
-			<img src="docs/media/two_columns.png" 
+		<td width="50%">
+			<img src="docs/media/two_column.png" 
 				alt="Two Column CV example preview" />
 		</td>
-	</tr>			
+	</tr>
 </table>
 
 <table>
@@ -67,11 +67,11 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
        	<th>Row Layout</th>
     </tr>
     	<tr>	
-    		<td>
+    		<td width="50%">
     			<img src="docs/media/sidebar.png" 
     				alt="Sidebar CV example preview" />
     		</td>
-    		<td>
+    		<td width="50%">
     		    <img src="docs/media/rows.png"
     		    alt="Row-Layout CV example preview" />
             </td>    	
@@ -84,11 +84,11 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
        	<th>More coming soon...</th>
     </tr>
     	<tr>	
-    		<td>
-    			<img src="docs/media/sidebarleft.png" 
+    		<td width="50%">
+    			<img src="docs/media/sidebarleft.png"
     				alt="Left sidebar CV example preview" />
     		</td>
-    		<td>
+    		<td width="50%">
     			<h4>Your idea for a new template.</h4>
             </td>    	
     	</tr>
