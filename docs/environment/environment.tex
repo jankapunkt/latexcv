@@ -1,0 +1,8 @@
+%==================================================================
+% Reads environment variables into own commands.
+% Credits: https://tex.stackexchange.com/a/62032
+%==================================================================
+\usepackage{catchfile}
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
