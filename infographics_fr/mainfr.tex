@@ -1,0 +1,557 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2016 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%	*************	RESOURCES USED	 ********************
+%
+%	http://tex.stackexchange.com/questions/5718/package-for-pie-charts
+%	http://tex.stackexchange.com/questions/183087/draw-colored-world-us-map-in-latex#183138
+%	http://www.texample.net/tikz/examples/simple-flow-chart/
+%	http://vizualize.me/#
+%	http://devnet.kentico.com/getattachment/fd511a92-e164-40f5-ba51-07c228a49fed/Kentico_fortune500_infographics_FINAL.png
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+%============================================================================%
+%
+%	DOCUMENT DEFINITION
+%
+%============================================================================%
+
+%we use article class because we want to fully customize the page
+\documentclass[10pt,A4]{article}	
+
+
+%----------------------------------------------------------------------------------------
+%	ENCODING
+%----------------------------------------------------------------------------------------
+
+%we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}		
+
+%----------------------------------------------------------------------------------------
+%	LOGIC
+%----------------------------------------------------------------------------------------
+
+\usepackage{xifthen}
+\usepackage{calc}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% some tex-live fonts - choose your own
+
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+\usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto} 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% set font default
+\renewcommand*\familydefault{\sfdefault} 	
+\usepackage[T1]{fontenc}
+
+% more font size definitions
+\usepackage{moresize}		
+
+% awesome font
+\usepackage{fontawesome5}
+
+
+%----------------------------------------------------------------------------------------
+%	PAGE LAYOUT  DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%debug page outer frames
+%\usepackage{showframe}			
+
+%define page styles using geometry
+\usepackage[a4paper]{geometry}		
+
+% for example, change the margins to 2 inches all round
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} 	
+
+% use customized header
+\usepackage{fancyhdr}				
+\pagestyle{fancy}
+
+%less space between header and content
+\setlength{\headheight}{-5pt}		
+
+% customize header entries
+\lhead{}
+\rhead{}
+\chead{}
+
+%indentation is zero
+\setlength{\parindent}{0mm}
+
+%----------------------------------------------------------------------------------------
+%	TABLE /ARRAY DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+%extended aligning of tabular cells
+\usepackage{array}
+
+% custom column width
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+
+
+%----------------------------------------------------------------------------------------
+%	GRAPHICS DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% for drawing graphics and charts
+\usepackage{tikz}
+\usetikzlibrary{shapes, backgrounds}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	ICON-SET EMBEDDING
+%---------------------------------------------------------------------------------------- 
+
+% at this point we simplify our icon-embedding by simply referring to a set of png images.
+% if you find a good way of including svg without conflicting with other packages you can
+% replace this part
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{sectcol}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\icontext}[3]{ 						%icon with text shortcut
+	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
+}
+
+%----------------------------------------------------------------------------------------
+%	Color DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+\usepackage{xcolor}
+
+%defineColors
+\definecolor{orange}{RGB}{255,150,0}
+\definecolor{lblue}{RGB}{0,178,255}
+\definecolor{darkblue}{RGB}{0,80,130}
+\definecolor{darkerblue}{RGB}{0,100,160}
+\definecolor{lgray}{RGB}{0,120,200}
+\definecolor{powderblue}{RGB}{190,220,255}
+\definecolor{darkestblue}{RGB}{0,50,80}
+
+
+%main color
+\colorlet{maincol}{orange}
+
+%secondary colors
+\colorlet{secondcol}{lblue}
+\colorlet{thirdcol}{darkblue}
+\colorlet{fourthcol}{darkerblue}
+\colorlet{fifthcol}{lgray}
+\colorlet{sixthcol}{darkblue}
+
+%background color
+\colorlet{bgcol}{powderblue}
+
+%textcolor
+\colorlet{textcol}{darkestblue}
+
+%titletextcolor
+\colorlet{titletext}{white}
+
+%sectioncolor
+\colorlet{sectcol}{white}
+
+%set a background col for whole page
+\pagecolor{bgcol}
+
+
+%----------------------------------------------------------------------------------------
+% 	HEADER
+%----------------------------------------------------------------------------------------
+
+% remove top header line
+\renewcommand{\headrulewidth}{0pt} 
+
+%remove botttom header line
+\renewcommand{\footrulewidth}{0pt}	  	
+
+%remove pagenum
+\renewcommand{\thepage}{}	
+
+%remove section num		
+\renewcommand{\thesection}{}			
+
+
+%----------------------------------------------------------------------------------------
+%
+% 	TIKZ GRAPHICS
+%
+%----------------------------------------------------------------------------------------
+
+
+% the chart graphics are outsourced into own files
+
+%----------------------------------------------------------------------------------------
+% 	PIE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/piechart.tex}
+
+%----------------------------------------------------------------------------------------
+% 	BAR CHART
+%----------------------------------------------------------------------------------------
+\input{./g/barchart.tex}
+
+
+%----------------------------------------------------------------------------------------
+% 	BUBBLE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/bubbles.tex}
+
+%----------------------------------------------------------------------------------------
+% 	SQUARE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/squares.tex}
+
+
+%----------------------------------------------------------------------------------------
+% 	TIMELINE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/timeline.tex}
+
+%----------------------------------------------------------------------------------------
+% 	FACT BUBBLE
+%----------------------------------------------------------------------------------------
+\input{./g/factbubble.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	custom sections
+%----------------------------------------------------------------------------------------
+
+% create a coloured box with arrow and title as cv section headline
+% param 1: section title
+%
+\newcommand{\cvsection}[2] {
+\textcolor{sectcol}{\uppercase{\textbf{#1}}}
+}
+
+\newcommand{\cvsect}[4]{
+	\textcolor{#3}{\hrule}
+	\colorbox{#3}{ {\cvsection{#1}{#4}}}
+}
+
+% create a coloured arrow with title as cv meta section section
+% param 1: meta section title
+%
+\newcommand{\metasection}[2] {
+	\begin{tabular*}{1\textwidth}{ l l }
+		#1&#2\\[12pt]
+	\end{tabular*}
+}
+
+%----------------------------------------------------------------------------------------
+%	 CV EVENT
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as 
+\newcommand{\cveventmeta}[2] {
+	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
+	#2
+}
+
+%----------------------------------------------------------------------------------------
+% STRUTS AND RULES
+%----------------------------------------- -----------------------------------------------
+
+% custom strut
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+% colored rule and text for chart legends, wrapped in parbox
+% param 1: text
+% param 2: width in cm or pt, em ...
+% param 3: color
+\newcommand{\legend}[3]{\parbox[t]{#2}{\textcolor{#3}{\rule{#2}{4pt}}\\#1}}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM LOREM IPSUM
+%----------------------------------------------------------------------------------------
+\newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+
+%============================================================================%
+%
+%
+%
+%	DOCUMENT CONTENT
+%
+%
+%
+%============================================================================%
+\begin{document}
+
+
+%use our custom fancy header definitions
+\pagestyle{fancy}	
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
+\mystrut
+\vspace{-12pt}
+
+\hspace{-20pt}\begin{tabular*}{1\textwidth}{ c c c}
+	\parbox[c]{0.45\linewidth}{
+		\colorbox{thirdcol}{\HUGE{\textcolor{titletext}{\textbf{\uppercase{Achraf Najmi}}} }}\\
+		\Large{\textcolor{thirdcol}{\textsc{Physicien}}}\\
+	}&
+	\parbox{0.25\textwidth}{
+	\icontext{BirthdayCake}{12}{Né le:  24/07/1994}\\
+	\icontext{MapMarker}{12}{Casablanca, Maroc}\\
+	\href{callto:+212622902221}{\icontext{Mobile}{12}{+212 6 22 90 22 21}}\\
+	\icontext{Car}{12}{Permis : B}\\
+	}&
+	\parbox{0.4\textwidth}{
+	\href{mailto:najmi.achraf@gmail.com}{\icontext{At}{12}{najmi.achraf@gmail.com}}\\
+	\href{https://www.github.com/AchrafNajmi}{\icontext{Github}{12}{github.com/AchrafNajmi}}\\
+	\href{https://www.linkedin.com/in/achraf-d-najmi}{\icontext{Linkedin}{12}{linkedin.com/in/achraf-d-najmi}}\\
+	\href{https://www.facebook.com/achraf.d.najmi}{\icontext{FacebookSquare}{12}{facebook.com/achraf.d.najmi}}\\
+	}
+\end{tabular*}
+
+% manage space by reducing font size
+\small
+
+% \vspace{2pt}
+
+
+\hspace{-20pt}\begin{minipage}{0.59\textwidth}
+
+%----------------------------------------------------------------------------------------
+%	FACTS
+%----------------------------------------------------------------------------------------
+
+	\mbox{
+		\parbox[c][3cm][c]{0.3\textwidth}{
+		\textcolor{textcol}{Je suis diplômé en Science Physique Électronique avec une expérience de travail dans des projets de recherche. \\Je suis toujours à la recherche de nouveaux projets interdisciplinaires passionnants liés à la physique.}
+		}
+		\hspace{2pt}
+		\parbox[c][3cm][c]{0.36\textwidth}{
+			\begin{center}
+			\factbubble{\huge{\textcolor{sectcol}{\textbf{L.}}}\\\small{\textcolor{sectcol}{\textbf{Science Physique Électronique}}}}{1}{maincol}{sectcol}{thirdcol}\\
+			\textcolor{textcol}{comme dernier diplôme de}\\
+			\textcolor{textcol}{\textbf{Université Hassan II de Casablanca : Faculté des Science Ben M'sik.}}
+			\end{center}
+		}
+		\hspace{2pt}
+		\parbox[c][3cm][c]{0.341\textwidth}{
+		
+			% étude spécialisée
+			\cvsect{Étude Spécialisée}{0.49}{thirdcol}{textcol}\\[4pt]
+			\icontext{Book}{12}{\colorbox{sectcol}{Électronique}}\\
+			\icontext{Book}{12}{\colorbox{sectcol}{Electrotechnique}}\\
+			\icontext{Book}{12}{\colorbox{sectcol}{Numérique}}\\
+			\icontext{Book}{12}{\colorbox{sectcol}{Télécommunication}}\\
+			\icontext{Book}{12}{\colorbox{sectcol}{Réseau}}\\
+		}
+	}
+	\vspace{30pt}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+	\cvsect{Compétences et Technologies}{0.49}{thirdcol}{textcol}\\[4pt]
+	\mbox{
+		
+		% TEXT BOX
+		\parbox[b][150pt][c]{0.35\textwidth}{
+			\textcolor{textcol}{La plus grande partie de ma contribution à mon travail se situe dans le domaine du développement et maintenance informatique.}
+		
+			% LANGUAGES
+			\cvsect{Langues}{0.49}{thirdcol}{textcol}\\[4pt]
+			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Arabe Classique (c2)}}}\\
+			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Français (b2)}}}\\
+			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Anglais (a2)}}}\\
+		}
+
+		% PIE CHART	
+		\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
+			\slice{12}{Projets}{secondcol}
+			\slice{29}{Développement}{maincol}
+			\slice{29}{Maintenance}{thirdcol}
+			\slice{16}{Recherche}{fourthcol}
+			\slice{14}{Désign}{fifthcol}
+		\end{piechart}\\
+	}
+	\begin{center}
+	\vspace{-10pt}
+	\begin{tikzpicture}
+		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+	\end{tikzpicture}
+	\hspace{100pt}\mbox{\legend{Language}{1.6cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
+	\end{center}
+
+	% BAR CHART
+	\mbox{\hspace{-14pt}
+		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
+			\baritem{50}{\faPython \hspace{1pt} Python 3}{100}{0}{0}
+			\baritem{50}{pyinstaller}{0}{40}{40}
+			\baritem{80}{tkinter}{0}{70}{0}
+			\baritem{80}{matplotlib}{0}{35}{10}
+			\baritem{80}{sympy}{0}{0}{33}
+			\baritem{50}{numpy}{0}{0}{20}
+		\end{barchart}
+		\hspace{10pt}
+
+		% TEXTBOX
+		\parbox[b][100pt][c]{0.3\textwidth}{\textcolor{textcol}{Actuellement,\\je développe des applications en temps réel avec Python et je fais une interface graphique avec tkinter et j'extrait du script file.py un fichier exécutable par Pyinstaller en utilisant auto py to exe.}}
+	}
+	\begin{center}
+	\vspace{-6pt}
+	\begin{tikzpicture}
+		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+	\end{tikzpicture}
+	\end{center}
+	\begin{center}
+	\mbox{
+		\parbox[b][1.5cm][c]{5cm}{
+			\textcolor{textcol}{J'utilise régulièrement pour mes projets de développement PyCharm comme IDE, et j'utilise parfois Visual Studio et Office pour modifier d'autres fichiers.}
+		
+			% OS
+			\cvsect{OS}{0.49}{thirdcol}{textcol}\\[4pt]
+			\icontext{Windows}{12}{\colorbox{maincol}{Windows}}
+			\icontext{Linux}{12}{\colorbox{maincol}{Linux}}
+		}\hspace{3pt}
+		\bubbles{6/PyCharm, 5.2/Office, 4.5/V.Studio, 3.9/Proteus}{\cvsection{Technologies}}	
+	}
+	\vspace{6pt}
+	\end{center}
+%---------------------------------------------------------------------------------------
+%	ACTIVITIES
+%----------------------------------------------------------------------------------------
+	\cvsect{Activités}{0.49}{thirdcol}{textcol}\\[20pt]
+	\mbox{
+		
+		% SQUARE BARS
+		\parbox[b][3cm][c]{4.6cm}{
+			\squares{20/Brain Games,15/Fitness,20/Dév News,30/Tutoriels Python,20/Stackoverflow}{1}
+			}
+		%\hspace{30pt}
+		% TEXT BOX
+		\parbox[b][3cm][c]{4cm}{
+			\textcolor{textcol}{Dans mon temps libre, je recherche beaucoup de nouvelles sur les développeurs et j'apprends des autres sur Stackoverflow. Grâce à la musculation, je peux garder mon corps et mon esprit en équilibre.}
+		}
+		
+		% FACT BUBBLE
+		\parbox[b][3cm][c]{3cm}{
+			\begin{center}
+			\factbubble{\HUGE{\textcolor{sectcol}{\textbf{4}}}\\\large{\textcolor{sectcol}{\textbf{ans}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
+			\textcolor{textcol}{d'entraînement en}\\
+			\textcolor{textcol}{\textbf{Musculation et \\Acrobatique}}
+			\end{center}
+		}
+
+	}
+
+\vspace{-70pt}\end{minipage}
+\begin{minipage}{0.05\textwidth}
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[draw=sectcol,dashed, opacity=0.5] (0,-12) -- (0,12);
+		\end{tikzpicture}
+	\end{center}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE / EDUCATION
+%----------------------------------------------------------------------------------------
+\cvsect{Expérience et Éducation}{0.4}{thirdcol}{textcol}\\[16pt]
+
+\hspace{55pt}\mbox{\legend{Éducation}{1.5cm}{maincol} \legend{Événements}{1.9cm}{secondcol} \legend{Expérience}{1.8cm}{thirdcol}}
+\vspace{-40pt}
+\begin{center}
+
+% TIMELINE
+\begin{cvtimeline}{2012}{2021}{21}{\linewidth}
+% {maincol}  {secondcol}  {thirdcol}
+
+\cvevent{6/2012}{6/2012}{Diplôme du Baccalauréat}{Lycée Ibno Zaidone.}{» Série : Sciences Expérimentales. » Option : Science de la Vie et la Terre.}{maincol}{0}
+
+\cvevent{9/2012}{9/2012}{Début des études Universitaires}{Uni Casablanca}{text}{maincol}{0}
+
+\cvevent{6/2013}{6/2020}{Maintenance informatique}{Free Lance}{» Diagnostique et réparation de Hardware & Software pour l'Ordinateur et le Smart-Phone...}{thirdcol}{0}
+
+\cvevent{10/2014}{10/2014}{Début des cours particulier}{location}{text}{thirdcol}{0}
+
+\cvevent{2/2016}{2/2016}{Toujour maintenance informatique}{Free Lance}{» Diagnostique et réparation de Hardware & Software pour l'Ordinateur et le Smart-Phone...}{thirdcol}{0}
+
+\cvevent{7/2016}{7/2016}{Fin des cours particulier}{location}{text}{thirdcol}{0}
+
+\cvevent{6/2017}{6/2017}{Diplôme d'Étude Univ Général}{Uni Casablanca}{Série : Science Matière Physique}{maincol}{0}
+
+\cvevent{9/2017}{9/2017}{Début des études de Licence}{Uni Casablanca}{text}{maincol}{0}
+
+\cvevent{6/2018}{6/2018}{Projet de Fin d'Études.}{Uni Casablanca}{Conception et simulation d'un système photovoltaïque et réalisation d'un suiveur solaire.}{secondcol}{0}
+
+\cvevent{4/2018}{4/2018}{Projet d'Entreprenariat}{Uni Casablanca}{Projet de Création une Entreprise Commerciale "electrocherry".}{secondcol}{0}
+
+\cvevent{6/2019}{6/2019}{Licence}{Uni Casablanca}{» Série : Science Matière Phys» Parcours : Électronique.}{maincol}{0}
+
+\cvevent{9/2019}{9/2019}{Début à apprendre Python}{From Home}{text}{maincol}{0}
+
+\cvevent{12/2019}{12/2019}{Commencer le projet MathPy}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+
+\cvevent{4/2020}{4/2020}{MathPy repository en bon résultat}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+
+\cvevent{7/2020}{7/2020}{Mis à jour de MathPy repository}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+\end{cvtimeline}
+\vspace{-70pt}\end{center}
+\end{minipage}
+%============================================================================%
+%
+%
+%
+%	DOCUMENT END
+%
+%
+%
+%============================================================================%
+\end{document}

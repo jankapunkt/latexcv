@@ -1,0 +1,75 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2016 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%counters for chart loop
+\newcounter{a}
+\newcounter{b}
+\newcounter{c}
+
+% draw a slice for a chart
+% param 1: Circle form - 90 = quarter, 180 = half, 360 = full
+% param 2: scale default=1 (scales only chart, not label text)
+% param 3: border color
+% param 4: label text color
+% param 5: label bg color
+% param 6:
+\newenvironment{piechart}[5] {
+
+	% draw a slice for a chart
+	% param 1: value x of 100
+	% param 2: label text
+	% param 3: fill color
+	% param 4:
+	% param 5:
+	% param 6:
+	\newcommand{\slice}[3] {
+
+		\setcounter{a}{\value{b}}
+		\addtocounter{b}{##1}
+
+		%set from angle point
+		\pgfmathparse{\thea/100*#1}
+	  	\let\pointa\pgfmathresult
+
+		%set toanglepoint
+		\pgfmathparse{\theb/100*#1}
+	  	\let\pointb\pgfmathresult
+
+		%set midangle
+	 	\pgfmathparse{0.5*\pointa+0.5*\pointb}
+	  	\let\midangle\pgfmathresult
+		
+		% draw the slice
+	  	\filldraw[fill=##3!100,draw=#3!100, line width=2pt ] (0,0) -- (\pointa:#2) arc (\pointa:\pointb:#2) -- cycle;
+
+	  	% draw label
+	  	\node[label=\midangle:\colorbox{#5}{\textcolor{#4}{##2}}] at (\midangle:#2) {};
+
+		\filldraw[fill=#3,draw=none] (0,0) circle (#2/2);
+	}
+
+	% execute commands
+	\setcounter{a}{0}
+	\setcounter{b}{0}
+	\begin{tikzpicture}
+}
+{\end{tikzpicture}}

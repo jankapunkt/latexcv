@@ -46,19 +46,36 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 
 <table width="100%" margin-left="auto" margin-right="auto">
 	<tr>
-		<th>Infographics</th>
-		<th>Two Columns</th>
+		<th>Infographics ENG</th>
+		<th>Infographics FR</th>
 	</tr>
 	<tr>
 		<td width="50%">
-			<img src="docs/media/infographics.png" 
+			<img src="docs/media/infographics_eng.png" 
 				alt="Infographics CV example preview" />
 		</td>
 		<td width="50%">
-			<img src="docs/media/two_column.png" 
-				alt="Two Column CV example preview" />
+			<img src="docs/media/infographics_fr.png" 
+				alt="Infographics CV example preview" />
 		</td>
 	</tr>
+</table>
+
+<table width="100%" margin-left="auto" margin-right="auto">
+  <tr>
+    <th>Infographics</th>
+    <th>Two Columns</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/media/infographics.png" 
+        alt="Infographics CV example preview" />
+    </td>
+    <td width="50%">
+      <img src="docs/media/two_column.png" 
+        alt="Two Column CV example preview" />
+    </td>
+  </tr>
 </table>
 
 <table>

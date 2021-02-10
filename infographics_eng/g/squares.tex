@@ -1,0 +1,46 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2016 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+\newcommand{\squares}[2]{
+	%reset counters
+	\setcounter{a}{0}
+	\setcounter{b}{0}
+	\setcounter{c}{50}
+	\begin{tikzpicture}[scale=3]
+	\foreach \p/\t in {#1} {
+		\setcounter{a}{\value{b}}
+	    	\addtocounter{b}{\p}
+	    	\square{\thea/100*#2}{\theb/100*#2}{\p\%}{\t}{thirdcol}
+	}
+	\end{tikzpicture}
+}
+
+\newcommand{\square}[5] {
+ 	\pgfmathparse{#1+0.5*(#2-#1)}
+  	\let\midangle\pgfmathresult
+
+	\draw[draw=sectcol] (0.4, \midangle) -- (0.6,\midangle);
+	% slice
+  	\filldraw[fill=#5!100,draw=bgcol!100, line width=3pt] (0,#1) -- (0.5,#1) -- (0.5,#2) -- (0,#2) -- cycle;
+  	% outer label
+  	\node[label=360:\colorbox{sectcol}{\textcolor{textcol}{#4}}] at (0.55,\midangle) {};
+}

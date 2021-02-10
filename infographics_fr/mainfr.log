@@ -1,0 +1,872 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6) (preloaded format=pdflatex 2020.6.29)  9 JUL 2020 17:51
+entering extended mode
+**"C:/Users/ACHRAF/Desktop/Near Document/CVTEX/infographics/mainfr.tex"
+("C:/Users/ACHRAF/Desktop/Near Document/CVTEX/infographics/mainfr.tex"
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-06-18>
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty
+"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xifthen\xifthen.s
+ty"
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+ ("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count177
+\calc@Cskip=\skip51
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifmtarg\ifmtarg.s
+ty"
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/raleway\raleway.s
+ty"
+Package: raleway 2016/12/03 v1.4 Matt McInerney’s Raleway family
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifxetex.s
+ty"
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
+"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifluatex.
+sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.s
+ty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval
+.tex"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutil
+s.tex"
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\keyval.
+tex"))
+\XKV@depth=\count178
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ly1\ly1enc.def"
+File: ly1enc.def 2009/07/22 v0.7 TeX 'n ANSI encoding (DPC/KB)
+Now handling font encoding LY1 ...
+... processing UTF-8 mapping file for font encoding LY1
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ly1enc.dfu"
+File: ly1enc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+))))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+Raleway-TLF on input
+ line 112.
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/raleway\t1raleway
+-tlf.fd"
+File: T1Raleway-TLF.fd 2014/07/28 (autoinst) Font definitions for T1/Raleway-TL
+F.
+)
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 112.
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/moresize\moresize
+.sty"
+Package: moresize 1999/07/26 v1.9 (more font sizes)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome\fonta
+wesome.sty"
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome\fonta
+wesomesymbols-generic.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome\fonta
+wesomesymbols-pdftex.tex"))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
+.sty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.st
+y"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count179
+\Gm@cntv=\count180
+\c@Gm@tempcnt=\count181
+\Gm@bindingoffset=\dimen137
+\Gm@wd@mp=\dimen138
+\Gm@odd@mp=\dimen139
+\Gm@even@mp=\dimen140
+\Gm@layoutwidth=\dimen141
+\Gm@layoutheight=\dimen142
+\Gm@layouthoffset=\dimen143
+\Gm@layoutvoffset=\dimen144
+\Gm@dimlist=\toks19
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
+.cfg"))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr
+.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip52
+\f@nch@O@elh=\skip53
+\f@nch@O@erh=\skip54
+\f@nch@O@olh=\skip55
+\f@nch@O@orh=\skip56
+\f@nch@O@elf=\skip57
+\f@nch@O@erf=\skip58
+\f@nch@O@olf=\skip59
+\f@nch@O@orf=\skip60
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen145
+\ar@mcellbox=\box45
+\extrarowheight=\dimen146
+\NC@list=\toks20
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box46
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx
+.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics
+.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
+"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\grap
+hics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdft
+ex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.s
+ty"
+\wrapoverhang=\dimen149
+\WF@size=\dimen150
+\c@WF@wrappedlines=\count182
+\WF@box=\box47
+\WF@everypar=\toks21
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer
+\tikz.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pg
+f.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgf
+rcs.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfutil-common.tex"
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen151
+\pgfutil@tempdimb=\dimen152
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfutil-common-lists.tex"))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfutil-latex.def"
+\pgfutil@abb=\box48
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfrcs.code.tex"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf\pgf.revisio
+n.tex")
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pg
+fcore.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/systemlayer\p
+gfsys.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
+\pgfsys.code.tex"
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfkeys.code.tex"
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen153
+\pgf@y=\dimen154
+\pgf@xa=\dimen155
+\pgf@ya=\dimen156
+\pgf@xb=\dimen157
+\pgf@yb=\dimen158
+\pgf@xc=\dimen159
+\pgf@yc=\dimen160
+\pgf@xd=\dimen161
+\pgf@yd=\dimen162
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count183
+\c@pgf@countb=\count184
+\c@pgf@countc=\count185
+\c@pgf@countd=\count186
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count187
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
+\pgf.cfg"
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
+\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
+\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
+\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count188
+\pgfsyssoftpath@bigbuffer@items=\count189
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
+\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(C:\Users\ACHRAF\AppData\Roaming\MiKTeX\2.9\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\colo
+r.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcore.code.tex"
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+h.code.tex"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hcalc.code.tex"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hutil.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hparser.code.tex"
+\pgfmath@dimen=\dimen163
+\pgfmath@count=\count190
+\pgfmath@box=\box49
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.code.tex"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.basic.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.trigonometric.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.random.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.comparison.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.base.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.round.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.misc.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfunctions.integerarithmetics.code.tex")))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+hfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count191
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint
+.code.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen164
+\pgf@picmaxx=\dimen165
+\pgf@picminy=\dimen166
+\pgf@picmaxy=\dimen167
+\pgf@pathminx=\dimen168
+\pgf@pathmaxx=\dimen169
+\pgf@pathminy=\dimen170
+\pgf@pathmaxy=\dimen171
+\pgf@xx=\dimen172
+\pgf@xy=\dimen173
+\pgf@yx=\dimen174
+\pgf@yy=\dimen175
+\pgf@zx=\dimen176
+\pgf@zy=\dimen177
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen178
+\pgf@path@lasty=\dimen179
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen180
+\pgf@shorten@start@additional=\dimen181
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box50
+\pgf@hbox=\box51
+\pgf@layerbox@main=\box52
+\pgf@picture@serial@count=\count192
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen182
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen183
+\pgf@pt@y=\dimen184
+\pgf@pt@temp=\dimen185
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen186
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen187
+\pgf@sys@shading@range@num=\count193
+\pgf@shadingcount=\count194
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box53
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\
+pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgf
+moduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box54
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgf
+moduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility
+\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen188
+\pgf@nodesepend=\dimen189
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility
+\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgf
+for.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgf
+keys.sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gfkeys.code.tex"))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/math\pgfmath.
+sty"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+h.code.tex"))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
+gffor.code.tex"
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmat
+h.code.tex")
+\pgffor@iter=\dimen190
+\pgffor@skip=\dimen191
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz\tikz.code.tex"
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\p
+gflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count195
+\pgfplotmarksize=\dimen192
+)
+\tikz@lastx=\dimen193
+\tikz@lasty=\dimen194
+\tikz@lastxsaved=\dimen195
+\tikz@lastysaved=\dimen196
+\tikz@lastmovetox=\dimen197
+\tikz@lastmovetoy=\dimen198
+\tikzleveldistance=\dimen199
+\tikzsiblingdistance=\dimen256
+\tikz@figbox=\box55
+\tikz@figbox@bg=\box56
+\tikz@tempbox=\box57
+\tikz@tempbox@bg=\box58
+\tikztreelevel=\count196
+\tikznumberofchildren=\count197
+\tikznumberofcurrentchild=\count198
+\tikz@fig@count=\count199
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgf
+modulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count266
+\pgfmatrixcurrentcolumn=\count267
+\pgf@matrix@numberofcolumns=\count268
+)
+\tikz@expandcount=\count269
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/s
+hapes\pgflibraryshapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/s
+hapes\pgflibraryshapes.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/s
+hapes\pgflibraryshapes.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/s
+hapes\pgflibraryshapes.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.callouts.code.tex"
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/s
+hapes\pgflibraryshapes.callouts.code.tex"))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/s
+hapes\pgflibraryshapes.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodepartlowerbox=\box59
+\pgfnodeparttwobox=\box60
+\pgfnodepartthreebox=\box61
+\pgfnodepartfourbox=\box62
+\pgfnodeparttwentybox=\box63
+\pgfnodepartnineteenbox=\box64
+\pgfnodeparteighteenbox=\box65
+\pgfnodepartseventeenbox=\box66
+\pgfnodepartsixteenbox=\box67
+\pgfnodepartfifteenbox=\box68
+\pgfnodepartfourteenbox=\box69
+\pgfnodepartthirteenbox=\box70
+\pgfnodeparttwelvebox=\box71
+\pgfnodepartelevenbox=\box72
+\pgfnodeparttenbox=\box73
+\pgfnodepartninebox=\box74
+\pgfnodeparteightbox=\box75
+\pgfnodepartsevenbox=\box76
+\pgfnodepartsixbox=\box77
+\pgfnodepartfivebox=\box78
+)))
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
+er/tikz/libraries\tikzlibrarybackgrounds.code.tex"
+File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@layerbox@background=\box79
+\pgf@layerboxsaved@background=\box80
+)
+\GPT@outputbox=\box81
+
+("C:/Users\ACHRAF\Desktop\Near Document\CVTEX\infographics\g\piechart.tex"
+\c@a=\count270
+\c@b=\count271
+\c@c=\count272
+)
+("C:/Users\ACHRAF\Desktop\Near Document\CVTEX\infographics\g\barchart.tex"
+\c@barcount=\count273
+)
+("C:/Users\ACHRAF\Desktop\Near Document\CVTEX\infographics\g\bubbles.tex")
+("C:/Users\ACHRAF\Desktop\Near Document\CVTEX\infographics\g\squares.tex")
+("C:/Users\ACHRAF\Desktop\Near Document\CVTEX\infographics\g\timeline.tex"
+\c@yearcount=\count274
+\c@leftcount=\count275
+)
+("C:/Users\ACHRAF\Desktop\Near Document\CVTEX\infographics\g\factbubble.tex")
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backe
+nd-pdfmode.def"
+File: l3backend-pdfmode.def 2020-06-23 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count276
+\l__pdf_internal_box=\box82
+)
+
+LaTeX Warning: Unused global option(s):
+    [A4].
+
+No file mainfr.aux.
+\openout1 = `mainfr.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 320.
+LaTeX Font Info:    ... okay on input line 320.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 320.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 3
+20.
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ly1\ly1ptm.fd"
+File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
+)
+LaTeX Font Info:    ... okay on input line 320.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=540.60239pt
+* \textheight=788.14136pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
+* \headheight=-5.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(C:\Users\ACHRAF\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count277
+\scratchdimen=\dimen257
+\scratchbox=\box83
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen258
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks35
+)
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epst
+opdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+) ABD: EveryShipout initializing macros
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 335.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 335.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
+(Font)              scaled to size 29.86pt on input line 339.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
+(Font)              scaled to size 29.86pt on input line 339.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 339.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/sc' will be
+(Font)              scaled to size 14.4pt on input line 339.
+
+Overfull \hbox (4.36104pt too wide) in paragraph at lines 339--339
+[][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
+ut line 345.
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome\ufont
+awesometwo.fd"
+File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
+)
+! Use of \fa doesn't match its definition.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.345 	}
+        &
+? 
