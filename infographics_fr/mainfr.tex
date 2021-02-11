@@ -407,7 +407,6 @@
 		
 			% LANGUAGES
 			\cvsect{Langues}{0.49}{thirdcol}{textcol}\\[4pt]
-			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Arabe Classique (c2)}}}\\
 			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Français (b2)}}}\\
 			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Anglais (a2)}}}\\
 		}
@@ -426,23 +425,33 @@
 	\begin{tikzpicture}
 		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
-	\hspace{100pt}\mbox{\legend{Language}{1.6cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
 	\end{center}
 
+	% TEXT BOX
+	\parbox[b][30pt][c]{0.35\textwidth}{
+		% DEV LANGUAGE
+		\cvsect{Dev Language}{0.49}{thirdcol}{textcol}\\[4pt]
+		\icontext{Python}{12}{\colorbox{maincol}{Python 3}}
+		}
+
+	\hspace{77pt}\mbox{\legend{Language}{1.6cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
+	
 	% BAR CHART
 	\mbox{\hspace{-14pt}
 		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
-			\baritem{50}{\faPython \hspace{1pt} Python 3}{100}{0}{0}
-			\baritem{50}{pyinstaller}{0}{40}{40}
-			\baritem{80}{tkinter}{0}{70}{0}
-			\baritem{80}{matplotlib}{0}{35}{10}
-			\baritem{80}{sympy}{0}{0}{33}
-			\baritem{50}{numpy}{0}{0}{20}
+			\baritem{50}{\faPython \hspace{1pt} Python 3}{40}{35}{25}
+			\baritem{50}{Syntax}{80}{0}{0}
+			\baritem{50}{GUI}{0}{75}{0}
+			\baritem{50}{Data Science}{0}{0}{70}
+			
 		\end{barchart}
+		
 		\hspace{10pt}
 
 		% TEXTBOX
-		\parbox[b][100pt][c]{0.3\textwidth}{\textcolor{textcol}{Actuellement,\\je développe des applications en temps réel avec Python et je fais une interface graphique avec tkinter et j'extrait du script file.py un fichier exécutable par Pyinstaller en utilisant auto py to exe.}}
+		\parbox[b][70pt][c]{0.3\textwidth}{
+		\textcolor{textcol}{Syntax: Python 3.7\&3.8 \\ GUI: \\\_ tkinter \& ttk\\\_ matplotlib.\\ Data Science: \\\_ sympy \\\_ matplotlib\\\_ numpy\\\_ pandas\\\_ smtplib. \\ }
+		}
 	}
 	\begin{center}
 	\vspace{-6pt}
@@ -457,8 +466,8 @@
 		
 			% OS
 			\cvsect{OS}{0.49}{thirdcol}{textcol}\\[4pt]
-			\icontext{Windows}{12}{\colorbox{maincol}{Windows}}
-			\icontext{Linux}{12}{\colorbox{maincol}{Linux}}
+			\icontext{Windows}{12}{\colorbox{secondcol}{\textcolor{titletext}{Windows}}}
+			\icontext{Linux}{12}{\colorbox{secondcol}{\textcolor{titletext}{Linux}}}
 		}\hspace{3pt}
 		\bubbles{6/PyCharm, 5.2/Office, 4.5/V.Studio, 3.9/Proteus}{\cvsection{Technologies}}	
 	}
@@ -510,20 +519,16 @@
 \begin{center}
 
 % TIMELINE
-\begin{cvtimeline}{2012}{2021}{21}{\linewidth}
+\begin{cvtimeline}{2017}{2022}{21}{\linewidth}
 % {maincol}  {secondcol}  {thirdcol}
 
-\cvevent{6/2012}{6/2012}{Diplôme du Baccalauréat}{Lycée Ibno Zaidone.}{» Série : Sciences Expérimentales. » Option : Science de la Vie et la Terre.}{maincol}{0}
+% \cvevent{6/2012}{6/2012}{Diplôme du Baccalauréat}{Lycée Ibno Zaidone.}{» Série : Sciences Expérimentales. » Option : Science de la Vie et la Terre.}{maincol}{0}
 
-\cvevent{9/2012}{9/2012}{Début des études Universitaires}{Uni Casablanca}{text}{maincol}{0}
+% \cvevent{9/2012}{9/2012}{Début des études Universitaires}{Uni Casablanca}{text}{maincol}{0}
 
-\cvevent{6/2013}{6/2020}{Maintenance informatique}{Free Lance}{» Diagnostique et réparation de Hardware & Software pour l'Ordinateur et le Smart-Phone...}{thirdcol}{0}
+% \cvevent{6/2013}{6/2020}{Maintenance informatique}{Free Lance}{» Diagnostique et réparation de Hardware & Software pour l'Ordinateur et le Smart-Phone...}{thirdcol}{0}
 
-\cvevent{10/2014}{10/2014}{Début des cours particulier}{location}{text}{thirdcol}{0}
-
-\cvevent{2/2016}{2/2016}{Toujour maintenance informatique}{Free Lance}{» Diagnostique et réparation de Hardware & Software pour l'Ordinateur et le Smart-Phone...}{thirdcol}{0}
-
-\cvevent{7/2016}{7/2016}{Fin des cours particulier}{location}{text}{thirdcol}{0}
+\cvevent{2/2017}{2/2017}{Devenir avancé à Maintenance Informatique}{Free Lance}{» Diagnostique et réparation de Hardware & Software pour l'Ordinateur et le Smart-Phone...}{thirdcol}{0}
 
 \cvevent{6/2017}{6/2017}{Diplôme d'Étude Univ Général}{Uni Casablanca}{Série : Science Matière Physique}{maincol}{0}
 
@@ -537,11 +542,17 @@
 
 \cvevent{9/2019}{9/2019}{Début à apprendre Python}{From Home}{text}{maincol}{0}
 
-\cvevent{12/2019}{12/2019}{Commencer le projet MathPy}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+\cvevent{12/2019}{12/2019}{Commencer le Projet MathPy}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
 
-\cvevent{4/2020}{4/2020}{MathPy repository en bon résultat}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+\cvevent{3/2020}{3/2020}{Le but de MathPy en bon résultat}{From Home At Internet}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
 
-\cvevent{7/2020}{7/2020}{Mis à jour de MathPy repository}{From Home}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+\cvevent{5/2020}{5/2020}{Mit le projet MathPy dans \faGithub}{From Home At Internet}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+
+\cvevent{7/2020}{7/2020}{Commencer le Projet Hydrogéologie}{From Home At Internet}{» https://github.com/AchrafNajmi/Hydrogeologie (LOCKED)}{secondcol}{0}
+
+\cvevent{10/2020}{10/2020}{Mis à jour de MathPy repository}{From Home At Internet}{» https://github.com/AchrafNajmi/MathPy (LOCKED)}{secondcol}{0}
+
+\cvevent{2/2021}{2/2021}{Mit le Projet Hydrogéologie dans \faGithub}{From Home At Internet}{» https://github.com/AchrafNajmi/Hydrogeologie (LOCKED)}{secondcol}{0}
 \end{cvtimeline}
 \vspace{-70pt}\end{center}
 \end{minipage}
