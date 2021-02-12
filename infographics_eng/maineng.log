@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  12 FEB 2021 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  12 FEB 2021 17:24
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -972,7 +972,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 327.
 LaTeX Info: Redefining \pageref on input line 327.
 LaTeX Info: Redefining \nameref on input line 327.
- (maineng.out) (maineng.out)
 \@outlinefile=\write4
 \openout4 = `maineng.out'.
 
@@ -1239,13 +1238,19 @@ Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
 {C:/Users/ACHRAF/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (maineng.a
 ux)
-Package rerunfilecheck Info: File `maineng.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `maineng.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `maineng.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25594 strings out of 479616
- 509898 string characters out of 2862590
- 825917 words of memory out of 3000000
+ 25590 strings out of 479616
+ 509738 string characters out of 2862590
+ 825884 words of memory out of 3000000
  42298 multiletter control sequences out of 15000+200000
  554266 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1264,7 +1269,7 @@ l/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pf
 b><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/impallari/rale
 way/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 104281 bytes).
+Output written on maineng.pdf (1 page, 104289 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
