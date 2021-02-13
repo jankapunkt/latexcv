@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  13 FEB 2021 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  13 FEB 2021 18:56
 entering extended mode
 **./mainfr.tex
 (mainfr.tex
@@ -1188,90 +1188,102 @@ LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
 n input line 435.
+
+Overfull \hbox (17.47862pt too wide) in paragraph at lines 435--437
+[][] [] 
+ []
+
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
-nput line 482.
+nput line 487.
 
 ("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
 tawesomefree3.fd")
-Overfull \hbox (30.42871pt too wide) in paragraph at lines 482--483
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
+
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 500--500
-[][]\T1/Raleway-TLF/m/n/9 J'utilise régulière-ment pour mes
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--500
-\T1/Raleway-TLF/m/n/9 pro-jets de développe-ment Py-
- []
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--500
-\T1/Raleway-TLF/m/n/9 Charm comme IDE, et j'utilise
  []
 
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 500.
+n input line 487.
 
-Overfull \hbox (11.38861pt too wide) in paragraph at lines 500--502
- [] 
+Overfull \hbox (35.42958pt too wide) in paragraph at lines 487--488
+[][] 
  []
 
 
-Overfull \hbox (6.20558pt too wide) in paragraph at lines 528--528
+Underfull \hbox (badness 1430) in paragraph at lines 509--509
+[][]\T1/Raleway-TLF/m/n/9 J'utilise régulière-ment pour mes pro-jets de
+ []
+
+
+Overfull \hbox (6.88498pt too wide) in paragraph at lines 509--510
+ []  
+ []
+
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 513.
+
+Overfull \hbox (6.20558pt too wide) in paragraph at lines 542--542
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 542--542
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 542--542
 [][]\T1/Raleway-TLF/m/n/9 Dans mon temps li-bre,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 542--542
 \T1/Raleway-TLF/m/n/9 je recherche beau-coup
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 542--542
 \T1/Raleway-TLF/m/n/9 de nou-velles sur les
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 528--528
+Underfull \hbox (badness 1472) in paragraph at lines 542--542
 \T1/Raleway-TLF/m/n/9 des autres sur Stack-over-
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 528--528
+Underfull \hbox (badness 1762) in paragraph at lines 542--542
 \T1/Raleway-TLF/m/n/9 tion, je peux garder mon
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 542--542
 \T1/Raleway-TLF/m/n/9 corps et mon es-prit en
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 528.
+(Font)              scaled to size 12.0pt on input line 542.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 528.
+(Font)              scaled to size 12.0pt on input line 542.
 
-Overfull \hbox (20.2787pt too wide) in paragraph at lines 506--529
+Overfull \hbox (20.2787pt too wide) in paragraph at lines 520--543
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
 
  []
 
@@ -1284,12 +1296,12 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 
-Overfull \hbox (59.0319pt too wide) in paragraph at lines 583--584
+Overfull \hbox (59.0319pt too wide) in paragraph at lines 597--598
  [] 
  []
 
 
-Overfull \hbox (4.68044pt too wide) in paragraph at lines 365--595
+Overfull \hbox (4.68044pt too wide) in paragraph at lines 365--609
 [] $[]$ $[]$ $[]$ 
  []
 
@@ -1312,11 +1324,11 @@ Package rerunfilecheck Info: File `mainfr.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25614 strings out of 479616
- 510488 string characters out of 2862590
- 829485 words of memory out of 3000000
- 42314 multiletter control sequences out of 15000+200000
- 554857 words of font info for 61 fonts, out of 3000000 for 9000
+ 25620 strings out of 479616
+ 510575 string characters out of 2862590
+ 833077 words of memory out of 3000000
+ 42319 multiletter control sequences out of 15000+200000
+ 568469 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,89p,426b,907s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontawesom
@@ -1334,7 +1346,7 @@ F/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/FontAwesome
 5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on mainfr.pdf (1 page, 112204 bytes).
+Output written on mainfr.pdf (1 page, 114938 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

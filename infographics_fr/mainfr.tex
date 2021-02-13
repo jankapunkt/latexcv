@@ -421,7 +421,7 @@
 		\end{piechart}\\
 	}
 	\begin{center}
-	\vspace{-10pt}
+	\vspace{-15pt}
 	\begin{tikzpicture}
 		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
@@ -430,76 +430,90 @@
 	% TEXT BOX
 	\parbox[b][30pt][c]{0.35\textwidth}{
 		% DEV LANGUAGE
-		\cvsect{Dév Langage}{0.49}{thirdcol}{textcol}\\[4pt]
+		\cvsect{Dév Language}{0.49}{thirdcol}{textcol}\\[4pt]
 		\icontext{Python}{12}{\colorbox{maincol}{Python 3}}
 		}
-
-	\hspace{77pt}\mbox{\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
+	\parbox[b][30pt][c]{0.7\textwidth}{\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
 	
 	% BAR CHART
-	\mbox{\hspace{-14pt}
+	\vspace{9pt}\mbox{\hspace{-14pt}
 		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
 % n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
-			\baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
-			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{80}{0}{0}
-			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{0}{72.5}{0}
-			\baritem{50}{\faChartPie \hspace{1pt} Data Science}{0}{0}{65}
+			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
+			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}
+			\baritem{50}{\faChartPie \hspace{1pt} Data Science}{0}{0}{85}
+			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{0}{80}{0}
+			\baritem{50}{\faBoxes \hspace{1pt} Bibliothèque}{0}{20}{50}
 			
 		\end{barchart}
 		
-		\hspace{10pt}
+		\hspace{15pt}
 	
 		% TEXTBOX
 		\parbox[b][70pt][c]{0.3\textwidth}{
 		
 		\textcolor{textcol}{\faCode \hspace{1pt} Syntaxe:}
 		
-		\hspace{5pt}
+		\hspace{10pt}
 		\textcolor{textcol}{\faPython \hspace{1pt} 3.7 \& 3.8}
 		
-		\textcolor{textcol}{\faLaptopCode \hspace{1pt} GUI:}
-			
-		\hspace{5pt}  		
-		\textcolor{textcol}{\faFeather \hspace{1pt} tkinter \& ttk}	
-		
-		\hspace{5pt}			 		
-		\textcolor{textcol}{\faChartArea \hspace{1pt} matplotlib}
+		\hspace{10pt}	 		
+		\textcolor{textcol}{\faTerminal\hspace{1pt} paq intégré}\\
 			 		
 		\textcolor{textcol}{\faChartPie \hspace{1pt} Data Science:}
 		
-		\hspace{5pt}	 		
+		\hspace{10pt}	 		
 		\textcolor{textcol}{\faSuperscript \hspace{1.5pt} sympy}
 		
-		\hspace{5pt}	 		
-		\textcolor{textcol}{\faChartLine \hspace{1pt} matplotlib}
-		
-		\hspace{5pt}	 		
+		\hspace{10pt}	 		
 		\textcolor{textcol}{\faSortNumericDown \hspace{2pt} numpy}	
 		
-		\hspace{5pt}	 		
-		\textcolor{textcol}{\faTable \hspace{1pt} pandas}
+		\hspace{10pt}	 		
+		\textcolor{textcol}{\faTable \hspace{1pt} pandas}\\
+		
+		\textcolor{textcol}{\faLaptopCode \hspace{1pt} GUI:}
+			
+		\hspace{10pt}  		
+		\textcolor{textcol}{\faFeather \hspace{1pt} tkinter \& ttk}	
+		
+		\hspace{10pt}			 		
+		\textcolor{textcol}{\faChartArea \hspace{1pt} matplotlib}\\
+			 		
+		\textcolor{textcol}{\faBoxes \hspace{1pt} Bibliothèque:}
+		
+		\hspace{10pt}	 		
+		\textcolor{textcol}{\faDAndD \hspace{1pt} pyinstaller}
 		}
 	}
+	
+	% TEXTBOX
+	\vspace{7pt}\parbox[b][30pt][c]{0.75\textwidth}{\textcolor{textcol}{Actuellement, je développe des applications en temps réel avec Python, et crée une interface graphique avec tkinter, et extrait du script `file.py` un fichier exécutable par pyinstaller en utilisant auto py to exe.}}
 	\begin{center}
-	% \vspace{-4pt}
+	\vspace{-6pt}
 	\begin{tikzpicture}
 		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
+	\vspace{-18pt}
 	\begin{center}
 	\mbox{
-		\parbox[b][1.5cm][c]{5cm}{
-			\textcolor{textcol}{J'utilise régulièrement pour mes projets de développement PyCharm comme IDE, et j'utilise parfois Visual Studio et Office pour modifier d'autres fichiers.}
-		
+		\parbox[b][30pt][c]{0.4\textwidth}{
 			% OS
 			\cvsect{OS}{0.49}{thirdcol}{textcol}\\[4pt]
 			\icontext{Windows}{12}{\colorbox{secondcol}{\textcolor{titletext}{Windows}}}
 			\icontext{Linux}{12}{\colorbox{secondcol}{\textcolor{titletext}{Linux}}}
-		}\hspace{3pt}
-		\bubbles{6/PyCharm, 5.2/Office, 4.5/V.Studio, 3.9/Proteus}{\cvsection{Technologies}}	
+		}
+		\parbox[b][30pt][c]{0.6\textwidth}{
+			\textcolor{textcol}{J'utilise régulièrement pour mes projets de développement PyCharm Community et Visual Studio comme IDE, et j'utilise pour la capture schématique et la simulation Proteus CAD.}
+		}
+	}\newline 
+	
+	\mbox{
+		\bubbles{6/PyCharm, 5.2/Office, 4.5/V.Studio, 3.9/Proteus, 3.4/\faMarkdown, 3/\LaTeX}{\cvsection{Utilitaires}}	
 	}
-	\vspace{6pt}
+		
 	\end{center}
+	\vspace{-18pt}
 %---------------------------------------------------------------------------------------
 %	ACTIVITIES
 %----------------------------------------------------------------------------------------
@@ -508,7 +522,7 @@
 		
 		% SQUARE BARS
 		\parbox[b][3cm][c]{4.6cm}{
-			\squares{20/\faChess \hspace{1pt} Brain Games,15/\faBicycle \hspace{0.5pt} Fitness,20/\faNewspaper \hspace{1pt} Actualités Dév,30/\faPython \hspace{1pt} Tutoriels,20/\faStackOverflow \hspace{1pt} Stackoverflow}{1}
+			\squares{20/\faChess \hspace{1pt} Brain Games,15/\faBicycle \hspace{0.5pt} Sport,20/\faNewspaper \hspace{1pt} Actualités Dév,30/\faPython \hspace{1pt} Tutoriels,20/\faStackOverflow \hspace{1pt} Stackoverflow}{1}
 			}
 		%\hspace{30pt}
 		% TEXT BOX
