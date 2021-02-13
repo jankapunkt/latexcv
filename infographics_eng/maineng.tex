@@ -439,10 +439,11 @@
 	% BAR CHART
 	\mbox{\hspace{-14pt}
 		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
-			\baritem{50}{\faPython \hspace{1pt} Python 3}{40}{35}{25}
-			\baritem{50}{Syntax}{80}{0}{0}
-			\baritem{50}{GUI}{0}{75}{0}
-			\baritem{50}{Data Science}{0}{0}{70}
+% n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
+			\baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
+			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{80}{0}{0}
+			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{0}{72.5}{0}
+			\baritem{50}{\faChartPie \hspace{1pt} Data Science}{0}{0}{65}
 			
 		\end{barchart}
 		
@@ -450,7 +451,33 @@
 
 		% TEXTBOX
 		\parbox[b][70pt][c]{0.3\textwidth}{
-		\textcolor{textcol}{Syntax: Python 3.7\&3.8 \\ GUI: \\\_ tkinter \& ttk\\\_ matplotlib.\\ Data Science: \\\_ sympy \\\_ matplotlib\\\_ numpy\\\_ pandas\\\_ smtplib. \\ }
+		
+		\textcolor{textcol}{\faCode \hspace{1pt} Syntax:}
+		
+		\hspace{5pt}
+		\textcolor{textcol}{\faPython \hspace{1pt} 3.7 \& 3.8}
+		
+		\textcolor{textcol}{\faLaptopCode \hspace{1pt} GUI:}
+			
+		\hspace{5pt}  		
+		\textcolor{textcol}{\faFeather \hspace{1pt} tkinter \& ttk}	
+		
+		\hspace{5pt}			 		
+		\textcolor{textcol}{\faChartArea \hspace{1pt} matplotlib}
+			 		
+		\textcolor{textcol}{\faChartPie \hspace{1pt} Data Science:}
+		
+		\hspace{5pt}	 		
+		\textcolor{textcol}{\faSuperscript \hspace{1.5pt} sympy}
+		
+		\hspace{5pt}	 		
+		\textcolor{textcol}{\faChartLine \hspace{1pt} matplotlib}
+		
+		\hspace{5pt}	 		
+		\textcolor{textcol}{\faSortNumericDown \hspace{2pt} numpy}	
+		
+		\hspace{5pt}	 		
+		\textcolor{textcol}{\faTable \hspace{1pt} pandas}
 		}
 	}
 	\begin{center}
@@ -482,8 +509,8 @@
 		
 		% SQUARE BARS
 		\parbox[b][3cm][c]{4.6cm}{
-			\squares{20/Brain Games,15/Fitness,20/Dév News,30/Python Tutorials,20/Stackoverflow}{1}
-		}
+			\squares{20/\faChess \hspace{1pt} Brain Games,15/\faBicycle \hspace{0.5pt} Fitness,20/\faNewspaper \hspace{1pt} Dev News,30/\faPython \hspace{1pt} Tutorials,20/\faStackOverflow \hspace{1pt} Stackoverflow}{1}
+			}
 
 		% TEXT BOX
 		\parbox[b][3cm][c]{4cm}{
