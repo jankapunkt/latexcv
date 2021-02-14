@@ -1,1 +1,0 @@
-This will son include a classic cv.
