@@ -22,7 +22,6 @@
 :necktie: A collection of simple and easy to use, yet powerful LaTeX templates for CVs and resumes. All of them are self designed and self implemented and not copied from template collections.
 </p>
 <p>
-Now with support for Chinese, Japanese and Korean character encoding. Setup is only two lines of code! Read more <a href="docs/cjk/README.md">here</a>.
 </p>	
 <br />
 
@@ -35,11 +34,11 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
   </tr>
   <tr>
     <td width="50%">
-      <img src="docs/media/infographics_eng.png" 
+      <img src="infographics_eng/media/infographics_eng.png" 
         alt="Infographics CV example preview" />
     </td>
     <td width="50%">
-      <img src="docs/media/infographics_fr.png" 
+      <img src="infographics_fr/media/infographics_fr.png" 
         alt="Infographics CV example preview" />
     </td>
   </tr>
