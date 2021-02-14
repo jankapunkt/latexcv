@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  13 FEB 2021 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  14 FEB 2021 05:33
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -1203,33 +1203,33 @@ Overfull \hbox (6.88498pt too wide) in paragraph at lines 509--510
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 513.
+(Font)              scaled to size 6.0pt on input line 514.
 
-Overfull \hbox (1.81358pt too wide) in paragraph at lines 542--542
+Overfull \hbox (1.81358pt too wide) in paragraph at lines 543--543
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--542
+Underfull \hbox (badness 10000) in paragraph at lines 543--543
 
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 542--542
+Underfull \hbox (badness 2970) in paragraph at lines 543--543
 \T1/Raleway-TLF/m/n/9 of dev news and i learn
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 542.
+(Font)              scaled to size 12.0pt on input line 543.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 542.
+(Font)              scaled to size 12.0pt on input line 543.
 
-Overfull \hbox (20.2787pt too wide) in paragraph at lines 521--543
+Overfull \hbox (20.2787pt too wide) in paragraph at lines 522--544
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
@@ -1242,12 +1242,12 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 
-Overfull \hbox (45.58595pt too wide) in paragraph at lines 597--598
+Overfull \hbox (45.58595pt too wide) in paragraph at lines 598--599
  [] 
  []
 
 
-Overfull \hbox (4.68044pt too wide) in paragraph at lines 364--609
+Overfull \hbox (4.68044pt too wide) in paragraph at lines 364--610
 [] $[]$ $[]$ $[]$ 
  []
 
@@ -1272,7 +1272,7 @@ Package rerunfilecheck Info: File `maineng.out' has not changed.
 Here is how much of TeX's memory you used:
  25620 strings out of 479616
  510604 string characters out of 2862590
- 831865 words of memory out of 3000000
+ 831857 words of memory out of 3000000
  42319 multiletter control sequences out of 15000+200000
  568469 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1292,7 +1292,7 @@ F/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/FontAwesome
 5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 112980 bytes).
+Output written on maineng.pdf (1 page, 114880 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
