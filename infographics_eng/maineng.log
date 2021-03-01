@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  27 FEB 2021 23:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  1 MAR 2021 18:31
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -1073,164 +1073,174 @@ LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not
 available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
 n input line 356.
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on
+ input line 356.
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
+tawesomebrands1.fd")
+LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <10> not 
+available
+(Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
+n input line 356.
 
 Underfull \hbox (badness 10000) in paragraph at lines 356--356
 
  []
 
 
-Overfull \hbox (90.0553pt too wide) in alignment at lines 340--357
+Overfull \hbox (63.02354pt too wide) in alignment at lines 340--357
 [][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 367.
-LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 378.
+(Font)              scaled to size 9.0pt on input line 360.
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 402.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 402.
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
-
- []
-
-LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 402.
-LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 402.
-
-Underfull \hbox (badness 6268) in paragraph at lines 402--402
+Underfull \hbox (badness 6268) in paragraph at lines 387--387
 [][]\T1/Raleway-TLF/m/n/9 I am a grad-u-ate in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/Raleway-TLF/m/n/9 Physics Elec-tronic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/Raleway-TLF/m/n/9 with work-ing ex-pe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/Raleway-TLF/m/n/9 ri-ence in re-search
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 387.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 387.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 387.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
+(Font)              scaled to size 20.74pt on input line 387.
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
+(Font)              scaled to size 9.0pt on input line 387.
 
-Underfull \hbox (badness 3354) in paragraph at lines 402--402
-\T1/Raleway-TLF/m/n/9 I am al-ways look-ing
+Underfull \hbox (badness 3291) in paragraph at lines 387--387
+\T1/Raleway-TLF/m/n/9 ci-plinary projects re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
-\T1/Raleway-TLF/m/n/9 dis-ci-plinary projects
- []
-
-
-Overfull \hbox (17.38954pt too wide) in paragraph at lines 402--404
+Overfull \hbox (1.87268pt too wide) in paragraph at lines 387--389
 [][]
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 430.
+nput line 415.
 
 ("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
 tawesomefree1.fd")
-Underfull \hbox (badness 10000) in paragraph at lines 430--430
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
 
  []
 
 
-Overfull \hbox (4.50247pt too wide) in paragraph at lines 409--431
+Overfull \hbox (4.50247pt too wide) in paragraph at lines 394--416
 [] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on
- input line 443.
-
-("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
-tawesomebrands1.fd")
 LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
-n input line 443.
+n input line 428.
 
-Overfull \hbox (7.91042pt too wide) in paragraph at lines 443--447
+Overfull \hbox (7.91042pt too wide) in paragraph at lines 428--432
 [][] [] 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
-nput line 498.
+nput line 483.
 
 ("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
 tawesomefree3.fd")
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 498.
+n input line 483.
 
-Overfull \hbox (14.10852pt too wide) in paragraph at lines 498--499
+Overfull \hbox (14.10852pt too wide) in paragraph at lines 483--484
 [][] 
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 501--501
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
+
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 486--486
 [][]\T1/Raleway-TLF/m/n/9 Currently, I am de-vel-op-ing re-al-time ap-pli-ca-ti
 ons with
  []
 
 
-Overfull \hbox (6.88498pt too wide) in paragraph at lines 520--521
+Overfull \hbox (6.88498pt too wide) in paragraph at lines 504--505
  []  
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 525.
+(Font)              scaled to size 6.0pt on input line 508.
 
-Overfull \hbox (1.81358pt too wide) in paragraph at lines 554--554
-[][]
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+[][]\T1/Raleway-TLF/m/n/9 Among the dom-i-nant
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--554
-
- []
-
-LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 554.
-LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 554.
-
-Underfull \hbox (badness 2671) in paragraph at lines 554--554
-\T1/Raleway-TLF/m/n/9 lots of dev news and
+Underfull \hbox (badness 3260) in paragraph at lines 537--537
+\T1/Raleway-TLF/m/n/9 in search of news on
  []
 
 
-Underfull \hbox (badness 1337) in paragraph at lines 554--554
-\T1/Raleway-TLF/m/n/9 i learn from oth-ers on
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+\T1/Raleway-TLF/m/n/9 the com-puter world
  []
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 554--554
-\T1/Raleway-TLF/m/n/9 body weight train-ing I
+Underfull \hbox (badness 1609) in paragraph at lines 537--537
+\T1/Raleway-TLF/m/n/9 and trained on all the
  []
 
 
-Overfull \hbox (6.05232pt too wide) in paragraph at lines 533--555
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+\T1/Raleway-TLF/m/n/9 tu-to-ri-als that in-ter-ests
+ []
+
+
+Overfull \hbox (6.05232pt too wide) in paragraph at lines 516--538
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--569
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
+
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+Raleway-TLF on inpu
+t line 557.
+
+("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/raleway\ts1ralewa
+y-tlf.fd"
+File: TS1Raleway-TLF.fd 2014/07/28 (autoinst) Font definitions for TS1/Raleway-
+TLF.
+)
+LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 557.
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
@@ -1242,14 +1252,11 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
+LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 567.
 
-Overfull \hbox (21.907pt too wide) in paragraph at lines 612--613
- [] 
- []
-
-
-Overfull \hbox (4.68044pt too wide) in paragraph at lines 371--624
-[] $[]$ $[]$ $[]$ 
+Overfull \hbox (18.56175pt too wide) in paragraph at lines 364--615
+[] $[]$ $[]$ 
  []
 
 
@@ -1271,31 +1278,32 @@ Package rerunfilecheck Info: File `maineng.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25624 strings out of 479616
- 510683 string characters out of 2862590
- 834148 words of memory out of 3000000
- 42323 multiletter control sequences out of 15000+200000
- 568469 words of font info for 63 fonts, out of 3000000 for 9000
+ 25674 strings out of 479616
+ 512088 string characters out of 2862590
+ 829432 words of memory out of 3000000
+ 42368 multiletter control sequences out of 15000+200000
+ 556237 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,89p,427b,984s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontawesom
-e5/fa5free3.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
-ips/fontawesome5/fa5brands1.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/ACHRAF/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{C:/Users/ACHRAF/
-AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:
-/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/raleway/a_bzmck
-q.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontaw
-esome5/fa5free0.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/en
-c/dvips/raleway/a_yqxcf3.enc}<C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/ACHRA
-F/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/FontAwesome
-5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 115844 bytes).
+{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/raleway/a_
+2bcjq6.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
+ontawesome5/fa5free3.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/ACHRAF/AppData/Local/Programs/
+MiKTeX 2.9/fonts/enc/dvips/fontawesome5/fa5brands1.enc}{C:/Users/ACHRAF/AppData
+/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{C:/User
+s/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontawesome5/fa5free
+2.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/ralewa
+y/a_bzmckq.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
+ps/fontawesome5/fa5free0.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9
+/fonts/enc/dvips/raleway/a_yqxcf3.enc}<C:/Users/ACHRAF/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Us
+ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
+ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
+Output written on maineng.pdf (1 page, 115881 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
