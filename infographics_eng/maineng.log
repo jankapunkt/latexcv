@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  1 MAR 2021 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  2 MAR 2021 15:12
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -1162,11 +1162,6 @@ nput line 483.
 
 ("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
 tawesomefree3.fd")
-LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
-vailable
-(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 483.
-
 Overfull \hbox (14.10852pt too wide) in paragraph at lines 483--484
 [][] 
  []
@@ -1182,6 +1177,10 @@ Underfull \hbox (badness 2680) in paragraph at lines 486--486
 ons with
  []
 
+LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
+vailable
+(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
+n input line 504.
 
 Overfull \hbox (6.88498pt too wide) in paragraph at lines 504--505
  []  
@@ -1280,7 +1279,7 @@ Package rerunfilecheck Info: File `maineng.out' has not changed.
 Here is how much of TeX's memory you used:
  25674 strings out of 479616
  512088 string characters out of 2862590
- 829512 words of memory out of 3000000
+ 829605 words of memory out of 3000000
  42368 multiletter control sequences out of 15000+200000
  556237 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1301,7 +1300,7 @@ ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
 ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 115853 bytes).
+Output written on maineng.pdf (1 page, 119132 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
