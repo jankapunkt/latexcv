@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  2 MAR 2021 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  2 MAR 2021 23:22
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -1162,7 +1162,7 @@ nput line 483.
 
 ("C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufon
 tawesomefree3.fd")
-Overfull \hbox (14.10852pt too wide) in paragraph at lines 483--484
+Overfull \hbox (9.10852pt too wide) in paragraph at lines 483--484
 [][] 
  []
 
@@ -1254,6 +1254,26 @@ Missing character: There is no 0 in font nullfont!
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 567.
 
+Underfull \hbox (badness 3803) in paragraph at lines 578--578
+[][]\T1/Raleway-TLF/m/n/9 6/2017[] []As-so-ciate of Gen-eral Stud-ies -
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 586--586
+[][]\T1/Raleway-TLF/m/n/9 6/2018[] []Pre-sen-ta-tion of Project Grad-u-a-
+ []
+
+
+Underfull \hbox (badness 6220) in paragraph at lines 596--596
+[][]\T1/Raleway-TLF/m/n/9 5/2020[] []Set MathPy Project in GitHub
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+[][]\T1/Raleway-TLF/m/n/9 2/2021[] []Set Hy-drogéolo-gie Project in
+ []
+
+
 Overfull \hbox (18.56175pt too wide) in paragraph at lines 364--615
 [] $[]$ $[]$ 
  []
@@ -1277,13 +1297,13 @@ Package rerunfilecheck Info: File `maineng.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25674 strings out of 479616
- 512088 string characters out of 2862590
- 829605 words of memory out of 3000000
- 42368 multiletter control sequences out of 15000+200000
+ 25670 strings out of 479616
+ 511982 string characters out of 2862590
+ 836658 words of memory out of 3000000
+ 42364 multiletter control sequences out of 15000+200000
  556237 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,89p,427b,917s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,12n,89p,427b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/raleway/a_
 2bcjq6.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
 ontawesome5/fa5free3.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -1300,9 +1320,9 @@ ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
 ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 119132 bytes).
+Output written on maineng.pdf (1 page, 120401 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
