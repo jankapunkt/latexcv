@@ -155,7 +155,7 @@
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
 % replace this part
-\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{sectcol}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{titletext}{\csname fa#1\endcsname}}}}	%icon shortcut
 \newcommand{\icontext}[3]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
@@ -269,7 +269,7 @@
 % param 1: section title
 %
 \newcommand{\cvsection}[2] {
-\textcolor{sectcol}{\uppercase{\textbf{#1}}}
+\textcolor{titletext}{\uppercase{\textbf{#1}}}
 }
 
 \newcommand{\cvsect}[4]{
@@ -374,7 +374,7 @@
 		\hspace{2pt}
 		\parbox[c][3cm][c]{0.36\textwidth}{
 			\begin{center}
-			\factbubble{\huge{\textcolor{sectcol}{\textbf{LEF}}}\\\small{\textcolor{sectcol}{\textbf{Physique Électronique}}}}{1}{maincol}{sectcol}{thirdcol}\\
+			\factbubble{\huge{\textcolor{titletext}{\textbf{LEF}}}\\\small{\textcolor{titletext}{\textbf{Physique Électronique}}}}{1}{maincol}{titletext}{thirdcol}\\
 			\textcolor{textcol}{comme dernier diplôme de}\\
 			\textcolor{textcol}{\textbf{Université Hassan II de Casablanca : Faculté des Sciences Ben M'sik.}}
 			\end{center}
@@ -415,7 +415,7 @@
 	\begin{center}
 	\vspace{-15pt}
 	\begin{tikzpicture}
-		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
 
@@ -482,7 +482,7 @@
 	\parbox[b][35pt][c]{0.75\textwidth}{\textcolor{textcol}{Actuellement, je développe des applications en temps réel avec Python, et crée une interface graphique avec tkinter, et extrait du script `file.py` un fichier exécutable par pyinstaller en utilisant auto py to exe.}}
 	\begin{center}
 	\begin{tikzpicture}
-		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
 	\vspace{-10pt}
@@ -513,13 +513,13 @@
 		
 		% SQUARE BARS
 		\parbox[b][3cm][c]{4.6cm}{
-			\squares{24/\faBicycle \hspace{0.5pt} Sport,27/\faChess \hspace{1pt} Brain Games,30/\faNewspaper \hspace{1pt} Actualités Dév,33/\faPlayCircle \hspace{1pt} Tutoriels}{1}
+			\squares{24/\faBicycle \hspace{0.5pt} Sport,27/\faChess \hspace{1pt} Jeux Cérébrale,30/\faNewspaper \hspace{1pt} Actualités Tech,33/\faPlayCircle \hspace{1pt} Tutoriels}{1}
 			}
 		
 		% FACT BUBBLE
 		\parbox[b][3cm][c]{3cm}{
 			\begin{center}
-			\factbubble{\HUGE{\textcolor{sectcol}{\textbf{5}}}\\\small{\textcolor{sectcol}{\textbf{repos \\ publique}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
+			\factbubble{\HUGE{\textcolor{titletext}{\textbf{5}}}\\\small{\textcolor{titletext}{\textbf{repos \\ publique}}}}{0.85}{maincol}{titletext}{thirdcol}\\
 			\textcolor{textcol}{dans mon}\\
 			\textcolor{textcol}{\textbf{Compte GitHub \\ \faGithub}}
 			\end{center}
@@ -536,7 +536,7 @@
 %\begin{minipage}{0.04\textwidth}
 %	\begin{center}
 %		\begin{tikzpicture}
-%			\draw[draw=sectcol,dashed, opacity=0.5] (0,-12) -- (0,12);
+%			\draw[draw=titletext,dashed, opacity=0.5] (0,-12) -- (0,12);
 %		\end{tikzpicture}
 %	\end{center}
 %\end{minipage}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  2 MAR 2021 23:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.2.11)  3 MAR 2021 15:45
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -1297,10 +1297,10 @@ Package rerunfilecheck Info: File `maineng.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25670 strings out of 479616
- 511982 string characters out of 2862590
- 836658 words of memory out of 3000000
- 42364 multiletter control sequences out of 15000+200000
+ 25671 strings out of 479616
+ 511997 string characters out of 2862590
+ 836695 words of memory out of 3000000
+ 42365 multiletter control sequences out of 15000+200000
  556237 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,89p,427b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1320,7 +1320,7 @@ ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
 ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 120401 bytes).
+Output written on maineng.pdf (1 page, 120415 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
