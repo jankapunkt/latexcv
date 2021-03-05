@@ -32,10 +32,10 @@
 % param 1: start year
 % param 2: end year
 % param 3: overall width
-%param 4: overall height             {\parbox{\myboxwidth}
+% param 4: overall height             {\parbox{\myboxwidth}
 \newenvironment{cvtimeline}[4]{
     \newcommand{\cvcategory}[2]{
-        \node[label=\mbox{\colorbox{##1}{\strut\hspace{2pt}}\colorbox{white}{\textcolor{textcol}{##2}}}] at (0,-5) {}; %start year
+        \node[label=\mbox{\colorbox{##1}{\strut\hspace{2pt}}\colorbox{white}{\textcolor{textcol}{##2}}}] at (0,-5) {}; % start year
     }
     \newcommand{\bxwidth}{4.5}
     \newcommand{\bxheight}{2}
@@ -47,7 +47,7 @@
     % param 4:  institution (where did you work / study)
     % param 5:  what was your position
     % param 6:  color
-    % param 7: level (position, use minus for left placement)
+    % param 7:  level (position, use minus for left placement)
     \newcommand{\cvevent}[7] {
         \foreach \monthf/\yearf in {##1} {
             \foreach \montht/\yeart in {##2} {
