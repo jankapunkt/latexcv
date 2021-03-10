@@ -160,6 +160,12 @@
 	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
 }
 
+\newcommand{\icox}[4]{\colorbox{#3}{\makebox(#2, #2){\textcolor{#4}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\iconbox}[5]{ 						%icon with text shortcut
+	\vcenteredhbox{\icox{#1}{#2}{#3}{#5}} \vcenteredhbox{\textcolor{#5}{\colorbox{#3}{#4}}}
+}
+
+
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -394,13 +400,13 @@
 	\mbox{
 		
 		% TEXT BOX
-		\parbox[b][150pt][c]{0.35\textwidth}{
+		\parbox[b][130pt][c]{0.35\textwidth}{
 			\textcolor{textcol}{La plus grande partie de ma contribution à mon travail se situe dans le domaine du développement et maintenance informatique.}
 		
 			% LANGUAGES
 			\cvsect{Langues}{0.49}{thirdcol}{textcol}\\[4pt]
-			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Français (B2)}}}\\
-			\icontext{Language}{12}{\colorbox{fifthcol}{\textcolor{titletext}{Anglais (A2)}}}\\
+			\iconbox{Language}{12}{fifthcol}{Français (B2)}{titletext}\\
+			\iconbox{Language}{12}{fifthcol}{Anglais (A2)}{titletext}\\
 		}
 
 		% PIE CHART	
@@ -413,23 +419,24 @@
 		\end{piechart}\\
 	}
 	\begin{center}
-	\vspace{-15pt}
+	\vspace{-10pt}
 	\begin{tikzpicture}
 		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
 
+	\vspace{10pt}
 	% TEXT BOX
-	\parbox[b][30pt][c]{0.33\textwidth}{
+	\parbox[b][30pt][c]{0.73\textwidth}{
 		% DEV LANGUAGE
 		\cvsect{Langage de Dev}{0.49}{thirdcol}{textcol}\\[4pt]
-		\icontext{Python}{12}{\colorbox{maincol}{Python 3}}
-		}
-	\parbox[b][30pt][c]{0.7\textwidth}{\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
+		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
+		\hspace{15pt}
+		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
 	
 	% BAR CHART
 	\vspace{9pt}\mbox{\hspace{-14pt}
-		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
+		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
 % n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
 			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
 			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}
@@ -440,46 +447,47 @@
 		\end{barchart}
 		
 		\hspace{10pt}
-	
-		% TEXTBOX
-		\parbox[b][70pt][c]{0.23\textwidth}{
 		
-		\textcolor{textcol}{\faCode \hspace{1pt} Syntaxe:}
+		% TEXTBOX
+		\parbox[b][70pt][c]{0.26\textwidth}{
+		
+		\vspace{5pt}
+		\iconbox{Code}{8}{maincol}{Syntaxe:}{textcol}
 		
 		\hspace{10pt}
-		\textcolor{textcol}{\faPython \hspace{1pt} 3.7 \& 3.8}
-			 		
-		\textcolor{textcol}{\faBoxes \hspace{1pt} Bibliothèques:}
+		\iconbox{Python}{8}{maincol}{3.7 \& 3.8}{textcol}
 		
-		\hspace{10pt}	 		
-		\textcolor{textcol}{\faTerminal\hspace{1pt} intégré}
+		\iconbox{Boxes}{8}{thirdcol}{Bibliothèques:}{titletext}
 		
-		\hspace{10pt}	 		
-		\textcolor{textcol}{\faFileCode \hspace{1pt} pyinstaller}
+		\hspace{10pt}
+		\iconbox{Terminal}{8}{thirdcol}{intégré}{titletext}
 		
-		\textcolor{textcol}{\faLaptopCode \hspace{1pt} GUI:}
+		\hspace{10pt}
+		\iconbox{FileCode}{8}{thirdcol}{pyinstaller}{titletext}
+		
+		\iconbox{LaptopCode}{8}{secondcol}{GUI:}{textcol}
 			
-		\hspace{10pt}  		
-		\textcolor{textcol}{\faFeather \hspace{1pt} tkinter \& ttk}	
-			 		
-		\textcolor{textcol}{\faChartPie \hspace{1pt} Data Analyse:}
+		\hspace{10pt}	
+		\iconbox{Feather}{8}{secondcol}{tkinter}{textcol}
 		
-		\hspace{10pt}			 		
-		\textcolor{textcol}{\faChartArea \hspace{1pt} matplotlib}
+		\hspace{10pt}
+		\iconbox{ChartArea}{8}{secondcol}{matplotlib}{textcol}
 		
-		\hspace{10pt}	 		
-		\textcolor{textcol}{\faSuperscript \hspace{1.5pt} sympy}
+		\iconbox{ChartPie}{8}{thirdcol}{Data Analyse:}{titletext}
 		
-		\hspace{10pt}	 		
-		\textcolor{textcol}{\faSortNumericDown \hspace{2pt} numpy}	
+		\hspace{10pt}
+		\iconbox{Superscript}{8}{thirdcol}{sympy}{titletext}
 		
 		\hspace{10pt}	 		
-		\textcolor{textcol}{\faTable \hspace{1pt} pandas}
+		\iconbox{SortNumericDown}{8}{thirdcol}{numpy}{titletext}	
+		
+		\hspace{10pt}
+		\iconbox{Table}{8}{thirdcol}{pandas}{titletext}
 		}
 	}\\
 	
 	% TEXTBOX
-	\parbox[b][35pt][c]{0.75\textwidth}{\textcolor{textcol}{Actuellement, je développe des applications en temps réel avec Python, et crée une interface graphique avec tkinter, et extrait du script `file.py` un fichier exécutable par pyinstaller en utilisant auto py to exe.}}
+	\parbox[b][35pt][c]{0.73\textwidth}{\textcolor{textcol}{Actuellement, je développe des applications en temps réel avec Python, et crée une interface graphique avec tkinter, et extrait du script `file.py` un fichier exécutable par pyinstaller en utilisant auto py to exe.}}
 	\begin{center}
 	\begin{tikzpicture}
 		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
@@ -491,8 +499,8 @@
 		\parbox[b][30pt][c]{0.4\textwidth}{
 			% OS
 			\cvsect{OS}{0.49}{thirdcol}{textcol}\\[4pt]
-			\icontext{Windows}{12}{\colorbox{secondcol}{\textcolor{titletext}{Windows}}}
-			\icontext{Linux}{12}{\colorbox{secondcol}{\textcolor{titletext}{Linux}}}
+			\iconbox{Windows}{12}{secondcol}{Windows}{textcol}
+			\iconbox{Linux}{12}{secondcol}{Linux}{textcol}
 		}
 		\parbox[b][30pt][c]{0.6\textwidth}{
 			\textcolor{textcol}{J'utilise régulièrement pour mes projets de développement PyCharm Community et Visual Studio comme IDE, et j'utilise pour la capture schématique et la simulation Proteus CAD.}
@@ -587,7 +595,7 @@
 
 \cvevent{12/2019}{2/2021}{Début du Projet MathPy \newline • Calculatrice Scientifique Moderne}{where}{what}{fifthcol}{0.05}
 
-\cvevent{4/2020}{2/2021}{Mis le projet MathPy dans GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PROJET PRIVÉ)} \newline Projet MathPy est constamment mis à jour}{where}{what}{secondcol}{-0.05}
+\cvevent{4/2020}{3/2021}{Mis le projet MathPy dans GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PROJET PRIVÉ)} \newline Projet MathPy est constamment mis à jour}{where}{what}{secondcol}{-0.05}
 
 \cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{where}{what}{fifthcol}{0.05}
 
