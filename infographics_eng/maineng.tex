@@ -256,7 +256,7 @@
 
 
 %----------------------------------------------------------------------------------------
-% 	TIMELINE CHART
+% 	TIMELINE VERTICAL & HORIZONTAL CHART
 %----------------------------------------------------------------------------------------
 \input{./g/timeline.tex}
 
@@ -424,12 +424,30 @@
 		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
+	
+	% \mbox{
+		% \begin{timelinehorizontal}{2019}{2022}{9}{textcol}
+		
+			% \cvevent{3/2021}{3/2021}{Developer Certification • Scientific Computing with Python}{2}{-2.5}{maincol}{-1}
+	
+			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/deepeastwind}}{1.5}{-3}{maincol}{-1}
+	
+			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{/scientific-computing-with-python-v7}}{1}{-2}{maincol}{-1}
+	
+			% \cvevent{9/2019}{3/2021}{Beginning of learning Python}{0.5}{-5}{maincol}{-1}
+	
+			% \cvevent{6/2019}{9/2017}{Bachelor of General Studies (BGS) • Physics Electronic}{1.5}{-5}{maincol}{-1}
+	
+			% \cvevent{6/2017}{3/2017}{Associate of General Studies (AGS) •  Physics}{1}{-8}{maincol}{-1}
+	
+		% \end{timelinehorizontal}
+	% }
 
 	\vspace{10pt}
 	% TEXT BOX
 	\parbox[b][30pt][c]{0.73\textwidth}{
-		% DEV LANGUAGE
-		\cvsect{Dev Language}{0.49}{thirdcol}{textcol}\\[4pt]
+		% DEVELOPMENT LANGUAGE
+		\cvsect{Development Language}{0.49}{thirdcol}{textcol}\\[4pt]
 		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
 		\hspace{15pt}
 		\legend{Language}{1.6cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}
@@ -571,38 +589,42 @@
 \begin{center}
 
 % TIMELINE fifthcol
-\begin{cvtimeline}{2017}{2022}{21}{\linewidth}
+\begin{timelinevertical}{2017}{2022}{21}{\linewidth}
 % {maincol}  {secondcol}  {thirdcol}
 
-% \cvevent{6/2012}{6/2012}{High School Degree \newline Series : Experimental Sciences \newline Option : Science of Life and Earth}{where}{what}}{maincol}{0}
+% \cvevent{6/2012}{6/2012}{High School Degree \newline Series : Experimental Sciences \newline Option : Science of Life and Earth}{0.5}{0}{maincol}{0}
 
-% \cvevent{9/2012}{9/2012}{Begin University Studies}{where}{what}{maincol}{0}
+% \cvevent{9/2012}{9/2012}{Begin University Studies}{0.5}{0}{maincol}{0}
 
-% \cvevent{6/2013}{3/2021}{Computer Maintenance \newline • Diagnostic and reparation of Hardware \& Software...}{where}{what}{thirdcol}{0.25}
+% \cvevent{6/2013}{3/2021}{Computer Maintenance \newline • Diagnostic and reparation of Hardware \& Software...}{0.5}{0}{thirdcol}{0.25}
 
-\cvevent{1/2017}{3/2021}{Computer Maintenance \newline • Diagnostic and reparation of Hardware \& Software...}{where}{what}{thirdcol}{0.25}
+\cvevent{1/2017}{3/2021}{Computer Maintenance since 2013 \newline • Diagnostic and reparation of Hardware \& Software...}{0.5}{0}{thirdcol}{0.4}
 
-\cvevent{6/2017}{12/2016}{Associate of General Studies (AGS) \newline • Series : Matter Science Physics}{where}{what}{maincol}{0.15}
+\cvevent{1/2017}{12/2016}{Computer Maintenance since 2013 \newline • Diagnostic and reparation of Hardware \& Software...}{0.5}{0}{thirdcol}{0.4}
 
-\cvevent{9/2017}{6/2019}{Beginning of Bachelor studies}{where}{what}{maincol}{0.15}
+\cvevent{6/2017}{12/2016}{Associate of General Studies (AGS) \newline • Series : Matter Science Physics}{0.5}{0}{maincol}{0.3}
 
-\cvevent{2/2018}{6/2018}{Start the Graduation Project \newline • Design of a photovoltaic system and realization of a solar tracker}{where}{what}{fifthcol}{0.05}
+\cvevent{9/2017}{6/2018}{Beginning of Bachelor studies}{0.5}{0}{maincol}{0.3}
 
-\cvevent{6/2018}{6/2018}{Presentation of Project Graduation}{where}{what}{secondcol}{0.05}
+\cvevent{2/2018}{6/2018}{Start the Graduation Project \newline • Design of a photovoltaic system and realization of a solar tracker}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{6/2019}{6/2019}{Bachelor of General Studies (BGS) \newline • Series : Matter Science Physics \newline • Course : Electronic}{where}{what}{maincol}{0.15}
+\cvevent{6/2018}{6/2018}{Presentation of Project Graduation}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{9/2019}{3/2021}{Beginning of learning Python}{where}{what}{maincol}{0.15}
+\cvevent{6/2019}{9/2018}{Bachelor of General Studies (BGS) \newline • Series : Matter Science Physics \newline • Course : Electronic}{0.5}{0}{maincol}{0.3}
 
-\cvevent{12/2019}{2/2021}{Start the MathPy Project \newline • Modern Scientific Calculator }{where}{what}{fifthcol}{0.05}
+\cvevent{9/2019}{3/2021}{Beginning of learning Python}{0.5}{0}{maincol}{0.3}
 
-\cvevent{4/2020}{3/2021}{Set MathPy Project in GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PRIVATE PROJECT)} \newline MathPy Project is constantly updating}{where}{what}{secondcol}{-0.05}
+\cvevent{12/2019}{2/2021}{Start the MathPy Project \newline • Modern Scientific Calculator}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{9/2020}{10/2020}{Start the Gmail Project \newline • CSV Google-mail Sender \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{where}{what}{fifthcol}{0.05}
+\cvevent{4/2020}{3/2021}{Set MathPy Project in GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PRIVATE PROJECT)} \newline MathPy Project is constantly updating}{0.5}{0}{secondcol}{0.1}
 
-\cvevent{2/2021}{3/2021}{Start the Hydrogeology Project \newline • Groundwater Hydrology \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PRIVATE PROJECT)}}{where}{what}{fifthcol}{0.05}
+\cvevent{9/2020}{10/2020}{Start the Gmail Project \newline • CSV Google-mail Sender \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{0.5}{0}{fifthcol}{0.2}
 
-\end{cvtimeline}
+\cvevent{2/2021}{3/2021}{Start the Hydrogeology Project \newline • Groundwater Hydrology \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PRIVATE PROJECT)}}{0.5}{0}{fifthcol}{0.2}
+
+\cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/\newline deepeastwind/scientific-computing-with-python-v7}}{0.5}{1.55}{maincol}{0.3}
+
+\end{timelinevertical}
 \end{center}
 \vspace{-40pt}\end{minipage}
 %============================================================================%

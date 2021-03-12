@@ -257,7 +257,7 @@
 
 
 %----------------------------------------------------------------------------------------
-% 	TIMELINE CHART
+% 	TIMELINE VERTICAL & HORIZONTAL CHART
 %----------------------------------------------------------------------------------------
 \input{./g/timeline.tex}
 
@@ -424,12 +424,30 @@
 		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
 	\end{tikzpicture}
 	\end{center}
+	
+	% \mbox{
+		% \begin{timelinehorizontal}{2019}{2022}{9}{textcol}
+		
+			% \cvevent{3/2021}{3/2021}{Developer Certification • Scientific Computing with Python}{2}{-2.5}{maincol}{-1}
+	
+			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/deepeastwind}}{1.5}{-3}{maincol}{-1}
+	
+			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{/scientific-computing-with-python-v7}}{1}{-2}{maincol}{-1}
+	
+			% \cvevent{9/2019}{3/2021}{Beginning of learning Python}{0.5}{-5}{maincol}{-1}
+	
+			% \cvevent{6/2019}{9/2017}{Bachelor of General Studies (BGS) • Physics Electronic}{1.5}{-5}{maincol}{-1}
+	
+			% \cvevent{6/2017}{3/2017}{Associate of General Studies (AGS) •  Physics}{1}{-8}{maincol}{-1}
+	
+		% \end{timelinehorizontal}
+	% }
 
 	\vspace{10pt}
 	% TEXT BOX
 	\parbox[b][30pt][c]{0.73\textwidth}{
-		% DEV LANGUAGE
-		\cvsect{Langage de Dev}{0.49}{thirdcol}{textcol}\\[4pt]
+		% LANGUE DE DÉVELOPPEMENT
+		\cvsect{Langage de Developpement}{0.49}{thirdcol}{textcol}\\[4pt]
 		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
 		\hspace{15pt}
 		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
@@ -446,7 +464,7 @@
 			
 		\end{barchart}
 		
-		\hspace{10pt}
+		\hspace{5pt}
 		
 		% TEXTBOX
 		\parbox[b][70pt][c]{0.26\textwidth}{
@@ -569,39 +587,41 @@
 \begin{center}
 
 % TIMELINE
-\begin{cvtimeline}{2017}{2022}{21}{\linewidth}
+\begin{timelinevertical}{2017}{2022}{21}{\linewidth}
 
 % {maincol}  {secondcol}  {thirdcol}
 
 % \cvevent{6/2012}{6/2012}{Diplôme du Baccalauréat \newline Série : Sciences Expérimentales. \newline Option : Science de la Vie et la Terre.}{where}{what}}{maincol}{0}
 
-% \cvevent{9/2012}{9/2012}{Début des études Universitaires}{where}{what}{maincol}{0}
+% \cvevent{9/2012}{9/2012}{Début des études Universitaires}{0.5}{0}{maincol}{0}
 
-% \cvevent{6/2013}{3/2021}{Maintenance Informatique \newline • Diagnostique et réparation de Hardware \& Software...}{where}{what}{thirdcol}{0.25}
+\cvevent{1/2017}{3/2021}{Maintenance Informatique depuis 2013 \newline • Diagnostique et réparation de Hardware \& Software...}{0.5}{0}{thirdcol}{0.4}
 
-\cvevent{2/2017}{3/2021}{Maintenance Informatique \newline • Diagnostique et réparation de Hardware \& Software...}{where}{what}{thirdcol}{0.25}
+\cvevent{1/2017}{12/2016}{Maintenance Informatique depuis 2013 \newline • Diagnostique et réparation de Hardware \& Software...}{0.5}{0}{thirdcol}{0.4}
 
-\cvevent{6/2017}{12/2016}{Diplôme d'Études Universitaires Générales (DEUG) \newline • Filière : Science Matière Physique}{where}{what}{maincol}{0.15}
+\cvevent{6/2017}{12/2016}{Diplôme d'Études Universitaires Générales (DEUG) \newline • Filière : Science Matière Physique}{0.5}{0}{maincol}{0.3}
 
-\cvevent{9/2017}{6/2019}{Début des études de licence}{where}{what}{maincol}{0.15}
+\cvevent{9/2017}{6/2018}{Début des études de licence}{0.5}{0}{maincol}{0.3}
 
-\cvevent{2/2018}{6/2018}{Début du Projet de Fin d'Études \newline • Conception d'un système photovoltaïque et réalisation d'un suiveur solaire}{where}{what}{fifthcol}{0.05}
+\cvevent{2/2018}{6/2018}{Début du Projet de Fin d'Études \newline • Conception d'un système photovoltaïque et réalisation d'un suiveur solaire}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{6/2018}{6/2018}{Présentation du Projet de Fin d'Études}{where}{what}{secondcol}{0.05}
+\cvevent{6/2018}{6/2018}{Présentation du Projet de Fin d'Études}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{6/2019}{6/2019}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{where}{what}{maincol}{0.15}
+\cvevent{6/2019}{9/2018}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{0.5}{0}{maincol}{0.3}
 
-\cvevent{9/2019}{3/2021}{Débuter à apprendre Python}{where}{what}{maincol}{0.15}
+\cvevent{9/2019}{3/2021}{Débuter à apprendre Python}{0.5}{0}{maincol}{0.3}
 
-\cvevent{12/2019}{2/2021}{Début du Projet MathPy \newline • Calculatrice Scientifique Moderne}{where}{what}{fifthcol}{0.05}
+\cvevent{12/2019}{2/2021}{Début du Projet MathPy \newline • Calculatrice Scientifique Moderne}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{4/2020}{3/2021}{Mis le projet MathPy dans GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PROJET PRIVÉ)} \newline Projet MathPy est constamment mis à jour}{where}{what}{secondcol}{-0.05}
+\cvevent{4/2020}{3/2021}{Mis le projet MathPy dans GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PROJET PRIVÉ)} \newline Projet MathPy est constamment mis à jour}{0.5}{0}{secondcol}{0.1}
 
-\cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{where}{what}{fifthcol}{0.05}
+\cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PROJET PRIVÉ)}}{where}{what}{fifthcol}{0.05}
+\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PROJET PRIVÉ)}}{0.5}{0}{fifthcol}{0.2}
 
-\end{cvtimeline}
+\cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/\newline deepeastwind/scientific-computing-with-python-v7}}{0.5}{1.55}{maincol}{0.3}
+
+\end{timelinevertical}
 \end{center}
 \vspace{-40pt}\end{minipage}
 %============================================================================%

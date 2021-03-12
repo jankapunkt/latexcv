@@ -21,7 +21,7 @@
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 %----------------------------------------------------------------------------------------
-%   TIMELINE CHART
+%   TIMELINE VERTICAL CHART
 %----------------------------------------------------------------------------------------
 \newcounter{yearcount}
 \newcounter{leftcount}
@@ -33,7 +33,7 @@
 % param 2: end year
 % param 3: overall width
 % param 4: overall height             {\parbox{\myboxwidth}
-\newenvironment{cvtimeline}[4]{
+\newenvironment{timelinevertical}[4]{
     \newcommand{\cvcategory}[2]{
         \node[label=\mbox{\colorbox{##1}{\strut\hspace{2pt}}\colorbox{white}{\textcolor{textcol}{##2}}}] at (0,-5) {}; % start year
     }
@@ -44,8 +44,8 @@
     % param 1:  event start month/year
     % param 2:  event end month/year
     % param 3:  event name
-    % param 4:  institution (where did you work / study)
-    % param 5:  what was your position
+    % param 4:  level position x
+    % param 5:  level position y
     % param 6:  color
     % param 7:  level (position, use minus for left placement)
     \newcommand{\cvevent}[7] {
@@ -58,12 +58,18 @@
                 \pgfmathparse{1/(\endexp-\startexp+1)}
                 \let\lenexp\pgfmathresult
                 \pgfmathparse{0.5*\endexp+0.5*\startexp}
-                \let\midexp\pgfmathresult
-                \filldraw[fill=##6,draw=none, opacity=0.9] (-0.15-##7,\startexp) rectangle (-0.15-##7-0.5,\endexp);
-                \draw[draw=##6, line width=1.5pt] (0, \startexp) -- (1,\startexp);
+                \let\midexp\pgfmathresult	
+                
+                \filldraw[fill=##6,draw=none, opacity=0.9] (-0.15-##7,\startexp) rectangle (-0.15-##7-0.5,\endexp);	
+                
+				\draw[draw=##6, line width=1.5pt, anchor=west] (0, \startexp) -- (##4, \startexp+##5);% line			
+				
+				\node[fill=##6,right=-0.1em,inner sep=0.5em, label={[label distance=0]0:\colorbox{sectcol}{\parbox{0.7\textwidth}{\textcolor{gray}{##1}\hspace{3pt}\textcolor{textcol}{##3}}}}] at (##4, \startexp+##5) {};% textbox			
+				
+				% \node[below, inner sep=1.5em] at (\eventposition,0) {##1};%draw year below
 
-                \node[label={[label distance=0]0:\colorbox{##6}{\strut}\colorbox{sectcol}{\parbox{0.7\textwidth}{\textcolor{gray}{##1}\hspace{3pt}\textcolor{textcol}{##3}}}}] at (0.5, \startexp) {};
-                % \node[label={[label distance=0]0:\colorbox{##6}{\strut}\colorbox{white}{\textcolor{gray}{##1}\hspace{3pt}\textcolor{textcol}{##3}}}] at (0.5, \startexp) {};
+				\draw[fill=white, draw=##6, line width=0.1em]  (0,\startexp) circle (0.1);%year circle
+				
             }
             \addtocounter{leftcount}{1}
         }
@@ -82,7 +88,7 @@
     %for each year put a horizontal line in place
     \setcounter{yearcount}{1}
     \whiledo{\value{yearcount} < \fullrange}{
-        \draw[fill=white,draw=textcol, line width=2pt]  (0,#3/\fullrange*\value{yearcount}) circle (0.1);
+        \draw[fill=white,draw=textcol, line width=2pt]  (0,#3/\fullrange*\value{yearcount}) circle (0.2);
         \stepcounter{yearcount}
     }
     %start year
@@ -91,5 +97,98 @@
     %end year
     \filldraw[fill=white!100,draw=textcol,line width=5pt] (0,#3+0.75) circle (0.75);
     \node[label=\textcolor{textcol}{\textbf{\large#2}}] at (0,#3+0.42) {}; 
+}%end begin part of newenv
+{\end{tikzpicture}}
+
+
+%----------------------------------------------------------------------------------------
+%   TIMELINE HORIZONTAL CHART
+%----------------------------------------------------------------------------------------
+% \newcounter{yearcount}
+% \newcounter{leftcount}
+% env cvtimeline
+%
+% creates a vertical cv timeline
+%
+% param 1: start year
+% param 2: end year
+% param 3: overall width
+% param 4: overall height             {\parbox{\myboxwidth}
+\newenvironment{timelinehorizontal}[4]{
+    \newcommand{\cvcategory}[2]{
+        \node[label=\mbox{\colorbox{##1}{\strut\hspace{2pt}}\colorbox{white}{\textcolor{textcol}{##2}}}] at (0,-5) {}; % start year
+    }
+    \newcommand{\bxwidth}{4.5}
+    \newcommand{\bxheight}{2}
+    % creates a stretched box as cv entry headline followed by two paragraphs about 
+    % the work you did
+    % param 1:  event start month/year
+    % param 2:  event end month/year
+    % param 3:  event name
+    % param 4:  level position y
+    % param 5:  level position x
+    % param 6:  color
+    % param 7:  level (position, use minus for left placement)
+    \newcommand{\cvevent}[7] {
+        \foreach \monthf/\yearf in {##1} {
+            \foreach \montht/\yeart in {##2} {
+                \pgfmathparse{-#3/\fullrange*((\yearf-#1)+(\monthf/12))}
+                \let\startexp\pgfmathresult
+                \pgfmathparse{-#3/\fullrange*((\yeart-#1)+(\montht/12))}
+                \let\endexp\pgfmathresult
+                \pgfmathparse{1/(\endexp-\startexp+1)}
+                \let\lenexp\pgfmathresult
+                \pgfmathparse{0.5*\endexp+0.5*\startexp}
+                \let\midexp\pgfmathresult
+                
+                \pgfmathparse{-#3/\fullrange*((\yearf-#1)+(\monthf/12))}% get the event position
+                \let\eventposition\pgfmathresult
+                
+                \filldraw[fill=##6, draw=none, opacity=0.9] (\startexp ,0.15+##7) rectangle (\endexp, 0.15+##7+0.5);
+                
+				\draw[draw=##6, line width=1.5pt, anchor=west] (\eventposition,0) -- (\eventposition+##5,##4);% line			
+				
+				\node[fill=##6,right=-0.1em,inner sep=0.5em, label={[label distance=0]0:\colorbox{sectcol}{\textcolor{textcol}{##3}}}] at (\eventposition+##5,##4) {\textcolor{white}{##1}};% textbox			
+				
+				% \node[below, inner sep=1.5em] at (\eventposition,0) {##1};%draw year below
+
+				\draw[fill=white,draw=##6, line width=0.1em]  (\eventposition,0) circle (0.1);%year circle
+            }
+            \addtocounter{leftcount}{1}
+        }
+    }
+
+    %--------------------------------------------------------------------------------------
+    %   BEGIN
+    %--------------------------------------------------------------------------------------
+
+    \begin{tikzpicture}
+    \setcounter{leftcount}{1}
+    %calc fullrange= number of years
+    \pgfmathparse{(#2-#1)}
+    \let\fullrange\pgfmathresult
+    \draw[draw=textcol,line width=4pt] (0,0) -- (-#3,0) ;    %the timeline
+    
+    %for each year put a horizontal line in place
+    \setcounter{yearcount}{1}
+    \whiledo{\value{yearcount} < \fullrange}{
+        \draw[fill=white,draw=textcol, line width=2pt]  (-#3/\fullrange*\value{yearcount},0) circle (0.2);
+        \stepcounter{yearcount}
+    }
+    
+    
+    %start year
+	% \filldraw[fill=white!100,draw=textcol,line width=3pt] (0,0) node[draw=none]{\textbf{\large \color{#4} #1}} circle (0.5);
+    %end year
+	% \filldraw[fill=white!100,draw=textcol,line width=5pt] (-#3,0) node[draw=none]{\textbf{\large\color{#4} #2}} circle (0.75);
+	
+	%start year
+    \filldraw[fill=white!100,draw=textcol,line width=3pt] (0,0) circle (0.5);
+    \node[draw=none, label=\textcolor{textcol}{\textbf{\small#1}}] at (0,-0.35) {}; 
+    %end year
+    \filldraw[fill=white!100,draw=textcol,line width=5pt] (-#3,0) circle (0.75);
+    \node[draw=none, label=\textcolor{textcol}{\textbf{\large#2}}] at (-#3,-0.35) {}; 
+    
+    
 }%end begin part of newenv
 {\end{tikzpicture}}
