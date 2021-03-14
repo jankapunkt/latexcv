@@ -173,7 +173,13 @@
 \usepackage{xcolor}
 
 %defineColors
-\definecolor{orange}{RGB}{255,150,0}
+\definecolor{pyblue}{HTML}{4B8BBE}
+% \definecolor{pyblue}{HTML}{306998}
+
+\definecolor{lpyyellow}{HTML}{FFE873}
+\definecolor{pyyellow}{HTML}{FFD43B}
+
+\definecolor{sorange}{RGB}{255,150,0}
 \definecolor{lblue}{RGB}{0,178,255}
 \definecolor{darkblue}{RGB}{0,80,130}
 \definecolor{darkerblue}{RGB}{0,100,160}
@@ -183,12 +189,13 @@
 
 
 %main color
-\colorlet{maincol}{orange}
+\colorlet{maincol}{pyyellow}
+\colorlet{invcol}{lpyyellow}
 
 %secondary colors
 \colorlet{secondcol}{lblue}
 \colorlet{thirdcol}{darkblue}
-\colorlet{fourthcol}{darkerblue}
+\colorlet{fourthcol}{pyblue}
 \colorlet{fifthcol}{lgray}
 \colorlet{sixthcol}{darkblue}
 
@@ -375,7 +382,9 @@
 
 	\mbox{
 		\parbox[c][3cm][c]{0.29\textwidth}{
-		\textcolor{textcol}{Je suis diplômé en Physique Électronique avec une expérience de travail dans des projets de recherche.}
+			\begin{center}
+			\textcolor{textcol}{Je suis diplômé en Physique Électronique avec une expérience de travail dans des projets de recherche.}
+			\end{center}
 		}
 		\hspace{2pt}
 		\parbox[c][3cm][c]{0.36\textwidth}{
@@ -387,7 +396,9 @@
 		}
 		\hspace{2pt}
 		\parbox[c][3cm][c]{0.29\textwidth}{
-		\textcolor{textcol}{Je suis toujours à la recherche de nouveaux projets interdisciplinaires passionnants liés à la physique.}
+			\begin{center}
+			\textcolor{textcol}{Je suis toujours à la recherche de nouveaux projets interdisciplinaires passionnants liés à la physique.}
+			\end{center}
 		}
 	}
 	\vspace{20pt}
@@ -401,7 +412,9 @@
 		
 		% TEXT BOX
 		\parbox[b][130pt][c]{0.35\textwidth}{
+			\begin{center}
 			\textcolor{textcol}{La plus grande partie de ma contribution à mon travail se situe dans le domaine du développement et maintenance informatique.}
+			\end{center}
 		
 			% LANGUAGES
 			\cvsect{Langues}{0.49}{thirdcol}{textcol}\\[4pt]
@@ -410,12 +423,11 @@
 		}
 
 		% PIE CHART	
-		\begin{piechart}{360}{1.75}{bgcol}{textcol}{sectcol}
-			\slice{18}{Projets}{fifthcol}
-			\slice{29}{Développement}{maincol}
-			\slice{29}{Maintenance}{thirdcol}
-			\slice{14}{Recherche}{secondcol}
-			\slice{10}{Désigne}{fourthcol}
+		\begin{piechart}{360}{1.7}{bgcol}{textcol}{sectcol}
+			\slice{33}{Développement}{maincol}
+			\slice{28}{Maintenance}{thirdcol}
+			\slice{23}{Schématisation}{invcol}
+			\slice{18}{Désigne}{fifthcol}
 		\end{piechart}\\
 	}
 	\begin{center}
@@ -450,11 +462,12 @@
 		\cvsect{Langage de Developpement}{0.49}{thirdcol}{textcol}\\[4pt]
 		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
 		\hspace{15pt}
-		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{thirdcol}}
+		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{thirdcol} \legend{Back End}{1.5cm}{fifthcol}
+	}
 	
 	% BAR CHART
 	\vspace{9pt}\mbox{\hspace{-14pt}
-		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
+		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{thirdcol}{fifthcol}
 % n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
 			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
 			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}
@@ -473,34 +486,34 @@
 		\iconbox{Code}{8}{maincol}{Syntaxe:}{textcol}
 		
 		\hspace{10pt}
-		\iconbox{Python}{8}{maincol}{3.7 \& 3.8}{textcol}
+		\iconbox{Python}{8}{maincol}{3.7 \& 3.8}{textcol}		
 		
-		\iconbox{Boxes}{8}{thirdcol}{Bibliothèques:}{titletext}
-		
-		\hspace{10pt}
-		\iconbox{Terminal}{8}{thirdcol}{intégré}{titletext}
+		\iconbox{Boxes}{8}{fifthcol}{Bibliothèques:}{titletext}
 		
 		\hspace{10pt}
-		\iconbox{FileCode}{8}{thirdcol}{pyinstaller}{titletext}
+		\iconbox{Terminal}{8}{fifthcol}{intégré}{titletext}
 		
-		\iconbox{LaptopCode}{8}{secondcol}{GUI:}{textcol}
+		\hspace{10pt}
+		\iconbox{FileCode}{8}{fifthcol}{pyinstaller}{titletext}
+		
+		\iconbox{LaptopCode}{8}{thirdcol}{GUI:}{titletext}
 			
 		\hspace{10pt}	
-		\iconbox{Feather}{8}{secondcol}{tkinter}{textcol}
+		\iconbox{Feather}{8}{thirdcol}{tkinter}{titletext}
 		
 		\hspace{10pt}
-		\iconbox{ChartArea}{8}{secondcol}{matplotlib}{textcol}
+		\iconbox{ChartArea}{8}{thirdcol}{matplotlib}{titletext}
 		
-		\iconbox{ChartPie}{8}{thirdcol}{Data Analyse:}{titletext}
+		\iconbox{ChartPie}{8}{fifthcol}{Data Analyse:}{titletext}
 		
 		\hspace{10pt}
-		\iconbox{Superscript}{8}{thirdcol}{sympy}{titletext}
+		\iconbox{Superscript}{8}{fifthcol}{sympy}{titletext}
 		
 		\hspace{10pt}	 		
-		\iconbox{SortNumericDown}{8}{thirdcol}{numpy}{titletext}	
+		\iconbox{SortNumericDown}{8}{fifthcol}{numpy}{titletext}	
 		
 		\hspace{10pt}
-		\iconbox{Table}{8}{thirdcol}{pandas}{titletext}
+		\iconbox{Table}{8}{fifthcol}{pandas}{titletext}
 		}
 	}\\
 	
@@ -553,7 +566,9 @@
 		
 		% TEXT BOX
 		\parbox[b][3cm][c]{3.5cm}{
+			\begin{center}
 			\textcolor{textcol}{Parmis les dominantes activités que je pratique est de naviguer sur internet à la recherche de nouvelles sur le monde d'informatique et  entraîné sur tous les tutoriels qui m'intéresse.}
+			\end{center}
 		}
 
 	}
@@ -595,9 +610,7 @@
 
 % \cvevent{9/2012}{9/2012}{Début des études Universitaires}{0.5}{0}{maincol}{0}
 
-\cvevent{1/2017}{3/2021}{Maintenance Informatique depuis 2013 \newline • Diagnostique et réparation de Hardware \& Software...}{0.5}{0}{thirdcol}{0.4}
-
-\cvevent{1/2017}{12/2016}{Maintenance Informatique depuis 2013 \newline • Diagnostique et réparation de Hardware \& Software...}{0.5}{0}{thirdcol}{0.4}
+\cvevent{2/2017}{9/2018}{Maintenance Informatique}{0.5}{0}{thirdcol}{0.4}
 
 \cvevent{6/2017}{12/2016}{Diplôme d'Études Universitaires Générales (DEUG) \newline • Filière : Science Matière Physique}{0.5}{0}{maincol}{0.3}
 
@@ -617,7 +630,7 @@
 
 \cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PROJET PRIVÉ)}}{0.5}{0}{fifthcol}{0.2}
+\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PROJET PRIVÉ)}}{0.5}{-0.15}{fifthcol}{0.2}
 
 \cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/\newline deepeastwind/scientific-computing-with-python-v7}}{0.5}{1.55}{maincol}{0.3}
 

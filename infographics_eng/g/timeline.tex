@@ -64,7 +64,7 @@
                 
 				\draw[draw=##6, line width=1.5pt, anchor=west] (0, \startexp) -- (##4, \startexp+##5);% line			
 				
-				\node[fill=##6,right=-0.1em,inner sep=0.5em, label={[label distance=0]0:\colorbox{sectcol}{\parbox{0.7\textwidth}{\textcolor{gray}{##1}\hspace{3pt}\textcolor{textcol}{##3}}}}] at (##4, \startexp+##5) {};% textbox			
+				\node[fill=##6,right=-0.1em,inner sep=0.5em, label={[label distance=0]0:\colorbox{sectcol}{\parbox{0.7\textwidth}{\textcolor{gray}{##1}\hspace{3pt}\textcolor{textcol}{##3}}}}] at (##4, \startexp+##5) {\textcolor{##6}{|}};% textbox			
 				
 				% \node[below, inner sep=1.5em] at (\eventposition,0) {##1};%draw year below
 
@@ -175,12 +175,6 @@
         \draw[fill=white,draw=textcol, line width=2pt]  (-#3/\fullrange*\value{yearcount},0) circle (0.2);
         \stepcounter{yearcount}
     }
-    
-    
-    %start year
-	% \filldraw[fill=white!100,draw=textcol,line width=3pt] (0,0) node[draw=none]{\textbf{\large \color{#4} #1}} circle (0.5);
-    %end year
-	% \filldraw[fill=white!100,draw=textcol,line width=5pt] (-#3,0) node[draw=none]{\textbf{\large\color{#4} #2}} circle (0.75);
 	
 	%start year
     \filldraw[fill=white!100,draw=textcol,line width=3pt] (0,0) circle (0.5);
