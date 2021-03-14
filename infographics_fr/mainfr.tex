@@ -176,8 +176,10 @@
 \definecolor{pyblue}{HTML}{4B8BBE}
 % \definecolor{pyblue}{HTML}{306998}
 
-\definecolor{lpyyellow}{HTML}{FFE873}
-\definecolor{pyyellow}{HTML}{FFD43B}
+\definecolor{lpyellow}{HTML}{FFE873}
+\definecolor{pyellow}{HTML}{FFD43B}
+
+\definecolor{pygray}{HTML}{646464}
 
 \definecolor{sorange}{RGB}{255,150,0}
 \definecolor{lblue}{RGB}{0,178,255}
@@ -189,11 +191,11 @@
 
 
 %main color
-\colorlet{maincol}{pyyellow}
-\colorlet{invcol}{lpyyellow}
+\colorlet{maincol}{pyellow}
 
 %secondary colors
-\colorlet{secondcol}{lblue}
+%\colorlet{secondcol}{lblue}
+\colorlet{secondcol}{pygray}
 \colorlet{thirdcol}{darkblue}
 \colorlet{fourthcol}{pyblue}
 \colorlet{fifthcol}{lgray}
@@ -415,18 +417,18 @@
 			\begin{center}
 			\textcolor{textcol}{La plus grande partie de ma contribution à mon travail se situe dans le domaine du développement et maintenance informatique.}
 			\end{center}
-		
+			\vspace{-10pt}
 			% LANGUAGES
 			\cvsect{Langues}{0.49}{thirdcol}{textcol}\\[4pt]
-			\iconbox{Language}{12}{fifthcol}{Français (B2)}{titletext}\\
-			\iconbox{Language}{12}{fifthcol}{Anglais (A2)}{titletext}\\
+			\iconbox{Language}{12}{thirdcol}{Français (B2)}{titletext}\\
+			\iconbox{Language}{12}{thirdcol}{Anglais (A2)}{titletext}\\
 		}
 
 		% PIE CHART	
 		\begin{piechart}{360}{1.7}{bgcol}{textcol}{sectcol}
 			\slice{33}{Développement}{maincol}
 			\slice{28}{Maintenance}{thirdcol}
-			\slice{23}{Schématisation}{invcol}
+			\slice{23}{Schématisation}{secondcol}
 			\slice{18}{Désigne}{fifthcol}
 		\end{piechart}\\
 	}
@@ -462,12 +464,12 @@
 		\cvsect{Langage de Developpement}{0.49}{thirdcol}{textcol}\\[4pt]
 		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
 		\hspace{15pt}
-		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{thirdcol} \legend{Back End}{1.5cm}{fifthcol}
+		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{fifthcol}
 	}
 	
 	% BAR CHART
 	\vspace{9pt}\mbox{\hspace{-14pt}
-		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{thirdcol}{fifthcol}
+		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{fifthcol}
 % n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
 			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
 			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}
@@ -496,13 +498,13 @@
 		\hspace{10pt}
 		\iconbox{FileCode}{8}{fifthcol}{pyinstaller}{titletext}
 		
-		\iconbox{LaptopCode}{8}{thirdcol}{GUI:}{titletext}
+		\iconbox{LaptopCode}{8}{secondcol}{GUI:}{titletext}
 			
 		\hspace{10pt}	
-		\iconbox{Feather}{8}{thirdcol}{tkinter}{titletext}
+		\iconbox{Feather}{8}{secondcol}{tkinter}{titletext}
 		
 		\hspace{10pt}
-		\iconbox{ChartArea}{8}{thirdcol}{matplotlib}{titletext}
+		\iconbox{ChartArea}{8}{secondcol}{matplotlib}{titletext}
 		
 		\iconbox{ChartPie}{8}{fifthcol}{Data Analyse:}{titletext}
 		
@@ -530,8 +532,8 @@
 		\parbox[b][30pt][c]{0.4\textwidth}{
 			% OS
 			\cvsect{OS}{0.49}{thirdcol}{textcol}\\[4pt]
-			\iconbox{Windows}{12}{secondcol}{Windows}{textcol}
-			\iconbox{Linux}{12}{secondcol}{Linux}{textcol}
+			\iconbox{Windows}{12}{thirdcol}{Windows}{titletext}
+			\iconbox{Linux}{12}{thirdcol}{Linux}{titletext}
 		}
 		\parbox[b][30pt][c]{0.6\textwidth}{
 			\textcolor{textcol}{J'utilise régulièrement pour mes projets de développement PyCharm Community et Visual Studio comme IDE, et j'utilise pour la capture schématique et la simulation Proteus CAD.}
@@ -583,10 +585,10 @@
 %\end{minipage}
 \hspace{2pt}
 \begin{minipage}{0.46\textwidth}
-%---------------------------------------------------------------------------------------
-%	EXPERIENCE / EDUCATION
 %----------------------------------------------------------------------------------------
-\cvsect{Experience et Education}{0.41}{thirdcol}{textcol}\\% [16pt]
+%	EDUCATION / PROJECT / EXPERIENCE
+%----------------------------------------------------------------------------------------
+\cvsect{Education et Projet et Experience}{0.41}{thirdcol}{textcol}\\% [16pt]
 
 
 %----------------------------------------------------------------------------------------
@@ -596,7 +598,7 @@
 
 \hspace{60pt}\colorbox{maincol}{\faBroadcastTower \hspace{1pt} Télécommunication ~•~ \faSitemap \hspace{1pt} Réseau}\\
    
-\hspace{60pt}\mbox{\legend{Expérience}{1.7cm}{thirdcol} \legend{Éducation}{1.5cm}{maincol} \legend{Projets}{1cm}{fifthcol} \legend{Événements}{1.9cm}{secondcol}}
+\hspace{60pt}\mbox{\legend{Éducation}{1.5cm}{maincol} \legend{Projet}{0.9cm}{secondcol} \legend{Expérience}{1.7cm}{thirdcol} \legend{Événement}{1.7cm}{fifthcol}}
 
 \vspace{-55pt}
 \begin{center}
@@ -616,21 +618,21 @@
 
 \cvevent{9/2017}{6/2018}{Début des études de licence}{0.5}{0}{maincol}{0.3}
 
-\cvevent{2/2018}{6/2018}{Début du Projet de Fin d'Études \newline • Conception d'un système photovoltaïque et réalisation d'un suiveur solaire}{0.5}{0}{fifthcol}{0.2}
+\cvevent{2/2018}{6/2018}{Début du Projet de Fin d'Études \newline • Conception d'un système photovoltaïque et réalisation d'un suiveur solaire}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{6/2018}{6/2018}{Présentation du Projet de Fin d'Études}{0.5}{0}{secondcol}{0.2}
+\cvevent{6/2018}{6/2018}{Présentation du Projet de Fin d'Études}{0.5}{0}{fifthcol}{0.2}
 
 \cvevent{6/2019}{9/2018}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{0.5}{0}{maincol}{0.3}
 
 \cvevent{9/2019}{3/2021}{Débuter à apprendre Python}{0.5}{0}{maincol}{0.3}
 
-\cvevent{12/2019}{2/2021}{Début du Projet MathPy \newline • Calculatrice Scientifique Moderne}{0.5}{0}{fifthcol}{0.2}
+\cvevent{12/2019}{2/2021}{Début du Projet MathPy \newline • Calculatrice Scientifique Moderne}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{4/2020}{3/2021}{Mis le projet MathPy dans GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PROJET PRIVÉ)} \newline Projet MathPy est constamment mis à jour}{0.5}{0}{secondcol}{0.1}
+\cvevent{4/2020}{3/2021}{Mis le projet MathPy dans GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PROJET PRIVÉ)} \newline Projet MathPy est constamment mis à jour}{0.5}{0}{fifthcol}{0.1}
 
-\cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{0.5}{0}{fifthcol}{0.2}
+\cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PROJET PRIVÉ)}}{0.5}{-0.15}{fifthcol}{0.2}
+\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PROJET PRIVÉ)}}{0.5}{-0.15}{secondcol}{0.2}
 
 \cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/\newline deepeastwind/scientific-computing-with-python-v7}}{0.5}{1.55}{maincol}{0.3}
 
