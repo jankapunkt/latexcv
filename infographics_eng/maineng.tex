@@ -165,6 +165,11 @@
 	\vcenteredhbox{\icox{#1}{#2}{#3}{#5}} \vcenteredhbox{\textcolor{#5}{\colorbox{#3}{#4}}}
 }
 
+\newcommand{\iconref}[2]{\textcolor{#1}{\csname fa#2\endcsname}}	%icon shortcut
+\newcommand{\iconweb}[5]{ 						%icon with text ref shortcut
+	\href{https://www.#5}{\vcenteredhbox{\iconref{#1}{#2}} \textcolor{#3}{#4}}
+}
+
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -364,9 +369,9 @@
 	}&
 	\parbox{0.4\textwidth}{
 	\href{mailto:najmi.achraf@gmail.com}{\icontext{At}{12}{najmi.achraf@gmail.com}}\\
-	\href{https://www.github.com/DeepEastWind}{\icontext{Github}{12}{github.com/DeepEastWind}}\\
+	\href{https://www.github.com/OsirisHorusEye}{\icontext{Github}{12}{github.com/OsirisHorusEye}}\\
 	\href{https://stackoverflow.com/users/12854948}{\icontext{StackOverflow}{12}{stackoverflow.com/users/12854948}}\\
-	\href{https://www.linkedin.com/in/achraf-d-najmi}{\icontext{Linkedin}{12}{linkedin.com/in/achraf-d-najmi}}\\
+	\href{https://www.linkedin.com/in/osirishoruseye}{\icontext{Linkedin}{12}{linkedin.com/in/osirishoruseye}}\\
 	}
 \end{tabular*}
 
@@ -445,9 +450,9 @@
 		
 			% \cvevent{3/2021}{3/2021}{Developer Certification • Scientific Computing with Python}{2}{-2.5}{maincol}{-1}
 	
-			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/deepeastwind}}{1.5}{-3}{maincol}{-1}
+			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/osirishoruseye/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/osirishoruseye}}{1.5}{-3}{maincol}{-1}
 	
-			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{/scientific-computing-with-python-v7}}{1}{-2}{maincol}{-1}
+			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/osirishoruseye/scientific-computing-with-python-v7}{/scientific-computing-with-python-v7}}{1}{-2}{maincol}{-1}
 	
 			% \cvevent{9/2019}{3/2021}{Beginning of learning Python}{0.5}{-5}{maincol}{-1}
 	
@@ -462,7 +467,7 @@
 	\begin{center}
 	
 	\mbox{	
-		\bubbles{6/PyCharm, 3.9/\faMarkdown \hspace{0.1em} MD, 5.2/Visual Studio, 3.4/\LaTeX, 4.5/Proteus CAD, 3/\faCodeBranch \hspace{0.1em} \faGit}{\cvsection{Utilitaires}}	
+		\bubbles{6/PyCharm, 3.9/\faMarkdown \hspace{0.1em} MD, 5.2/Visual Studio, 3.4/\LaTeX, 4.5/Proteus CAD, 3/\faCodeBranch \hspace{0.1em} \faGit}{\cvsection{Utilitaires}}
 		}
 	\newline
 	
@@ -618,13 +623,13 @@
 
 \cvevent{12/2019}{2/2021}{Start the MathPy Project \newline • Modern Scientific Calculator}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{4/2020}{3/2021}{Set MathPy Project in GitHub \newline \href{https://www.github.com/DeepEastWind/MathPy}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/MathPy \newline (PRIVATE PROJECT)} \newline MathPy Project is constantly updating}{0.5}{0}{fifthcol}{0.1}
+\cvevent{4/2020}{3/2021}{Set MathPy Project in GitHub \newline \iconweb{pygray}{Github}{pygray}{github.com/OsirisHorusEye/MathPy \newline (PROJET PRIVÉ)}{github.com/OsirisHorusEye/MathPy} \newline MathPy Project is constantly updating}{0.5}{0}{fifthcol}{0.1}
 
-\cvevent{9/2020}{10/2020}{Start the Gmail Project \newline • CSV Google-mail Sender \newline \href{https://github.com/DeepEastWind/Gmail}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind/Gmail}}{0.5}{0}{secondcol}{0.2}
+\cvevent{9/2020}{10/2020}{Start the Gmail Project \newline • CSV Google-mail Sender \newline \iconweb{pygray}{Github}{pygray}{github.com/OsirisHorusEye/Gmail}{github.com/OsirisHorusEye/Gmail}}{0.5}{0}{secondcol}{0.2}
 
-\cvevent{2/2021}{3/2021}{Start the Hydrogeology Project \newline • Groundwater Hydrology \newline \href{https://github.com/DeepEastWind/Hydrogeologie}{\textcolor{textcol}{\faGithub} \hspace{1pt} github.com/DeepEastWind \newline /Hydrogeologie (PRIVATE PROJECT)}}{0.5}{-0.15}{secondcol}{0.2}
+\cvevent{2/2021}{3/2021}{Start the Hydrogeology Project \newline • Groundwater Hydrology \newline \iconweb{pygray}{Github}{pygray}{github.com/OsirisHorusEye \newline /Hydrogeologie (PROJET PRIVÉ)}{github.com/OsirisHorusEye/Hydrogeologie}}{0.5}{-0.15}{secondcol}{0.2}
 
-\cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \href{https://freecodecamp.org/certification/deepeastwind/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/\newline deepeastwind/scientific-computing-with-python-v7}}{0.5}{1.55}{maincol}{0.3}
+\cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \iconweb{pygray}{FreeCodeCamp}{pygray}{freecodecamp.org/certification/\newline osirishoruseye/scientific-computing-with-python-v7}{freecodecamp.org/certification/osirishoruseye/scientific-computing-with-python-v7}}{0.5}{1.55}{maincol}{0.3}
 
 \end{timelinevertical}
 \end{center}
