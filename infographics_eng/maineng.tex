@@ -411,10 +411,10 @@
 	\vspace{20pt}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS AND TECHNOLOGIES
+%	SKILLS
 %----------------------------------------------------------------------------------------
 
-	\cvsect{Skills \& Technologies}{0.49}{thirdcol}{textcol}\\
+	\cvsect{Skills}{0.49}{thirdcol}{textcol}\\[-4pt]
 	\mbox{
 		
 		% TEXT BOX
@@ -430,20 +430,22 @@
 		}
 
 		% PIE CHART	
-		\footnotesize
-		\begin{piechart}{360}{1.75}{bgcol}{textcol}{sectcol}
-			\slice{33}{Development}{maincol}
-			\slice{28}{Maintenance}{thirdcol}
-			\slice{23}{Schematization}{secondcol}
-			\slice{18}{Design}{fifthcol}
-		\end{piechart}\\
+		\parbox[b][130pt][c]{0.65\textwidth}{
+			\footnotesize
+			\begin{piechart}{360}{1.75}{bgcol}{textcol}{sectcol}
+				\slice{33}{Development}{maincol}
+				\slice{28}{Maintenance}{thirdcol}
+				\slice{23}{Schematization}{secondcol}
+				\slice{18}{Design}{fifthcol}
+			\end{piechart}\\
+		}
 	}
-	\begin{center}
-	\vspace{-10pt}
-	\begin{tikzpicture}
-		\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
-	\end{tikzpicture}
-	\end{center}
+	% \begin{center}
+	% \vspace{-10pt}
+	% \begin{tikzpicture}
+	% 	\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
+	% \end{tikzpicture}
+	% \end{center}
 	
 	% \mbox{
 		% \begin{timelinehorizontal}{2019}{2022}{9}{textcol}{0.5}
@@ -462,10 +464,15 @@
 	
 		% \end{timelinehorizontal}
 	% }
+	
+%----------------------------------------------------------------------------------------
+%	SOFTWARE PROGRAMS
+%----------------------------------------------------------------------------------------
 
 	\vspace{-10pt}
+	\cvsect{Software Programs}{0.49}{thirdcol}{textcol}\\[-10pt]
+	% \vspace{-10pt}
 	\begin{center}
-	
 	\mbox{	
 		\bubbles{6/PyCharm, 3.9/\faMarkdown \hspace{0.1em} MD, 5.2/Visual Studio, 3.4/\LaTeX, 4.5/Proteus CAD, 3/\faCodeBranch \hspace{0.1em} \faGit}{\cvsection{Utilitaires}}
 		}
@@ -485,6 +492,11 @@
 			}
 		
 	\end{center}
+	
+%----------------------------------------------------------------------------------------
+%	IT DEVELOPMENT
+%----------------------------------------------------------------------------------------
+
 	\vspace{10pt}
 	% TEXT BOX
 	\parbox[b][30pt][c]{1\textwidth}{

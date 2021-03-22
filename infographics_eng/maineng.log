@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  20 MAR 2021 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.21)  22 MAR 2021 19:32
 entering extended mode
 **./maineng.tex
 (maineng.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> xparse <2020-03-03>
+L3 programming layer <2021-02-18>
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo
@@ -406,14 +406,14 @@ Package: fontawesome5 2020/03/24 v5.13.0 Font Awesome 5
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/l3keys2
 e\l3keys2e.sty
-Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
 xparse.sty
-Package: xparse 2020-10-27 L3 Experimental document command parser
-
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
-xparse-generic.tex))
+xparse-2020-10-01.sty
+(C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
+xparse-generic.tex)))
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\fonta
 wesome5-generic-helper.sty
 Package: fontawesome5-generic-helper 2020/03/24 v5.13.0 non-uTeX helper for fon
@@ -966,6 +966,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 346.
 LaTeX Info: Redefining \pageref on input line 346.
 LaTeX Info: Redefining \nameref on input line 346.
+ (maineng.out) (maineng.out)
 \@outlinefile=\write4
 \openout4 = `maineng.out'.
 
@@ -1025,7 +1026,11 @@ pdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-)
+
+(C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\epstopdf-
+sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 359.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1103,62 +1108,72 @@ Overfull \hbox (1.87268pt too wide) in paragraph at lines 410--412
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 440.
+nput line 442.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomefree1.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 442--442
 
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 440.
+(Font)              scaled to size 8.0pt on input line 442.
 
-Overfull \hbox (5.39676pt too wide) in paragraph at lines 417--441
+Underfull \hbox (badness 10000) in paragraph at lines 442--442
+
+ []
+
+
+Overfull \hbox (6.88498pt too wide) in paragraph at lines 417--449
 [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
+
  []
 
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 471.
+n input line 478.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 471.
+(Font)              scaled to size 6.0pt on input line 478.
 LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
-n input line 479.
+n input line 486.
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--479
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
-nput line 530.
+nput line 542.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomefree3.fd)
-Overfull \hbox (2.38484pt too wide) in paragraph at lines 530--531
+Overfull \hbox (2.38484pt too wide) in paragraph at lines 542--543
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
 
  []
 
 
-Overfull \hbox (6.05232pt too wide) in paragraph at lines 549--573
+Overfull \hbox (6.05232pt too wide) in paragraph at lines 561--585
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Underfull \hbox (badness 10000) in paragraph at lines 599--600
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+Raleway-TLF on inpu
-t line 593.
+t line 605.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/raleway\ts1raleway
 -tlf.fd
@@ -1166,9 +1181,9 @@ File: TS1Raleway-TLF.fd 2014/07/28 (autoinst) Font definitions for TS1/Raleway-
 TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 593.
+(Font)              scaled to size 8.0pt on input line 605.
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--596
+Underfull \hbox (badness 10000) in paragraph at lines 607--608
 
  []
 
@@ -1181,21 +1196,21 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 603.
+(Font)              scaled to size 12.0pt on input line 615.
 LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 613.
+(Font)              scaled to size 9.0pt on input line 625.
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--613
+Underfull \hbox (badness 10000) in paragraph at lines 625--625
 [][]\T1/Raleway-TLF/m/n/9 6/2017[] []As-so-ciate of Gen-eral Stud-ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--633
+Underfull \hbox (badness 10000) in paragraph at lines 645--645
 \T1/Raleway-TLF/m/n/9 osirishoruseye/scientific-computing-
  []
 
 
-Overfull \hbox (15.79913pt too wide) in paragraph at lines 383--646
+Overfull \hbox (15.79913pt too wide) in paragraph at lines 383--658
 [] $[]$   $[]$ $[]$ 
  []
 
@@ -1214,23 +1229,17 @@ Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
 {C:/Users/ACHRAF/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (maineng.a
 ux)
-
-Package rerunfilecheck Warning: File `maineng.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `maineng.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `maineng.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25646 strings out of 479334
- 511167 string characters out of 2854673
- 861690 words of memory out of 3000000
- 42622 multiletter control sequences out of 15000+200000
- 571479 words of font info for 72 fonts, out of 3000000 for 9000
+ 25664 strings out of 479324
+ 511992 string characters out of 2854404
+ 861726 words of memory out of 3000000
+ 42639 multiletter control sequences out of 15000+600000
+ 571479 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,89p,427b,1028s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,12n,89p,427b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/raleway/a_
 2bcjq6.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
 ontawesome5/fa5free3.enc}{C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
@@ -1247,7 +1256,7 @@ ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
 ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 122972 bytes).
+Output written on maineng.pdf (1 page, 123082 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
