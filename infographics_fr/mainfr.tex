@@ -165,6 +165,11 @@
 	\vcenteredhbox{\icox{#1}{#2}{#3}{#5}} \vcenteredhbox{\textcolor{#5}{\colorbox{#3}{#4}}}
 }
 
+\newcommand{\icoxfa}[4]{\colorbox{#3}{\makebox(#2, #2){\textcolor{#4}{\faIcon{#1}}}}}	%icon shortcut
+\newcommand{\iconboxfa}[5]{ 						%icon with text shortcut
+	\vcenteredhbox{\icoxfa{#1}{#2}{#3}{#5}} \vcenteredhbox{\textcolor{#5}{\colorbox{#3}{#4}}}
+}
+
 \newcommand{\iconref}[2]{\textcolor{#1}{\csname fa#2\endcsname}}	%icon shortcut
 \newcommand{\iconweb}[5]{ 						%icon with text ref shortcut
 	\href{https://www.#5}{\vcenteredhbox{\iconref{#1}{#2}} \textcolor{#3}{#4}}
@@ -469,15 +474,13 @@
 %----------------------------------------------------------------------------------------
 
 	% \vspace{-10pt}
-	\cvsect{Programmes Logiciels}{0.49}{thirdcol}{textcol}\\[-15pt]
-	% \vspace{-10pt}
+	\cvsect{Software Programs}{0.49}{thirdcol}{textcol}\\[-15pt]
 	\begin{center}
-	
-	\mbox{	
-		\bubbles{6/PyCharm, 3.9/\faMarkdown \hspace{0.1em} MD, 5.2/Visual Studio, 3.4/\LaTeX, 4.5/Proteus CAD, 3/\faCodeBranch \hspace{0.1em} \faGit}{\cvsection{Utilitaires}}		
+	\mbox{
+		\bubbles{6/PyCharm, 3.9/\faMarkdown \hspace{0.1em} MD, 5.2/Visual Studio, 3.4/\LaTeX, 4.5/Proteus CAD, 3/\faCodeBranch \hspace{0.1em} \faGit}{\cvsection{Utilitaires}}
 	}
-	\newline 
-	
+	\vspace{5pt}
+	\newline
 	\parbox[b][40pt][c]{0.35\textwidth}{
 		% OS
 		\cvsect{OS}{0.35}{thirdcol}{textcol}\\[4pt]
@@ -499,7 +502,7 @@
 
 	\vspace{10pt}
 	% TEXT BOX
-	\parbox[b][30pt][c]{1\textwidth}{
+	\parbox[b][25pt][c]{1\textwidth}{
 		% DÉVELOPPEMENT INFORMATIQUE
 		\cvsect{Developpement Informatique}{0.49}{thirdcol}{textcol}\\[4pt]
 		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
@@ -511,29 +514,30 @@
 	\vspace{9pt}\mbox{\hspace{-14pt}
 		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{fifthcol}
 % n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
-			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885} 
-			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}\\
-			\baritem{50}{\faBoxes \hspace{1pt} Bibliothèques}{0}{0}{88}
-			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{0}{82.5}{0}
-			\baritem{50}{\faChartPie \hspace{1pt} Data Analyse}{0}{0}{77}
+			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885}
+			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}
+			\baritem{50}{\faBoxes \hspace{1pt} Bibliothèques}{0}{0}{90}
+			\baritem{50}{\faAtom \hspace{1pt} Data Science}{0}{40}{40}
+			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{0}{70}{0}
+			\baritem{50}{\faChartPie \hspace{1pt} Data Analyse}{0}{0}{60}
 			
 		\end{barchart}
 		
 		\hspace{15pt}
 		
 		% TEXTBOX
-		\parbox[b][70pt][c]{0.22\textwidth}{\vspace{60pt}
+		\parbox[b][70pt][c]{0.22\textwidth}{\vspace{30pt}
 		\iconbox{Python}{8}{maincol}{3.7 \& 3.8}{textcol}	
 		
 		\iconbox{Terminal}{8}{fifthcol}{intégré}{titletext}
 		
 		\iconbox{FileCode}{8}{fifthcol}{pyinstaller}{titletext}
 		
-		\iconbox{Feather}{8}{secondcol}{tkinter}{titletext}
-		
 		\iconbox{ChartArea}{8}{secondcol}{matplotlib}{titletext}
 		
-		\iconbox{Superscript}{8}{fifthcol}{sympy}{titletext}
+		\iconboxfa{square-root-alt}{8}{fifthcol}{sympy}{titletext}
+		
+		\iconboxfa{feather-alt}{8}{secondcol}{tkinter}{titletext}
 		
 		\iconbox{SortNumericDown}{8}{fifthcol}{numpy}{titletext}
 		
@@ -603,7 +607,7 @@
 %----------------------------------------------------------------------------------------
 %	Physique Électronique
 %----------------------------------------------------------------------------------------
-\hspace{5pt}\colorbox{maincol}{\footnotesize \faRobot \hspace{1pt} Électronique ~•~ \faChargingStation \hspace{1pt} Électrotechnique ~•~ \faLaptop \hspace{1pt} Numérique}
+\hspace{5pt}\colorbox{maincol}{\footnotesize \faDigitalTachograph \hspace{1pt} Électronique ~•~ \faChargingStation \hspace{1pt} Électrotechnique ~•~ \faMicrochip \hspace{1pt} Numérique}
 
 \hspace{55pt}\colorbox{maincol}{\footnotesize \faBroadcastTower \hspace{1pt} Télécommunication ~•~ \faSitemap \hspace{1pt} Réseau}\\
    
@@ -625,13 +629,13 @@
 
 \cvevent{6/2017}{12/2016}{Diplôme d'Études Universitaires Générales (DEUG) \newline • Filière : Science Matière Physique}{0.5}{0}{maincol}{0.3}
 
-\cvevent{9/2017}{6/2018}{Début des études de licence}{0.5}{0}{maincol}{0.3}
+\cvevent{9/2017}{6/2019}{Début des études de licence}{0.5}{0}{maincol}{0.3}
 
 \cvevent{2/2018}{6/2018}{Début du Projet de Fin d'Études \newline • Conception d'un système photovoltaïque et réalisation d'un suiveur solaire}{0.5}{0}{secondcol}{0.2}
 
 \cvevent{6/2018}{6/2018}{Présentation du Projet de Fin d'Études}{0.5}{0}{fifthcol}{0.2}
 
-\cvevent{6/2019}{9/2018}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{0.5}{-0.15}{maincol}{0.3}
+\cvevent{6/2019}{6/2019}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{0.5}{-0.15}{maincol}{0.3}
 
 \cvevent{9/2019}{3/2021}{Débuter à apprendre Python}{0.5}{0}{maincol}{0.3}
 

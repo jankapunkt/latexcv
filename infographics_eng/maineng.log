@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.21)  22 MAR 2021 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.27)  27 MAR 2021 15:07
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -398,7 +398,7 @@ Package: expl3 2021-02-18 L3 programming layer (loader)
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdftex.def
-File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count267
 \l__pdf_internal_box=\box47
 ))
@@ -921,33 +921,33 @@ LaTeX Warning: Unused global option(s):
 (maineng.aux)
 \openout1 = `maineng.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 346.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 351.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 3
-46.
+51.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ly1\ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 346.
-LaTeX Font Info:    ... okay on input line 346.
-Package hyperref Info: Link coloring ON on input line 346.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 351.
+LaTeX Font Info:    ... okay on input line 351.
+Package hyperref Info: Link coloring ON on input line 351.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty
@@ -963,9 +963,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count299
 )
-LaTeX Info: Redefining \ref on input line 346.
-LaTeX Info: Redefining \pageref on input line 346.
-LaTeX Info: Redefining \nameref on input line 346.
+LaTeX Info: Redefining \ref on input line 351.
+LaTeX Info: Redefining \pageref on input line 351.
+LaTeX Info: Redefining \nameref on input line 351.
  (maineng.out) (maineng.out)
 \@outlinefile=\write4
 \openout4 = `maineng.out'.
@@ -1032,148 +1032,148 @@ sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 359.
+(Font)              <7> on input line 364.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 359.
+(Font)              <5> on input line 364.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 29.86pt on input line 363.
+(Font)              scaled to size 29.86pt on input line 368.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 29.86pt on input line 363.
+(Font)              scaled to size 29.86pt on input line 368.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 363.
+(Font)              scaled to size 14.4pt on input line 368.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 363.
+(Font)              scaled to size 14.4pt on input line 368.
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--363
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
-nput line 369.
+nput line 374.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomefree0.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 369.
+nput line 374.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomefree2.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 369--369
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 375.
+ input line 380.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
 available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 375.
+n input line 380.
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on
- input line 375.
+ input line 380.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomebrands1.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <10> not 
 available
 (Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
-n input line 375.
+n input line 380.
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
 
  []
 
 
-Overfull \hbox (63.02354pt too wide) in alignment at lines 359--376
+Overfull \hbox (63.02354pt too wide) in alignment at lines 364--381
 [][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 379.
+(Font)              scaled to size 9.0pt on input line 384.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 410.
+(Font)              <9> on input line 415.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 410.
+(Font)              <6> on input line 415.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 410.
+(Font)              scaled to size 20.74pt on input line 415.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 410.
+(Font)              scaled to size 20.74pt on input line 415.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 410.
+(Font)              scaled to size 9.0pt on input line 415.
 
-Overfull \hbox (1.87268pt too wide) in paragraph at lines 410--412
+Overfull \hbox (1.87268pt too wide) in paragraph at lines 415--417
 [][]
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 442.
+nput line 447.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomefree1.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 442--442
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
 
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 442.
+(Font)              scaled to size 8.0pt on input line 447.
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--442
+Underfull \hbox (badness 10000) in paragraph at lines 447--447
 
  []
 
 
-Overfull \hbox (6.88498pt too wide) in paragraph at lines 417--449
+Overfull \hbox (6.88498pt too wide) in paragraph at lines 422--454
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--475
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 478.
+n input line 482.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 478.
+(Font)              scaled to size 6.0pt on input line 482.
 LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
-n input line 486.
+n input line 490.
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--486
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
-nput line 542.
+nput line 547.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fontawesome5\ufont
 awesomefree3.fd)
-Overfull \hbox (2.38484pt too wide) in paragraph at lines 542--543
+Overfull \hbox (2.38484pt too wide) in paragraph at lines 547--548
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 547--548
 
  []
 
 
-Overfull \hbox (6.05232pt too wide) in paragraph at lines 561--585
+Overfull \hbox (6.05232pt too wide) in paragraph at lines 566--590
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+Raleway-TLF on inpu
-t line 605.
+t line 610.
 
 (C:\Users\ACHRAF\AppData\Local\Programs\MiKTeX 2.9\tex/latex/raleway\ts1raleway
 -tlf.fd
@@ -1181,9 +1181,9 @@ File: TS1Raleway-TLF.fd 2014/07/28 (autoinst) Font definitions for TS1/Raleway-
 TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 605.
+(Font)              scaled to size 8.0pt on input line 610.
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--608
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
@@ -1196,21 +1196,21 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 615.
+(Font)              scaled to size 12.0pt on input line 620.
 LaTeX Font Info:    Font shape `TS1/Raleway-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 625.
+(Font)              scaled to size 9.0pt on input line 630.
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--625
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
 [][]\T1/Raleway-TLF/m/n/9 6/2017[] []As-so-ciate of Gen-eral Stud-ies
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--645
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
 \T1/Raleway-TLF/m/n/9 osirishoruseye/scientific-computing-
  []
 
 
-Overfull \hbox (15.79913pt too wide) in paragraph at lines 383--658
+Overfull \hbox (15.79913pt too wide) in paragraph at lines 388--663
 [] $[]$   $[]$ $[]$ 
  []
 
@@ -1233,10 +1233,10 @@ Package rerunfilecheck Info: File `maineng.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25664 strings out of 479324
- 511992 string characters out of 2854404
- 861726 words of memory out of 3000000
- 42639 multiletter control sequences out of 15000+600000
+ 25693 strings out of 479321
+ 512546 string characters out of 2854162
+ 862573 words of memory out of 3000000
+ 42668 multiletter control sequences out of 15000+600000
  571479 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,89p,427b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1256,7 +1256,7 @@ ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
 ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 123082 bytes).
+Output written on maineng.pdf (1 page, 124702 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
