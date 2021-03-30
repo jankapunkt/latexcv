@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.27)  27 MAR 2021 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.27)  29 MAR 2021 17:29
 entering extended mode
 **./maineng.tex
 (maineng.tex
@@ -966,7 +966,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 351.
 LaTeX Info: Redefining \pageref on input line 351.
 LaTeX Info: Redefining \nameref on input line 351.
- (maineng.out) (maineng.out)
 \@outlinefile=\write4
 \openout4 = `maineng.out'.
 
@@ -1206,7 +1205,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 630--630
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 650--650
-\T1/Raleway-TLF/m/n/9 osirishoruseye/scientific-computing-
+\T1/Raleway-TLF/m/n/9 najmiachraf/scientific-computing-with-
  []
 
 
@@ -1229,13 +1228,19 @@ Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
 {C:/Users/ACHRAF/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (maineng.a
 ux)
-Package rerunfilecheck Info: File `maineng.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `maineng.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `maineng.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25693 strings out of 479321
- 512546 string characters out of 2854162
- 862573 words of memory out of 3000000
+ 25689 strings out of 479321
+ 512386 string characters out of 2854162
+ 862414 words of memory out of 3000000
  42668 multiletter control sequences out of 15000+600000
  571479 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1256,7 +1261,7 @@ ers/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fontawesome5/Fo
 ntAwesome5Free-Solid.pfb><C:/Users/ACHRAF/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/impallari/raleway/Raleway-Bold.pfb><C:/Users/ACHRAF/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/impallari/raleway/Raleway-Regular.pfb>
-Output written on maineng.pdf (1 page, 124702 bytes).
+Output written on maineng.pdf (1 page, 124641 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
