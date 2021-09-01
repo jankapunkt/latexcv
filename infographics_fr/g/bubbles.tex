@@ -21,13 +21,16 @@
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 
-\newcommand{\bubble}[5]{
+\newcommand{\bubble}[6]{
 	\definecolor{tmpcol}{RGB}{50,50,#5}
 	% slice
   	\filldraw[fill=thirdcol,draw=none] (#1,0.5) circle (#3);
 
   	% outer label
   	\node[label=\textcolor{textcol}{#4}] at (#1,0.7) {};
+
+  	% outer label
+  	\node[label=\textcolor{titletext}{#6}] at (#1,0.38) {};
 }
 
 \newcommand{\bubbles}[2]{
@@ -35,9 +38,9 @@
 	\setcounter{a}{0}
 	\setcounter{c}{150}
 	\begin{tikzpicture}[scale=3]
-	\foreach \p/\t in {#1} {
+	\foreach \p/\t/\c in {#1} {
 	    	\addtocounter{a}{1}
-	    	\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
+	    	\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}{\c}
 	}
 	\end{tikzpicture}
 }
