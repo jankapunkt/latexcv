@@ -1,0 +1,538 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2016 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%	*************	RESOURCES USED	 ********************
+%
+%	http://tex.stackexchange.com/questions/5718/package-for-pie-charts
+%	http://tex.stackexchange.com/questions/183087/draw-colored-world-us-map-in-latex#183138
+%	http://www.texample.net/tikz/examples/simple-flow-chart/
+%	http://vizualize.me/#
+%	http://devnet.kentico.com/getattachment/fd511a92-e164-40f5-ba51-07c228a49fed/Kentico_fortune500_infographics_FINAL.png
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+%============================================================================%
+%
+%	DOCUMENT DEFINITION
+%
+%============================================================================%
+
+%we use article class because we want to fully customize the page
+\documentclass[10pt,A4]{article}	
+
+
+%----------------------------------------------------------------------------------------
+%	ENCODING
+%----------------------------------------------------------------------------------------
+
+%we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}		
+
+%----------------------------------------------------------------------------------------
+%	LOGIC
+%----------------------------------------------------------------------------------------
+
+\usepackage{xifthen}
+\usepackage{calc}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% some tex-live fonts - choose your own
+
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+\usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto} 
+
+% set font default
+\renewcommand*\familydefault{\sfdefault} 	
+\usepackage[T1]{fontenc}
+
+% more font size definitions
+\usepackage{moresize}		
+
+% awesome font
+\usepackage{fontawesome}
+
+
+%----------------------------------------------------------------------------------------
+%	PAGE LAYOUT  DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%debug page outer frames
+%\usepackage{showframe}			
+
+%define page styles using geometry
+\usepackage[a4paper]{geometry}		
+
+% for example, change the margins to 2 inches all round
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} 	
+
+% use customized header
+\usepackage{fancyhdr}				
+\pagestyle{fancy}
+
+%less space between header and content
+\setlength{\headheight}{-5pt}		
+
+% customize header entries
+\lhead{}
+\rhead{}
+\chead{}
+
+%indentation is zero
+\setlength{\parindent}{0mm}
+
+%----------------------------------------------------------------------------------------
+%	TABLE /ARRAY DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+%extended aligning of tabular cells
+\usepackage{array}
+
+% custom column width
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+
+
+%----------------------------------------------------------------------------------------
+%	GRAPHICS DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% for drawing graphics and charts
+\usepackage{tikz}
+\usetikzlibrary{shapes, backgrounds}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+% use to vertically center content
+% credits to: http://tex.stackexchange.com/questions/7219/how-to-vertically-center-two-images-next-to-each-other
+\newcommand*{\vcenteredhbox}[1]{\begingroup
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	ICON-SET EMBEDDING
+%---------------------------------------------------------------------------------------- 
+
+% at this point we simplify our icon-embedding by simply referring to a set of png images.
+% if you find a good way of including svg without conflicting with other packages you can
+% replace this part
+\newcommand{\icon}[2]{\colorbox{thirdcol}{\makebox(#2, #2){\textcolor{sectcol}{\csname fa#1\endcsname}}}}	%icon shortcut
+\newcommand{\icontext}[3]{ 						%icon with text shortcut
+	\vcenteredhbox{\icon{#1}{#2}} \vcenteredhbox{\textcolor{textcol}{#3}}
+}
+
+%----------------------------------------------------------------------------------------
+%	Color DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+\usepackage{xcolor}
+
+%defineColors
+\definecolor{orange}{RGB}{255,150,0}
+\definecolor{lblue}{RGB}{0,178,255}
+\definecolor{darkblue}{RGB}{0,80,130}
+\definecolor{darkerblue}{RGB}{0,100,160}
+\definecolor{lgray}{RGB}{0,120,200}
+\definecolor{powderblue}{RGB}{190,220,255}
+\definecolor{darkestblue}{RGB}{0,50,80}
+
+
+%main color
+\colorlet{maincol}{orange}
+
+%secondary colors
+\colorlet{secondcol}{lblue}
+\colorlet{thirdcol}{darkblue}
+\colorlet{fourthcol}{darkerblue}
+\colorlet{fifthcol}{lgray}
+\colorlet{sixthcol}{darkblue}
+
+%background color
+\colorlet{bgcol}{powderblue}
+
+%textcolor
+\colorlet{textcol}{darkestblue}
+
+%titletextcolor
+\colorlet{titletext}{white}
+
+%sectioncolor
+\colorlet{sectcol}{white}
+
+%set a background col for whole page
+\pagecolor{bgcol}
+
+
+%----------------------------------------------------------------------------------------
+% 	HEADER
+%----------------------------------------------------------------------------------------
+
+% remove top header line
+\renewcommand{\headrulewidth}{0pt} 
+
+%remove botttom header line
+\renewcommand{\footrulewidth}{0pt}	  	
+
+%remove pagenum
+\renewcommand{\thepage}{}	
+
+%remove section num		
+\renewcommand{\thesection}{}			
+
+
+%----------------------------------------------------------------------------------------
+%
+% 	TIKZ GRAPHICS
+%
+%----------------------------------------------------------------------------------------
+
+
+% the chart graphics are outsourced into own files
+
+%----------------------------------------------------------------------------------------
+% 	PIE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/piechart.tex}
+
+%----------------------------------------------------------------------------------------
+% 	BAR CHART
+%----------------------------------------------------------------------------------------
+\input{./g/barchart.tex}
+
+
+%----------------------------------------------------------------------------------------
+% 	BUBBLE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/bubbles.tex}
+
+%----------------------------------------------------------------------------------------
+% 	SQUARE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/squares.tex}
+
+
+%----------------------------------------------------------------------------------------
+% 	TIMELINE CHART
+%----------------------------------------------------------------------------------------
+\input{./g/timeline.tex}
+
+%----------------------------------------------------------------------------------------
+% 	FACT BUBBLE
+%----------------------------------------------------------------------------------------
+\input{./g/factbubble.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	custom sections
+%----------------------------------------------------------------------------------------
+
+% create a coloured box with arrow and title as cv section headline
+% param 1: section title
+%
+\newcommand{\cvsection}[2] {
+\textcolor{sectcol}{\uppercase{\textbf{#1}}}
+}
+
+\newcommand{\cvsect}[4]{
+	\textcolor{#3}{\hrule}
+	\colorbox{#3}{ {\cvsection{#1}{#4}}}
+}
+
+% create a coloured arrow with title as cv meta section section
+% param 1: meta section title
+%
+\newcommand{\metasection}[2] {
+	\begin{tabular*}{1\textwidth}{ l l }
+		#1&#2\\[12pt]
+	\end{tabular*}
+}
+
+%----------------------------------------------------------------------------------------
+%	 CV EVENT
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as 
+\newcommand{\cveventmeta}[2] {
+	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
+	#2
+}
+
+%----------------------------------------------------------------------------------------
+% STRUTS AND RULES
+%----------------------------------------- -----------------------------------------------
+
+% custom strut
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+% colored rule and text for chart legends, wrapped in parbox
+% param 1: text
+% param 2: width in cm or pt, em ...
+% param 3: color
+\newcommand{\legend}[3]{\parbox[t]{#2}{\textcolor{#3}{\rule{#2}{4pt}}\\#1}}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM LOREM IPSUM
+%----------------------------------------------------------------------------------------
+\newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+
+%============================================================================%
+%
+%
+%
+%	DOCUMENT CONTENT
+%
+%
+%
+%============================================================================%
+\begin{document}
+
+
+%use our custom fancy header definitions
+\pagestyle{fancy}	
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
+\mystrut
+\vspace{-12pt}
+
+\begin{tabular*}{1\textwidth}{ c c c}
+	\parbox[c]{0.4\linewidth}{
+		\colorbox{thirdcol}{\HUGE{\textcolor{titletext}{\textbf{\uppercase{Jan Küster}}} }}\\
+		\Large{\textcolor{thirdcol}{\textsc{ Consultant/ Software Eng.}}}\\
+	}&
+	\parbox{0.25\textwidth}{
+	\icontext{MapMarker}{12}{Bremen, Germany}\\
+	\icontext{MobilePhone}{12}{+49 176 *** *** **}\\
+	\icontext{Send}{12}{info@jankuester.com}\\
+	}&
+	\parbox{0.3\textwidth}{
+	\icontext{MousePointer}{12}{www.jankuester.com}\\
+	\icontext{Github}{12}{github.com/jankapunkt}\\
+	\icontext{Twitter}{12}{@Kuester\_Jan}\\
+	}
+\end{tabular*}
+
+% manage space by reducing font size
+\small
+
+\vspace{16pt}
+
+
+\begin{minipage}{0.59\textwidth}
+
+%----------------------------------------------------------------------------------------
+%	FACTS
+%----------------------------------------------------------------------------------------
+
+	\mbox{
+		\parbox[c][3cm][c]{0.29\textwidth}{
+		\textcolor{textcol}{I am a digital media graduate with working experience in research projects as well as in the private sector.}
+		}
+		\hspace{10pt}
+		\parbox[c][3cm][c]{0.32\textwidth}{
+			\begin{center}
+			\factbubble{\huge{\textcolor{sectcol}{\textbf{M.Sc.}}}\\\small{\textcolor{sectcol}{\textbf{Digital Media}}}}{1}{maincol}{sectcol}{thirdcol}\\
+			\textcolor{textcol}{as latest degree from}\\
+			\textcolor{textcol}{\textbf{University of Bremen}}
+			\end{center}
+		}
+		\hspace{10pt}
+		\parbox[c][3cm][c]{0.29\textwidth}{
+		\textcolor{textcol}{And I am always looking for new exciting and interdisciplinary projects worldwide.}
+		}
+	}
+	\vspace{34pt}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS AND TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+	\cvsect{Skills and Technologies}{0.49}{thirdcol}{textcol}\\[4pt]
+	\mbox{
+		
+		% TEXT BOX
+		\parbox[b][150pt][c]{0.35\textwidth}{
+			\textcolor{textcol}{The biggest part I contribute to my work is in the area of Software Engineering.}\\
+		
+			% LANGUAGES
+			\cvsect{Languages}{0.49}{thirdcol}{textcol}\\[4pt]
+			\icontext{Language}{12}{\colorbox{maincol}{German (native)}}\\
+			\icontext{Language}{12}{\colorbox{maincol}{English (c1)}}\\
+		}
+
+		% PIE CHART	
+		\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
+			\slice{6}{Design}{thirdcol}
+			\slice{16}{Consulting}{fourthcol}
+			\slice{16}{Research}{fifthcol}
+			\slice{16}{Projects}{secondcol}
+			\slice{46}{Software Engineering}{maincol}
+		\end{piechart}\\
+	}
+	\begin{center}
+	\begin{tikzpicture}
+		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+	\end{tikzpicture}
+	\end{center}
+
+	% BAR CHART
+	\mbox{\hspace{-14pt}
+		\begin{barchart}{10}{5.5}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{thirdcol}
+			\baritem{90}{Javascript}{100}{0}{0}
+			\baritem{90}{Blaze}{100}{0}{0}
+			\baritem{90}{Metor}{100}{0}{0}
+			\baritem{75}{Bootstrap}{0}{0}{75}
+			\baritem{75}{MongoDB}{0}{0}{65}
+			\baritem{65}{HTML/CSS}{0}{0}{65}
+			\baritem{65}{LaTex}{0}{0}{50}
+		\end{barchart}
+		\hspace{10pt}
+
+		% TEXTBOX
+		\parbox[b][100pt][c]{0.3\textwidth}{\textcolor{textcol}{Currently, I develop realtime apps with Meteor and Blaze.\\Formerly I worked with Java and XPages.}}
+	}
+	\begin{center}
+	\begin{tikzpicture}
+		\draw[draw=sectcol,dashed, opacity=0.5] (4,0) -- (-4,0);
+	\end{tikzpicture}
+	\end{center}
+	\begin{center}
+	\mbox{
+		\parbox[b][2cm][c]{3cm}{
+			\textcolor{textcol}{I regularly use Meteor, Git and Webstorm for my dev projects.}
+		}\hspace{12pt}
+		\bubbles{6/Webstorm, 5/Git, 5/Sourcetree, 4/Linux, 3/Office}{\cvsection{Technologies}}		
+	}
+	\end{center}
+%---------------------------------------------------------------------------------------
+%	ACTIVITIES
+%----------------------------------------------------------------------------------------
+	\cvsect{Actvities}{0.49}{thirdcol}{textcol}\\[20pt]
+	\mbox{
+		
+		% FACT BUBBLE
+		\parbox[b][3cm][c]{3cm}{
+			\factbubble{\HUGE{\textcolor{sectcol}{\textbf{7}}}\\\large{\textcolor{sectcol}{\textbf{years}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
+			\textcolor{textcol}{of participation at}\\
+			\textcolor{textcol}{\textbf{Global Game Jam}}
+		}
+
+		% TEXT BOX
+		\parbox[b][3cm][c]{4cm}{
+			\textcolor{textcol}{In my freetime I read lots of news and help others on Stackoverflow. Via bodyweight training I keep my body and mind in balance.}
+		}
+
+		% SQUARE BARS
+		\squares{20/Game Dev,20/Fitness,30/News,20/Stackoverflow}{1}
+	}
+\end{minipage}
+\begin{minipage}{0.05\textwidth}
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[draw=sectcol,dashed, opacity=0.5] (0,-12) -- (0,12);
+		\end{tikzpicture}
+	\end{center}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE / EDUCATION
+%----------------------------------------------------------------------------------------
+\cvsect{Experience and Education}{0.4}{thirdcol}{textcol}\\[16pt]
+
+\hspace{60pt}\mbox{\legend{Experience}{1.8cm}{maincol} \legend{Events}{1.1cm}{secondcol} \legend{Education}{1.5cm}{thirdcol}}
+\vspace{-40pt}
+\begin{center}
+
+% TIMELINE
+\begin{cvtimeline}{2007}{2021}{20.6}{\linewidth}
+\cvevent{10/2007}{11/2011}{Bachelor Studies}{Uni Bremen}
+    {Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
+
+\cvevent{5/2009}{1/2010}{Semester Abroad}{University of Melbourne}
+    {Mastered six months of study and trans-cultural experience in Melbourne, Australia}{maincol}{1}
+
+\cvevent{6/2010}{11/2011}{Student Assistant @UB}{Uni Bremen}
+    {Realized an online diagnosis platform for workforce literacy development (Flex)}{maincol}{1}
+
+\cvevent{6/2011}{6/2011}{PM Training}{Getoq Consulting}
+    {Performed a two-day project simulation from management perspective}{secondcol}{2}
+
+\cvevent{1/2012}{11/2014}{Scientific Employee @UB}{Uni of Bremen}
+    {Invented a flexible assessment framework, targeting industrial trainees}{maincol}{1}
+
+\cvevent{11/2012}{11/2013}{Master Project - PrIMA}{University of Bremen}
+    {Co-Invented a touch table application for medical support, co-developed software (Java) }
+    {thirdcol}{2}
+
+\cvevent{9/2013}{9/2013}{DELFI Conference}{DELFI Conference}
+    {Co-published poster with paper on usability guidelines for tests with functional illiterates}
+    {secondcol}{2}
+
+\cvevent{11/2014}{9/2016}{IT Consultant @We4IT}{We4IT GmbH Bremen}
+    {Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}
+    {maincol}{1}
+
+\cvevent{7/2015}{7/2015}{M.Sc. Graduation}{University of Bremen}
+    {Master Thesis: Semi Automated Scoring in Technology Based Assessment}{thirdcol}{0}
+
+\cvevent{5/2016}{5/2016}{Startup Weekend}{Uni Bremen}
+    {Performed a two-day project simulation from management perspective}{secondcol}{0}
+
+\cvevent{9/2016}{12/2016}{Software Engineer @UB}{University of Bremen}
+    {text a}{maincol}{1}
+    
+\cvevent{10/2018}{10/2018}{Software Engineer @UB}{University of Bremen}
+    {text a}{maincol}{1}    
+    
+\cvevent{10/2020}{10/2020}{Meteor Impact Conference}{Worldwide}
+    {text a}{secondcol}{0}
+     
+\end{cvtimeline}
+\tiny @UB = University of Bremen
+\end{center}
+\end{minipage}
+%============================================================================%
+%
+%
+%
+%	DOCUMENT END
+%
+%
+%
+%============================================================================%
+\end{document}

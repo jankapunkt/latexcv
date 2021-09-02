@@ -1,0 +1,39 @@
+# basic travis setup for a simple Ubuntu trusty container
+sudo: true
+dist: trusty
+language: bash
+
+# restrict build to certain branches
+general:
+  branches:
+    only:
+      - ci_setup
+
+
+before_install:
+  - PROJECTDIR=$(pwd)
+   # this line below downloads tex-live distribution to the container
+   # it uses a German Mirror from the Friedrich-Alexander University
+   # we use a custom tex-live distribution because the trusty repo does not 
+   # contain a texlive version that supports fontawesome, thus failing the builds
+   # see https://tug.org/
+   # see https://ctan.org/mirrors
+  - cd /tmp && wget http://ftp.fau.de/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz
+   # unpacking the texlive unix distribution
+   # and prepare for building
+  - tar -xvzf install-tl-unx.tar.gz
+  - cd install-tl-*
+  - chmod +x install-tl
+   # we install it using a given texlive.profile 
+   # (see https://github.com/jankapunkt/latexcv/blob/master/texlive.profile)
+   # and add it's executable to $PATH
+   # if everything was successful, we can enter the pdflatex command
+   # without any errors
+  - sudo ./install-tl --profile=$PROJECTDIR/texlive.profile
+  - PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
+  - pdflatex -v
+  - cd $PROJECTDIR
+
+# finally run the test scripts from https://github.com/jankapunkt/latexcv/tree/master/tests
+script:
+  - bash tests/testall.sh
