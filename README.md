@@ -92,14 +92,6 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 		</td>
 	</tr>
 </table>
-<table>
-    <tr>
-
-    </tr>
-    	<tr>	
- 	
-    	</tr>
-</table>
 </div>
 
 **Great first impression**
