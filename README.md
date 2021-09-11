@@ -78,6 +78,24 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
     	</tr>
 </table>
 
+<table width="100%" margin-left="auto" margin-right="auto">
+  <tr>
+    <th>Infographics 2 EN</th>
+    <th>Infographics 2 FR</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/media/infographics2_en.png" 
+        alt="Infographics CV example preview" />
+    </td>
+    <td width="50%">
+      <img src="docs/media/infographics2_fr.png" 
+        alt="Infographics CV example preview" />
+    </td>
+  </tr>
+</table>
+</div>
+
 <table>
     <tr>
        	<th>Sidebar Left</th>
