@@ -27,6 +27,7 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 <br />
 
 
+<div align="center">
 <table width="100%" margin-left="auto" margin-right="auto">
   <tr>
     <th>Infographics</th>
@@ -48,9 +49,8 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
     </td>
   </tr>
 </table>
-</div>
 
-<div align="center">
+
 <table width="100%" margin-left="auto" margin-right="auto">
   <tr>
     <th>Classic</th>
@@ -75,25 +75,26 @@ Now with support for Chinese, Japanese and Korean character encoding. Setup is o
 
 <table width="100%" margin-left="auto" margin-right="auto">
   <tr>
-           <th>Sidebar</th>
-           <th>Sidebar Left</th>
-           <th>Row Layout</th>
+    <th>Sidebar</th>
+    <th>Sidebar Left</th>
+    <th>Row Layout</th>
   </tr>
   <tr>
     <td width="33%">
-          <img src="docs/media/sidebar.png" 
-            alt="Sidebar CV example preview" />
+      <img src="docs/media/sidebar.png" 
+        alt="Sidebar CV example preview" />
         </td>
     <td width="33%">
-          <img src="docs/media/sidebarleft.png"
-            alt="Left sidebar CV example preview" />
-        </td>
-        <td width="33%">
-          <img src="docs/media/rows.png"
-                alt="Row-Layout CV example preview" />
-              </td>
+      <img src="docs/media/sidebarleft.png"
+        alt="Left sidebar CV example preview" />
+    </td>
+    <td width="33%">
+      <img src="docs/media/rows.png"
+        alt="Row-Layout CV example preview" />
+    </td>
   </tr>
 </table>
+</div>
 
 **Great first impression**
 
