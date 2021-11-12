@@ -1,11 +1,11 @@
 selected_scheme scheme-basic
-TEXDIR /usr/local/texlive/2017
-TEXMFCONFIG ~/.texlive2017/texmf-config
+TEXDIR /usr/local/texlive/2021
+TEXMFCONFIG ~/.texlive2021/texmf-config
 TEXMFHOME ~/texmf
 TEXMFLOCAL /usr/local/texlive/texmf-local
-TEXMFSYSCONFIG /usr/local/texlive/2017/texmf-config
-TEXMFSYSVAR /usr/local/texlive/2017/texmf-var
-TEXMFVAR ~/.texlive2017/texmf-var
+TEXMFSYSCONFIG /usr/local/texlive/2021/texmf-config
+TEXMFSYSVAR /usr/local/texlive/2021/texmf-var
+TEXMFVAR ~/.texlive2021/texmf-var
 binary_x86_64-linux 1
 # we will use the tl manager to install packages instead of using collections
 instopt_adjustpath 0

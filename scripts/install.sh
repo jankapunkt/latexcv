@@ -18,7 +18,7 @@ cd install-tl-*/
 chmod +x install-tl
 
 echo "Install texlive from profile: texlive.profile"
-./install-tl --profile=$PROJECT_DIR/texlive.profile
+sudo ./install-tl --profile=$PROJECT_DIR/texlive.profile
 
 echo "Expand PATH"
 YEAR=$(date +'%Y')
