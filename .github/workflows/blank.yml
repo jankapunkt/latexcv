@@ -35,23 +35,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install tex-live
-        run: |
-          PROJECTDIR=$(pwd)
-          cd /tmp && wget http://ftp.fau.de/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz
-          echo "Unpack texlive:"
-          tar -xvzf install-tl-unx.tar.gz
-          rm install-tl-unx.tar.gz
-          echo "Prepare install texlive in $(pwd):"
-          cd install-tl-*/
-          chmod +x install-tl
-          echo "Install texlive from profile:"
-          sudo ./install-tl --profile=$PROJECTDIR/texlive.profile
-          PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
-          pdflatex -v
-          cd $PROJECTDIR
+        run: ./scripts/install.sh
           
         
 
       # Runs a set of commands using the runners shell
       - name: Run build script
-        run: bash tests/testall.sh
+        run: ./scripts/testall.sh

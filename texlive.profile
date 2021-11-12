@@ -1,6 +1,3 @@
-# texlive.profile written on Tue Mar 13 13:37:43 2018 UTC
-# It will NOT be updated and reflects only the
-# installation profile at installation time.
 selected_scheme scheme-basic
 TEXDIR /usr/local/texlive/2017
 TEXMFCONFIG ~/.texlive2017/texmf-config
@@ -10,10 +7,7 @@ TEXMFSYSCONFIG /usr/local/texlive/2017/texmf-config
 TEXMFSYSVAR /usr/local/texlive/2017/texmf-var
 TEXMFVAR ~/.texlive2017/texmf-var
 binary_x86_64-linux 1
-collection-fontsextra 1
-collection-latexextra 1
-# collection-latexrecommended 1
-collection-pictures 1
+# we will use the tl manager to install packages instead of using collections
 instopt_adjustpath 0
 instopt_adjustrepo 1
 instopt_letter 0
