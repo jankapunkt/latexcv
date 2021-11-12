@@ -28,7 +28,9 @@ jobs:
       - name: cache dependencies
         uses: actions/cache@v1
         with:
-          path: ~/.npm
+          path: |
+            ~/.texlive2021
+            /usr/bin/latex
           key: ${{ runner.os }}-texlive-${{ hashFiles('**/texlive.profile') }}
           restore-keys: |
             ${{ runner.os }}-texlive-
