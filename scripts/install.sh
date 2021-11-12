@@ -28,18 +28,19 @@ print "Check for latex version:"
 pdflatex -v
 
 print "Install additional packages:"
-sudo /bin/tlmgr install xifthen
-sudo /bin/tlmgr install ifmtarg
-sudo /bin/tlmgr install gillius
-sudo /bin/tlmgr install xkeyval
-sudo /bin/tlmgr install fontaxes
-sudo /bin/tlmgr install moresize
-sudo /bin/tlmgr install fontawesome
-sudo /bin/tlmgr install multirow
-sudo /bin/tlmgr install wrapfig
-sudo /bin/tlmgr install float
-sudo /bin/tlmgr install pgf
-sudo /bin/tlmgr install transparent
+sudo su
+tlmgr install xifthen
+tlmgr install ifmtarg
+tlmgr install gillius
+tlmgr install xkeyval
+tlmgr install fontaxes
+tlmgr install moresize
+tlmgr install fontawesome
+tlmgr install multirow
+tlmgr install wrapfig
+tlmgr install float
+tlmgr install pgf
+tlmgr install transparent
 
 cd ${PROJECT_DIR}
 

@@ -31,6 +31,7 @@ jobs:
           path: |
             ~/.texlive2021
             /usr/bin/latex
+            /usr/local/texlive/
           key: ${{ runner.os }}-texlive-${{ hashFiles('**/texlive.profile') }}
           restore-keys: |
             ${{ runner.os }}-texlive-
