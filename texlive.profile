@@ -10,6 +10,10 @@ TEXMFSYSCONFIG /usr/local/texlive/2017/texmf-config
 TEXMFSYSVAR /usr/local/texlive/2017/texmf-var
 TEXMFVAR ~/.texlive2017/texmf-var
 binary_x86_64-linux 1
+collection-fontsextra
+collection-latexextra
+collection-latexrecommended
+collection-pictures
 instopt_adjustpath 0
 instopt_adjustrepo 1
 instopt_letter 0
