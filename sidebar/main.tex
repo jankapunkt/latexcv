@@ -21,7 +21,7 @@
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
-
+ 
 %============================================================================%
 %
 %	DOCUMENT DEFINITION
@@ -52,14 +52,14 @@
 
 % some tex-live fonts - choose your own
 
-%\usepackage[defaultsans]{droidsans}
-%\usepackage[default]{comfortaa}
-%\usepackage{cmbright}
-%\usepackage[default]{raleway}
-%\usepackage{fetamont}
+% \usepackage[defaultsans]{droidsans}
+% \usepackage[default]{comfortaa}
+% \usepackage{cmbright}
+% \usepackage[default]{raleway}
+% \usepackage{fetamont}
 \usepackage[default]{gillius}
-%\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+% \usepackage[light,math]{iwona}
+% \usepackage[thin]{roboto} 
 
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
@@ -222,29 +222,37 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by some paragraphs about 
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
 % param 3:	institution (where did you work / study)
-% param 4:	what was your position
-% param 5:	some words about your contributions
+% param 4:	list of paragraphs outlining your contributions, see example usage below
 %
-\newcommand{\cvevent}[5]
+\newcommand{\cvevent}[4]
 {
-\vspace{8pt}
+\vspace{6pt}
 	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1} 
-
 	\end{tabular*}
-\vspace{-12pt}
+\vspace{0pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
-\larrow{softcol}  #4\\[3pt]
-\larrow{softcol}  #5\\[6pt]
-	\end{tabular*}
+	\cvlist {#4}
+\vspace{-6pt}
+}
 
+% formats a list of strings with variable length for use in `\cvevent`
+% param 1: a list of strings outlining your contributions
+\newcommand{\cvlist}[1] {
+    \foreach \listitem in {#1}
+    {
+        \begin{tabular*}
+            {1\mpwidth}{p{1.2\mpwidth}}
+            \parbox{1\mpwidth}{\larrow{softcol} \listitem}
+            \vspace{3pt}
+        \end{tabular*}
+    }
 }
 
 % creates a stretched box as 
@@ -311,186 +319,186 @@
 \fcolorbox{white}{white}{\begin{minipage}[c][0.95\textheight][t]{0.69\linewidth}
 
 
-%---------------------------------------------------------------------------------------
-%	TITLE HEADLINE
-%----------------------------------------------------------------------------------------
-\vspace{-3pt}
-% use this for multiple words like working titles etc.
-%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
-% \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
-%}}
+		%---------------------------------------------------------------------------------------
+		%	TITLE HEADLINE
+		%----------------------------------------------------------------------------------------
+		\vspace{-3pt}
+		% use this for multiple words like working titles etc.
+		%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\hspace{46pt}\HUGE{\textcolor{white}{\uppercase{M.Sc. Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \parbox[b]{5cm}{   \large{ \textcolor{white}{{IT Consultant}}}\\
+		% \large{ \textcolor{white}{{JS Fullstack Engineer}}}}
+		%}}
 
-% use this for single words, e.g. CV or RESUME etc.
-\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{Resume}} } }}
+		% use this for single words, e.g. CV or RESUME etc.
+		\colorbox{bgcol}{\makebox[\mpwidth][c]{\HUGE{\textcolor{white}{\uppercase{Jan Küster}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\uppercase{Resume}} } }}
 
-%----------------------------------------------------------------------------------------
-%	HEADER IMAGE
-%----------------------------------------------------------------------------------------
-
-
-%\hspace{-1.6cm}
-%\includegraphics[trim= 0 250 0 270,clip,width=1\linewidth+3.1cm]{myfoto.jpg}	%trimming relative to image size!
-\includegraphics[trim= 350 150 0 200, clip ,width=\linewidth]{myfoto.jpg}	%trimming relative to image size
-
-%---------------------------------------------------------------------------------------
-%	SUMMARY
-%----------------------------------------------------------------------------------------
-\transparent{0.85}%
-\vspace{-130pt}
-\hspace{0.4\linewidth}
-\colorbox{bgcol}{
-	\parbox{0.5\linewidth}{
-		\transparent{1}%
-		\begin{center}
-		\larrow{sectcol}\larrow{sectcol}\textcolor{white}{I create awesome resume templates in LaTeX for everyone. Besides that I am working at the University of Bremen and engineer fullstack JS applications with Meteor.}
-		\end{center}
-	}
-}
-\vspace{60pt}
-
-%============================================================================%
-%
-%	CV SECTIONS AND EVENTS (MAIN CONTENT)
-%
-%============================================================================%
-
-%---------------------------------------------------------------------------------------
-%	STATUS
-%----------------------------------------------------------------------------------------
-\cvsection{Status}
-
-JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and healthcare
-
-\vspace{12pt}
-
-%---------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-\cvsection{Experience}
-
-%
-\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
-
-%\textcolor{softcol}{\hrule}
+		%----------------------------------------------------------------------------------------
+		%	HEADER IMAGE
+		%----------------------------------------------------------------------------------------
 
 
-%\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
+		%\hspace{-1.6cm}
+		%\includegraphics[trim= 0 250 0 270,clip,width=1\linewidth+3.1cm]{myfoto.jpg}	%trimming relative to image size!
+		\includegraphics[trim= 350 150 0 200, clip ,width=\linewidth]{myfoto.jpg}	%trimming relative to image size
+
+		%---------------------------------------------------------------------------------------
+		%	SUMMARY
+		%----------------------------------------------------------------------------------------
+		\transparent{0.85}%
+		\vspace{-130pt}
+		\hspace{0.4\linewidth}
+		\colorbox{bgcol}{
+			\parbox{0.5\linewidth}{
+				\transparent{1}%
+				\begin{center}
+					\larrow{sectcol}\larrow{sectcol}\textcolor{white}{I create awesome resume templates in LaTeX for everyone. Besides that I am working at the University of Bremen and engineer fullstack JS applications with Meteor.}
+				\end{center}
+			}
+		}
+		\vspace{60pt}
+
+		%============================================================================%
+		%
+		%	CV SECTIONS AND EVENTS (MAIN CONTENT)
+		%
+		%============================================================================%
+
+		%---------------------------------------------------------------------------------------
+		%	STATUS
+		%----------------------------------------------------------------------------------------
+		\cvsection{Status}
+
+		JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and healthcare
+
+		\vspace{12pt}
+
+		%---------------------------------------------------------------------------------------
+		%	EXPERIENCE
+		%----------------------------------------------------------------------------------------
+		\cvsection{Experience}
+
+		%
+		\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React, Design software architecture and leading development}
+
+		%\textcolor{softcol}{\hrule}
 
 
-%\textcolor{softcol}{\hrule}
+		%\cvevent{2014 - 2016}{IT Consultant for IBM XPages and Notes Domino}{We4IT GmbH Bremen}{Realize projects in XPages and We4IT Aveedo, monitor project status, conduct reports}{Integrated Camunda BPMN engine and BPMN.IO modeler in We4IT Aveedo}
 
 
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
-
-%\textcolor{softcol}{\hrule}
+		%\textcolor{softcol}{\hrule}
 
 
-%
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
+		\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework{,} targeting industrial trainees, Supervised software development lifecycle, Recruited team members}
 
-\vspace{12pt}
-%---------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%--------------------------------------------------------------------------------------
-\cvsection{Education}
+		%\textcolor{softcol}{\hrule}
 
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+		%
+		\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective, Topics included customer contracts{,} change management{,} controlling{,} operational tasks}
 
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
+		%\textcolor{softcol}{\hrule}
 
 
-\end{minipage}}%
+		%
+		\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex), Modeled software design{,} implemented various prototypes{,} conducted usability tests}
+
+		\vspace{12pt}
+		%---------------------------------------------------------------------------------------
+		%	EDUCATION SECTION
+		%--------------------------------------------------------------------------------------
+		\cvsection{Education}
+
+		\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment, Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+
+		% \textcolor{softcol}{\hrule}
+
+		%
+		\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support{,} co-developed software (Java), Formed a scrum team{,} mainted project dev server (Debian){,} surveyed target audience}
+
+		%\textcolor{softcol}{\hrule}
+
+		%
+		\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English{,} covering special topics in computer science and design, Professionalized in research methods{,} software development and e-assessment}
+
+		%\textcolor{softcol}{\hrule}
+
+		%
+		\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne{,} Australia, Finished machine programming{,} information visualization{,} professional essay writing}
+
+
+	\end{minipage}}%
 \fcolorbox{white}{sectcol}{\begin{minipage}[c][0.95\textheight][t]{0.33\linewidth}
 
 
-\begin{metasection}{Contact}
+		\begin{metasection}{Contact}
 
-	\icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
-	\icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
-	\iconemail{Send}{12}{info@jankuester.com}{info@jankuester.com}{white}\\[6pt]
-	\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
-	\iconhref{Github}{12}{https://github.com/jankapunkt}{https://github.com/jankapunkt}{white}\\[6pt]
-	\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
+			\icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
+			\icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
+			\iconemail{Send}{12}{info@jankuester.com}{info@jankuester.com}{white}\\[6pt]
+			\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
+			\iconhref{Github}{12}{https://github.com/jankapunkt}{https://github.com/jankapunkt}{white}\\[6pt]
+			\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
 
-\end{metasection}
-	
-%----------------------------------------------------------------------------------------
-%	META SECTION
-%----------------------------------------------------------------------------------------
+		\end{metasection}
 
-\begin{metasection}{Fields}
+		%----------------------------------------------------------------------------------------
+		%	META SECTION
+		%----------------------------------------------------------------------------------------
 
-\icontext{Code}{12}{Software Development}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
+		\begin{metasection}{Fields}
 
-\icontext{CommentsO}{12}{Consulting}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+			\icontext{Code}{12}{Software Development}{white}\\
+			\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\\[6pt]
 
-\icontext{CodeFork}{12}{Project Management}{white}\\
-\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
+			\icontext{CommentsO}{12}{Consulting}{white}\\
+			\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
 
-
-\end{metasection}
+			\icontext{CodeFork}{12}{Project Management}{white}\\
+			\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{complcol}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\icon{Star}{12}{white}\\[6pt]
 
 
-\begin{metasection}{Technologies}
+		\end{metasection}
 
-\textcolor{white}{
-\icontext{Code}{12}{JavaScript}{white} \\[6pt]
-\icontext{Code}{12}{Meteor}{white} \\[6pt]
-\icontext{Fire}{12}{Blaze}{white} \\[6pt]
-\icontext{Database}{12}{MongoDB}{white} \\[6pt]
-\icontext{CodeFork}{12}{Git}{white} \\[6pt]
-}
-\end{metasection}
 
-\begin{metasection}{Tools}
+		\begin{metasection}{Technologies}
 
-\textcolor{white}{
-\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
-\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
-}
-\end{metasection}
+			\textcolor{white}{
+				\icontext{Code}{12}{JavaScript}{white} \\[6pt]
+				\icontext{Code}{12}{Meteor}{white} \\[6pt]
+				\icontext{Fire}{12}{Blaze}{white} \\[6pt]
+				\icontext{Database}{12}{MongoDB}{white} \\[6pt]
+				\icontext{CodeFork}{12}{Git}{white} \\[6pt]
+			}
+		\end{metasection}
 
-\begin{metasection}{Activities}
+		\begin{metasection}{Tools}
 
-\textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Bicycle}{24}{white}}}
-\end{metasection}
+			\textcolor{white}{
+				\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
+				\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
+			}
+		\end{metasection}
 
-\begin{metasection}{Operating Systems}
+		\begin{metasection}{Activities}
 
-\textcolor{white}{\LARGE{\icon{Linux}{24}{white} \icon{Apple}{24}{white}  \icon{Windows}{24}{white}}}
+			\textcolor{white}{\LARGE{\icon{Gamepad}{24}{white} \icon{Headphones}{24}{white}  \icon{Bicycle}{24}{white}}}
+		\end{metasection}
 
-\end{metasection}
+		\begin{metasection}{Operating Systems}
 
-%---------------------------------------------------------------------------------------
-%	QR CODE (optional)
-%----------------------------------------------------------------------------------------
+			\textcolor{white}{\LARGE{\icon{Linux}{24}{white} \icon{Apple}{24}{white}  \icon{Windows}{24}{white}}}
 
-\vspace{12pt}
-\begin{center}
-\includegraphics[width=0.35\mpwidth]{qrcode}
-\end{center}
+		\end{metasection}
 
-\end{minipage}}
+		%---------------------------------------------------------------------------------------
+		%	QR CODE (optional)
+		%----------------------------------------------------------------------------------------
+
+		\vspace{12pt}
+		\begin{center}
+			\includegraphics[width=0.35\mpwidth]{qrcode}
+		\end{center}
+
+	\end{minipage}}
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
