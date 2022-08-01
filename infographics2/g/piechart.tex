@@ -62,7 +62,7 @@
 	  	\filldraw[fill=##3!100,draw=#3!100, line width=2pt ] (0,0) -- (\pointa:#2) arc (\pointa:\pointb:#2) -- cycle;
 
 	  	% draw label
-	  	\node[label=\midangle:\colorbox{#5}{\textcolor{#4}{##2}}] at (\midangle:#2) {};
+	  	\node[label=\midangle:\fcolorbox{##3}{#5}{\textcolor{#4}{##2}}] at (\midangle:#2) {};
 
 		\filldraw[fill=#3,draw=none] (0,0) circle (#2/2);
 	}

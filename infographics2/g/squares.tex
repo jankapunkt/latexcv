@@ -42,5 +42,5 @@
 	% slice
   	\filldraw[fill=#5!100,draw=bgcol!100, line width=3pt] (0,#1) -- (0.5,#1) -- (0.5,#2) -- (0,#2) -- cycle;
   	% outer label
-  	\node[label=360:\colorbox{sectcol}{\textcolor{textcol}{#4}}] at (0.55,\midangle) {};
+  	\node[label=360:\fcolorbox{#5}{sectcol}{\textcolor{textcol}{#4}}] at (0.55,\midangle) {};
 }
