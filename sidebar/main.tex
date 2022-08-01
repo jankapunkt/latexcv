@@ -52,14 +52,14 @@
 
 % some tex-live fonts - choose your own
 
-%\usepackage[defaultsans]{droidsans}
-%\usepackage[default]{comfortaa}
-%\usepackage{cmbright}
-%\usepackage[default]{raleway}
-%\usepackage{fetamont}
+% \usepackage[defaultsans]{droidsans}
+% \usepackage[default]{comfortaa}
+% \usepackage{cmbright}
+% \usepackage[default]{raleway}
+% \usepackage{fetamont}
 \usepackage[default]{gillius}
-%\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+% \usepackage[light,math]{iwona}
+% \usepackage[thin]{roboto} 
 
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
@@ -222,29 +222,37 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by some paragraphs about 
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
 % param 3:	institution (where did you work / study)
-% param 4:	what was your position
-% param 5:	some words about your contributions
+% param 4:	list of paragraphs outlining your contributions, see example usage below
 %
-\newcommand{\cvevent}[5]
+\newcommand{\cvevent}[4]
 {
-\vspace{8pt}
+\vspace{6pt}
 	\begin{tabular*}{1\mpwidth}{p{0.55\mpwidth}  x{0.42\mpwidth}}
  	\textcolor{black}{\textbf{#2}} & \textcolor{complcol}{#3}, \textcolor{bgcol}{#1} 
-
 	\end{tabular*}
-\vspace{-12pt}
+\vspace{0pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-	\begin{tabular*}{0.5\mpwidth}{p{\mpwidth}}
-\larrow{softcol}  #4\\[3pt]
-\larrow{softcol}  #5\\[6pt]
-	\end{tabular*}
+	\cvlist {#4}
+\vspace{-6pt}
+}
 
+% formats a list of strings with variable length for use in `\cvevent`
+% param 1: a list of strings outlining your contributions
+\newcommand{\cvlist}[1] {
+    \foreach \listitem in {#1}
+    {
+        \begin{tabular*}
+            {1\mpwidth}{p{1.2\mpwidth}}
+            \parbox{1\mpwidth}{\larrow{softcol} \listitem}
+            \vspace{3pt}
+        \end{tabular*}
+    }
 }
 
 % creates a stretched box as 
@@ -369,7 +377,7 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 \cvsection{Experience}
 
 %
-\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React}{Design software architecture and leading development}
+\cvevent{2016/09 - now}{Fullstack Javascript Engineer}{University of Bremen}{Invent a realtime classroom management using Meteor and React, Design software architecture and leading development}
 
 %\textcolor{softcol}{\hrule}
 
@@ -380,18 +388,18 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 %\textcolor{softcol}{\hrule}
 
 
-\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
+\cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework{,} targeting industrial trainees, Supervised software development lifecycle, Recruited team members}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective}{Topics included customer contracts, change management, controlling, operational tasks}
+\cvevent{2011 / 11}{Project Management Simulation Training}{Getoq Consulting}{Performed a two-day project simulation from management perspective, Topics included customer contracts{,} change management{,} controlling{,} operational tasks}
 
 %\textcolor{softcol}{\hrule}
 
 
 %
-\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
+\cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex), Modeled software design{,} implemented various prototypes{,} conducted usability tests}
 
 \vspace{12pt}
 %---------------------------------------------------------------------------------------
@@ -399,22 +407,22 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment}{Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+\cvevent{2015 / 07}{Graduated as M.Sc. Digital Media}{University of Bremen}{Master Thesis: Semi Automated Scoring in Technology Based Assessment, Developed and evaluated an algorithm for semi automated scoring of spreadsheet data}
+
+% \textcolor{softcol}{\hrule}
+
+%
+\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support{,} co-developed software (Java), Formed a scrum team{,} mainted project dev server (Debian){,} surveyed target audience}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2012 - 2013}{Master Project - PrIMA}{University of Bremen}{Co-Invented a touch table application for medical support, co-developed software (Java) }{Formed a scrum team, mainted project dev server (Debian), surveyed target audience}
+\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English{,} covering special topics in computer science and design, Professionalized in research methods{,} software development and e-assessment}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2012 - 2015}{Master Studies Digital Media}{University of Bremen}{Inter-cultural classes in English, covering special topics in computer science and design}{Professionalized in research methods, software development and e-assessment}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne, Australia}{Finished machine programming, information visualization, professional essay writing}
+\cvevent{2009 - 2010}{Semester Abroad}{University of Melbourne}{Mastered six months of study and trans-cultural experience in Melbourne{,} Australia, Finished machine programming{,} information visualization{,} professional essay writing}
 
 
 \end{minipage}}%
@@ -423,15 +431,15 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 
 \begin{metasection}{Contact}
 
-	\icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
-	\icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
-	\iconemail{Send}{12}{info@jankuester.com}{info@jankuester.com}{white}\\[6pt]
-	\iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
-	\iconhref{Github}{12}{https://github.com/jankapunkt}{https://github.com/jankapunkt}{white}\\[6pt]
-	\iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
+    \icontext{MapMarker}{12}{Bremen, Germany}{white}\\[6pt]
+    \icontext{MobilePhone}{12}{+49 176 313 *** **}{white}\\[6pt]
+    \iconemail{Send}{12}{info@jankuester.com}{info@jankuester.com}{white}\\[6pt]
+    \iconhref{MousePointer}{12}{http://jankuester.com/}{www.jankuester.com}{white}\\[6pt]
+    \iconhref{Github}{12}{https://github.com/jankapunkt}{https://github.com/jankapunkt}{white}\\[6pt]
+    \iconhref{Twitter}{12}{@Kuester\_Jan}{https://twitter.com/kuester_jan?lang=en}{white}\\[6pt]
 
 \end{metasection}
-	
+
 %----------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
@@ -454,19 +462,19 @@ JavaScript fullstack engineer, M.Sc. Digital Media, focuses on education and hea
 \begin{metasection}{Technologies}
 
 \textcolor{white}{
-\icontext{Code}{12}{JavaScript}{white} \\[6pt]
-\icontext{Code}{12}{Meteor}{white} \\[6pt]
-\icontext{Fire}{12}{Blaze}{white} \\[6pt]
-\icontext{Database}{12}{MongoDB}{white} \\[6pt]
-\icontext{CodeFork}{12}{Git}{white} \\[6pt]
+	\icontext{Code}{12}{JavaScript}{white} \\[6pt]
+	\icontext{Code}{12}{Meteor}{white} \\[6pt]
+	\icontext{Fire}{12}{Blaze}{white} \\[6pt]
+	\icontext{Database}{12}{MongoDB}{white} \\[6pt]
+	\icontext{CodeFork}{12}{Git}{white} \\[6pt]
 }
 \end{metasection}
 
 \begin{metasection}{Tools}
 
 \textcolor{white}{
-\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
-\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
+	\icontext{Code}{12}{Webstorm}{white} \icontext{CodeFork}{12}{SourceTree}{white}\\[6pt]
+	\icontext{Terminal}{12}{Terminal}{white}  \icontext{PaintBrush}{12}{Inkscape}{white}\icontext{Cube}{12}{Blender}{white}
 }
 \end{metasection}
 

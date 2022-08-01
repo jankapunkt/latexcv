@@ -444,28 +444,14 @@
 				\slice{17}{Désigne}{fifthcol}
 			\end{piechart}\\
 		}
-	}
-	% \begin{center}
-	% \vspace{-10pt}
-	% \begin{tikzpicture}
-	% 	\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
-	% \end{tikzpicture}
-	% \end{center}
+	}	
 	
 	% \mbox{
-		% \begin{timelinehorizontal}{2019}{2022}{9}{textcol}{0.5}
-		
-			% \cvevent{3/2021}{3/2021}{Developer Certification • Scientific Computing with Python}{2}{-2.5}{maincol}{-1}
+		% \begin{timelinehorizontal}{2017}{2020}{9}{textcol}{0.15}
 	
-			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/najmiachraf/scientific-computing-with-python-v7}{\textcolor{textcol}{\faFreeCodeCamp} \hspace{1pt} freecodecamp.org/certification/najmiachraf}}{1.5}{-3}{maincol}{-1}
+			% \cvevent{9/2017}{6/2019}{Bachelor of General Studies (BGS) • Physics Electronic}{1.3}{0}{maincol}{titletext}{-0.4}
 	
-			% \cvevent{3/2021}{9/2019}{\href{https://freecodecamp.org/certification/najmiachraf/scientific-computing-with-python-v7}{/scientific-computing-with-python-v7}}{1}{-2}{maincol}{-1}
-	
-			% \cvevent{9/2019}{3/2021}{Beginning of learning Python}{0.5}{-5}{maincol}{-1}
-	
-			% \cvevent{6/2019}{9/2017}{Bachelor of General Studies (BGS) • Physics Electronic}{1.5}{-5}{maincol}{-1}
-	
-			% \cvevent{6/2017}{3/2017}{Associate of General Studies (AGS) •  Physics}{1}{-8}{maincol}{-1}
+			% \cvevent{3/2017}{6/2017}{Associate of General Studies (AGS) •  Physics}{2}{0}{maincol}{titletext}{-0.4}
 	
 		% \end{timelinehorizontal}
 	% }
@@ -474,97 +460,81 @@
 %	PROGRAMMES LOGICIELS
 %----------------------------------------------------------------------------------------
 
-	% \vspace{-10pt}
-	\cvsect{Software Programs}{0.49}{thirdcol}{textcol}\\[-15pt]
-	\begin{center}
+	\vspace{-5pt}
+	\cvsect{Programmes Logiciels}{0.49}{thirdcol}{textcol}\\
 	\mbox{
-		\bubbles{6/PyCharm/\faIcon{file-code}, 4.5/MD/\faMarkdown, 5.5/CLion/\faIcon{file-code}, 4/Terminal/\faTerminal, 5/Proteus/\faDiceD6, 3.5/\faGit/\faCodeBranch}{\cvsection{Utilitaires}}
+		\bubbles{6/VSCode/\faEdit, 4/Typora/\faMarkdown, 5.5/Terminal/\faTerminal, 4.5/Proteus/\faUncharted, 5/Texmaker/\faEdit}{\cvsection{Utilitaires}} % , 3.5/\faGit/\faCodeBranch
+		\hspace{10pt}
+		\parbox[b][40pt][c]{0.24\textwidth}{
+			% OS
+			\vspace{20pt}
+			\cvsect{OS}{0.35}{thirdcol}{textcol}\\[4pt]
+			\iconbox{Microsoft}{12}{thirdcol}{Windows}{titletext}\\
+			\iconbox{Apple}{12}{thirdcol}{macOS}{titletext}\\
+			\iconbox{Ubuntu}{12}{thirdcol}{ubuntu}{titletext}\\
+		}
 	}
-	\vspace{5pt}
-	\newline
-	\parbox[b][40pt][c]{0.35\textwidth}{
-		% OS
-		\cvsect{OS}{0.35}{thirdcol}{textcol}\\[4pt]
-		\iconbox{Microsoft}{12}{thirdcol}{Windows}{titletext}\\
-		\iconbox{Apple}{12}{thirdcol}{macOS}{titletext}\\
-		}
-	\hspace{10pt}
-	\parbox[b][50pt][c]{0.6\textwidth}{
+	\parbox[b][50pt][c]{0.72\textwidth}{
 		\begin{center}
-		\textcolor{textcol}{J'utilise régulièrement pour mes projets de développement PyCharm et CLion comme IDE, et j'utilise pour la capture schématique et la simulation Proteus CAD.}
+		\textcolor{textcol}{J'utilise régulièrement pour mes projets de dév VSCode comme IDE, Terminal avec bash ou zsh pour cmd le systeme, Texmaker pour \LaTeX \hspace{1pt} CV, Proteus CAD pour la capture schématique et la simulation.}
 		\end{center}
-		}
-		
-	\end{center}
-		
+	}
+
 %----------------------------------------------------------------------------------------
 %	DÉVELOPPEMENT INFORMATIQUE
 %----------------------------------------------------------------------------------------
 
-	\vspace{10pt}
 	% TEXT BOX
 	\parbox[b][25pt][c]{1\textwidth}{
-		% DÉVELOPPEMENT INFORMATIQUE
-		\cvsect{Developpement Informatique}{0.49}{thirdcol}{textcol}\\[4pt]
-		\iconbox{Python}{12}{maincol}{Python 3}{textcol}
-		\iconbox{Cuttlefish}{12}{maincol}{C}{textcol}
-		\hspace{20pt}
+		% IT DEVELOPMENT
+		\cvsect{Developpement Informatique}{0.49}{thirdcol}{textcol}
 		\legend{Langage}{1.5cm}{maincol} \legend{Front End}{1.5cm}{secondcol} \legend{Back End}{1.5cm}{fifthcol}
 	}
-	
+
 	% BAR CHART
-	\vspace{9pt}\mbox{\hspace{-14pt}
-		\begin{barchart}{10}{5.2}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{fifthcol}
-% n1*x + n2*x + n3*x... = 100, Ex:{x=0.459770114942529, n1=80} -> x*n1 = 36.7816
-			% \baritem{50}{\faPython \hspace{1pt} Python 3}{36.7816}{33.3333}{29.885}
-			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{100}{0}{0}
-			\baritem{50}{\faBoxes \hspace{1pt} Bibliothèques}{0}{0}{90}
-			\baritem{50}{\faWaveSquare \hspace{1pt} Data Science}{0}{40}{40}
-			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{0}{70}{0}
-			\baritem{50}{\faChartPie \hspace{1pt} Data Analyse}{0}{0}{60}
+	\mbox{\hspace{-14pt}
+		\begin{barchart}{10}{8}{sectcol}{textcol}{sectcol}{maincol}{secondcol}{fifthcol}
+			\baritem{50}{\faCode \hspace{1pt} Syntaxe}{\faPython \hspace{1pt} Python 3 ~•~ \faCuttlefish \hspace{1pt} C ~•~ \LaTeX}{textcol}{100}{0}{0}
+			\baritem{50}{\faBoxes \hspace{1pt} Bibliothèques}{\faIcon{share-alt} \hspace{1pt} built-in ~•~ \faCogs \hspace{1pt} pyinstaller}{sectcol}{0}{0}{90}
+			\baritem{50}{\faWaveSquare \hspace{1pt} Data Science}{\faChartArea \hspace{1pt} matplotlib ~•~ \faIcon{square-root-alt} \hspace{1pt} sympy}{sectcol}{0}{43}{37}
+			\baritem{50}{\faLaptopCode \hspace{1pt} GUI}{\faIcon{feather-alt} \hspace{1pt} tkinter ~•~ \faIcon{feather} \hspace{1pt} MinilibX}{sectcol}{0}{70}{0}
+			\baritem{50}{\faChartPie \hspace{1pt} Data Analyse}{\faSortNumericDown \hspace{1pt} numpy ~•~ \faTable \hspace{1pt} pandas}{sectcol}{0}{0}{60}
 			
 		\end{barchart}
-		
-		\hspace{15pt}
-		
-		% TEXTBOX
-		\parbox[b][70pt][c]{0.22\textwidth}{\vspace{30pt}
-		\colorbox{maincol}{\faPython \hspace{1pt} \& \faCuttlefish \hspace{1pt} \& \LaTeX}	
-		
-		\iconboxfa{share-alt}{8}{fifthcol}{intégré}{titletext}
-		
-		\iconbox{Cogs}{8}{fifthcol}{pyinstaller}{titletext}
-		
-		\iconbox{ChartArea}{8}{secondcol}{matplotlib}{titletext}
-		
-		\iconboxfa{square-root-alt}{8}{fifthcol}{sympy}{titletext}
-		
-		\iconboxfa{feather-alt}{8}{secondcol}{tkinter}{titletext}
-		
-		\iconbox{SortNumericDown}{8}{fifthcol}{numpy}{titletext}
-		
-		\iconbox{Table}{8}{fifthcol}{pandas}{titletext}
-		}
+
 	}\\
-	
-	% TEXTBOX
-	\parbox[b][35pt][c]{0.73\textwidth}{
-		\begin{center}
-		\textcolor{textcol}{Actuellement, je développe des applications en temps réel avec Python, et crée une interface graphique avec tkinter, et extrait du script `file.py` un fichier exécutable par pyinstaller en utilisant auto py to exe.}
-		\end{center}
+
+	\mbox{
+		% SYSTEME
+		\parbox[b][55pt][c]{0.22\textwidth}{
+			\cvsect{\faTerminal \hspace{1pt} Systeme}{0.35}{thirdcol}{textcol}\\[4pt]
+			\iconboxfa{file-code}{12}{maincol}{makefile}{textcol}\\
+			\iconboxfa{file-code}{12}{maincol}{shell}{textcol}\\
+			\iconboxfa{file-code}{12}{maincol}{batch}{textcol}\\
 		}
-	% \begin{center}
-	% \begin{tikzpicture}
-	% 	\draw[draw=titletext,dashed, opacity=0.5] (4,0) -- (-4,0);
-	% \end{tikzpicture}
-	% \end{center}
-	% \vspace{-10pt}
-	\vspace{5pt}
-	
-%---------------------------------------------------------------------------------------
+		% TEXTBOX
+		\parbox[b][55pt][c]{0.55\textwidth}{
+			\begin{center}
+			\textcolor{textcol}{Actuellement, je développe des applications en temps réel avec Python et C, et crée une interface graphique avec tkinter et MinilibX. Pour cmd le système les scripts makefile, shell et batch sont les plus utilisés de son côté. GNU Compiler Collection pour compiler des scripts C.}
+			\end{center}
+		}
+		% OUTILS
+		\parbox[b][55pt][c]{0.22\textwidth}{
+			\cvsect{\faTerminal \hspace{1pt} Outils}{0.35}{thirdcol}{textcol}\\[4pt]
+			\iconboxfa{dollar-sign}{12}{thirdcol}{bash}{sectcol}\\
+			\iconbox{CodeBranch}{12}{thirdcol}{\faGit}{sectcol}\\
+			\iconbox{Cogs}{12}{thirdcol}{GNU CC}{sectcol}\\
+			% \iconbox{Edit}{12}{thirdcol}{Vim}{sectcol}
+		}
+	}
+
+%----------------------------------------------------------------------------------------
 %	ACTIVITIES
 %----------------------------------------------------------------------------------------
-	\cvsect{Activites}{0.49}{thirdcol}{textcol}\\[14pt]
+
+	\vspace{5pt}
+	\cvsect{Activites}{0.49}{thirdcol}{textcol}\\[10pt]
+	
 	\mbox{
 		
 		% SQUARE BARS
@@ -575,9 +545,11 @@
 		% FACT BUBBLE
 		\parbox[b][3cm][c]{3cm}{
 			\begin{center}
-			\factbubble{\HUGE{\textcolor{titletext}{\textbf{8}}}\\\small{\textcolor{titletext}{\textbf{repos \\ publique}}}}{0.85}{maincol}{titletext}{thirdcol}\\
+			\href{https://www.github.com/NajmiAchraf?tab=repositories}{
+			\factbubble{\HUGE{\textcolor{titletext}{\textbf{10}}}\\\small{\textcolor{titletext}{\textbf{repos \\ publique}}}}{0.85}{maincol}{titletext}{thirdcol}\\
 			\textcolor{textcol}{dans mon}\\
 			\textcolor{textcol}{\textbf{Compte GitHub \\ \faGithub}}
+			}
 			\end{center}
 		}
 		
@@ -619,39 +591,27 @@
 \begin{center}
 
 % TIMELINE
-\begin{timelinevertical}{2019}{2022}{21}{\linewidth}{0.15}
+\begin{timelinevertical}{2019}{2023}{21}{\linewidth}{0.15}
 
-% {maincol}  {secondcol}  {thirdcol}
+% {maincol}  {secondcol}  {thirdcol}  {fifthcol}
 
-% \cvevent{6/2012}{6/2012}{Diplôme du Baccalauréat \newline Série : Sciences Expérimentales. \newline Option : Science de la Vie et la Terre.}{where}{what}}{maincol}{0}
+\cvevent{6/2019}{12/2018}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{0.5}{-0.3}{maincol}{0.25}
 
-% \cvevent{9/2012}{9/2012}{Début des études Universitaires}{0.5}{0}{maincol}{0}
+\cvevent{9/2019}{10/2021}{Python \newline • Langage de Programmation}{0.5}{0}{maincol}{0.7}
 
-% \cvevent{2/2017}{9/2018}{Maintenance Informatique}{0.5}{0}{thirdcol}{0.4}
+\cvevent{12/2019}{10/2021}{MathPy \newline • Calculatrice Scientifique Moderne}{0.5}{0}{secondcol}{0.55}
 
-% \cvevent{6/2017}{12/2016}{Diplôme d'Études Universitaires Générales (DEUG) \newline • Filière : Science Matière Physique}{0.5}{0}{maincol}{0.3}
+\cvevent{4/2020}{10/2021}{Repository MathPy mis dans GitHub et constamment mis à jour \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/MathPy \newline (PROJET PRIVÉ)}{github.com/NajmiAchraf/MathPy}}{0.5}{0}{fifthcol}{0.4}
 
-% \cvevent{9/2017}{6/2019}{Début des études de licence}{0.5}{0}{maincol}{0.3}
+\cvevent{9/2020}{10/2020}{Repository Gmail \newline • Expéditeur CSV de Google messagerie \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/Gmail}{github.com/NajmiAchraf/Gmail}}{0.5}{0}{secondcol}{0.25}
 
-% \cvevent{2/2018}{6/2018}{Début du Projet de Fin d'Études \newline • Conception d'un système photovoltaïque et réalisation d'un suiveur solaire}{0.5}{0}{secondcol}{0.2}
+\cvevent{2/2021}{3/2021}{Repository Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf \newline /Hydrogeologie (PROJET PRIVÉ)}{github.com/NajmiAchraf/Hydrogeologie}}{0.5}{-0.3}{secondcol}{0.25}
 
-% \cvevent{6/2018}{6/2018}{Présentation du Projet de Fin d'Études}{0.5}{0}{fifthcol}{0.2}
+\cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline • Developer Certification \newline \iconweb{pygray}{FreeCodeCamp}{pygray}{freecodecamp.org/certification\newline /najmiachraf/scientific-computing-with-python-v7}{freecodecamp.org/certification/najmiachraf/scientific-computing-with-python-v7}}{0.5}{1.4}{maincol}{0.7}
 
-\cvevent{6/2019}{12/2018}{Licence d'Études Fondamentales (LEF) \newline • Filière : Science Matière Physique \newline • Parcours : Électronique}{0.5}{-0.15}{maincol}{0.1}
+\cvevent{7/2021}{8/2021}{Un mois intensif dans UM6P \newline • Piscine d'école 1337 42Network \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/1337\_Piscine}{github.com/NajmiAchraf/1337\_Piscine}}{0.5}{1.7}{maincol}{0.25}
 
-\cvevent{9/2019}{8/2021}{Débuter à apprendre Python}{0.5}{0}{maincol}{0.55}
-
-\cvevent{12/2019}{3/2021}{Début du Projet MathPy \newline • Calculatrice Scientifique Moderne}{0.5}{0}{secondcol}{0.4}
-
-\cvevent{4/2020}{3/2021}{Mis le projet MathPy dans GitHub \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/MathPy \newline (PROJET PRIVÉ)}{github.com/NajmiAchraf/MathPy} \newline Projet MathPy est constamment mis à jour}{0.5}{0}{fifthcol}{0.25}
-
-\cvevent{9/2020}{10/2020}{Début du Projet Gmail \newline • Expéditeur CSV de Google messagerie \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/Gmail}{github.com/NajmiAchraf/Gmail}}{0.5}{0}{secondcol}{0.1}
-
-\cvevent{2/2021}{3/2021}{Début du Projet Hydrogéologie \newline • Hydrologie des eaux souterraines \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf \newline /Hydrogeologie (PROJET PRIVÉ)}{github.com/NajmiAchraf/Hydrogeologie}}{0.5}{-0.7}{secondcol}{0.1}
-
-\cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline Developer Certification \newline \iconweb{pygray}{FreeCodeCamp}{pygray}{freecodecamp.org/certification/\newline najmiachraf/scientific-computing-with-python-v7}{freecodecamp.org/certification/najmiachraf/scientific-computing-with-python-v7}}{0.5}{1}{maincol}{0.55}
-
-\cvevent{7/2021}{8/2021}{Un mois intensif dans UM6P \newline Piscine d'école 1337 42 network \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/1337\_Piscine}{github.com/NajmiAchraf/1337\_Piscine}}{0.5}{1}{maincol}{0.1}
+\cvevent{11/2021}{8/2022}{Architecte en Technologies du Numérique \newline • Ecole 1337 de UM6P 42Network \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/42cursus}{github.com/NajmiAchraf/42cursus}}{0.5}{1.7}{maincol}{0.25}
 
 \end{timelinevertical}
 \end{center}

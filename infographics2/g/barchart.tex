@@ -31,39 +31,45 @@
 % param 6: cat 1 color
 \newenvironment{barchart}[8]{
 
-	\newcommand{\barwidth}{0.35}
+	\newcommand{\barwidth}{0.4}
 	\newcommand{\barsep}{0.2}
 
 	% param 1: overall percent
 	% param 2: label
-	% param 3: cat 1 percent
-	% param 4: cat 2 percent
-	% param 5: cat 3 percent
-	\newcommand{\baritem}[5]{
+	% param 3: label
+	% param 4: label text color
+	% param 5: cat 1 percent
+	% param 6: cat 2 percent
+	% param 7: cat 3 percent
+	\newcommand{\baritem}[7]{
 
-		\pgfmathparse{##3+##4+##5}
+		\pgfmathparse{##5+##6+##7}
 		 \let\perc\pgfmathresult
 
 		\pgfmathparse{#2}
 		 \let\barsize\pgfmathresult
 	
-		\pgfmathparse{\barsize*##3/100}
+		\pgfmathparse{\barsize*##5/100}
 		 \let\barone\pgfmathresult
 	
-		\pgfmathparse{\barsize*##4/100}
+		\pgfmathparse{\barsize*##6/100}
 		 \let\bartwo\pgfmathresult
 	
-		\pgfmathparse{\barsize*##5/100}
+		\pgfmathparse{\barsize*##7/100}
 		 \let\barthree\pgfmathresult
 
 		\pgfmathparse{(\barwidth*\thebarcount)+(\barsep*\thebarcount)}
 		 \let\barx\pgfmathresult
+		 
+		\pgfmathparse{(\barone+\bartwo+\barthree)/2}
+		 \let\barmid\pgfmathresult
 
 		\filldraw[fill=#6, draw=none] (0,-\barx) rectangle (\barone,-\barx-\barwidth);
 		\filldraw[fill=#7, draw=none] (\barone, -\barx) rectangle (\barone+\bartwo,-\barx-\barwidth);
 		\filldraw[fill=#8, draw=none] (\barone+\bartwo,-\barx ) rectangle (\barone+\bartwo+\barthree,-\barx-\barwidth);
 
-		\node [label=180:\colorbox{#5}{\textcolor{#4}{##2}}] at (0,-\barx-0.175) {};
+		\node [label=180:\fcolorbox{#4}{#5}{\textcolor{#4}{##2}}] at (0,-\barx-0.175) {};
+		\node [label=90:\textcolor{##4}{##3}] at (\barmid,-\barx-0.6) {};
 		\addtocounter{barcount}{1}
 	}
 	\begin{tikzpicture}
