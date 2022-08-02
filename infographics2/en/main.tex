@@ -176,6 +176,10 @@
 	\href{https://www.#5}{\vcenteredhbox{\iconref{#1}{#2}} \textcolor{#3}{#4}}
 }
 
+\newcommand{\textweb}[2]{ 						%text ref shortcut
+	\href{https://www.#1}{\vcenteredhbox{\textcolor{textcol}{#2}}}
+}
+
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -591,7 +595,7 @@
 \vspace{-55pt}
 \begin{center}
 
-% TIMELINE fifthcol
+% TIMELINE
 \begin{timelinevertical}{2019}{2023}{21}{\linewidth}{0.15}
 
 % {maincol}  {secondcol}  {thirdcol}  {fifthcol}
@@ -610,13 +614,21 @@
 
 \cvevent{3/2021}{3/2021}{Scientific Computing with Python \newline • Developer Certification \newline \iconweb{pygray}{FreeCodeCamp}{pygray}{freecodecamp.org/certification/\newline najmiachraf/scientific-computing-with-python-v7}{freecodecamp.org/certification/najmiachraf/scientific-computing-with-python-v7}}{0.5}{1.4}{maincol}{0.7}
 
-\cvevent{7/2021}{8/2021}{One intensive month in UM6P \newline • Piscine of School 1337 42Network \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/1337\_Piscine}{github.com/NajmiAchraf/1337\_Piscine}}{0.5}{1.7}{maincol}{0.25}
+\cvevent{7/2021}{8/2021}{One intensive month in \textweb{um6p.ma/en/ecole-1337}{UM6P} \newline • \textweb{1337.ma/en/the-pool}{Piscine of School 1337}\textweb{42network.org/campuses/1337-ben-guerir/}{42Network} \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/1337\_Piscine}{github.com/NajmiAchraf/1337\_Piscine}}{0.5}{1.7}{maincol}{0.25}
 
-\cvevent{11/2021}{8/2022}{Digital Technologies Architect \newline • School 1337 of UM6P 42Network \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/42cursus}{github.com/NajmiAchraf/42cursus}}{0.5}{1.7}{maincol}{0.25}
+\cvevent{11/2021}{8/2022}{Digital Technologies Architect \newline • \textweb{1337.ma/en/}{School 1337}of\textweb{um6p.ma/en/ecole-1337}{UM6P}\textweb{42network.org/campuses/1337-ben-guerir/}{42Network} \newline \iconweb{pygray}{Github}{pygray}{github.com/NajmiAchraf/42cursus}{github.com/NajmiAchraf/42cursus}}{0.5}{1.7}{maincol}{0.25}
 
 \end{timelinevertical}
 \end{center}
+\begin{center}
+\hspace{-333pt}
+\tiny REFS : 
+\tiny \textweb{um6p.ma/en/ecole-1337}{UM6P = Mohammed VI Polytechnic University} ~•~
+\tiny \textweb{1337.ma/en/}{1337 = LEET} ~•~
+\tiny \textweb{42network.org/campuses/1337-ben-guerir/}{42Network}
+\end{center}
 \vspace{-40pt}\end{minipage}
+
 %============================================================================%
 %
 %
