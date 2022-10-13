@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-cd $1
-echo $(pwd)
-ls -la
-
+cd "$1" || exit 1
+pwd
 
 # remove main.pdf
 [ -f main.pdf ] && rm main.pdf || echo "continue without remove"
