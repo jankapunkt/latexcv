@@ -47,11 +47,6 @@ jobs:
       - name: Install tex-live
         run: sudo apt-get install -y texlive texlive-base
 
-      - name: Add single tex-packages
-        run: |
-          cd /tmp && wget http://mirrors.ctan.org/support/texliveonfly/texliveonfly.py
-          cp -f 
-
       # Runs a set of commands using the runners shell
       - name: Run build script
         run: ./scripts/testall.sh
