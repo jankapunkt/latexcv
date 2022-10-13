@@ -25,20 +25,21 @@ jobs:
       - uses: actions/checkout@v2
       
       # Cache TexLive dependencies based on texlive.profile file hash
-      - name: cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: |
-            ~/.texlive2021
-            /usr/bin/latex
-            /usr/local/texlive/
-          key: ${{ runner.os }}-texlive-${{ hashFiles('**/texlive.profile') }}
-          restore-keys: |
-            ${{ runner.os }}-texlive-
+      # - name: cache dependencies
+      #  uses: actions/cache@v1
+      #  with:
+      #    path: |
+      #      ~/.texlive2021
+      #      /usr/bin/latex
+      #      /usr/local/texlive/
+      #      /usr/bin/tex
+      #    key: ${{ runner.os }}-texlive-${{ hashFiles('**/texlive.profile') }}
+      #    restore-keys: |
+      #      ${{ runner.os }}-texlive-
 
       # Runs a single command using the runners shell
       - name: Install tex-live
-        run: ./scripts/install.sh
+        run: sudo apt-get install -y texlive texlive-base
 
       # Runs a set of commands using the runners shell
       - name: Run build script
