@@ -49,8 +49,8 @@ jobs:
 
       - name: Add single tex-packages
         run: |
-          tlmgr init-usertree
-          tlmgr install xifthen
+          cd /tmp && wget http://mirrors.ctan.org/support/texliveonfly/texliveonfly.py
+          cp -f 
 
       # Runs a set of commands using the runners shell
       - name: Run build script
