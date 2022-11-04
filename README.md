@@ -135,12 +135,17 @@ This repo also contains a `texlive.profile` file in the project root, that can b
 
 **Contributors are very welcome**. You want to contribute? Awesome! Please check the [contribution guidelines](https://github.com/jankapunkt/latexcv/blob/master/CONTRIBUTING.md) first to make it a success.
 
+## Sponsors
+
+:heart: Thanks a lot to all sponsors of this project, your contribution will help to keep this project going:
+
+- [janemiceli](https://github.com/janemiceli)
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2014-2019 Jan Küster
+Copyright (c) 2014-2021 Jan Küster
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
