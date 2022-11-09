@@ -32,6 +32,7 @@ glossary.ist
 .\#
 \#*
 
+*.swp
 
 #project specific
 infographics/Font-Awesome-SVG-PNG
