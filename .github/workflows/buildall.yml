@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: awalsh128/cache-apt-pkgs-action@latest
         with:
-          packages: texlive texlive-base
+          packages: texlive texlive-base texlive-latex-extra
           version: 1.0
       
       # Cache TexLive dependencies based on texlive.profile file hash
@@ -45,7 +45,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install tex-live
-        run: sudo apt-get install -y texlive texlive-base
+        run: sudo apt-get install -y texlive texlive-base texlive-latex-extra
 
       # Runs a set of commands using the runners shell
       - name: Run build script
