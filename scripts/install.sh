@@ -29,9 +29,9 @@ PATH=/usr/local/texlive/${YEAR}/bin/x86_64-linux:$PATH
 print "Check for latex version:"
 pdflatex -v
 
-#print "Install additional packages:"
+print "Install additional packages:"
 #sudo su
-#tlmgr install xifthen
+tlmgr install xifthen
 #tlmgr install ifmtarg
 #tlmgr install gillius
 #tlmgr install xkeyval
