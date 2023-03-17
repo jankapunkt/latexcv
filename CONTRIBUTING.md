@@ -9,7 +9,7 @@ Everyone is welcome to open a pull request and improve this package. To maximize
 * Included `.tex` files should be stored in a folder, e.g. named "lib" (for structural docs) or "g" (for tikz graphics).
 * Non-compiling PRs will be rejected
 * Always add the main.pdf output as a
-* Make sure, that your PR does not cause a template to exceed the size of one page. This project intends to keep every tamplte short and clear.
+* Make sure, that your PR does not cause a template to exceed the size of one page. This project intends to keep every template short and clear.
 
 ### Dependencies
 
