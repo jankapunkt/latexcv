@@ -5,15 +5,13 @@
 </h1>
 
 <div align="center">
-  <a href="https://travis-ci.org/jankapunkt/latexcv" title="Build Status">
-    <img src="https://travis-ci.org/jankapunkt/latexcv.svg?branch=master" alt="Build Status" />
+  <a href="https://github.com/jankapunkt/latexcv/actions/workflows/buildall.yml">
+    <img alt="buildall workflow status" src="https://github.com/jankapunkt/latexcv/actions/workflows/buildall.yml/badge.svg">
   </a>
   <a href="http://www.repostatus.org/#active" title="Project Status: Active – The project has reached a stable, usable state and is being actively developed.">
     <img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active" />
   </a>
-  <a href="https://gitlicense.com/license/jankapunkt/latexcv">
-    <img src="https://gitlicense.com/badge/jankapunkt/latexcv" alt="GitLicense" />
-  </a>	
+  <img alt="license badge" src="https://img.shields.io/github/license/jankapunkt/latexcv">
 </div>
 
 <br />
