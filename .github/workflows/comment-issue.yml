@@ -1,0 +1,28 @@
+name: Add immediate comment on new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  createComment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Comment
+        uses: peter-evans/create-or-update-comment@v1.4.2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Thank you for submitting this issue!
+            
+            As a maintainer I take every issue seriously.
+            My goal is to provide a usable CV for everyone.
+            
+            However, I contribute to this project in my free time.
+            Therefore, I can't guarantee your issues to be solved within certain time.
+            
+            If you think this issue is trivial to solve, don't hesitate to submit
+            a pull request, too! I can accompany you in the process with reviews and hints.
+            
+            Please also consider a donation / sponsoring or contact me,
+            in case you need a specific template for your next job application.

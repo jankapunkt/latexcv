@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-cd $1
-echo $(pwd)
-ls -la
-
+cd "$1" || exit 1
+pwd
 
 # remove main.pdf
 [ -f main.pdf ] && rm main.pdf || echo "continue without remove"
@@ -16,4 +14,6 @@ ls -la
 pdflatex main.tex
 
 # exit successfully if pdf present or with error if not present
-[ -f main.pdf ] && exit 0 || exit 1
+[ -f main.pdf ] || exit 1
+
+exit 0

@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: buildall
 
 # Controls when the workflow will run
 on:
@@ -22,25 +22,31 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: texlive texlive-base texlive-latex-extra texlive-fonts-extra
+          version: 1.0
       
-      # TODO Cache TexLive dependencies based on texlive.profile file hash
+      # Cache TexLive dependencies based on texlive.profile file hash
+      # - name: cache dependencies
+      #  uses: actions/cache@v1
+      #  with:
+      #    path: |
+      #      ~/.texlive2021
+      #      /usr/bin/latex
+      #      /usr/local/texlive/
+      #      /usr/bin/tex
+      #    key: ${{ runner.os }}-texlive-${{ hashFiles('**/texlive.profile') }}
+      #    restore-keys: |
+      #      ${{ runner.os }}-texlive-
+
+      # Cache TexLive dependencies based on texlive.profile file hash
 
       # Runs a single command using the runners shell
       - name: Install tex-live
-        run: |
-          PROJECTDIR=$(pwd)
-          cd /tmp && wget http://ftp.fau.de/ctan/systems/texlive/tlnet/install-tl-unx.tar.gz
-          tar -xvzf install-tl-unx.tar.gz
-          cd install-tl-*
-          chmod +x install-tl
-          sudo ./install-tl --profile=$PROJECTDIR/texlive.profile
-          PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
-          pdflatex -v
-          cd $PROJECTDIR
-          
-        
+        run: sudo apt-get install -y texlive texlive-base texlive-latex-extra texlive-fonts-extra
 
       # Runs a set of commands using the runners shell
       - name: Run build script
-        run: bash tests/testall.sh
+        run: ./scripts/testall.sh
