@@ -4,7 +4,7 @@
 
 At first you need to have the CJK LaTeX packages to be installed on your system.
  
-The easiest way is to install install all packages for Chinese, Japanese and KoreaN (CJK) from the apt repositories (Ubuntu Linux):
+The easiest way is to install all packages for Chinese, Japanese and Korean (CJK) from the apt repositories (Ubuntu Linux):
 
 
 ```bash
