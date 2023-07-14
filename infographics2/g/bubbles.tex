@@ -27,9 +27,9 @@
   	\filldraw[fill=thirdcol,draw=none] (#1,0.5) circle (#3);
 
   	% outer label
-  	\node[label=\textcolor{textcol}{#4}] at (#1,0.7) {};
+  	\node[label={\textcolor{textcol}{#4}\vphantom{|}}] at (#1,0.7) {};
 
-  	% outer label
+  	% inner label
   	\node[label=\textcolor{titletext}{#6}] at (#1,0.38) {};
 }
 
