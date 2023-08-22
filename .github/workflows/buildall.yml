@@ -43,9 +43,12 @@ jobs:
 
       # Cache TexLive dependencies based on texlive.profile file hash
 
+      - name: Update APT-List
+        run: sudo apt-get update
+
       # Runs a single command using the runners shell
       - name: Install tex-live
-        run: sudo apt-get install -y texlive texlive-base texlive-latex-extra texlive-fonts-extra
+        run: sudo apt-get install --fix-missing -y texlive texlive-base texlive-latex-extra texlive-fonts-extra
 
       # Runs a set of commands using the runners shell
       - name: Run build script
