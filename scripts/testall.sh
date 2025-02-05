@@ -9,6 +9,7 @@ set -e
 ./scripts/test.sh ./rows
 ./scripts/test.sh ./sidebar
 ./scripts/test.sh ./sidebarleft
+./scripts/test.sh ./minimalistic
 
 echo 'all tests passed'
 exit 0
