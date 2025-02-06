@@ -6,7 +6,8 @@ export default defineConfig({
   description: "Free LaTeX cv and resume templates",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/media/logo.svg',
+    logo: '/logo.svg',
+    
     search: {
       provider: 'local',
       options: {

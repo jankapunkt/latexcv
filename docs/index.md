@@ -7,7 +7,7 @@ hero:
   text: "Free LaTeX cv and resume templates"
   tagline: Crafting your own is essential to stand out. These templates will make it easy as a snap! Select one and just get started. They're all free, no hidden costs!
   image:
-    src: /media/logo.svg
+    src: /logo.svg
     alt: LaTeX CV Banner
   actions:
     - theme: brand
@@ -45,6 +45,7 @@ const members = [
 
 <div align="center">
 <table width="100%" margin-left="auto" margin-right="auto">
+<tbody>
 	<tr>
 		<th>Classic</th>
 		<th>Modern</th>
@@ -67,9 +68,11 @@ const members = [
 			 <Badge type="tip" text="Soon on Overleaf!" />
 		</td>
 	</tr>
+	</tbody>
 </table>
 
 <table width="100%" margin-left="auto" margin-right="auto">
+<tbody>
 	<tr>
 		<th>Two Columns</th>
    	    	<th>Sidebar</th>
@@ -92,9 +95,11 @@ const members = [
 				<a href="https://www.overleaf.com/latex/templates/jan-kusters-left-sidebar-cv/tmmnhrkcmpgv">Edit on overleaf</a>
     		</td>
 	</tr>
+	</tbody>
 </table>
 
 <table width="100%" margin-left="auto" margin-right="auto">
+<tbody>
 	<tr>
    		<th>Row Layout</th>
 		<th>Infographics</th>
@@ -116,6 +121,7 @@ const members = [
 				alt="Infographics CV example preview" />
 		</td>
 	</tr>
+	</tbody>
 </table>
 </div>
 
