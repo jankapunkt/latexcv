@@ -45,3 +45,18 @@ infographics/Font-Awesome-SVG-PNG/*
 .idea/inspectionProfiles/Project_Default.xml
 
 out/
+
+# vite/ vitepress
+.DS_Store
+.idea
+.temp
+.vite_opt_cache
+.vscode
+dist
+cache
+temp
+examples-temp
+node_modules
+pnpm-global
+TODOs.md
+*.timestamp-*.mjs
