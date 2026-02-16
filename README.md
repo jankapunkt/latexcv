@@ -118,8 +118,7 @@ There are multiple ways to build your very own version of these templates.
 
 ### Using Overleaf
 
-Most of the templates are also available on [Overleaf](https://overleaf.com), an 
-online LaTeX editing and publishing tool.
+Most of the templates are also available on [Overleaf](https://overleaf.com) and [SpicyChai LaTeX](https://latex.spicychai.com/), online LaTeX editing tools.
 
 Just pick one and start editing without any local installation required:
 
