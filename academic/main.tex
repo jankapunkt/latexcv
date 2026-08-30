@@ -1,0 +1,171 @@
+% !TEX program = pdflatex
+% English academic CV template for PhD, MRes, RA, and research-focused applications
+% Compiler: pdfLaTeX
+\documentclass[11pt,a4paper]{article}
+
+% -- Font settings ------------------------------------------------------------
+% pdfLaTeX cannot use the system-installed Times New Roman font directly.
+% newtxtext provides a high-quality Times-style serif font distributed with TeX.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext}
+
+% -- Page layout --------------------------------------------------------------
+\usepackage{geometry}
+% Adjust these four values to change the page margins.
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=1.2cm, bottom=1.2cm}
+
+% -- Colors -------------------------------------------------------------------
+\usepackage{xcolor}
+% Section headings, clickable links, and normal body text, respectively.
+\definecolor{sectioncolor}{RGB}{46,116,181}
+\definecolor{linkcolor}{RGB}{0,112,192}
+\definecolor{textcolor}{RGB}{0,0,0}
+
+% -- Section headings ---------------------------------------------------------
+\usepackage{titlesec}
+% Font style for section titles; the final bracket adds the horizontal rule.
+\titleformat{\section}
+    {\large\bfseries\color{sectioncolor}}
+    {}
+    {0em}
+    {\uppercase}
+    [\vspace{-0.8em}\rule{\textwidth}{1pt}]
+% {left indent}{space before}{space after}; adjust for tighter or looser sections.
+\titlespacing{\section}{0pt}{0.1em}{0.1em}
+
+% -- Lists --------------------------------------------------------------------
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, nosep, topsep=0.2em, itemsep=0.1em, parsep=0em}
+
+% -- Icons and links ----------------------------------------------------------
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=linkcolor, urlcolor=linkcolor}
+
+% -- Global style -------------------------------------------------------------
+\color{textcolor}
+% Increase or decrease this value to adjust overall line spacing.
+\linespread{1.10}
+\pagestyle{empty}
+
+% -- Helper commands ----------------------------------------------------------
+% Use \daterange{...} for bold dates aligned at the right of an entry.
+\newcommand{\daterange}[1]{{\textbf{#1}}}
+% Use \entrytitle{...} for bold project or thesis titles.
+\newcommand{\entrytitle}[1]{{\textbf{#1}}}
+
+\begin{document}
+
+% Start here.
+% Replace every placeholder below with your own information.
+
+% -- Contact header -----------------------------------------------------------
+\vspace*{-2.5em}
+\begin{center}
+    {\Huge\bfseries\color{sectioncolor} Your Name} \\[0.8em]
+    {\color{textcolor}\faPhone\enspace +00 000 000 0000}
+    \enspace $\vert$ \enspace
+    {\color{textcolor}\faEnvelope\enspace email@example.com}
+    \enspace $\vert$ \enspace
+    \href{https://github.com/your-username}{{\color{textcolor}\faGithub}\enspace{\color{linkcolor}your-username}}
+    \enspace $\vert$ \enspace
+    \href{https://your-site.example}{{\color{textcolor}\faGlobe}\enspace{\color{linkcolor}your-site.example}}
+    % Optional LinkedIn profile: uncomment both lines and replace the URL and username.
+    % \enspace $\vert$ \enspace
+    % \href{https://www.linkedin.com/in/your-linkedin}{{\color{textcolor}\faLinkedin}\enspace{\color{linkcolor}your-linkedin}}
+\end{center}
+
+% -- Education ----------------------------------------------------------------
+\section*{Education}
+\vspace{-0.3em}
+
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{Graduate University Name} & City, Province/Country \\
+    \textbullet\enspace \textit{M.Res./M.Sc. in Your Major} & Sep. 2026 -- Jun. 2028 (Expected) \\
+    \multicolumn{2}{@{}l}{\textbullet\enspace GPA: X.XX/4.00 \enspace (Top XX\%)} \\
+    % Optional graduate coursework: uncomment and edit the following row if relevant.
+    % \multicolumn{2}{@{}l}{\textbullet\enspace Selected Coursework: Course A, Course B, Course C, Course D.} \\
+    \textbf{Undergraduate University Name} & City, Province/Country \\
+    \textbullet\enspace \textit{B.Eng./B.Sc. in Your Major} & Sep. 2022 -- Jun. 2026 \\
+    \multicolumn{2}{@{}l}{\textbullet\enspace GPA: X.XX/4.00 \enspace (Top XX\%)} \\
+    % Optional undergraduate coursework: uncomment and edit the following row if relevant.
+    % \multicolumn{2}{@{}l}{\textbullet\enspace Selected Coursework: Course A, Course B, Course C, Course D.} \\
+\end{tabular*}
+
+% -- Publications -------------------------------------------------------------
+\section*{Publications}
+\vspace{-0.1em}
+
+\begin{enumerate}[label={[\arabic*]}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                  topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item \textbf{Surname A}, Coauthor B, Coauthor C\textsuperscript{*}. ``Title of Your Published Research Article.'' \textit{Journal Name}, Year. DOI: \href{https://doi.org/10.0000/example}{10.0000/example}. [JCR Q1, IF: X.X]
+
+    \item Coauthor A, \textbf{Surname B}, Coauthor C\textsuperscript{*}. ``Title of Your Second Published Research Article.'' \textit{Journal Name}, Year. DOI: \href{https://doi.org/10.0000/example-2}{10.0000/example-2}. [JCR Q1, IF: X.X]
+
+    \item \textbf{Surname A}, Coauthor B, Coauthor C\textsuperscript{*}. ``Title of Your First Conference Paper.'' \textit{Conference Name}, Year. DOI: \href{https://doi.org/10.0000/example-3}{10.0000/example-3}. [CCF A]
+
+    \item \textbf{Surname A}, Coauthor B, Coauthor C\textsuperscript{*}. ``Title of Your Second Conference Paper.'' \textit{Conference Name}, Year. DOI: \href{https://doi.org/10.0000/example-4}{10.0000/example-4}. [CCF B]
+
+    \item \textbf{Surname A}, Coauthor B, Coauthor C, Coauthor D\textsuperscript{*}. ``Title of a Manuscript Currently Under Review.'' \textit{Target Journal Name}. Under Review. [JCR Q1, IF: X.X]
+\end{enumerate}
+
+% -- Research experience ------------------------------------------------------
+\section*{Research Experience}
+\vspace{-0.1em}
+
+\noindent
+\entrytitle{Research Project or Thesis Title}
+
+\par\noindent
+\textit{Undergraduate/Master's Thesis or Research Programme}
+\hfill \daterange{Sep. 2025 -- Jun. 2026}
+
+\begin{itemize}[label={\textbullet}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item Identified a research gap through literature review and formulated the research problem; developed a methodology using suitable analytical methods or datasets to address the identified challenge.
+    \item Implemented and benchmarked the proposed approach, quantified its improvements, and produced outputs such as a manuscript, prototype, dataset, or reusable software artifact.
+    \item Tested robustness through ablation or sensitivity analyses and documented experimental settings, assumptions, and limitations to support reproducibility.
+\end{itemize}
+
+\noindent
+\entrytitle{Second Research Project Title}
+
+\par\noindent
+\textit{National, University, or Laboratory Research Programme}
+\hfill \daterange{Jan. 2025 -- Present}
+
+\begin{itemize}[label={\textbullet}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item Investigated a domain-specific problem by analyzing its background and existing limitations; applied theoretical modeling, simulations, experiments, or real-world data to address a key methodological or practical challenge.
+    \item Built a reproducible research prototype, validated its effectiveness quantitatively, and produced outputs such as a publication, technical report, software tool, patent, or open-source resource.
+    \item Collaborated with supervisors and team members to refine the research design, interpret findings, and communicate results through presentations, reports, or manuscripts.
+\end{itemize}
+
+% -- Honors and awards --------------------------------------------------------
+\section*{Honors \& Awards}
+\vspace{-0.1em}
+
+\begin{itemize}[label={\textbullet}, labelindent=0pt, leftmargin=*, labelsep=0.45em,
+                topsep=0.15em, itemsep=0pt, parsep=0pt]
+    \item Academic or Research Excellence Award \hfill Jun. 2026
+    \item First-Class Scholarship at University Name (Top X\%) \hfill 2025, 2026
+    \item Outstanding Graduate or Dean's List Recognition \hfill 2025
+    \item First Prize, International/National Research Competition \hfill Sep. 2024
+    \item Third Prize, National Engineering or Modeling Competition \hfill May 2024
+\end{itemize}
+
+% -- Skills -------------------------------------------------------------------
+\section*{Skills}
+\vspace{-0.1em}
+
+\noindent
+\textbf{Research Interests:} Research Area A, Research Area B, and Research Area C.
+
+\noindent
+\textbf{Technical Skills:} Python, C/C++, MATLAB, Linux, SQL, Docker, Git, \LaTeX.
+
+\noindent
+\textbf{Languages:} First Language (native); English (IELTS/TOEFL score).
+
+\end{document}

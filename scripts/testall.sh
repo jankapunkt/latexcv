@@ -10,6 +10,7 @@ set -e
 ./scripts/test.sh ./sidebar
 ./scripts/test.sh ./sidebarleft
 ./scripts/test.sh ./minimalistic
+./scripts/test.sh ./academic
 
 echo 'all tests passed'
 exit 0
